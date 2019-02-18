@@ -40,6 +40,6 @@ public class MainMenu extends Screen implements ComponentListener {
 
 
     public void componentActivated(AbstractComponent abstractComponent) {
-        this.enterState(Main.FIGHT);
+        this.enterState(Main.UPGRADE);
     }
 }

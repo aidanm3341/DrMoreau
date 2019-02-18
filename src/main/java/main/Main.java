@@ -8,6 +8,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import screens.Fight;
 import screens.MainMenu;
 import screens.Travel;
+import screens.Upgrade;
 import util.MyFont;
 import util.ResourceLoader;
 
@@ -16,10 +17,12 @@ import java.io.IOException;
 
 public class Main extends StateBasedGame {
 
+
     // Game state identifiers
     public static final int MAINMENU = 0;
     public static final int FIGHT    = 1;
-    public static final int TRAVEL   = 2;
+    public static final int UPGRADE  = 2;
+    public static final int TRAVEL   = 3;
 
     // Application Properties
     public static final int WIDTH   = 1680;
@@ -45,6 +48,7 @@ public class Main extends StateBasedGame {
         // The first state added will be the one that is loaded first, when the application is launched
         this.addState(new MainMenu());
         this.addState(new Fight());
+        this.addState(new Upgrade());
         this.addState(new Travel());
     }
 

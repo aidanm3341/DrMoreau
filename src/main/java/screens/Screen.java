@@ -29,7 +29,7 @@ public abstract class Screen extends BasicGameState {
         g.fillRect(0, 0, gc.getWidth(), gc.getHeight());
     }
 
-    public abstract void update(GameContainer gc, StateBasedGame sbg, int i) throws SlickException;
+    public void update(GameContainer gc, StateBasedGame sbg, int i) throws SlickException{}
 
     protected void enterState(int ID)
     {

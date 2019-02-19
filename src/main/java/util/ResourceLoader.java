@@ -29,7 +29,6 @@ public class ResourceLoader {
         images.put("brickRouteHover", new Image("brickRouteHover.png"));
         images.put("greyRoute", new Image("greyRoute.png"));
         images.put("greyRouteHover", new Image("greyRouteHover.png"));
-        images.put("separator", new Image("separator.png"));
         images.put("travelBorder", new Image("travelBorder.png"));
     }
 

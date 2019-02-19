@@ -4,16 +4,13 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.geom.Point;
 import org.newdawn.slick.geom.Rectangle;
 
-public class Body extends Part{
+class Body extends Part{
 
-    private float x, y;
     private Point headP, armRightP, armLeftP, legLeftP, legRightP, tailP;
 
-    public Body(float x, float y, Image image)
+    Body(float x, float y, Image image)
     {
         super(PartType.BODY, image, null);
-        this.x = x;
-        this.y = y;
         box = new Rectangle(x,y, image.getWidth(), image.getHeight());
 
         headP = new Point(x+box.getWidth()*0.9f, y+(box.getHeight()*0.33f));
@@ -24,27 +21,27 @@ public class Body extends Part{
         tailP = new Point(x, y+box.getHeight()*0.4f);
     }
 
-    public void attachHead(Part p) {
+    void attachHead(Part p) {
         p.attachTo(headP);
     }
 
-    public void attachArmLeft(Part p) {
+    void attachArmLeft(Part p) {
         p.attachTo(armLeftP);
     }
 
-    public void attachArmRight(Part p) {
+    void attachArmRight(Part p) {
         p.attachTo(armRightP);
     }
 
-    public void attachLegLeft(Part p) {
+    void attachLegLeft(Part p) {
         p.attachTo(legLeftP);
     }
 
-    public void attachLegRight(Part p) {
+    void attachLegRight(Part p) {
         p.attachTo(legRightP);
     }
 
-    public void attachTail(Part p) {
+    void attachTail(Part p) {
         p.attachTo(tailP);
     }
 }

@@ -33,15 +33,11 @@ public class Part{
         g.drawImage(image, box.getX(), box.getY());
     }
 
-    public float getWidth(){
-        return box.getWidth();
+    public Image getImage(){
+        return image;
     }
 
-    public float getHeight(){
-        return box.getHeight();
-    }
-
-    public PartType type(){
+    public PartType getType(){
         return type;
     }
 }

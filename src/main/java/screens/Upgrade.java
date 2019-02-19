@@ -1,5 +1,6 @@
 package screens;
 
+import animal.PartFactory;
 import main.Main;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -9,6 +10,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import screens.draganddrop.DragAndDropManager;
 import screens.draganddrop.DragArea;
 import screens.draganddrop.Draggable;
+import screens.draganddrop.PartDraggable;
 import util.ResourceLoader;
 
 import java.util.ArrayList;
@@ -56,8 +58,8 @@ public class Upgrade extends Screen {
         dragAreas.add(puddle3);
 
 
-        draggables.add(new Draggable(headArea, 50, 50));
-        draggables.add(new Draggable(bodyArea, 75, 50));
+        draggables.add(new PartDraggable(headArea, 50, 50, PartFactory.getPart("dog_head")));
+        draggables.add(new PartDraggable(bodyArea, 75, 50, PartFactory.getPart("ostrich_head")));
 
         for(Draggable d : draggables) {
             d.init(gc);

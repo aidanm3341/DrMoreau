@@ -19,9 +19,9 @@ public class MainMenu extends Screen implements ComponentListener {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
 
-        startButton = new Button("Start", ResourceLoader.getImage("button1"), gc.getWidth()/2, gc.getHeight()/2);
+        startButton = new Button("Start", ResourceLoader.getImage("menuButton"), gc.getWidth()/2, gc.getHeight()/2);
         startButton.init(gc);
-        startButton.addHoverOverImage(ResourceLoader.getImage("button2"));
+        startButton.addHoverOverImage(ResourceLoader.getImage("menuButtonHover"));
         startButton.addListener(this);
     }
 

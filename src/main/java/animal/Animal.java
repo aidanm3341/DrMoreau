@@ -35,7 +35,7 @@ public class Animal {
 
 
     public static Animal createDefaultAnimal() throws SlickException {
-        Animal animal = new Animal(new Body(250, 350, new Image("dog_body.png")));
+        Animal animal = new Animal(new Body(250, 350, new Image("parts/dog_body.png")));
 
         animal.attach(PartFactory.getPart("dog_leg2"));
         animal.attach(PartFactory.getPart("dog_arm2"));

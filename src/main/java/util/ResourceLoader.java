@@ -12,24 +12,28 @@ public class ResourceLoader {
     public static void loadImages() throws SlickException
     {
         images = new HashMap<>();
-        images.put("dog_leg", new Image("dog_leg.png"));
-        images.put("dog_arm", new Image("dog_arm.png"));
-        images.put("dog_head", new Image("dog_head.png"));
-        images.put("dog_body", new Image("dog_body.png"));
-        images.put("dog_tail", new Image("dog_tail.png"));
-        images.put("ostrich_head", new Image("ostrich_head.png"));
-        images.put("blue_leg", new Image("blue_leg.png"));
-        images.put("button1", new Image("button.png"));
-        images.put("button2", new Image("button2.png"));
-        images.put("basicButton", new Image("basicButton.png"));
-        images.put("basicButtonHover", new Image("basicButtonHover.png"));
-        images.put("basicButtonPressed", new Image("basicButtonPressed.png"));
+        // Parts
+        images.put("dog_leg", new Image("parts/dog_leg.png"));
+        images.put("dog_arm", new Image("parts/dog_arm.png"));
+        images.put("dog_head", new Image("parts/dog_head.png"));
+        images.put("dog_body", new Image("parts/dog_body.png"));
+        images.put("dog_tail", new Image("parts/dog_tail.png"));
+        images.put("ostrich_head", new Image("parts/ostrich_head.png"));
+        images.put("blue_leg", new Image("parts/blue_leg.png"));
 
-        images.put("brickRoute", new Image("brickRoute.png"));
-        images.put("brickRouteHover", new Image("brickRouteHover.png"));
-        images.put("greyRoute", new Image("greyRoute.png"));
-        images.put("greyRouteHover", new Image("greyRouteHover.png"));
-        images.put("travelBorder", new Image("travelBorder.png"));
+        // Gui
+        images.put("menuButton", new Image("gui/menuButton.png"));
+        images.put("menuButtonHover", new Image("gui/menuButtonHover.png"));
+        images.put("basicButton", new Image("gui/basicButton.png"));
+        images.put("basicButtonHover", new Image("gui/basicButtonHover.png"));
+        images.put("basicButtonPressed", new Image("gui/basicButtonPressed.png"));
+
+        // Travel
+        images.put("brickRoute", new Image("travel/brickRoute.png"));
+        images.put("brickRouteHover", new Image("travel/brickRouteHover.png"));
+        images.put("greyRoute", new Image("parts/greyRoute.png"));
+        images.put("greyRouteHover", new Image("parts/greyRouteHover.png"));
+        images.put("travelBorder", new Image("travel/travelBorder.png"));
     }
 
     public static Image getImage(String name)

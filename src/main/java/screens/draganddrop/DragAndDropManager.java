@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 public class DragAndDropManager extends InputAdapter {
 
-    private ArrayList<PartDraggable> draggables;
-    private ArrayList<PartDragArea> dragAreas;
+    private ArrayList<Draggable> draggables;
+    private ArrayList<DragArea> dragAreas;
 
     public DragAndDropManager(){
         draggables = new ArrayList<>();
@@ -19,16 +19,16 @@ public class DragAndDropManager extends InputAdapter {
         gc.getInput().addPrimaryListener(this);
     }
 
-    public void attatch(PartDraggable d){
+    public void attatch(Draggable d){
         draggables.add(d);
     }
 
-    public void attatch(PartDragArea da){
+    public void attatch(DragArea da){
         dragAreas.add(da);
     }
 
     public void mousePressed(int button, int x, int y) {
-        for(PartDraggable d : draggables) {
+        for(Draggable d : draggables) {
             if (!d.isClicked() && d.contains(x, y)) {
                 d.setClicked(true);
             }
@@ -36,11 +36,11 @@ public class DragAndDropManager extends InputAdapter {
     }
 
     public void mouseReleased(int button, int x, int y) {
-        for(PartDraggable d : draggables) {
+        for(Draggable d : draggables) {
             if (d.isClicked()) {
-                for(PartDragArea da : dragAreas) {
+                for(DragArea da : dragAreas) {
                     if(d.getRect().intersects(da.getRect())){
-                        PartDraggable oldPart = da.getPart();
+                        Draggable oldPart = da.getPart();
                         d.getHome().setPart(null); // clean-up the old home
                         if( oldPart != null) {
                             d.getHome().link(oldPart);
@@ -59,7 +59,7 @@ public class DragAndDropManager extends InputAdapter {
 
 
     public void mouseDragged(int oldx, int oldy, int newx, int newy) {
-        for(PartDraggable d : draggables) {
+        for(Draggable d : draggables) {
             if (d.contains(oldx, oldy) && d.isClicked()) {
                 d.setX(d.getX() + newx - oldx);
                 d.setY(d.getY() + newy - oldy);

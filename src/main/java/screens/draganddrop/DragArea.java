@@ -5,13 +5,13 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.geom.Rectangle;
 
-public class PartDragArea{
+public class DragArea {
 
     private Rectangle rect;
     private int homex, homey;
-    private PartDraggable part;
+    private Draggable part;
 
-    public PartDragArea(int x, int y, int width, int height) {
+    public DragArea(int x, int y, int width, int height) {
         rect = new Rectangle(x, y, width, height);
         homex = x + width/2;
         homey = y + height/2;
@@ -36,16 +36,16 @@ public class PartDragArea{
     }
 
 
-    public void link(PartDraggable d){
+    public void link(Draggable d){
         this.part = d;
         d.setHome(this);
     }
 
-    public void setPart(PartDraggable p){
+    public void setPart(Draggable p){
         this.part = p;
     }
 
-    public PartDraggable getPart() {
+    public Draggable getPart() {
         return part;
     }
 }

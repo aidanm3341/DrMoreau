@@ -44,7 +44,6 @@ public class Main extends StateBasedGame {
 
 
         ResourceLoader.loadImages();
-        PartFactory.createParts();
         // The first state added will be the one that is loaded first, when the application is launched
         this.addState(new MainMenu());
         this.addState(new Fight());

@@ -45,6 +45,6 @@ public class Fight extends Screen implements ComponentListener {
     }
 
     public void componentActivated(AbstractComponent abstractComponent) {
-        enterState(Main.TRAVEL);
+        enterState(Main.UPGRADE);
     }
 }

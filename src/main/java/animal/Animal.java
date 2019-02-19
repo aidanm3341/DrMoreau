@@ -11,38 +11,64 @@ import java.util.Comparator;
 public class Animal {
 
     private Body body;
-    private ArrayList<Part> parts;
+    private Part head, armleft, armRight, legLeft, legRight, tail;
 
     public Animal(Body body)
     {
-        parts = new ArrayList<>();
         this.body = body;
-        parts.add(body);
     }
 
-    public void attach(Part p)
-    {
-        body.attach(p);
-        parts.add(p);
-        parts.sort(Comparator.comparingInt(p2 -> p2.type().getZIndex()));
+    public void attachHead(Part p) {
+        body.attachHead(p);
+        head = p;
+    }
+
+    public void attachArmLeft(Part p) {
+        body.attachArmLeft(p);
+        armleft = p;
+    }
+
+    public void attachArmRight(Part p) {
+        body.attachArmRight(p);
+        armRight = p;
+    }
+
+    public void attachLegLeft(Part p) {
+        body.attachLegLeft(p);
+        legLeft= p;
+    }
+
+    public void attachLegRight(Part p) {
+        body.attachLegRight(p);
+        legRight = p;
+    }
+
+    public void attachTail(Part p) {
+        body.attachTail(p);
+        tail = p;
     }
 
     public void render(GameContainer gc, Graphics g)
     {
-        for(Part p : parts)
-            p.render(gc, g);
+        legLeft.render(gc, g);
+        armleft.render(gc, g);
+        body.render(gc, g);
+        armRight.render(gc, g);
+        legRight.render(gc, g);
+        tail.render(gc, g);
+        head.render(gc, g);
     }
 
 
     public static Animal createDefaultAnimal() throws SlickException {
         Animal animal = new Animal(new Body(250, 350, new Image("parts/dog_body.png")));
 
-        animal.attach(PartFactory.getPart("dog_leg2"));
-        animal.attach(PartFactory.getPart("dog_arm2"));
-        animal.attach(PartFactory.getPart("ostrich_head"));
-        animal.attach(PartFactory.getPart("dog_arm"));
-        animal.attach(PartFactory.getPart("dog_leg"));
-        animal.attach(PartFactory.getPart("dog_tail"));
+        animal.attachLegLeft(PartFactory.getPart("dog_leg"));
+        animal.attachArmLeft(PartFactory.getPart("dog_arm"));
+        animal.attachHead(PartFactory.getPart("ostrich_head"));
+        animal.attachArmRight(PartFactory.getPart("dog_arm"));
+        animal.attachLegRight(PartFactory.getPart("dog_leg"));
+        animal.attachTail(PartFactory.getPart("dog_tail"));
 
         return animal;
     }

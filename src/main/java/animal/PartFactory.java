@@ -1,6 +1,7 @@
 package animal;
 
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
 import util.ResourceLoader;
 
@@ -8,7 +9,7 @@ import java.util.HashMap;
 
 public class PartFactory {
 
-    public static Part getPart(String name)
+    public static Part getPart(String name) throws SlickException
     {
         switch(name)
         {
@@ -35,9 +36,11 @@ public class PartFactory {
             case "blue_leg":
                 Image blueLeg = ResourceLoader.getImage("blue_leg");
                 return new Part(PartType.LEG, blueLeg, new Point(blueLeg.getWidth()/2, 0));
-
+            case "dog_body":
+                Image dogBody = ResourceLoader.getImage("dog_body");
+                return new Part(PartType.BODY, dogBody, null);
             default:
-                return null;
+                throw new SlickException("Not a valid animal part.");
         }
     }
 }

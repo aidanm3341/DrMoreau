@@ -40,4 +40,12 @@ public class Part{
     public PartType getType(){
         return type;
     }
+
+    public float getWidth(){
+        return box.getWidth();
+    }
+
+    public float getHeight(){
+        return box.getHeight();
+    }
 }

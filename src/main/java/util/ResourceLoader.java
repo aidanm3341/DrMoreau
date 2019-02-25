@@ -20,6 +20,7 @@ public class ResourceLoader {
         images.put("dog_tail", new Image("parts/dog_tail.png"));
         images.put("ostrich_head", new Image("parts/ostrich_head.png"));
         images.put("blue_leg", new Image("parts/blue_leg.png"));
+        images.put("dog_body", new Image("parts/dog_body.png"));
 
         // Gui
         images.put("menuButton", new Image("gui/menuButton.png"));

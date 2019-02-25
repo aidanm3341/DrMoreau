@@ -10,14 +10,15 @@ public class Draggable {
     private Rectangle rect;
     private boolean isClicked;
 
-    public Draggable(DragArea home, int width, int height)
+    public Draggable(DragArea home)
     {
         home.link(this);
-        rect = new Rectangle(0, 0, width, height);
+        rect = new Rectangle(0, 0, 100, 100);
         goHome();
     }
 
     public void init(GameContainer gc){
+        goHome();
     }
 
     public void render(GUIContext gc, Graphics g) {
@@ -38,6 +39,8 @@ public class Draggable {
     public void setY(float y){
         rect.setCenterY(y);
     }
+    public void setWidth(float width){rect.setWidth(width);}
+    public void setHeight(float height){rect.setHeight(height);}
     public float getX(){
         return rect.getCenterX();
     }

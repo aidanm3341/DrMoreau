@@ -18,7 +18,7 @@ public class Fight extends Screen implements ComponentListener {
     private Animal animal;
     private Button basicButton;
     public int getID() {
-        return Main.FIGHT;
+        return -1;//Main.FIGHT;
     }
 
 

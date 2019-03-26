@@ -1,6 +1,7 @@
 package main;
 
 import animal.PartFactory;
+import combat.CombatController;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
@@ -46,9 +47,7 @@ public class Main extends StateBasedGame {
         ResourceLoader.loadImages();
         // The first state added will be the one that is loaded first, when the application is launched
         this.addState(new MainMenu());
-        this.addState(new Fight());
-        this.addState(new Upgrade());
-        this.addState(new Travel());
+
     }
 
 

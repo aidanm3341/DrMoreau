@@ -4,6 +4,7 @@ import main.Attack;
 import main.Main;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 import screens.Screen;
 
@@ -13,10 +14,21 @@ public class CombatController extends Screen {
     private Mob mob;
     private Attack at1, at2, at3, at4, at5, at6;
 
-    public CombatController()
+    public CombatController(Attack at1, Attack at2, Attack at3, Attack at4, Attack at5, Attack at6)
     {
+        this.at1 = at1;
+        this.at2 = at2;
+        this.at3 = at3;
+        this.at4 = at4;
+        this.at5 = at5;
+        this.at6 = at6;
+    }
 
+    public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
+    {
+        super.init(gc, sbg);
         view = new CombatView(this, at1.getName(), at2.getName(), at3.getName(), at4.getName(), at5.getName(), at6.getName());
+        view.init(gc);
     }
 
     public void startNewCombat()
@@ -36,7 +48,7 @@ public class CombatController extends Screen {
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
     {
         view.render(gc, g);
-        g.drawImage(mob.getMobImage(), 800, 300);
+        //g.drawImage(mob.getMobImage(), 800, 300);
     }
 
     @Override

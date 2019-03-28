@@ -14,8 +14,12 @@ public class CombatView implements ComponentListener {
 
     public CombatView(CombatController ctrl, String at1, String at2, String at3, String at4, String at5, String at6)
     {
-        this.ctrl = ctrl;
         att1_button = new AttackButton(at1, 200, 600);
+        this.ctrl = ctrl;
+    }
+
+    public void init(GameContainer gc){
+        att1_button.init(gc);
         att1_button.addListener(this);
     }
 

@@ -9,6 +9,9 @@ import org.newdawn.slick.state.StateBasedGame;
 import screens.Screen;
 
 public class CombatController extends Screen {
+    public int getID() {
+        return Main.FIGHT;
+    }
 
     private CombatView view;
     private Mob mob;
@@ -29,11 +32,12 @@ public class CombatController extends Screen {
         super.init(gc, sbg);
         view = new CombatView(this, at1.getName(), at2.getName(), at3.getName(), at4.getName(), at5.getName(), at6.getName());
         view.init(gc);
+        startNewCombat(MobData.getMob("test"));
     }
 
-    public void startNewCombat()
+    public void startNewCombat(Mob mob)
     {
-
+        this.mob = mob;
     }
 
     public void doAttack1(){mob.setHp(at1.getDmg());}
@@ -48,11 +52,10 @@ public class CombatController extends Screen {
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
     {
         view.render(gc, g);
-        //g.drawImage(mob.getMobImage(), 800, 300);
+        //g.drawImage(mob.getMobImage(), 1100, 300);
     }
 
-    @Override
-    public int getID() {
-        return Main.FIGHT;
+    public Mob getMob(){
+        return mob;
     }
 }

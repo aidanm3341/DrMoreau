@@ -4,6 +4,7 @@ import org.newdawn.slick.*;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.gui.MouseOverArea;
 
@@ -57,5 +58,10 @@ public class Button {
 
     public void addListener(ComponentListener listener) {
         mouseArea.addListener(listener);
+    }
+
+    public boolean equals(Object c)
+    {
+        return mouseArea.equals(c);
     }
 }

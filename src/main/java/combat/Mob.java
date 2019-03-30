@@ -12,15 +12,20 @@ public class Mob {
     private ArrayList<BodyPart> parts;
     private Image mobImage;
 
-    public Mob(String name, int hp, ArrayList<BodyPart> parts)
+    public Mob(String name, Image image, int hp, ArrayList<BodyPart> parts)
     {
         this.name = name;
+        this.mobImage = image;
         this.hp = hp;
         this.parts = parts;
     }
 
     public void setHp(int dmgDealt){
         hp -= dmgDealt;
+    }
+
+    public int getHp(){
+        return hp;
     }
 
     public int getAttStat(){

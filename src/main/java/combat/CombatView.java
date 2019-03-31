@@ -62,7 +62,7 @@ public class CombatView implements ComponentListener {
         g.drawImage(ctrl.getMob().getMobImage(), 1100, 300);
 
         g.setColor(Color.white);
-        g.drawString(""+ctrl.getMob().getHp(), 1150, 600);
+        g.drawString(" "+ctrl.getMob().getHp(), 1150, 600);
         //g.drawImage(ctrl.getSidekick().getImage(), 100, 100);
     }
 

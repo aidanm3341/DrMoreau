@@ -2,6 +2,8 @@ package combat;
 
 import main.Attack;
 import main.Main;
+import main.MainController;
+import main.SidekickData;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -13,12 +15,14 @@ public class CombatController extends Screen {
         return Main.FIGHT;
     }
 
+    private MainController main;
     private CombatView view;
     private Mob mob;
     private Attack at1, at2, at3, at4, at5, at6;
 
-    public CombatController(Attack at1, Attack at2, Attack at3, Attack at4, Attack at5, Attack at6)
+    public CombatController(MainController main, Attack at1, Attack at2, Attack at3, Attack at4, Attack at5, Attack at6)
     {
+        this.main = main;
         this.at1 = at1;
         this.at2 = at2;
         this.at3 = at3;
@@ -59,4 +63,7 @@ public class CombatController extends Screen {
         return mob;
     }
 
+    public SidekickData getSidekick(){
+        return main.getSidekick();
+    }
 }

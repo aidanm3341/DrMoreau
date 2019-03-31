@@ -58,4 +58,5 @@ public class CombatController extends Screen {
     public Mob getMob(){
         return mob;
     }
+
 }

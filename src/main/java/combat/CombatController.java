@@ -34,9 +34,9 @@ public class CombatController extends Screen {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
     {
         super.init(gc, sbg);
+        startNewCombat(MobData.getMob("test"));
         view = new CombatView(this, at1.getName(), at2.getName(), at3.getName(), at4.getName(), at5.getName(), at6.getName());
         view.init(gc);
-        startNewCombat(MobData.getMob("test"));
     }
 
     public void startNewCombat(Mob mob)
@@ -53,10 +53,14 @@ public class CombatController extends Screen {
 
 
 
+    public void update(GameContainer gc, StateBasedGame sbg, int delta){
+        if(mob.getHp() <= 0)
+            enterState(Main.UPGRADE);
+    }
+
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
     {
         view.render(gc, g);
-        //g.drawImage(mob.getMobImage(), 1100, 300);
     }
 
     public Mob getMob(){

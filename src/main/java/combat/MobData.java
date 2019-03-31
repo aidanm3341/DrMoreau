@@ -16,11 +16,19 @@ public class MobData {
                 50, 50, 50,  new ArrayList<>(), ResourceLoader.getImage("ostrich_head").getFlippedCopy(true, false).getScaledCopy(2f)));
     }
 
+//    public static Mob getMob(String name)
+//    {
+//        if (mobs == null)
+//            loadMobs();
+//
+//        return mobs.get(name);
+//    }
+
     public static Mob getMob(String name)
     {
-        if (mobs == null)
-            loadMobs();
-
-        return mobs.get(name);
+        if (name.equals("test"))
+            return new Mob("Test",
+                    50, 50, 50,  new ArrayList<>(), ResourceLoader.getImage("ostrich_head").getFlippedCopy(true, false).getScaledCopy(2f));
+        return null;
     }
 }

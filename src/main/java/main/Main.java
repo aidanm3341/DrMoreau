@@ -45,7 +45,7 @@ public class Main extends StateBasedGame {
 
         ResourceLoader.loadImages();
         // The first state added will be the one that is loaded first, when the application is launched
-        this.addState(new MainMenu());
+        this.addState(new ConfirmationPanel());
         MainController main = new MainController(gc, this);
         main.init(gc);
     }

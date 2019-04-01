@@ -2,6 +2,7 @@ package screens;
 
 import animal.PartFactory;
 import main.Main;
+import main.MainController;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -20,6 +21,8 @@ import java.util.ArrayList;
 
 public class Upgrade extends Screen implements ComponentListener {
 
+    private MainController main;
+
     private DragAndDropManager dndManager;
     private ArrayList<Draggable> draggables;
     private ArrayList<DragArea> dragAreas;
@@ -28,6 +31,11 @@ public class Upgrade extends Screen implements ComponentListener {
     private Button nextButton;
     public int getID() {
         return Main.UPGRADE;
+    }
+
+    public Upgrade(MainController main)
+    {
+        this.main = main;
     }
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
@@ -104,6 +112,6 @@ public class Upgrade extends Screen implements ComponentListener {
 
     @Override
     public void componentActivated(AbstractComponent abstractComponent) {
-        enterState(Main.TRAVEL);
+        main.enterState(Main.TRAVEL);
     }
 }

@@ -1,6 +1,7 @@
-package screens;
+package navigation;
 
 import main.Main;
+import main.MainController;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -8,15 +9,21 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.state.StateBasedGame;
+import screens.Screen;
 import util.Button;
 import util.ResourceLoader;
 
 public class ConfirmationPanel extends Screen implements ComponentListener {
 
+    private MainController main;
     private Button confirmButton, cancelButton;
 
     public int getID() {
         return Main.CONFIRM;
+    }
+
+    public ConfirmationPanel(MainController main){
+        this.main = main;
     }
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
@@ -51,6 +58,6 @@ public class ConfirmationPanel extends Screen implements ComponentListener {
     }
 
     public void componentActivated(AbstractComponent abstractComponent) {
-        enterState(Main.UPGRADE);
+        main.enterState(Main.FIGHT);
     }
 }

@@ -1,6 +1,7 @@
 package screens;
 
 import main.Main;
+import main.MainController;
 import org.newdawn.slick.*;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
@@ -10,11 +11,16 @@ import util.ResourceLoader;
 
 public class MainMenu extends Screen implements ComponentListener {
 
+    private MainController main;
     private Button startButton;
     public int getID() {
         return Main.MAINMENU;
     }
 
+    public MainMenu(MainController main)
+    {
+        this.main = main;
+    }
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
@@ -40,6 +46,6 @@ public class MainMenu extends Screen implements ComponentListener {
 
 
     public void componentActivated(AbstractComponent abstractComponent) {
-        this.enterState(Main.FIGHT);
+        main.enterState(Main.FIGHT);
     }
 }

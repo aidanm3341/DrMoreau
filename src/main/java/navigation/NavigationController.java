@@ -1,6 +1,7 @@
 package navigation;
 
 import main.Main;
+import main.MainController;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -14,7 +15,12 @@ public class NavigationController extends Screen implements ComponentListener {
         return Main.TRAVEL;
     }
 
+    private MainController main;
     private NavigationView view;
+
+    public NavigationController(MainController main){
+        this.main = main;
+    }
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
     {
@@ -29,6 +35,6 @@ public class NavigationController extends Screen implements ComponentListener {
     }
 
     public void componentActivated(AbstractComponent c) {
-        enterState(Main.FIGHT);
+        main.enterState(Main.CONFIRM);
     }
 }

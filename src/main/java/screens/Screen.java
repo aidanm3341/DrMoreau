@@ -13,13 +13,11 @@ import org.newdawn.slick.state.transition.FadeOutTransition;
 public abstract class Screen extends BasicGameState {
 
     private Color bg;
-    private StateBasedGame sbg;
 
     public abstract int getID();
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
     {
-        this.sbg = sbg;
         bg = new Color(10, 10, 25);
     }
 
@@ -30,9 +28,4 @@ public abstract class Screen extends BasicGameState {
     }
 
     public void update(GameContainer gc, StateBasedGame sbg, int i) throws SlickException{}
-
-    protected void enterState(int ID)
-    {
-        sbg.enterState(ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
-    }
 }

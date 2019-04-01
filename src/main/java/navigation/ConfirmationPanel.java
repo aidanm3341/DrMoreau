@@ -29,7 +29,7 @@ public class ConfirmationPanel extends Screen implements ComponentListener {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
 
-        confirmButton = new Button("Confrim", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.25f, gc.getHeight()/2);
+        confirmButton = new Button("Confirm", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.25f, gc.getHeight()/2);
         confirmButton.init(gc);
         confirmButton.addListener(this);
         confirmButton.addHoverOverImage(ResourceLoader.getImage("basicButtonHover"));
@@ -57,7 +57,10 @@ public class ConfirmationPanel extends Screen implements ComponentListener {
 
     }
 
-    public void componentActivated(AbstractComponent abstractComponent) {
-        main.enterState(Main.FIGHT);
+    public void componentActivated(AbstractComponent c) {
+        if(confirmButton.equals(c))
+            main.enterState(Main.FIGHT);
+        else if(cancelButton.equals(c))
+            main.enterState(Main.TRAVEL);
     }
 }

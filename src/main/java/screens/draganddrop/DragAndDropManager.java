@@ -19,11 +19,11 @@ public class DragAndDropManager extends InputAdapter {
         gc.getInput().addPrimaryListener(this);
     }
 
-    public void attatch(Draggable d){
+    public void attach(Draggable d){
         draggables.add(d);
     }
 
-    public void attatch(DragArea da){
+    public void attach(DragArea da){
         dragAreas.add(da);
     }
 

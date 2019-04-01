@@ -81,10 +81,10 @@ public class Upgrade extends Screen implements ComponentListener {
 
         for(Draggable d : draggables) {
             d.init(gc);
-            dndManager.attatch(d);
+            dndManager.attach(d);
         }
         for(DragArea da : dragAreas)
-            dndManager.attatch(da);
+            dndManager.attach(da);
 
         puddle = ResourceLoader.getImage("upgradePuddle");
 

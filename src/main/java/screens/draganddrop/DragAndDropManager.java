@@ -2,6 +2,7 @@ package screens.draganddrop;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.util.InputAdapter;
+import upgrade.NullBodyPart;
 
 import java.util.ArrayList;
 
@@ -41,7 +42,8 @@ public class DragAndDropManager extends InputAdapter {
                 for(DragArea da : dragAreas) {
                     if(d.getRect().intersects(da.getRect())){
                         PartDraggable oldPart = da.getPart();
-                        d.getHome().setPart(null); // clean-up the old home
+                        //d.getHome().setPart(null); // clean-up the old home
+                        d.getHome().setPart(new PartDraggable(da, new NullBodyPart()));
                         if( oldPart != null) {
                             d.getHome().link(oldPart);
                             oldPart.goHome();

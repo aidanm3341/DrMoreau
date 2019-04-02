@@ -89,7 +89,7 @@ public class UpgradeController extends Screen implements ComponentListener {
             dndManager.attach(da);
     }
 
-    public void enter(GameContainer gc, StateBasedGame sbg)
+    public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException
     {
         draggables = new ArrayList<>();
 
@@ -101,6 +101,8 @@ public class UpgradeController extends Screen implements ComponentListener {
         draggables.add(new PartDraggable(armLeftArea, sidekick.getArmLeft()));
         draggables.add(new PartDraggable(armRightArea, sidekick.getArmRight()));
         draggables.add(new PartDraggable(tailArea, sidekick.getTail()));
+
+        draggables.add(new PartDraggable(puddle1, PartFactory.getPart("ostrich_head")));
 
         for(PartDraggable d : draggables) {
             d.init(gc);

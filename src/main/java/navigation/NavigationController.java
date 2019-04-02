@@ -29,6 +29,10 @@ public class NavigationController extends Screen implements ComponentListener {
         view.init(gc, sbg);
     }
 
+    public void enter(GameContainer gc, StateBasedGame sbg){
+
+    }
+
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
     {
         view.render(gc, g);

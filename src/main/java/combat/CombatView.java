@@ -8,7 +8,6 @@ import org.newdawn.slick.gui.ComponentListener;
 import util.AttackButton;
 import util.MyFont;
 
-
 public class CombatView implements ComponentListener {
 
     private AttackButton att1_button, att2_button, att3_button, att4_button, att5_button, att6_button;
@@ -61,7 +60,7 @@ public class CombatView implements ComponentListener {
 
         g.setColor(Color.white);
         g.drawString(" "+ctrl.getMob().getHp(), 1150, 600);
-        //g.drawImage(ctrl.getSidekick().getImage(), 100, 100);
+        ctrl.getSidekick().getImage().render(200, 300, g);
     }
 
     public void componentActivated(AbstractComponent c) {

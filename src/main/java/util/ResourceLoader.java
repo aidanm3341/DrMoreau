@@ -33,8 +33,8 @@ public class ResourceLoader {
         // Travel
         images.put("brickRoute", new Image("travel/brickRoute.png"));
         images.put("brickRouteHover", new Image("travel/brickRouteHover.png"));
-        images.put("greyRoute", new Image("parts/greyRoute.png"));
-        images.put("greyRouteHover", new Image("parts/greyRouteHover.png"));
+        images.put("greyRoute", new Image("travel/greyRoute.png"));
+        images.put("greyRouteHover", new Image("travel/greyRouteHover.png"));
         images.put("travelBorder", new Image("travel/travelBorder.png"));
     }
 

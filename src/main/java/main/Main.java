@@ -54,11 +54,12 @@ public class Main extends StateBasedGame {
     public void enterState(int id, Transition x, Transition y)
     {
         super.enterState(id, x, y);
-        try {
-            this.getState(id).init(gc, this);
-        } catch (SlickException e) {
-            e.printStackTrace();
-        }
+
+//        try {
+//            this.getState(id).init(gc, this);
+//        } catch (SlickException e) {
+//            e.printStackTrace();
+//        }
     }
 
 

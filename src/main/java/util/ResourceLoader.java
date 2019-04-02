@@ -36,6 +36,9 @@ public class ResourceLoader {
         images.put("greyRoute", new Image("travel/greyRoute.png"));
         images.put("greyRouteHover", new Image("travel/greyRouteHover.png"));
         images.put("travelBorder", new Image("travel/travelBorder.png"));
+
+
+        images.put("null", new Image("null.png"));
     }
 
     public static Image getImage(String name)

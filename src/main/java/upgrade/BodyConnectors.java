@@ -1,14 +1,12 @@
 package upgrade;
 
-import org.newdawn.slick.Image;
 import org.newdawn.slick.geom.Point;
-import org.newdawn.slick.geom.Rectangle;
 
 public class BodyConnectors{
 
     private Point headP, armRightP, armLeftP, legLeftP, legRightP, tailP;
 
-    public BodyConnectors(BodyPart bodyPart)
+    public BodyConnectors(AbstractBodyPart bodyPart)
     {
         headP = new Point(bodyPart.getWidth()*0.9f, (bodyPart.getHeight()*0.33f));
         armRightP = new Point(bodyPart.getWidth()*0.8f, bodyPart.getHeight()*0.4f);

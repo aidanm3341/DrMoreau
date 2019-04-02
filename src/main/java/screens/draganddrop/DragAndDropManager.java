@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class DragAndDropManager extends InputAdapter {
 
-    private ArrayList<Draggable> draggables;
+    private ArrayList<PartDraggable> draggables;
     private ArrayList<DragArea> dragAreas;
 
     public DragAndDropManager(){
@@ -19,7 +19,7 @@ public class DragAndDropManager extends InputAdapter {
         gc.getInput().addPrimaryListener(this);
     }
 
-    public void attach(Draggable d){
+    public void attach(PartDraggable d){
         draggables.add(d);
     }
 
@@ -28,7 +28,7 @@ public class DragAndDropManager extends InputAdapter {
     }
 
     public void mousePressed(int button, int x, int y) {
-        for(Draggable d : draggables) {
+        for(PartDraggable d : draggables) {
             if (!d.isClicked() && d.contains(x, y)) {
                 d.setClicked(true);
             }
@@ -36,11 +36,11 @@ public class DragAndDropManager extends InputAdapter {
     }
 
     public void mouseReleased(int button, int x, int y) {
-        for(Draggable d : draggables) {
+        for(PartDraggable d : draggables) {
             if (d.isClicked()) {
                 for(DragArea da : dragAreas) {
                     if(d.getRect().intersects(da.getRect())){
-                        Draggable oldPart = da.getPart();
+                        PartDraggable oldPart = da.getPart();
                         d.getHome().setPart(null); // clean-up the old home
                         if( oldPart != null) {
                             d.getHome().link(oldPart);
@@ -59,7 +59,7 @@ public class DragAndDropManager extends InputAdapter {
 
 
     public void mouseDragged(int oldx, int oldy, int newx, int newy) {
-        for(Draggable d : draggables) {
+        for(PartDraggable d : draggables) {
             if (d.contains(oldx, oldy) && d.isClicked()) {
                 d.setX(d.getX() + newx - oldx);
                 d.setY(d.getY() + newy - oldy);

@@ -22,6 +22,8 @@ public class SuperImage {
         images.add(image);
     }
 
+    public void removeImage(PositionedImage image){images.remove(image);}
+
     public void render(float x, float y, Graphics g)
     {
         for(PositionedImage img : images){

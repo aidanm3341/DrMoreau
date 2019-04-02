@@ -9,7 +9,6 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.state.transition.FadeInTransition;
 import org.newdawn.slick.state.transition.FadeOutTransition;
-import screens.Upgrade;
 import upgrade.UpgradeController;
 
 public class MainController {
@@ -29,6 +28,7 @@ public class MainController {
     public void init(GameContainer gc) throws SlickException
     {
         sidekick = new SidekickData();
+        sidekick.init(gc);
 
         combat = new CombatController(this, sidekick.getAt1(), sidekick.getAt2(), sidekick.getAt3(), sidekick.getAt4(), sidekick.getAt5(), sidekick.getAt6());
         combat.init(gc, sbg);
@@ -42,8 +42,8 @@ public class MainController {
         sbg.addState(combat);
         sbg.addState(navigation);
         sbg.addState(upgrade);
-        sbg.addState(new Upgrade(this));
         sbg.addState(new ConfirmationPanel(this));
+        //updateSidekick();
     }
 
     public void attack(int dmg){
@@ -51,13 +51,19 @@ public class MainController {
     }
 
     public SidekickData getSidekick(){
-        updateSidekick();
+        //updateSidekick();
         return sidekick;
     }
 
-    private void updateSidekick()
+    public void updateSidekick()
     {
-
+        sidekick.addBody(upgrade.getBody());
+        sidekick.addArmRight(upgrade.getArmRight());
+        sidekick.addLegLeft(upgrade.getArmLeft());
+        sidekick.addLegLeft(upgrade.getLegLeft());
+        sidekick.addLegRight(upgrade.getLegRight());
+        sidekick.addHead(upgrade.getHead());
+        sidekick.addTail(upgrade.getTail());
     }
 
     public void enterState(int ID)

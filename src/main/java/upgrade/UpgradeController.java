@@ -1,11 +1,10 @@
 package upgrade;
 
-import animal.PartFactory;
 import main.Main;
 import main.MainController;
+import main.SidekickData;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
@@ -13,10 +12,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import screens.Screen;
 import screens.draganddrop.DragAndDropManager;
 import screens.draganddrop.DragArea;
-import screens.draganddrop.Draggable;
 import screens.draganddrop.PartDraggable;
-import util.Button;
-import util.ResourceLoader;
 
 import java.util.ArrayList;
 
@@ -26,9 +22,9 @@ public class UpgradeController extends Screen implements ComponentListener {
     private UpgradeView view;
 
     private DragAndDropManager dndManager;
-    private ArrayList<Draggable> draggables;
+    private ArrayList<PartDraggable> draggables;
     private ArrayList<DragArea> dragAreas;
-    private DragArea headArea, bodyArea, arm1Area, arm2Area, leg1Area, leg2Area, tailArea, puddle1, puddle2, puddle3;
+    private DragArea headArea, bodyArea, armLeftArea, armRightArea, legLeftArea, legRightArea, tailArea, puddle1, puddle2, puddle3;
     public int getID() {
         return Main.UPGRADE;
     }
@@ -52,17 +48,17 @@ public class UpgradeController extends Screen implements ComponentListener {
 
         headArea = new DragArea(200, 100, 75, 75);
         bodyArea = new DragArea(175, 200, 125, 250);
-        arm1Area = new DragArea(75, 200, 70, 150);
-        arm2Area = new DragArea(325, 200, 70, 150);
-        leg1Area = new DragArea(160, 475, 75, 150);
-        leg2Area = new DragArea(250, 475, 75, 150);
+        armLeftArea = new DragArea(75, 200, 70, 150);
+        armRightArea = new DragArea(325, 200, 70, 150);
+        legLeftArea = new DragArea(160, 475, 75, 150);
+        legRightArea = new DragArea(250, 475, 75, 150);
         tailArea = new DragArea(325, 380, 200, 50);
         dragAreas.add(headArea);
         dragAreas.add(bodyArea);
-        dragAreas.add(arm1Area);
-        dragAreas.add(arm2Area);
-        dragAreas.add(leg1Area);
-        dragAreas.add(leg2Area);
+        dragAreas.add(armLeftArea);
+        dragAreas.add(armRightArea);
+        dragAreas.add(legLeftArea);
+        dragAreas.add(legRightArea);
         dragAreas.add(tailArea);
 
         puddle1 = new DragArea(1200, 340, 10, 10);
@@ -73,27 +69,81 @@ public class UpgradeController extends Screen implements ComponentListener {
         dragAreas.add(puddle3);
 
 
-        draggables.add(new PartDraggable(headArea, PartFactory.getPart("dog_head")));
-        draggables.add(new PartDraggable(bodyArea,  PartFactory.getPart("ostrich_head")));
-        draggables.add(new PartDraggable(puddle1,  PartFactory.getPart("dog_leg")));
-        draggables.add(new PartDraggable(leg1Area,  PartFactory.getPart("blue_leg")));
-        draggables.add(new PartDraggable(arm2Area,  PartFactory.getPart("dog_arm")));
-        draggables.add(new PartDraggable(tailArea,  PartFactory.getPart("dog_arm")));
-        draggables.add(new PartDraggable(puddle2, PartFactory.getPart("dog_body")));
-        draggables.add(new PartDraggable(puddle3, PartFactory.getPart("dog_leg")));
+        //draggables.add(new PartDraggable(headArea, PartFactory.getPart("dog_head")));
+        //draggables.add(new PartDraggable(bodyArea,  PartFactory.getPart("dog_body")));
+        //draggables.add(new PartDraggable(legRightArea, PartFactory.getPart("dog_leg")));
+        //draggables.add(new PartDraggable(legLeftArea,  PartFactory.getPart("dog_leg")));
+        //draggables.add(new PartDraggable(armRightArea,  PartFactory.getPart("dog_arm")));
+        //draggables.add(new PartDraggable(armLeftArea,  PartFactory.getPart("dog_arm")));
+        //draggables.add(new PartDraggable(tailArea,  PartFactory.getPart("dog_tail")));
 
-        for(Draggable d : draggables) {
+        //draggables.add(new PartDraggable(puddle1,  PartFactory.getPart("dog_leg")));
+        //draggables.add(new PartDraggable(puddle2, PartFactory.getPart("dog_body")));
+        //draggables.add(new PartDraggable(puddle3, PartFactory.getPart("dog_leg")));
+
+//        for(PartDraggable d : draggables) {
+//            d.init(gc);
+//            dndManager.attach(d);
+//        }
+        for(DragArea da : dragAreas)
+            dndManager.attach(da);
+    }
+
+    public void enter(GameContainer gc, StateBasedGame sbg)
+    {
+        draggables = new ArrayList<>();
+
+        SidekickData sidekick = main.getSidekick();
+        draggables.add(new PartDraggable(headArea, sidekick.getHead()));
+        draggables.add(new PartDraggable(bodyArea, sidekick.getBody()));
+        draggables.add(new PartDraggable(legLeftArea, sidekick.getLegLeft()));
+        draggables.add(new PartDraggable(legRightArea, sidekick.getLegRight()));
+        draggables.add(new PartDraggable(armLeftArea, sidekick.getArmLeft()));
+        draggables.add(new PartDraggable(armRightArea, sidekick.getArmRight()));
+        draggables.add(new PartDraggable(tailArea, sidekick.getTail()));
+
+        for(PartDraggable d : draggables) {
             d.init(gc);
             dndManager.attach(d);
         }
-        for(DragArea da : dragAreas)
-            dndManager.attach(da);
-
-
-
     }
 
-    public ArrayList<Draggable> getDraggables() {
+    public void leave(GameContainer gc, StateBasedGame sbg)
+    {
+        main.updateSidekick();
+    }
+
+
+    public AbstractBodyPart getHead(){
+        return headArea.getPart().getPart();
+    }
+
+    public AbstractBodyPart getBody(){
+        return bodyArea.getPart().getPart();
+    }
+
+    public AbstractBodyPart getLegLeft(){
+        return legLeftArea.getPart().getPart();
+    }
+
+    public AbstractBodyPart getLegRight(){
+        return legRightArea.getPart().getPart();
+    }
+
+    public AbstractBodyPart getArmLeft(){
+        return armLeftArea.getPart().getPart();
+    }
+
+    public AbstractBodyPart getArmRight(){
+        return armRightArea.getPart().getPart();
+    }
+
+    public AbstractBodyPart getTail(){
+        return tailArea.getPart().getPart();
+    }
+
+
+    public ArrayList<PartDraggable> getDraggables() {
         return draggables;
     }
 

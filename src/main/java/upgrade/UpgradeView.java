@@ -6,7 +6,7 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 import screens.draganddrop.DragArea;
-import screens.draganddrop.Draggable;
+import screens.draganddrop.PartDraggable;
 import util.Button;
 import util.ResourceLoader;
 
@@ -37,7 +37,7 @@ public class UpgradeView {
         g.drawImage(puddle, gc.getWidth()/2, 100);
         for(DragArea d : ctrl.getDragAreas())
             d.render(gc, g);
-        for(Draggable d : ctrl.getDraggables())
+        for(PartDraggable d : ctrl.getDraggables())
             d.render(gc, g);
 
         nextButton.render(gc, g);

@@ -4,7 +4,7 @@ import main.Attack;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.geom.Point;
 
-public class BodyPart {
+public class BodyPart implements AbstractBodyPart{
 
     private String name, type;
     private int hp;

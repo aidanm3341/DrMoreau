@@ -30,7 +30,7 @@ public class Upgrade extends Screen implements ComponentListener {
     private Image puddle;
     private Button nextButton;
     public int getID() {
-        return Main.UPGRADE;
+        return -1;//Main.UPGRADE;
     }
 
     public Upgrade(MainController main)

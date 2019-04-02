@@ -10,6 +10,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.state.transition.FadeInTransition;
 import org.newdawn.slick.state.transition.FadeOutTransition;
 import screens.Upgrade;
+import upgrade.UpgradeController;
 
 public class MainController {
 
@@ -17,6 +18,7 @@ public class MainController {
 
     private CombatController combat;
     private NavigationController navigation;
+    private UpgradeController upgrade;
     private StateBasedGame sbg;
 
     public MainController(GameContainer gc, StateBasedGame sbg) throws SlickException
@@ -27,14 +29,19 @@ public class MainController {
     public void init(GameContainer gc) throws SlickException
     {
         sidekick = new SidekickData();
+
         combat = new CombatController(this, sidekick.getAt1(), sidekick.getAt2(), sidekick.getAt3(), sidekick.getAt4(), sidekick.getAt5(), sidekick.getAt6());
         combat.init(gc, sbg);
 
         navigation = new NavigationController(this);
         navigation.init(gc, sbg);
 
+        upgrade = new UpgradeController(this);
+        upgrade.init(gc, sbg);
+
         sbg.addState(combat);
         sbg.addState(navigation);
+        sbg.addState(upgrade);
         sbg.addState(new Upgrade(this));
         sbg.addState(new ConfirmationPanel(this));
     }
@@ -44,7 +51,13 @@ public class MainController {
     }
 
     public SidekickData getSidekick(){
+        updateSidekick();
         return sidekick;
+    }
+
+    private void updateSidekick()
+    {
+
     }
 
     public void enterState(int ID)

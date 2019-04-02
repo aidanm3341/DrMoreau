@@ -26,84 +26,110 @@ public class SidekickData {
 
 
         image = new SuperImage();
-        initBody();
-        initLegLeft();
-        initArmLeft();
-        // NOTE : NEEDS TO BE HERE TO BE RENDERED PROPERLY, AS OPPOSED TO IN THE initBody METHOD.
-        image.addImage(new PositionedImage(body.getImage(),0, 0));
-        //
-        initLegRight();
-        initArmRight();
-        initTail();
-        initHead();
-    }
+        addBody(new BodyPart("dog_body", "body", at1, 30,
+                ResourceLoader.getImage("dog_body"), null));
 
-    private void initBody() {
-        body = new BodyPart("dog_body", "body", at1, 30, ResourceLoader.getImage("dog_body"), null);
-        connectors = new BodyConnectors(body);
-    }
-
-    private void initHead() {
-        Image dogHead = ResourceLoader.getImage("dog_head");
-        head = new BodyPart("dog_head", "head", at1, 10, dogHead,
-                new Point(0, dogHead.getHeight() - 40));
-
-        image.addImage(new PositionedImage(head.getImage(),
-                connectors.getHeadP().getX() - head.getAttachPoint().getX(),
-                connectors.getHeadP().getY() - head.getAttachPoint().getY()));
-    }
-
-    private void initLegLeft(){
         Image dogLeg = ResourceLoader.getImage("dog_leg");
-        legLeft = new BodyPart("dog_leg", "leg", at2, 5, dogLeg,
-                new Point(dogLeg.getWidth()/2, 20));
+        addLegLeft(new BodyPart("dog_leg", "leg", at2, 5, dogLeg,
+                new Point(dogLeg.getWidth()/2, 20)));
 
-        image.addImage(new PositionedImage(legLeft.getImage(),
-                connectors.getLegLeftP().getX() - legLeft.getAttachPoint().getX(),
-                connectors.getLegLeftP().getY() - legLeft.getAttachPoint().getY()));
-    }
-
-    private void initLegRight(){
-        Image dogLeg = ResourceLoader.getImage("dog_leg");
-        legRight = new BodyPart("dog_leg", "leg", at2, 5, dogLeg,
-                new Point(dogLeg.getWidth()/2, 20));
-
-        image.addImage(new PositionedImage(legRight.getImage(),
-                connectors.getLegRightP().getX() - legRight.getAttachPoint().getX(),
-                connectors.getLegRightP().getY() - legRight.getAttachPoint().getY()));
-    }
-
-    private void initArmLeft(){
         Image dogArm = ResourceLoader.getImage("dog_arm");
-        armLeft = new BodyPart("dog_arm", "arm", at2, 5, dogArm,
-                new Point(dogArm.getWidth()/2, 15));
+        addArmLeft(new BodyPart("dog_arm", "arm", at2, 5, dogArm,
+                new Point(dogArm.getWidth()/2, 15)));
 
-        image.addImage(new PositionedImage(armLeft.getImage(),
-                connectors.getArmLeftP().getX() - armLeft.getAttachPoint().getX(),
-                connectors.getArmLeftP().getY() - armLeft.getAttachPoint().getY()));
-    }
+        addLegRight(new BodyPart("dog_leg", "leg", at2, 5, dogLeg,
+                new Point(dogLeg.getWidth()/2, 20)));
 
-    private void initArmRight(){
-        Image dogArm = ResourceLoader.getImage("dog_arm");
-        armRight = new BodyPart("dog_arm", "arm", at2, 5, dogArm,
-                new Point(dogArm.getWidth()/2, 15));
+        addArmRight(new BodyPart("dog_arm", "arm", at2, 5, dogArm,
+                new Point(dogArm.getWidth()/2, 15)));
 
-        image.addImage(new PositionedImage(armRight.getImage(),
-                connectors.getArmRightP().getX() - armRight.getAttachPoint().getX(),
-                connectors.getArmRightP().getY() - armRight.getAttachPoint().getY()));
-    }
-
-    private void initTail(){
         Image dogTail = ResourceLoader.getImage("dog_tail");
-        tail = new BodyPart("dog_tail", "tail", at2, 5, dogTail,
-                new Point(dogTail.getWidth()-15, dogTail.getHeight()/2));
+        addTail(new BodyPart("dog_tail", "tail", at2, 5, dogTail,
+                new Point(dogTail.getWidth()-15, dogTail.getHeight()/2)));
 
-        image.addImage(new PositionedImage(tail.getImage(),
-                connectors.getTailP().getX() - tail.getAttachPoint().getX(),
-                connectors.getTailP().getY() - tail.getAttachPoint().getY()));
+        Image dogHead = ResourceLoader.getImage("dog_head");
+        addHead(new BodyPart("dog_head", "head", at1, 10, dogHead,
+                new Point(0, dogHead.getHeight() - 40)));
+
+        composeImage();
     }
 
 
+
+    public void addBody(BodyPart newPart){
+        body = newPart;
+        connectors = new BodyConnectors(body);
+        composeImage();
+    }
+
+    public void addHead(BodyPart newPart){
+        head = newPart;
+        composeImage();
+    }
+
+    public void addLegLeft(BodyPart newPart){
+        legLeft = newPart;
+        composeImage();
+    }
+
+    public void addLegRight(BodyPart newPart){
+        legRight = newPart;
+        composeImage();
+    }
+
+    public void addArmLeft(BodyPart newPart){
+        armLeft = newPart;
+        composeImage();
+    }
+
+    public void addArmRight(BodyPart newPart){
+        armRight = newPart;
+        composeImage();
+    }
+
+    public void addTail(BodyPart newPart){
+        tail = newPart;
+        composeImage();
+    }
+
+
+    private void composeImage() {
+        if(legLeft != null) {
+            image.addImage(new PositionedImage(legLeft.getImage(),
+                    connectors.getLegLeftP().getX() - legLeft.getAttachPoint().getX(),
+                    connectors.getLegLeftP().getY() - legLeft.getAttachPoint().getY()));
+        }
+        if(armLeft != null) {
+            image.addImage(new PositionedImage(armLeft.getImage(),
+                    connectors.getArmLeftP().getX() - armLeft.getAttachPoint().getX(),
+                    connectors.getArmLeftP().getY() - armLeft.getAttachPoint().getY()));
+        }
+        if(body != null) {
+            // NOTE : NEEDS TO BE HERE TO BE RENDERED PROPERLY
+            image.addImage(new PositionedImage(body.getImage(), 0, 0));
+            //
+        }
+        if(legRight != null) {
+            image.addImage(new PositionedImage(legRight.getImage(),
+                    connectors.getLegRightP().getX() - legRight.getAttachPoint().getX(),
+                    connectors.getLegRightP().getY() - legRight.getAttachPoint().getY()));
+        }
+        if(armRight != null) {
+            image.addImage(new PositionedImage(armRight.getImage(),
+                    connectors.getArmRightP().getX() - armRight.getAttachPoint().getX(),
+                    connectors.getArmRightP().getY() - armRight.getAttachPoint().getY()));
+        }
+        if(tail != null) {
+            image.addImage(new PositionedImage(tail.getImage(),
+                    connectors.getTailP().getX() - tail.getAttachPoint().getX(),
+                    connectors.getTailP().getY() - tail.getAttachPoint().getY()));
+        }
+        if(head != null) {
+            image.addImage(new PositionedImage(head.getImage(),
+                    connectors.getHeadP().getX() - head.getAttachPoint().getX(),
+                    connectors.getHeadP().getY() - head.getAttachPoint().getY()));
+        }
+    }
 
 
     public void attack(int dmg){

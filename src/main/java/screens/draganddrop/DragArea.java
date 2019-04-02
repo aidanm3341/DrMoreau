@@ -4,8 +4,7 @@ import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.geom.Rectangle;
-import upgrade.BodyPart;
-import upgrade.NullBodyPart;
+import upgrade.bodyparts.NullBodyPart;
 
 public class DragArea {
 

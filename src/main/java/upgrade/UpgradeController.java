@@ -13,6 +13,8 @@ import screens.Screen;
 import screens.draganddrop.DragAndDropManager;
 import screens.draganddrop.DragArea;
 import screens.draganddrop.PartDraggable;
+import upgrade.bodyparts.AbstractBodyPart;
+import upgrade.bodyparts.PartFactory;
 
 import java.util.ArrayList;
 

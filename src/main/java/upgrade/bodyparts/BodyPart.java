@@ -1,10 +1,11 @@
-package upgrade;
+package upgrade.bodyparts;
 
 import main.Attack;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.geom.Point;
+import upgrade.bodyparts.AbstractBodyPart;
 
-public class BodyPart implements AbstractBodyPart{
+public class BodyPart implements AbstractBodyPart {
 
     private String name, type;
     private int hp;

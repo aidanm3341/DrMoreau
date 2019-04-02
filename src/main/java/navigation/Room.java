@@ -2,7 +2,7 @@ package navigation;
 
 import combat.Mob;
 import org.newdawn.slick.Image;
-import upgrade.BodyPart;
+import upgrade.bodyparts.BodyPart;
 
 import java.util.ArrayList;
 

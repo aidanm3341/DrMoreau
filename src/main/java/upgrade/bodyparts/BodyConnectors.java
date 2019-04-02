@@ -1,6 +1,7 @@
-package upgrade;
+package upgrade.bodyparts;
 
 import org.newdawn.slick.geom.Point;
+import upgrade.bodyparts.AbstractBodyPart;
 
 public class BodyConnectors{
 

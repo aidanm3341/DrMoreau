@@ -1,7 +1,7 @@
 package combat;
 
 import org.newdawn.slick.Image;
-import upgrade.BodyPart;
+import upgrade.bodyparts.BodyPart;
 
 import java.util.ArrayList;
 

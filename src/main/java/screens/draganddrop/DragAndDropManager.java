@@ -2,7 +2,7 @@ package screens.draganddrop;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.util.InputAdapter;
-import upgrade.NullBodyPart;
+import upgrade.bodyparts.NullBodyPart;
 
 import java.util.ArrayList;
 

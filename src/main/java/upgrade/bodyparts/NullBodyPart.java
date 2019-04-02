@@ -1,7 +1,8 @@
-package upgrade;
+package upgrade.bodyparts;
 
 import org.newdawn.slick.Image;
 import org.newdawn.slick.geom.Point;
+import upgrade.bodyparts.AbstractBodyPart;
 import util.ResourceLoader;
 
 public class NullBodyPart implements AbstractBodyPart {

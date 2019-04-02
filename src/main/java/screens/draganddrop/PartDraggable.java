@@ -3,7 +3,7 @@ package screens.draganddrop;
 import org.newdawn.slick.*;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.gui.GUIContext;
-import upgrade.AbstractBodyPart;
+import upgrade.bodyparts.AbstractBodyPart;
 
 public class PartDraggable {
 

@@ -37,6 +37,13 @@ public class Pool<E> {
         return returns;
     }
 
+    public E pop()
+    {
+        E e = things.get(rand.nextInt(things.size()));
+        things.remove(e);
+        return e;
+    }
+
     public ArrayList<E> getX(int number) {
         if(number > things.size())
             throw new IndexOutOfBoundsException("Number given is greater than Pool size.");

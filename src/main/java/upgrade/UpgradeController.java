@@ -14,7 +14,9 @@ import screens.draganddrop.DragAndDropManager;
 import screens.draganddrop.DragArea;
 import screens.draganddrop.PartDraggable;
 import upgrade.bodyparts.AbstractBodyPart;
+import upgrade.bodyparts.BodyPart;
 import upgrade.bodyparts.PartFactory;
+import util.Pool;
 
 import java.util.ArrayList;
 
@@ -104,7 +106,13 @@ public class UpgradeController extends Screen implements ComponentListener {
         draggables.add(new PartDraggable(armRightArea, sidekick.getArmRight()));
         draggables.add(new PartDraggable(tailArea, sidekick.getTail()));
 
-        draggables.add(new PartDraggable(puddle1, PartFactory.getPart("ostrich_head")));
+        Pool<BodyPart> rewards = new Pool<>();
+        rewards.addAll(main.getActiveRoom().getRewards());
+
+        draggables.add(new PartDraggable(puddle1, rewards.pop()));
+        draggables.add(new PartDraggable(puddle2, rewards.pop()));
+        draggables.add(new PartDraggable(puddle3, rewards.pop()));
+
 
         for(PartDraggable d : draggables) {
             d.init(gc);

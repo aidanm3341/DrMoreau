@@ -28,7 +28,7 @@ public class Room {
         navigationImageHover = navigationImage.copy();
         navigationImageHover.getGraphics().drawImage(ResourceLoader.getImage("travelHover"), 0, 0);
         navigationImageHover.getGraphics().flush();
-        rewards = rewards;
+        this.rewards = rewards;
     }
 
     public int getType() {

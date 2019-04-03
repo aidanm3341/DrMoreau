@@ -12,21 +12,15 @@ public class ResourceLoader {
     public static void loadImages() throws SlickException
     {
         images = new HashMap<>();
-        // Parts
-        images.put("dog_leg", new Image("parts/dog/dog_leg.png"));
-        images.put("dog_arm", new Image("parts/dog/dog_arm.png"));
-        images.put("dog_head", new Image("parts/dog/dog_head.png"));
-        images.put("dog_body", new Image("parts/dog/dog_body.png"));
-        images.put("dog_tail", new Image("parts/dog/dog_tail.png"));
-        images.put("ostrich_head", new Image("parts/ostrich_head.png"));
 
-        images.put("rat_leg", new Image("parts/rat/rat_leg.png"));
-        images.put("rat_arm", new Image("parts/rat/rat_arm.png"));
-        images.put("rat_head", new Image("parts/rat/rat_head.png"));
-        images.put("rat_body", new Image("parts/rat/rat_body.png"));
-        images.put("rat_tail", new Image("parts/rat/rat_tail.png"));
+        loadParts();
+        loadGUI();
+        loadNavigation();
 
-        // Gui
+        images.put("null", new Image("null.png"));
+    }
+
+    private static void loadGUI() throws SlickException {
         images.put("menuButton", new Image("gui/menuButton.png"));
         images.put("menuButtonHover", new Image("gui/menuButtonHover.png"));
         images.put("basicButton", new Image("gui/basicButton.png"));
@@ -34,18 +28,40 @@ public class ResourceLoader {
         images.put("basicButtonPressed", new Image("gui/basicButtonPressed.png"));
         images.put("upgradePuddle", new Image("gui/upgradePuddle.png"));
         images.put("battleBackground", new Image("gui/background.png"));
+    }
 
-        // Travel
+    private static void loadNavigation() throws SlickException {
         images.put("brickRoute", new Image("travel/brickRoute.png"));
         images.put("brickRouteHover", new Image("travel/brickRouteHover.png"));
         images.put("greyRoute", new Image("travel/greyRoute.png"));
         images.put("greyRouteHover", new Image("travel/greyRouteHover.png"));
         images.put("travelBorder", new Image("travel/travelBorder.png"));
         images.put("travelHover", new Image("travel/travelHover.png"));
-
-
-        images.put("null", new Image("null.png"));
     }
+
+    private static void loadParts() throws SlickException {
+        loadDog();
+        loadRat();
+        loadMisc();
+
+        images.put("ostrich_head", new Image("parts/ostrich_head.png"));
+    }
+
+    private static void loadDog() throws SlickException {
+        images.put("dog_leg", new Image("parts/dog/dog_leg.png"));
+        images.put("dog_arm", new Image("parts/dog/dog_arm.png"));
+        images.put("dog_head", new Image("parts/dog/dog_head.png"));
+        images.put("dog_body", new Image("parts/dog/dog_body.png"));
+        images.put("dog_tail", new Image("parts/dog/dog_tail.png"));
+    }
+    private static void loadRat() throws SlickException {
+        images.put("rat_leg", new Image("parts/rat/rat_leg.png"));
+        images.put("rat_arm", new Image("parts/rat/rat_arm.png"));
+        images.put("rat_head", new Image("parts/rat/rat_head.png"));
+        images.put("rat_body", new Image("parts/rat/rat_body.png"));
+        images.put("rat_tail", new Image("parts/rat/rat_tail.png"));
+    }
+    private static void loadMisc() throws SlickException{}
 
     public static Image getImage(String name)
     {

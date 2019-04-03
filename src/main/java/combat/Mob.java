@@ -1,6 +1,5 @@
 package combat;
 
-import org.newdawn.slick.Image;
 import upgrade.bodyparts.BodyPart;
 import util.SuperImage;
 

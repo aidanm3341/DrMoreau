@@ -25,7 +25,7 @@ public class CombatView implements ComponentListener {
         att5_button = new AttackButton(at5, 400, 750);
         att6_button = new AttackButton(at6, 650, 750);
         this.ctrl = ctrl;
-        background = ResourceLoader.getImage("battleBackground").getScaledCopy(4f);
+        background = ResourceLoader.getImage("battleBackground");
     }
 
     public void init(GameContainer gc){
@@ -54,17 +54,18 @@ public class CombatView implements ComponentListener {
         try {
             g.setFont(MyFont.createFont(12));
         } catch (Exception e) { e.printStackTrace(); }
+        ctrl.getSidekick().getImage().render(300, 450, g);
+        ctrl.getMob().getMobImage().render(1300, 510, g);
+
         att1_button.render(gc, g);
         att2_button.render(gc, g);
         att3_button.render(gc, g);
         att4_button.render(gc, g);
         att5_button.render(gc, g);
         att6_button.render(gc, g);
-        ctrl.getMob().getMobImage().render(1300, 400, g);
 
         g.setColor(Color.white);
         g.drawString(" "+ctrl.getMob().getHp(), 1150, 600);
-        ctrl.getSidekick().getImage().render(300, 350, g);
     }
 
     public void componentActivated(AbstractComponent c) {

@@ -8,7 +8,6 @@ import upgrade.bodyparts.BodyPart;
 import upgrade.bodyparts.BodyConnectors;
 import upgrade.bodyparts.NullBodyPart;
 import util.CreatureComposer;
-import util.PositionedImage;
 import util.ResourceLoader;
 import util.SuperImage;
 

@@ -2,27 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/CreatureComposer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Mob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/PositionedImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/PositionedImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/SuperImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/SuperImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/combat/Mob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/Mob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/MobData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/MobData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/SidekickData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/SidekickData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/blue_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog_tail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/PartDraggable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/draganddrop/PartDraggable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/BodyPart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,16 +45,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/combat/MobData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="235">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/combat/Mob.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
@@ -94,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/util/SuperImage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/util/CreatureComposer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/main/java/screens/Travel.java" />
         <option value="$PROJECT_DIR$/src/main/java/screens/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/navigation/ConfirmationPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/CombatView.java" />
         <option value="$PROJECT_DIR$/src/main/java/screens/Upgrade.java" />
         <option value="$PROJECT_DIR$/src/main/java/animal/PartFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/animal/Animal.java" />
@@ -161,12 +146,13 @@
         <option value="$PROJECT_DIR$/src/main/java/navigation/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/MobData.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/CreatureComposer.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/PositionedImage.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/SuperImage.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/SidekickData.java" />
         <option value="$PROJECT_DIR$/src/main/java/combat/Mob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/CombatView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/MobData.java" />
       </list>
     </option>
   </component>
@@ -288,7 +274,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554250863464" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554251311781" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -416,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554248210196</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Created a generalised way of created mob images, and made them flippable&#10;so that they can be used to create mobs">
+      <created>1554251115065</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1554251115065</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -463,7 +456,8 @@
     <MESSAGE value="You can now permanently add parts to the sidekick in the upgrade screen" />
     <MESSAGE value="Refactored body parts" />
     <MESSAGE value="Refactored the way images are stored slightly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored the way images are stored slightly" />
+    <MESSAGE value="Created a generalised way of created mob images, and made them flippable&#10;so that they can be used to create mobs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a generalised way of created mob images, and made them flippable&#10;so that they can be used to create mobs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/parts/rat/rat_tail.png">
@@ -483,13 +477,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_forelimb.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/animal/Part.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -750,17 +737,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/MobData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/util/CreatureComposer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -781,7 +761,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/util/SuperImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -803,6 +783,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/MobData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
         </state>
       </provider>
     </entry>

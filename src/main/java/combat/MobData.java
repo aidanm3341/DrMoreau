@@ -1,6 +1,8 @@
 package combat;
 
+import util.PositionedImage;
 import util.ResourceLoader;
+import util.SuperImage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,9 +14,12 @@ public class MobData {
     private static void loadMobs()
     {
         mobs = new HashMap<>();
+        SuperImage test = new SuperImage();
+        test.addImage(new PositionedImage(ResourceLoader.getImage("ostrich_head"), 10, 10));
+        test.flipH(true);
         mobs.put("test", new Mob("Test",
                 50, 50, 50,  new ArrayList<>(),
-                ResourceLoader.getImage("ostrich_head").getFlippedCopy(true, false).getScaledCopy(2f)));
+                test));
     }
 
 //    public static Mob getMob(String name)
@@ -27,10 +32,15 @@ public class MobData {
 
     public static Mob getMob(String name)
     {
-        if (name.equals("test"))
+        if (name.equals("test")) {
+            SuperImage test = new SuperImage();
+            test.addImage(new PositionedImage(ResourceLoader.getImage("ostrich_head"), 10, 10));
+            test.flipH(true);
             return new Mob("Test",
                     50, 50, 50,  new ArrayList<>(),
-                    ResourceLoader.getImage("ostrich_head").getFlippedCopy(true, false).getScaledCopy(2f));
+                    test);
+
+        }
         return null;
     }
 }

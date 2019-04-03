@@ -48,6 +48,8 @@ public class MobData {
                 return makeDog();
             case "rat":
                 return makeRat();
+            case "bunny":
+                return makeBunny();
         }
         return null;
     }
@@ -110,5 +112,31 @@ public class MobData {
         parts.add(PartFactory.getPart("rat_body"));
 
         return new Mob("Rat", 10, 5, 5, parts, image);
+    }
+
+    private static Mob makeBunny() throws SlickException
+    {
+        BodyPart body = PartFactory.getPart("bunny_body");
+
+        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+                PartFactory.getPart("bunny_head"),
+                PartFactory.getPart("bunny_arm"),
+                PartFactory.getPart("bunny_arm"),
+                PartFactory.getPart("bunny_leg"),
+                PartFactory.getPart("bunny_leg"),
+                PartFactory.getPart("bunny_tail"),
+                PartFactory.getPart("bunny_body"));
+        image.flipH(true);
+
+        ArrayList<BodyPart> parts = new ArrayList<>();
+        parts.add(PartFactory.getPart("bunny_head"));
+        parts.add(PartFactory.getPart("bunny_arm"));
+        parts.add(PartFactory.getPart("bunny_arm"));
+        parts.add(PartFactory.getPart("bunny_leg"));
+        parts.add(PartFactory.getPart("bunny_leg"));
+        parts.add(PartFactory.getPart("bunny_tail"));
+        parts.add(PartFactory.getPart("bunny_body"));
+
+        return new Mob("Bunny", 10, 5, 5, parts, image);
     }
 }

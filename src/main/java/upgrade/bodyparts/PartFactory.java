@@ -76,6 +76,29 @@ public class PartFactory {
                 Image bunnyHead = ResourceLoader.getImage("bunny_head");
                 return new BodyPart("bunny_head", "head", at1, 5, bunnyHead,
                         new Point(bunnyHead.getWidth() * 1.66f, bunnyHead.getHeight() - 50));
+            case "bunny_leg":
+                Image bunnyLeg = ResourceLoader.getImage("bunny_leg");
+                return new BodyPart("bunny_leg", "leg", at1, 5, bunnyLeg,
+                        new Point(bunnyLeg.getWidth()/2, 20));
+            case "bunny_arm":
+                Image bunnyArm = ResourceLoader.getImage("bunny_arm").getScaledCopy(0.8f);
+                return new BodyPart("bunny_arm", "arm", at1, 5, bunnyArm,
+                        new Point(bunnyArm.getWidth()/1.66f, 20));
+            case "bunny_tail":
+                Image bunnyTail = ResourceLoader.getImage("bunny_tail");
+                return new BodyPart("bunny_tail", "tail", at1, 5, bunnyTail,
+                        new Point (bunnyTail.getWidth()-15, bunnyTail.getHeight()/2));
+            case "bunny_body":
+                Image bunnyBody = ResourceLoader.getImage("bunny_body");
+                connectors = new BodyConnectors(
+                        new Point(bunnyBody.getWidth()*0.95f, (bunnyBody.getHeight()*0.8f)),
+                        new Point(bunnyBody.getWidth()*0.8f, bunnyBody.getHeight()*0.7f),
+                        new Point(bunnyBody.getWidth()*0.7f, bunnyBody.getHeight()*0.6f),
+                        new Point (bunnyBody.getWidth()*0.3f, bunnyBody.getHeight()*0.7f),
+                        new Point (bunnyBody.getWidth()*0.2f, bunnyBody.getHeight()*0.6f),
+                        new Point(-10, bunnyBody.getHeight()*0.65f));
+                return new BodyBodyPart("bunny_body", "body", at1, 5, bunnyBody,null, connectors);
+
             default:
                 throw new SlickException("Not a valid animal part.");
         }

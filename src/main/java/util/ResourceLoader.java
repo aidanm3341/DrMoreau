@@ -33,6 +33,7 @@ public class ResourceLoader {
         images.put("basicButtonHover", new Image("gui/basicButtonHover.png"));
         images.put("basicButtonPressed", new Image("gui/basicButtonPressed.png"));
         images.put("upgradePuddle", new Image("gui/upgradePuddle.png"));
+        images.put("battleBackground", new Image("gui/background.png"));
 
         // Travel
         images.put("brickRoute", new Image("travel/brickRoute.png"));

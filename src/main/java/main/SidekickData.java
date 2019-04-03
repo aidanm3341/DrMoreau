@@ -72,7 +72,12 @@ public class SidekickData {
 
     public void addBody(AbstractBodyPart newPart){
         body = newPart;
-        connectors = new BodyConnectors(body);
+        connectors = new BodyConnectors(new Point(body.getWidth()*0.9f, (body.getHeight()*0.33f)),
+                new Point(body.getWidth()*0.8f, body.getHeight()*0.4f),
+                new Point(body.getWidth()*0.7f, body.getHeight()*0.3f),
+                new Point (body.getWidth()*0.3f, body.getHeight()*0.3f),
+                new Point (body.getWidth()*0.2f, body.getHeight()*0.2f),
+                new Point(0, body.getHeight()*0.4f));
         composeImage();
     }
 

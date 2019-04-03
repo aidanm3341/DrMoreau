@@ -3,15 +3,18 @@ package combat;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import util.AttackButton;
 import util.MyFont;
+import util.ResourceLoader;
 
 public class CombatView implements ComponentListener {
 
     private AttackButton att1_button, att2_button, att3_button, att4_button, att5_button, att6_button;
     private CombatController ctrl;
+    private Image background;
 
     public CombatView(CombatController ctrl, String at1, String at2, String at3, String at4, String at5, String at6)
     {
@@ -22,6 +25,7 @@ public class CombatView implements ComponentListener {
         att5_button = new AttackButton(at5, 400, 750);
         att6_button = new AttackButton(at6, 650, 750);
         this.ctrl = ctrl;
+        background = ResourceLoader.getImage("battleBackground").getScaledCopy(4f);
     }
 
     public void init(GameContainer gc){
@@ -46,6 +50,7 @@ public class CombatView implements ComponentListener {
 
     public void render(GameContainer gc, Graphics g)
     {
+        g.drawImage(background, 0, 0);
         try {
             g.setFont(MyFont.createFont(12));
         } catch (Exception e) { e.printStackTrace(); }
@@ -55,11 +60,11 @@ public class CombatView implements ComponentListener {
         att4_button.render(gc, g);
         att5_button.render(gc, g);
         att6_button.render(gc, g);
-        ctrl.getMob().getMobImage().render(1400, 300, g);
+        ctrl.getMob().getMobImage().render(1300, 400, g);
 
         g.setColor(Color.white);
         g.drawString(" "+ctrl.getMob().getHp(), 1150, 600);
-        ctrl.getSidekick().getImage().render(200, 300, g);
+        ctrl.getSidekick().getImage().render(300, 350, g);
     }
 
     public void componentActivated(AbstractComponent c) {

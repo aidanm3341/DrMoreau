@@ -1,7 +1,9 @@
 package combat;
 
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.Point;
 import upgrade.bodyparts.BodyConnectors;
+import upgrade.bodyparts.BodyPart;
 import upgrade.bodyparts.PartFactory;
 import util.CreatureComposer;
 import util.PositionedImage;
@@ -42,28 +44,57 @@ public class MobData {
                 image.flipH(true);
                 return new Mob("Test", 50, 50, 50, new ArrayList<>(), image);
             case "dog":
-                image = CreatureComposer.composeImage(new BodyConnectors(PartFactory.getPart("dog_body")),
-                        PartFactory.getPart("dog_head"),
-                        PartFactory.getPart("dog_arm"),
-                        PartFactory.getPart("dog_arm"),
-                        PartFactory.getPart("dog_leg"),
-                        PartFactory.getPart("dog_leg"),
-                        PartFactory.getPart("dog_tail"),
-                        PartFactory.getPart("dog_body"));
-                image.flipH(true);
-                return new Mob("Dog", 20, 10, 5, new ArrayList<>(), image);
+                return makeDog();
             case "rat":
-                image = CreatureComposer.composeImage(new BodyConnectors(PartFactory.getPart("rat_body")),
-                        PartFactory.getPart("rat_head"),
-                        PartFactory.getPart("rat_arm"),
-                        PartFactory.getPart("rat_arm"),
-                        PartFactory.getPart("rat_leg"),
-                        PartFactory.getPart("rat_leg"),
-                        PartFactory.getPart("rat_tail"),
-                        PartFactory.getPart("rat_body"));
-                image.flipH(true);
-                return new Mob("Rat", 10, 5, 5, new ArrayList<>(), image);
+                return makeRat();
         }
         return null;
+    }
+
+    private static Mob makeDog() throws SlickException
+    {
+        BodyPart body = PartFactory.getPart("dog_body");
+        BodyConnectors connectors = new BodyConnectors(
+                new Point(body.getWidth()*0.9f, (body.getHeight()*0.33f)),
+                new Point(body.getWidth()*0.8f, body.getHeight()*0.4f),
+                new Point(body.getWidth()*0.7f, body.getHeight()*0.3f),
+                new Point (body.getWidth()*0.3f, body.getHeight()*0.3f),
+                new Point (body.getWidth()*0.2f, body.getHeight()*0.2f),
+                new Point(0, body.getHeight()*0.4f));
+
+        SuperImage image = CreatureComposer.composeImage(connectors,
+                PartFactory.getPart("dog_head"),
+                PartFactory.getPart("dog_arm"),
+                PartFactory.getPart("dog_arm"),
+                PartFactory.getPart("dog_leg"),
+                PartFactory.getPart("dog_leg"),
+                PartFactory.getPart("dog_tail"),
+                PartFactory.getPart("dog_body"));
+        image.flipH(true);
+
+        return new Mob("Dog", 20, 10, 5, new ArrayList<>(), image);
+    }
+
+    private static Mob makeRat() throws SlickException
+    {
+        BodyPart body = PartFactory.getPart("dog_body");
+        BodyConnectors connectors = new BodyConnectors(
+                new Point(body.getWidth()*0.95f, (body.getHeight()*0.8f)),
+                new Point(body.getWidth()*0.8f, body.getHeight()*0.7f),
+                new Point(body.getWidth()*0.7f, body.getHeight()*0.6f),
+                new Point (body.getWidth()*0.3f, body.getHeight()*0.7f),
+                new Point (body.getWidth()*0.2f, body.getHeight()*0.6f),
+                new Point(-10, body.getHeight()*0.65f));
+
+        SuperImage image = CreatureComposer.composeImage(connectors,
+                PartFactory.getPart("rat_head"),
+                PartFactory.getPart("rat_arm"),
+                PartFactory.getPart("rat_arm"),
+                PartFactory.getPart("rat_leg"),
+                PartFactory.getPart("rat_leg"),
+                PartFactory.getPart("rat_tail"),
+                PartFactory.getPart("rat_body"));
+        image.flipH(true);
+        return new Mob("Rat", 10, 5, 5, new ArrayList<>(), image);
     }
 }

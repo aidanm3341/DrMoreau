@@ -38,7 +38,7 @@ public class PartFactory {
                 Image ratLeg = ResourceLoader.getImage("rat_leg");
                 return new BodyPart("rat_leg", "leg", at1, 5, ratLeg, new Point(ratLeg.getWidth()/2, 20));
             case "rat_arm":
-                Image ratArm = ResourceLoader.getImage("rat_arm");
+                Image ratArm = ResourceLoader.getImage("rat_arm").getScaledCopy(0.8f);
                 return new BodyPart("rat_arm", "arm", at1, 5, ratArm, new Point(ratArm.getWidth()/1.66f, 20));
             case "rat_head":
                 Image ratHead = ResourceLoader.getImage("rat_head");

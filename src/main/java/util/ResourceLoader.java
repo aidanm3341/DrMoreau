@@ -43,6 +43,12 @@ public class ResourceLoader {
         loadDog();
         loadRat();
         loadBunny();
+        loadBoar();
+        loadDuck();
+        loadElephant();
+        loadGoat();
+        loadLion();
+        loadSquid();
         loadMisc();
 
         images.put("ostrich_head", new Image("parts/ostrich_head.png"));
@@ -69,6 +75,55 @@ public class ResourceLoader {
         images.put("bunny_tail", new Image("parts/bunny/bunny_tail.png"));
         images.put("bunny_head", new Image("parts/bunny/bunny_head.png"));
     }
+
+    private static void loadBoar() throws SlickException {
+        images.put("boar_body", new Image("parts/boar/boar_body.png"));
+        images.put("boar_forelimb", new Image("parts/boar/boar_forelimb.png"));
+        images.put("boar_leg", new Image("parts/boar/boar_leg.png"));
+        images.put("boar_tail", new Image("parts/boar/boar_tail.png"));
+        images.put("boar_head", new Image("parts/boar/boar_head.png"));
+    }
+
+    private static void loadDuck() throws SlickException {
+        images.put("duck_body", new Image("parts/duck/duck_body.png"));
+        images.put("duck_leg1", new Image("parts/duck/duck_leg.png"));
+        images.put("duck_leg2", new Image("parts/duck/duck_leg.png"));
+        images.put("duck_head", new Image("parts/duck/DuckHead.png"));
+    }
+
+    private static void loadElephant() throws SlickException {
+        images.put("elephant_body", new Image("parts/elephant/Elephant_body.png"));
+        images.put("elephant_leg1", new Image("parts/elephant/Elephant_leg.png"));
+        images.put("elephant_leg2", new Image("parts/elephant/Elephant_leg.png"));
+        images.put("elephant_leg3", new Image("parts/elephant/Elephant_leg.png"));
+        images.put("elephant_leg4", new Image("parts/elephant/Elephant_leg.png"));
+        images.put("elephant_head", new Image("parts/elephant/Elephant.png"));
+    }
+
+    private static void loadGoat() throws SlickException {
+        images.put("goat_body", new Image("parts/goat/Goat_body.png"));
+        images.put("goat_leg1", new Image("parts/goat/goat_leg.png"));
+        images.put("goat_leg2", new Image("parts/goat/goat_leg.png"));
+        images.put("goat_head", new Image("parts/goat/Goat.png"));
+    }
+
+    private static void loadLion() throws SlickException {
+        images.put("lion_body", new Image("parts/lion/Lion_body.png"));
+        images.put("lion_leg1", new Image("parts/lion/Lion_leg.png"));
+        images.put("lion_leg2", new Image("parts/lion/Lion_leg.png"));
+        images.put("lion_head", new Image("parts/lion/Lion.png"));
+    }
+
+    private static void loadSquid() throws SlickException {
+        images.put("squid_body", new Image("parts/squid/squid_body.png"));
+        images.put("squid_left_leg1", new Image("parts/squid/squid_left_legs.png"));
+        images.put("squid_left_leg2", new Image("parts/squid/squid_left_legs.png"));
+        images.put("squid_right_leg1", new Image("parts/squid/squid_right_legs.png"));
+        images.put("squid_right_leg2", new Image("parts/squid/squid_right_legs.png"));
+    }
+
+
+
     private static void loadMisc() throws SlickException{}
 
     public static Image getImage(String name)

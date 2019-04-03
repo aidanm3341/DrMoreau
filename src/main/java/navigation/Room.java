@@ -3,6 +3,7 @@ package navigation;
 import combat.Mob;
 import main.Main;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 import upgrade.bodyparts.BodyPart;
 import util.ResourceLoader;
 
@@ -14,16 +15,19 @@ public class Room {
 
     private int type;
     private String theme;
-    private Image navigationImage;
+    private Image navigationImage, navigationImageHover;
     private Mob mob;
     private ArrayList<BodyPart> rewards;
 
-    public Room(int type, String theme, Mob mob, Image navigationImage, ArrayList<BodyPart> rewards)
+    public Room(int type, String theme, Mob mob, Image navigationImage, ArrayList<BodyPart> rewards) throws SlickException
     {
         this.type = type;
         this.theme = theme;
         this.mob = mob;
         this.navigationImage = navigationImage;
+        navigationImageHover = navigationImage.copy();
+        navigationImageHover.getGraphics().drawImage(ResourceLoader.getImage("travelHover"), 0, 0);
+        navigationImageHover.getGraphics().flush();
         rewards = rewards;
     }
 
@@ -33,5 +37,9 @@ public class Room {
 
     public Image getNavigationImage() {
         return navigationImage;
+    }
+
+    public Image getNavigationImageHover() {
+        return navigationImageHover;
     }
 }

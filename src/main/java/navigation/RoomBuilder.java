@@ -1,27 +1,35 @@
 package navigation;
 
 import combat.Mob;
+import combat.MobData;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
+import upgrade.bodyparts.BodyPart;
 import util.Pool;
 import util.ResourceLoader;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class RoomBuilder {
 
     private Pool<Mob> red, grey;
 
-    public RoomBuilder()
+    public RoomBuilder() throws SlickException
     {
-        red = new Pool<Mob>();
-        //red.add();
+        red = new Pool<>();
+        grey = new Pool<>();
+        red.add(MobData.getMob("dog"));
+        grey.add(MobData.getMob("rat"));
     }
 
-    public Room buildRoom(String theme) {
+    public Room buildRoom(String theme) throws SlickException{
         int type;
         Random rand = new Random();
         Image navigationImage;
         Mob mob;
+        Pool<BodyPart> parts = new Pool<>();
+        ArrayList<BodyPart> rewards;
 
 
         if(rand.nextInt(10) < 5)
@@ -30,14 +38,19 @@ public class RoomBuilder {
             type = Room.TREASURE;
 
         switch (theme) {
+            default:
             case "red":
-                navigationImage = ResourceLoader.getImage("brick_route");
-                //mob = red.getX(1);
+                navigationImage = ResourceLoader.getImage("brickRoute");
+                mob = red.get();
                 break;
             case "grey":
-                navigationImage = ResourceLoader.getImage("grey_route");
+                navigationImage = ResourceLoader.getImage("greyRoute");
+                mob = grey.get();
         }
 
-        return null;//new Room(type, theme, );
+        parts.addAll(mob.getParts());
+        rewards = parts.getX(3);
+
+        return new Room(type, theme, mob, navigationImage, rewards);
     }
 }

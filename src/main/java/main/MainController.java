@@ -1,6 +1,7 @@
 package main;
 
 import combat.CombatController;
+import combat.Mob;
 import navigation.ConfirmationPanel;
 import navigation.NavigationController;
 import org.newdawn.slick.Color;

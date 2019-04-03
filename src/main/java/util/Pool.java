@@ -18,13 +18,17 @@ public class Pool<E> {
         things.add(e);
     }
 
+    public void addAll(ArrayList<E> es){
+        things.addAll(es);
+    }
+
     public ArrayList<E> popX(int number) {
         if(number > things.size())
             throw new IndexOutOfBoundsException("Number given is greater than Pool size.");
 
         ArrayList<E> returns = new ArrayList<>();
 
-        for(int i=number; i>0; i++) {
+        for(int i=number; i>0; i--) {
             E thing = things.get(rand.nextInt(things.size()));
             things.remove(thing);
             returns.add(thing);
@@ -39,9 +43,14 @@ public class Pool<E> {
 
         ArrayList<E> returns = new ArrayList<>();
 
-        for(int i=number; i>0; i++)
+        for(int i=number; i>0; i--)
             returns.add(things.get(rand.nextInt(things.size())));
 
         return returns;
+    }
+
+    public E get()
+    {
+        return things.get(rand.nextInt(things.size()));
     }
 }

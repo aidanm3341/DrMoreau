@@ -72,7 +72,17 @@ public class MobData {
                 PartFactory.getPart("dog_body"));
         image.flipH(true);
 
-        return new Mob("Dog", 20, 10, 5, new ArrayList<>(), image);
+        ArrayList<BodyPart> parts = new ArrayList<>();
+        parts.add(PartFactory.getPart("dog_head"));
+        parts.add(PartFactory.getPart("dog_arm"));
+        parts.add(PartFactory.getPart("dog_arm"));
+        parts.add(PartFactory.getPart("dog_leg"));
+        parts.add(PartFactory.getPart("dog_leg"));
+        parts.add(PartFactory.getPart("dog_tail"));
+        parts.add(PartFactory.getPart("dog_body"));
+
+
+        return new Mob("Dog", 20, 10, 5, parts, image);
     }
 
     private static Mob makeRat() throws SlickException
@@ -95,6 +105,16 @@ public class MobData {
                 PartFactory.getPart("rat_tail"),
                 PartFactory.getPart("rat_body"));
         image.flipH(true);
-        return new Mob("Rat", 10, 5, 5, new ArrayList<>(), image);
+
+        ArrayList<BodyPart> parts = new ArrayList<>();
+        parts.add(PartFactory.getPart("rat_head"));
+        parts.add(PartFactory.getPart("rat_arm"));
+        parts.add(PartFactory.getPart("rat_arm"));
+        parts.add(PartFactory.getPart("rat_leg"));
+        parts.add(PartFactory.getPart("rat_leg"));
+        parts.add(PartFactory.getPart("rat_tail"));
+        parts.add(PartFactory.getPart("rat_body"));
+
+        return new Mob("Rat", 10, 5, 5, parts, image);
     }
 }

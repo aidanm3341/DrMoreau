@@ -9,6 +9,7 @@ import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.state.StateBasedGame;
 import screens.Screen;
+import util.Pool;
 
 public class NavigationController extends Screen implements ComponentListener {
     public int getID() {
@@ -17,6 +18,9 @@ public class NavigationController extends Screen implements ComponentListener {
 
     private MainController main;
     private NavigationView view;
+    private Pool<String> themes;
+    private RoomBuilder builder;
+    private Room left, right;
 
     public NavigationController(MainController main){
         this.main = main;
@@ -27,10 +31,17 @@ public class NavigationController extends Screen implements ComponentListener {
         super.init(gc, sbg);
         view = new NavigationView(this);
         view.init(gc, sbg);
+        themes = new Pool<>();
+        themes.add("red");
+        themes.add("grey");
+        builder = new RoomBuilder();
     }
 
-    public void enter(GameContainer gc, StateBasedGame sbg){
-
+    public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException{
+        left = builder.buildRoom(themes.get());
+        right = builder.buildRoom(themes.get());
+        view.setLeftImage(left.getNavigationImage(), left.getNavigationImageHover());
+        view.setRightImage(right.getNavigationImage(), right.getNavigationImageHover());
     }
 
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException

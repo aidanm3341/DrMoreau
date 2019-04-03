@@ -33,12 +33,22 @@ public class NavigationView {
         }
 
         left = new MouseOverArea(gc, ResourceLoader.getImage("brickRoute"), 110, 180);
-        left.setMouseOverImage(ResourceLoader.getImage("brickRouteHover"));
         left.addListener(ctrl);
         right = new MouseOverArea(gc, ResourceLoader.getImage("greyRoute"), gc.getWidth()/2 + 80, 180);
-        right.setMouseOverImage(ResourceLoader.getImage("greyRouteHover"));
         right.addListener(ctrl);
         border = ResourceLoader.getImage("travelBorder");
+    }
+
+    public void setLeftImage(Image leftNormal, Image leftHover){
+        left.setNormalImage(leftNormal);
+        left.setMouseOverImage(leftHover);
+        left.setMouseDownImage(leftHover);
+    }
+
+    public void setRightImage(Image rightNormal, Image rightHover){
+        right.setNormalImage(rightNormal.getFlippedCopy(true, false));
+        right.setMouseOverImage(rightHover.getFlippedCopy(true, false));
+        right.setMouseDownImage(rightHover.getFlippedCopy(true, false));
     }
 
     public void render(GameContainer gc, Graphics g) throws SlickException {

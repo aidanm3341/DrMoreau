@@ -19,7 +19,12 @@ public class ResourceLoader {
         images.put("dog_body", new Image("parts/dog/dog_body.png"));
         images.put("dog_tail", new Image("parts/dog/dog_tail.png"));
         images.put("ostrich_head", new Image("parts/ostrich_head.png"));
-        images.put("dog_body", new Image("parts/dog/dog_body.png"));
+
+        images.put("rat_leg", new Image("parts/rat/rat_leg.png"));
+        images.put("rat_arm", new Image("parts/rat/rat_arm.png"));
+        images.put("rat_head", new Image("parts/rat/rat_head.png"));
+        images.put("rat_body", new Image("parts/rat/rat_body.png"));
+        images.put("rat_tail", new Image("parts/rat/rat_tail.png"));
 
         // Gui
         images.put("menuButton", new Image("gui/menuButton.png"));

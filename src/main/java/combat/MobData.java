@@ -52,6 +52,17 @@ public class MobData {
                         PartFactory.getPart("dog_body"));
                 image.flipH(true);
                 return new Mob("Dog", 20, 10, 5, new ArrayList<>(), image);
+            case "rat":
+                image = CreatureComposer.composeImage(new BodyConnectors(PartFactory.getPart("rat_body")),
+                        PartFactory.getPart("rat_head"),
+                        PartFactory.getPart("rat_arm"),
+                        PartFactory.getPart("rat_arm"),
+                        PartFactory.getPart("rat_leg"),
+                        PartFactory.getPart("rat_leg"),
+                        PartFactory.getPart("rat_tail"),
+                        PartFactory.getPart("rat_body"));
+                image.flipH(true);
+                return new Mob("Rat", 10, 5, 5, new ArrayList<>(), image);
         }
         return null;
     }

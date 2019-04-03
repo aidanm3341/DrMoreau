@@ -55,8 +55,6 @@ public class CombatView implements ComponentListener {
         att4_button.render(gc, g);
         att5_button.render(gc, g);
         att6_button.render(gc, g);
-
-        //g.drawImage(ctrl.getMob().getMobImage(), 1100, 300);
         ctrl.getMob().getMobImage().render(1400, 300, g);
 
         g.setColor(Color.white);

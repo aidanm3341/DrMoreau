@@ -8,13 +8,12 @@ import java.util.ArrayList;
 public class SuperImage {
 
     private ArrayList<PositionedImage> images;
-    //private float x, y;
+    private Boolean isFlippedH;
 
-    public SuperImage()//float x, float y)
+    public SuperImage()
     {
         images = new ArrayList<>();
-        //this.x = x;
-        //this.y = y;
+        isFlippedH = false;
     }
 
     public void addImage(PositionedImage image)
@@ -24,10 +23,27 @@ public class SuperImage {
 
     public void removeImage(PositionedImage image){images.remove(image);}
 
+    public void flipH(boolean isFlippedH)
+    {
+        this.isFlippedH = isFlippedH;
+        for(PositionedImage img : images)
+            img.flipH();
+
+
+    }
+
+    private float calcX(float x, PositionedImage img)
+    {
+        if(!isFlippedH)
+            return x + img.getX();
+        else
+            return x - img.getX() - img.getWidth();
+    }
+
     public void render(float x, float y, Graphics g)
     {
         for(PositionedImage img : images){
-            g.drawImage(img.getImage(), x + img.getX(), y + img.getY());
+            g.drawImage(img.getImage(), calcX(x, img), y + img.getY());
         }
 
     }

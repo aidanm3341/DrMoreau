@@ -13,6 +13,16 @@ public class PositionedImage {
         this.y = y;
     }
 
+//    public PositionedImage getFlippedCopy(Boolean flipHorizontal, Boolean flipVertical)
+//    {
+//        return new PositionedImage(image.getFlippedCopy(flipHorizontal, flipVertical), x, y);
+//    }
+
+    public void flipH()
+    {
+        image = image.getFlippedCopy(true, false);
+    }
+
     public Image getImage() {
         return image;
     }
@@ -24,4 +34,8 @@ public class PositionedImage {
     public float getY() {
         return y;
     }
+
+    public float getWidth(){return image.getWidth();}
+
+    public float getHeight(){return image.getHeight();}
 }

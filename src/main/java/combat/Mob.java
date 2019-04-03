@@ -2,6 +2,7 @@ package combat;
 
 import org.newdawn.slick.Image;
 import upgrade.bodyparts.BodyPart;
+import util.SuperImage;
 
 import java.util.ArrayList;
 
@@ -10,9 +11,9 @@ public class Mob {
     private String name;
     private int hp, attStat, defStat;
     private ArrayList<BodyPart> parts;
-    private Image mobImage;
+    private SuperImage mobImage;
 
-    public Mob(String name, int hp, int attStat, int defStat, ArrayList<BodyPart> parts, Image image)
+    public Mob(String name, int hp, int attStat, int defStat, ArrayList<BodyPart> parts, SuperImage image)
     {
         this.name = name;
         this.hp = hp;
@@ -44,7 +45,7 @@ public class Mob {
         return parts;
     }
 
-    public Image getMobImage() {
+    public SuperImage getMobImage() {
         return mobImage;
     }
 }

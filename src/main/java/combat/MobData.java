@@ -13,7 +13,8 @@ public class MobData {
     {
         mobs = new HashMap<>();
         mobs.put("test", new Mob("Test",
-                50, 50, 50,  new ArrayList<>(), ResourceLoader.getImage("ostrich_head").getFlippedCopy(true, false).getScaledCopy(2f)));
+                50, 50, 50,  new ArrayList<>(),
+                ResourceLoader.getImage("ostrich_head").getFlippedCopy(true, false).getScaledCopy(2f)));
     }
 
 //    public static Mob getMob(String name)
@@ -28,7 +29,8 @@ public class MobData {
     {
         if (name.equals("test"))
             return new Mob("Test",
-                    50, 50, 50,  new ArrayList<>(), ResourceLoader.getImage("ostrich_head").getFlippedCopy(true, false).getScaledCopy(2f));
+                    50, 50, 50,  new ArrayList<>(),
+                    ResourceLoader.getImage("ostrich_head").getFlippedCopy(true, false).getScaledCopy(2f));
         return null;
     }
 }

@@ -7,6 +7,7 @@ import upgrade.bodyparts.AbstractBodyPart;
 import upgrade.bodyparts.BodyPart;
 import upgrade.bodyparts.BodyConnectors;
 import upgrade.bodyparts.NullBodyPart;
+import util.CreatureComposer;
 import util.PositionedImage;
 import util.ResourceLoader;
 import util.SuperImage;
@@ -102,36 +103,7 @@ public class SidekickData {
 
 
     private void composeImage() {
-        image = new SuperImage();
-
-        image.addImage(new PositionedImage(legLeft.getImage(),
-                connectors.getLegLeftP().getX() - legLeft.getAttachPoint().getX(),
-                connectors.getLegLeftP().getY() - legLeft.getAttachPoint().getY()));
-
-        image.addImage(new PositionedImage(armLeft.getImage(),
-                connectors.getArmLeftP().getX() - armLeft.getAttachPoint().getX(),
-                connectors.getArmLeftP().getY() - armLeft.getAttachPoint().getY()));
-
-        // NOTE : NEEDS TO BE HERE TO BE RENDERED PROPERLY
-        image.addImage(new PositionedImage(body.getImage(), 0, 0));
-        //
-
-        image.addImage(new PositionedImage(legRight.getImage(),
-                connectors.getLegRightP().getX() - legRight.getAttachPoint().getX(),
-                connectors.getLegRightP().getY() - legRight.getAttachPoint().getY()));
-
-        image.addImage(new PositionedImage(armRight.getImage(),
-                connectors.getArmRightP().getX() - armRight.getAttachPoint().getX(),
-                connectors.getArmRightP().getY() - armRight.getAttachPoint().getY()));
-
-        image.addImage(new PositionedImage(tail.getImage(),
-                connectors.getTailP().getX() - tail.getAttachPoint().getX(),
-                connectors.getTailP().getY() - tail.getAttachPoint().getY()));
-
-        image.addImage(new PositionedImage(head.getImage(),
-                connectors.getHeadP().getX() - head.getAttachPoint().getX(),
-                connectors.getHeadP().getY() - head.getAttachPoint().getY()));
-
+        image = CreatureComposer.composeImage(connectors, head, armLeft, armRight, legLeft, legRight, tail, body);
     }
 
 

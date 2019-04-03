@@ -46,7 +46,7 @@ public class RoomBuilder {
         }
 
         parts.addAll(mob.getParts());
-        rewards = parts.getX(3);
+        rewards = parts.popX(3);
 
         return new Room(type, theme, mob, navigationImage, rewards);
     }

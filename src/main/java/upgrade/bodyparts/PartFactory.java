@@ -28,7 +28,13 @@ public class PartFactory {
                 return new BodyPart("dog_tail", "tail", at1, 5, dogTail, new Point (dogTail.getWidth()-15, dogTail.getHeight()/2));
             case "dog_body":
                  Image dogBody = ResourceLoader.getImage("dog_body");
-                 return new BodyPart("dog_body", "body", at1, 5, dogBody, null);
+                 BodyConnectors connectors = new BodyConnectors(new Point(dogBody.getWidth()*0.9f, (dogBody.getHeight()*0.33f)),
+                        new Point(dogBody.getWidth()*0.8f, dogBody.getHeight()*0.4f),
+                        new Point(dogBody.getWidth()*0.7f, dogBody.getHeight()*0.3f),
+                        new Point (dogBody.getWidth()*0.3f, dogBody.getHeight()*0.3f),
+                        new Point (dogBody.getWidth()*0.2f, dogBody.getHeight()*0.2f),
+                        new Point(0, dogBody.getHeight()*0.4f));
+                 return new BodyBodyPart("dog_body", "body", at1, 5, dogBody, null, connectors);
 
             case "ostrich_head":
                 Image ostrichHead = ResourceLoader.getImage("ostrich_head");
@@ -48,7 +54,14 @@ public class PartFactory {
                 return new BodyPart("rat_tail", "tail", at1, 5, ratTail, new Point (ratTail.getWidth()-15, ratTail.getHeight()/2));
             case "rat_body":
                 Image ratBody = ResourceLoader.getImage("rat_body");
-                return new BodyPart("rat_body", "body", at1, 5, ratBody,null);
+                connectors = new BodyConnectors(
+                        new Point(ratBody.getWidth()*0.95f, (ratBody.getHeight()*0.8f)),
+                        new Point(ratBody.getWidth()*0.8f, ratBody.getHeight()*0.7f),
+                        new Point(ratBody.getWidth()*0.7f, ratBody.getHeight()*0.6f),
+                        new Point (ratBody.getWidth()*0.3f, ratBody.getHeight()*0.7f),
+                        new Point (ratBody.getWidth()*0.2f, ratBody.getHeight()*0.6f),
+                        new Point(-10, ratBody.getHeight()*0.65f));
+                return new BodyBodyPart("rat_body", "body", at1, 5, ratBody,null, connectors);
 
             default:
                 throw new SlickException("Not a valid animal part.");

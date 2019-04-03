@@ -2,11 +2,9 @@ package main;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
-import upgrade.bodyparts.AbstractBodyPart;
-import upgrade.bodyparts.BodyPart;
-import upgrade.bodyparts.BodyConnectors;
-import upgrade.bodyparts.NullBodyPart;
+import upgrade.bodyparts.*;
 import util.CreatureComposer;
 import util.ResourceLoader;
 import util.SuperImage;
@@ -15,7 +13,6 @@ public class SidekickData {
 
     private Attack at1, at2, at3, at4, at5, at6;
     private AbstractBodyPart head, armLeft, armRight, legLeft, legRight, tail, body;
-    private BodyConnectors connectors;
     private int hp;
     private SuperImage image;
 
@@ -23,7 +20,7 @@ public class SidekickData {
 
     }
 
-    public void init(GameContainer gc) {
+    public void init(GameContainer gc) throws SlickException {
         at1 = new Attack("Punch!", 5);
         at2 = new Attack("Kick!", 5);
         at3 = new Attack("Shoot!", 10);
@@ -40,74 +37,43 @@ public class SidekickData {
         body = new NullBodyPart();
 
         image = new SuperImage();
-        addBody(new BodyPart("dog_body", "body", at1, 30,
-                ResourceLoader.getImage("dog_body"), null));
 
-        Image dogLeg = ResourceLoader.getImage("dog_leg");
-        addLegLeft(new BodyPart("dog_leg", "leg", at2, 5, dogLeg,
-                new Point(dogLeg.getWidth()/2, 20)));
-
-        Image dogArm = ResourceLoader.getImage("dog_arm");
-        addArmLeft(new BodyPart("dog_arm", "arm", at2, 5, dogArm,
-                new Point(dogArm.getWidth()/2, 15)));
-
-        addLegRight(new BodyPart("dog_leg", "leg", at2, 5, dogLeg,
-                new Point(dogLeg.getWidth()/2, 20)));
-
-        addArmRight(new BodyPart("dog_arm", "arm", at2, 5, dogArm,
-                new Point(dogArm.getWidth()/2, 15)));
-
-        Image dogTail = ResourceLoader.getImage("dog_tail");
-        addTail(new BodyPart("dog_tail", "tail", at2, 5, dogTail,
-                new Point(dogTail.getWidth()-15, dogTail.getHeight()/2)));
-
-        Image dogHead = ResourceLoader.getImage("dog_head");
-        addHead(new BodyPart("dog_head", "head", at1, 10, dogHead,
-                new Point(0, dogHead.getHeight() - 40)));
-
-        //composeImage();
+        addBody(PartFactory.getPart("dog_body"));
+        addLegLeft(PartFactory.getPart("dog_leg"));
+        addArmLeft(PartFactory.getPart("dog_arm"));
+        addLegRight(PartFactory.getPart("dog_leg"));
+        addArmRight(PartFactory.getPart("dog_arm"));
+        addTail(PartFactory.getPart("dog_tail"));
+        addHead(PartFactory.getPart("dog_head"));
     }
 
-
-
+    
     public void addBody(AbstractBodyPart newPart){
         body = newPart;
-        connectors = new BodyConnectors(new Point(body.getWidth()*0.9f, (body.getHeight()*0.33f)),
-                new Point(body.getWidth()*0.8f, body.getHeight()*0.4f),
-                new Point(body.getWidth()*0.7f, body.getHeight()*0.3f),
-                new Point (body.getWidth()*0.3f, body.getHeight()*0.3f),
-                new Point (body.getWidth()*0.2f, body.getHeight()*0.2f),
-                new Point(0, body.getHeight()*0.4f));
-        composeImage();
     }
-
     public void addHead(AbstractBodyPart newPart){
         head = newPart;
     }
-
     public void addLegLeft(AbstractBodyPart newPart){
         legLeft = newPart;
     }
-
     public void addLegRight(AbstractBodyPart newPart){
         legRight = newPart;
     }
-
     public void addArmLeft(AbstractBodyPart newPart){
         armLeft = newPart;
     }
-
     public void addArmRight(AbstractBodyPart newPart){
         armRight = newPart;
     }
-
     public void addTail(AbstractBodyPart newPart){
         tail = newPart;
     }
 
 
     private void composeImage() {
-        image = CreatureComposer.composeImage(connectors, head, armLeft, armRight, legLeft, legRight, tail, body);
+        image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+                head, armLeft, armRight, legLeft, legRight, tail, body);
     }
 
 
@@ -137,27 +103,21 @@ public class SidekickData {
     public AbstractBodyPart getHead() {
         return head;
     }
-
     public AbstractBodyPart getArmLeft() {
         return armLeft;
     }
-
     public AbstractBodyPart getArmRight() {
         return armRight;
     }
-
     public AbstractBodyPart getLegLeft() {
         return legLeft;
     }
-
     public AbstractBodyPart getLegRight() {
         return legRight;
     }
-
     public AbstractBodyPart getTail() {
         return tail;
     }
-
     public AbstractBodyPart getBody() {
         return body;
     }

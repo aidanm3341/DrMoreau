@@ -2,6 +2,7 @@ package combat;
 
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
+import upgrade.bodyparts.BodyBodyPart;
 import upgrade.bodyparts.BodyConnectors;
 import upgrade.bodyparts.BodyPart;
 import upgrade.bodyparts.PartFactory;
@@ -87,16 +88,9 @@ public class MobData {
 
     private static Mob makeRat() throws SlickException
     {
-        BodyPart body = PartFactory.getPart("dog_body");
-        BodyConnectors connectors = new BodyConnectors(
-                new Point(body.getWidth()*0.95f, (body.getHeight()*0.8f)),
-                new Point(body.getWidth()*0.8f, body.getHeight()*0.7f),
-                new Point(body.getWidth()*0.7f, body.getHeight()*0.6f),
-                new Point (body.getWidth()*0.3f, body.getHeight()*0.7f),
-                new Point (body.getWidth()*0.2f, body.getHeight()*0.6f),
-                new Point(-10, body.getHeight()*0.65f));
+        BodyPart body = PartFactory.getPart("rat_body");
 
-        SuperImage image = CreatureComposer.composeImage(connectors,
+        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
                 PartFactory.getPart("rat_head"),
                 PartFactory.getPart("rat_arm"),
                 PartFactory.getPart("rat_arm"),

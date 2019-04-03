@@ -60,7 +60,7 @@ public class MainController {
     {
         sidekick.addBody(upgrade.getBody());
         sidekick.addArmRight(upgrade.getArmRight());
-        sidekick.addLegLeft(upgrade.getArmLeft());
+        sidekick.addArmLeft(upgrade.getArmLeft());
         sidekick.addLegLeft(upgrade.getLegLeft());
         sidekick.addLegRight(upgrade.getLegRight());
         sidekick.addHead(upgrade.getHead());

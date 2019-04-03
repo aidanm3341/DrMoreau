@@ -18,12 +18,12 @@ public class CombatView implements ComponentListener {
 
     public CombatView(CombatController ctrl, String at1, String at2, String at3, String at4, String at5, String at6)
     {
-        att1_button = new AttackButton(at1, 150, 650);
-        att2_button = new AttackButton(at2, 400, 650);
-        att3_button = new AttackButton(at3, 650, 650);
-        att4_button = new AttackButton(at4, 150, 750);
-        att5_button = new AttackButton(at5, 400, 750);
-        att6_button = new AttackButton(at6, 650, 750);
+        att1_button = new AttackButton(at1, 150, 700);
+        att2_button = new AttackButton(at2, 400, 700);
+        att3_button = new AttackButton(at3, 650, 700);
+        att4_button = new AttackButton(at4, 150, 800);
+        att5_button = new AttackButton(at5, 400, 800);
+        att6_button = new AttackButton(at6, 650, 800);
         this.ctrl = ctrl;
         background = ResourceLoader.getImage("battleBackground");
     }
@@ -54,7 +54,7 @@ public class CombatView implements ComponentListener {
         try {
             g.setFont(MyFont.createFont(12));
         } catch (Exception e) { e.printStackTrace(); }
-        ctrl.getSidekick().getImage().render(300, 450, g);
+        ctrl.getSidekick().getImage().render(300, 420, g);
         ctrl.getMob().getMobImage().render(1300, 510, g);
 
         att1_button.render(gc, g);

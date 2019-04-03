@@ -1,9 +1,9 @@
 package main;
 
 import combat.CombatController;
-import combat.Mob;
 import navigation.ConfirmationPanel;
 import navigation.NavigationController;
+import navigation.Room;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
@@ -70,6 +70,10 @@ public class MainController {
     public void enterState(int ID)
     {
         sbg.enterState(ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
+    }
+
+    public Room getActiveRoom(){
+        return navigation.getActiveRoom();
     }
 
 }

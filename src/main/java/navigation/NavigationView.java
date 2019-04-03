@@ -59,4 +59,12 @@ public class NavigationView {
         g.setColor(Color.red);
         g.drawString("Which Way?", gc.getWidth()/2 - 175, gc.getHeight() - 150);
     }
+
+    public MouseOverArea getLeft() {
+        return left;
+    }
+
+    public MouseOverArea getRight() {
+        return right;
+    }
 }

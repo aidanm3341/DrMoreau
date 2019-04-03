@@ -42,4 +42,16 @@ public class Room {
     public Image getNavigationImageHover() {
         return navigationImageHover;
     }
+
+    public String getTheme() {
+        return theme;
+    }
+
+    public Mob getMob() {
+        return mob;
+    }
+
+    public ArrayList<BodyPart> getRewards() {
+        return rewards;
+    }
 }

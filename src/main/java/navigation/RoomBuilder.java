@@ -13,17 +13,14 @@ import java.util.Random;
 
 public class RoomBuilder {
 
-    private Pool<Mob> red, grey;
+    private static Pool<Mob> red, grey;
 
-    public RoomBuilder() throws SlickException
-    {
+    public static Room buildRoom(String theme) throws SlickException{
         red = new Pool<>();
         grey = new Pool<>();
         red.add(MobData.getMob("dog"));
         grey.add(MobData.getMob("rat"));
-    }
 
-    public Room buildRoom(String theme) throws SlickException{
         int type;
         Random rand = new Random();
         Image navigationImage;

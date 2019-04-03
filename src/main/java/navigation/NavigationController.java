@@ -19,8 +19,7 @@ public class NavigationController extends Screen implements ComponentListener {
     private MainController main;
     private NavigationView view;
     private Pool<String> themes;
-    private RoomBuilder builder;
-    private Room left, right;
+    private Room left, right, activeRoom;
 
     public NavigationController(MainController main){
         this.main = main;
@@ -34,12 +33,12 @@ public class NavigationController extends Screen implements ComponentListener {
         themes = new Pool<>();
         themes.add("red");
         themes.add("grey");
-        builder = new RoomBuilder();
+        activeRoom = RoomBuilder.buildRoom("grey");
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException{
-        left = builder.buildRoom(themes.get());
-        right = builder.buildRoom(themes.get());
+        left = RoomBuilder.buildRoom(themes.get());
+        right = RoomBuilder.buildRoom(themes.get());
         view.setLeftImage(left.getNavigationImage(), left.getNavigationImageHover());
         view.setRightImage(right.getNavigationImage(), right.getNavigationImageHover());
     }
@@ -49,7 +48,16 @@ public class NavigationController extends Screen implements ComponentListener {
         view.render(gc, g);
     }
 
+    public Room getActiveRoom(){
+        return activeRoom;
+    }
+
     public void componentActivated(AbstractComponent c) {
+        if(view.getLeft().equals(c))
+            activeRoom = left;
+        else if(view.getRight().equals(c))
+            activeRoom = right;
+
         main.enterState(Main.CONFIRM);
     }
 }

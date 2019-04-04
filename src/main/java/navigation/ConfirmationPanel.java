@@ -29,13 +29,13 @@ public class ConfirmationPanel extends Screen implements ComponentListener {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
 
-        confirmButton = new Button("Confirm", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.25f, gc.getHeight()/2);
+        confirmButton = new Button("Confirm", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.3f, gc.getHeight()/2);
         confirmButton.init(gc);
         confirmButton.addListener(this);
         confirmButton.addHoverOverImage(ResourceLoader.getImage("basicButtonHover"));
         confirmButton.addPressedImage(ResourceLoader.getImage("basicButtonPressed"));
 
-        cancelButton = new Button("Cancel", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.50f, gc.getHeight()/2);
+        cancelButton = new Button("Cancel", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.66f, gc.getHeight()/2);
         cancelButton.init(gc);
         cancelButton.addListener(this);
         cancelButton.addHoverOverImage(ResourceLoader.getImage("basicButtonHover"));
@@ -47,14 +47,11 @@ public class ConfirmationPanel extends Screen implements ComponentListener {
 
         g.setFont(gc.getDefaultFont());
         g.setColor(new Color(227, 255, 86));
-        g.drawString("Do you wish to proceed?", gc.getWidth()/2 - 600, 150);
+        g.drawString("Are you SURE you", gc.getWidth()/2 - 570, 110);
+        g.drawString("wish to proceed?", gc.getWidth()/2 - 470, 200);
 
         confirmButton.render(gc, g);
         cancelButton.render(gc, g);
-    }
-
-    public void update(GameContainer gc, StateBasedGame sbg, int i) throws SlickException {
-
     }
 
     public void componentActivated(AbstractComponent c) {

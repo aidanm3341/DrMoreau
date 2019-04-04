@@ -1,11 +1,9 @@
 package upgrade.bodyparts;
 
 import main.Attack;
-import org.newdawn.slick.Color;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
-import upgrade.bodyparts.AbstractBodyPart;
 
 public class BodyPart implements AbstractBodyPart {
 

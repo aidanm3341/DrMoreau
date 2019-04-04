@@ -28,6 +28,7 @@ public class ResourceLoader {
         images.put("basicButtonPressed", new Image("gui/basicButtonPressed.png"));
         images.put("upgradePuddle", new Image("gui/upgradePuddle.png"));
         images.put("battleBackground", new Image("gui/background.png"));
+        images.put("intro", new Image("gui/intro.png"));
     }
 
     private static void loadNavigation() throws SlickException {

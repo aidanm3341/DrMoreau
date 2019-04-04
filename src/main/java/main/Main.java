@@ -16,10 +16,11 @@ public class Main extends StateBasedGame {
 
     // Game state identifiers
     public static final int MAINMENU = 0;
-    public static final int FIGHT    = 1;
-    public static final int UPGRADE  = 2;
-    public static final int TRAVEL   = 3;
-    public static final int CONFIRM  = 4;
+    public static final int INTRO    = 1;
+    public static final int FIGHT    = 2;
+    public static final int UPGRADE  = 3;
+    public static final int TRAVEL   = 4;
+    public static final int CONFIRM  = 5;
 
     // Application Properties
     public static final int WIDTH   = 1680;

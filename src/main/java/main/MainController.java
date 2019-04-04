@@ -16,6 +16,7 @@ public class MainController {
 
     private SidekickData sidekick;
 
+    private Intro intro;
     private CombatController combat;
     private NavigationController navigation;
     private UpgradeController upgrade;
@@ -31,6 +32,9 @@ public class MainController {
         sidekick = new SidekickData();
         sidekick.init(gc);
 
+        intro = new Intro(this);
+        intro.init(gc, sbg);
+
         combat = new CombatController(this, sidekick.getAt1(), sidekick.getAt2(), sidekick.getAt3(), sidekick.getAt4(), sidekick.getAt5(), sidekick.getAt6());
         combat.init(gc, sbg);
 
@@ -40,6 +44,7 @@ public class MainController {
         upgrade = new UpgradeController(this);
         upgrade.init(gc, sbg);
 
+        sbg.addState(intro);
         sbg.addState(combat);
         sbg.addState(navigation);
         sbg.addState(upgrade);

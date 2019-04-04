@@ -1,6 +1,5 @@
 package util;
 
-import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
 import java.util.ArrayList;
@@ -28,8 +27,6 @@ public class SuperImage {
         this.isFlippedH = isFlippedH;
         for(PositionedImage img : images)
             img.flipH();
-
-
     }
 
     private float calcX(float x, PositionedImage img)

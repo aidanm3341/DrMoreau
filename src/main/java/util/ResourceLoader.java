@@ -78,7 +78,7 @@ public class ResourceLoader {
 
     private static void loadBoar() throws SlickException {
         images.put("boar_body", new Image("parts/boar/boar_body.png"));
-        images.put("boar_forelimb", new Image("parts/boar/boar_forelimb.png"));
+        images.put("boar_forelimb", new Image("parts/boar/boar_arm.png"));
         images.put("boar_leg", new Image("parts/boar/boar_leg.png"));
         images.put("boar_tail", new Image("parts/boar/boar_tail.png"));
         images.put("boar_head", new Image("parts/boar/boar_head.png"));

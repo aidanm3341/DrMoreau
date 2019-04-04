@@ -75,28 +75,28 @@ public class PartFactory {
             case "bunny_head":
                 Image bunnyHead = ResourceLoader.getImage("bunny_head");
                 return new BodyPart("bunny_head", "head", at1, 5, bunnyHead,
-                        new Point(bunnyHead.getWidth() * 0.4f, bunnyHead.getHeight() * 0.8f - 30));
+                        new Point(bunnyHead.getWidth() * 0.4f, bunnyHead.getHeight() - 40));
             case "bunny_leg":
                 Image bunnyLeg = ResourceLoader.getImage("bunny_leg");
                 return new BodyPart("bunny_leg", "leg", at1, 5, bunnyLeg,
-                        new Point(bunnyLeg.getWidth()* 0.7f/2, 10));
+                        new Point(bunnyLeg.getWidth()/2, 45));
             case "bunny_arm":
                 Image bunnyArm = ResourceLoader.getImage("bunny_arm").getScaledCopy(0.8f);
                 return new BodyPart("bunny_arm", "arm", at1, 5, bunnyArm,
-                        new Point(bunnyArm.getWidth()/1.66f, 10));
+                        new Point(bunnyArm.getWidth()*0.4f, 20));
             case "bunny_tail":
                 Image bunnyTail = ResourceLoader.getImage("bunny_tail");
                 return new BodyPart("bunny_tail", "tail", at1, 5, bunnyTail,
-                        new Point (bunnyTail.getWidth()* 0.3f-15, bunnyTail.getHeight()* 0.8f/2));
+                        new Point (bunnyTail.getWidth()* 0.55f, bunnyTail.getHeight()/2));
             case "bunny_body":
                 Image bunnyBody = ResourceLoader.getImage("bunny_body");
                 connectors = new BodyConnectors(
-                        new Point(bunnyBody.getWidth()*0.8f, (bunnyBody.getHeight()*0.1f)),
-                        new Point(bunnyBody.getWidth()*0.9f, bunnyBody.getHeight()*0.5f),
-                        new Point(bunnyBody.getWidth()*0.8f, bunnyBody.getHeight()*0.4f),
-                        new Point (bunnyBody.getWidth()*0.1f, bunnyBody.getHeight()*0.4f),
-                        new Point (bunnyBody.getWidth()*0.2f, bunnyBody.getHeight()*0.4f),
-                        new Point(-30, bunnyBody.getHeight()*0.65f));
+                        new Point(bunnyBody.getWidth()*0.8f, (bunnyBody.getHeight()*0.3f)),
+                        new Point(bunnyBody.getWidth()*0.67f, bunnyBody.getHeight()*0.6f),
+                        new Point(bunnyBody.getWidth()*0.57f, bunnyBody.getHeight()*0.55f),
+                        new Point (bunnyBody.getWidth()*0.25f, bunnyBody.getHeight()*0.66f),
+                        new Point (bunnyBody.getWidth()*0.2f, bunnyBody.getHeight()*0.6f),
+                        new Point(0, bunnyBody.getHeight()*0.66f));
                 return new BodyBodyPart("bunny_body", "body", at1, 5, bunnyBody,null, connectors);
 
 

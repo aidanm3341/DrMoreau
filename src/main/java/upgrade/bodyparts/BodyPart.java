@@ -24,11 +24,11 @@ public class BodyPart implements AbstractBodyPart {
         this.hp = hp;
         this.image = image;
         this.attachPoint = attachPoint;
-        if(attachPoint != null) {
-            image.getGraphics().setColor(Color.black);
-            image.getGraphics().drawOval(attachPoint.getX(), attachPoint.getY(), 10, 10);
-            image.getGraphics().flush();
-        }
+//        if(attachPoint != null) {
+//            image.getGraphics().setColor(Color.black);
+//            image.getGraphics().drawOval(attachPoint.getX(), attachPoint.getY(), 10, 10);
+//            image.getGraphics().flush();
+//        }
     }
 
     public String getName(){return name;}

@@ -59,7 +59,7 @@ public class CombatController extends Screen {
 
 
     public void update(GameContainer gc, StateBasedGame sbg, int delta){
-        if(mob.getHp() <= 0)
+        if(mob.getCurrentHp() <= 0)
             main.enterState(Main.UPGRADE);
     }
 

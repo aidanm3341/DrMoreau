@@ -8,14 +8,15 @@ import java.util.ArrayList;
 public class Mob {
 
     private String name;
-    private int hp, attStat, defStat;
+    private int currentHp, maxHp, attStat, defStat;
     private ArrayList<BodyPart> parts;
     private SuperImage mobImage;
 
     public Mob(String name, int hp, int attStat, int defStat, ArrayList<BodyPart> parts, SuperImage image)
     {
         this.name = name;
-        this.hp = hp;
+        this.maxHp = hp;
+        currentHp = maxHp;
         this.attStat = attStat;
         this.defStat = defStat;
         this.parts = parts;
@@ -25,11 +26,20 @@ public class Mob {
     public String getName(){return name;}
 
     public void setHp(int dmgDealt){
-        hp -= dmgDealt;
+        if(currentHp - dmgDealt < 0)
+            currentHp = 0;
+        else if(currentHp - dmgDealt > maxHp)
+            currentHp = maxHp;
+        else
+            currentHp -= dmgDealt;
     }
 
-    public int getHp(){
-        return hp;
+    public int getCurrentHp(){
+        return currentHp;
+    }
+
+    public int getMaxHp() {
+        return maxHp;
     }
 
     public int getAttStat(){

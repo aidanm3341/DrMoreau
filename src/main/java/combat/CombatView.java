@@ -64,8 +64,13 @@ public class CombatView implements ComponentListener {
         att5_button.render(gc, g);
         att6_button.render(gc, g);
 
+        g.setColor(Color.red);
+        g.fillRect(1100, 100, 400, 30);
+        g.setColor(Color.green);
+        g.fillRect(1100, 100,
+                ((float) ctrl.getMob().getCurrentHp()/(float) ctrl.getMob().getMaxHp())*400, 30);
         g.setColor(Color.white);
-        g.drawString(" "+ctrl.getMob().getHp(), 1150, 600);
+        g.drawString(" "+ctrl.getMob().getCurrentHp() + " / " + ctrl.getMob().getMaxHp(), 1150, 145);
     }
 
     public void componentActivated(AbstractComponent c) {

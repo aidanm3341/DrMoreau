@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Mob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +20,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="923">
               <caret line="87" column="72" lean-forward="true" selection-start-line="87" selection-start-column="72" selection-end-line="87" selection-end-column="72" />
             </state>
           </provider>
@@ -36,15 +39,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/parts/bunny/bunny_body.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+            <state relative-caret-position="210">
+              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
               <folding>
                 <element signature="e#1182#1183#0" expanded="true" />
                 <element signature="e#1210#1211#0" expanded="true" />
@@ -53,37 +51,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="258">
+              <caret line="72" column="99" selection-start-line="72" selection-start-column="99" selection-end-line="72" selection-end-column="99" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/navigation/NavigationView.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-              <folding>
-                <element signature="e#2068#2069#0" expanded="true" />
-                <element signature="e#2107#2108#0" expanded="true" />
-                <element signature="e#2135#2136#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="130">
+              <caret line="41" column="39" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/combat/Mob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+            <state relative-caret-position="298">
+              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+              <folding>
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,20 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screens/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
+            <state relative-caret-position="203">
               <caret line="40" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/Intro.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -147,14 +129,11 @@
         <option value="$PROJECT_DIR$/src/main/java/util/CreatureComposer.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/PositionedImage.java" />
         <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/Mob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/CombatController.java" />
         <option value="$PROJECT_DIR$/src/main/java/navigation/NavigationView.java" />
         <option value="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/navigation/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/Pool.java" />
         <option value="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/CombatView.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/SidekickData.java" />
         <option value="$PROJECT_DIR$/src/main/java/combat/MobData.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" />
@@ -165,8 +144,11 @@
         <option value="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/SuperImage.java" />
         <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyBodyPart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" />
         <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/CombatController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/Mob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/CombatView.java" />
       </list>
     </option>
   </component>
@@ -287,7 +269,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="parts" type="462c0819:PsiDirectoryNode" />
-              <item name="bunny" type="462c0819:PsiDirectoryNode" />
+              <item name="boar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -538,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554351288510</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Changed bunny proportions slightly">
+      <created>1554387617111</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1554387617111</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -574,7 +563,6 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made the sidekick visible again!!" />
     <MESSAGE value="refactored sidekick for reuse" />
     <MESSAGE value="HUGE refactoring of all the upgrade mechanics" />
     <MESSAGE value="You can now actually add parts to the sidekick in the upgrade screen, &#10;and the changes stick" />
@@ -599,12 +587,10 @@
     <MESSAGE value="Fixed naming bug, and added bunny to the pool of &quot;red&quot; theme" />
     <MESSAGE value="Added the intro in!!" />
     <MESSAGE value="[WARNING SLOW] added &quot;debugger&quot; which shows the attachment point &#10;for animals" />
-    <option name="LAST_COMMIT_MESSAGE" value="[WARNING SLOW] added &quot;debugger&quot; which shows the attachment point &#10;for animals" />
+    <MESSAGE value="Changed bunny proportions slightly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed bunny proportions slightly" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/parts/duck/duck_leg.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/parts/duck/duck_body.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -639,16 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/CreatureComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/navigation/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
@@ -656,13 +632,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -688,13 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-85">
           <caret line="133" column="15" selection-start-line="133" selection-start-column="15" selection-end-line="133" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-117">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
@@ -729,32 +691,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_arm.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_body.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_head.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_leg.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_tail.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lwjgl/slick.jar!/org/newdawn/slick/util/ResourceLoader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/ResourceLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding>
-            <element signature="method#loadNavigation#0;class#ResourceLoader#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -769,13 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/Mob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -835,34 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screens/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Intro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-          <folding>
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1210#1211#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/parts/bunny/bunny_head.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -885,10 +790,102 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/parts/bunny/bunny_tail.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_tail.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_leg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_head.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/parts/boar/boar_body.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="923">
           <caret line="87" column="72" lean-forward="true" selection-start-line="87" selection-start-column="72" selection-end-line="87" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/ResourceLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <folding>
+            <element signature="method#loadNavigation#0;class#ResourceLoader#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/CreatureComposer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lwjgl/slick.jar!/org/newdawn/slick/AppGameContainer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="210" selection-start-line="210" selection-end-line="210" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+          <folding>
+            <element signature="e#1182#1183#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Intro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screens/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/Mob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="72" column="99" selection-start-line="72" selection-start-column="99" selection-end-line="72" selection-end-column="99" />
         </state>
       </provider>
     </entry>

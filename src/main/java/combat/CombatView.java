@@ -64,6 +64,9 @@ public class CombatView implements ComponentListener {
         att5_button.render(gc, g);
         att6_button.render(gc, g);
 
+        g.setColor(Color.white);
+        g.drawString(ctrl.getMob().getName(), 1100, 55);
+        // health bar
         g.setColor(Color.red);
         g.fillRect(1100, 100, 400, 30);
         g.setColor(Color.green);

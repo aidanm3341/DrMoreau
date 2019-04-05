@@ -77,6 +77,14 @@ public class ResourceLoader {
         images.put("bunny_head", new Image("parts/bunny/bunny_head.png"));
     }
 
+    private static void loadPenguin() throws SlickException {
+        images.put("penguin_body", new Image("parts/penguin/penguin_body.png"));
+        images.put("penguin_leg", new Image("parts/penguin/penguin_leg.png"));
+        images.put("penguin_arm", new Image("parts/penguin/penguin_arm.png"));
+        images.put("penguin_tail", new Image("parts/penguin/penguin_tail.png"));
+        images.put("penguin_head", new Image("parts/penguin/penguin_head.png"));
+    }
+
     private static void loadBoar() throws SlickException {
         images.put("boar_body", new Image("parts/boar/boar_body.png"));
         images.put("boar_forelimb", new Image("parts/boar/boar_arm.png"));

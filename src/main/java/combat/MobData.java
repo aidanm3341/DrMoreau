@@ -139,4 +139,30 @@ public class MobData {
 
         return new Mob("Bunny", 10, 5, 5, parts, image);
     }
+
+    private static Mob makePenguin() throws SlickException
+    {
+        BodyPart body = PartFactory.getPart("penguin_body");
+
+        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+                PartFactory.getPart("penguin_head"),
+                PartFactory.getPart("penguin_arm"),
+                PartFactory.getPart("penguin_arm"),
+                PartFactory.getPart("penguin_leg"),
+                PartFactory.getPart("penguin_leg"),
+                PartFactory.getPart("penguin_tail"),
+                PartFactory.getPart("penguin_body"));
+        image.flipH(true);
+
+        ArrayList<BodyPart> parts = new ArrayList<>();
+        parts.add(PartFactory.getPart("penguin_head"));
+        parts.add(PartFactory.getPart("penguin_arm"));
+        parts.add(PartFactory.getPart("penguin_arm"));
+        parts.add(PartFactory.getPart("penguin_leg"));
+        parts.add(PartFactory.getPart("penguin_leg"));
+        parts.add(PartFactory.getPart("penguin_tail"));
+        parts.add(PartFactory.getPart("penguin_body"));
+
+        return new Mob("Penguin", 10, 5, 5, parts, image);
+    }
 }

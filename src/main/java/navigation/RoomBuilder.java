@@ -19,6 +19,7 @@ public class RoomBuilder {
         red = new Pool<>();
         grey = new Pool<>();
         red.add(MobData.getMob("bunny"));
+        red.add(MobData.getMob("penguin"));
         red.add(MobData.getMob("dog"));
         grey.add(MobData.getMob("rat"));
 

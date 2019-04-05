@@ -44,6 +44,7 @@ public class ResourceLoader {
         loadDog();
         loadRat();
         loadBunny();
+        loadPenguin();
         loadBoar();
         loadDuck();
         loadElephant();

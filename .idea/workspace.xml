@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_arm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_body.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_head.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_leg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/MobData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/MobData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/Button.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/Button.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -44,17 +30,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
+            <state relative-caret-position="1989">
               <caret line="122" column="46" selection-start-line="122" selection-start-column="46" selection-end-line="122" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/util/ResourceLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+            <state relative-caret-position="102">
+              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
               <folding>
                 <element signature="method#loadNavigation#0;class#ResourceLoader#0" />
               </folding>
@@ -65,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/combat/MobData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+            <state relative-caret-position="-1139">
+              <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
               <folding>
                 <element signature="method#loadMobs#0;class#MobData#0" />
               </folding>
@@ -77,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="191">
+              <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/main/java/combat/CombatController.java" />
         <option value="$PROJECT_DIR$/src/main/java/combat/Mob.java" />
         <option value="$PROJECT_DIR$/src/main/java/combat/CombatView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/MobData.java" />
         <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/MobData.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" />
       </list>
@@ -158,7 +144,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -261,6 +246,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -530,7 +516,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29727685" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30181542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -839,8 +825,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
+        <state relative-caret-position="1989">
           <caret line="122" column="46" selection-start-line="122" selection-start-column="46" selection-end-line="122" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/ResourceLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+          <folding>
+            <element signature="method#loadNavigation#0;class#ResourceLoader#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/MobData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1139">
+          <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+          <folding>
+            <element signature="method#loadMobs#0;class#MobData#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -848,36 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/MobData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
-          <folding>
-            <element signature="method#loadMobs#0;class#MobData#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/ResourceLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
-          <folding>
-            <element signature="method#loadNavigation#0;class#ResourceLoader#0" />
-          </folding>
         </state>
       </provider>
     </entry>

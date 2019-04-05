@@ -50,6 +50,8 @@ public class MobData {
                 return makeRat();
             case "bunny":
                 return makeBunny();
+            case "penguin":
+                return makePenguin();
         }
         return null;
     }

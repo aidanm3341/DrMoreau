@@ -54,6 +54,8 @@ public class MobData {
                 return makePenguin();
             case  "lion":
                 return makeLion();
+            case  "elephant":
+                return makeElephant();
         }
         return null;
     }
@@ -194,5 +196,30 @@ public class MobData {
         parts.add(PartFactory.getPart("lion_body"));
 
         return new Mob("Lion", 10, 5, 5, parts, image);
+    }
+    private static Mob makeElephant() throws SlickException
+    {
+        BodyPart body = PartFactory.getPart("elephant_body");
+
+        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+                PartFactory.getPart("elephant_head"),
+                PartFactory.getPart("elephant_arm"),
+                PartFactory.getPart("elephant_arm"),
+                PartFactory.getPart("elephant_leg"),
+                PartFactory.getPart("elephant_leg"),
+                PartFactory.getPart("elephant_tail"),
+                PartFactory.getPart("elephant_body"));
+        image.flipH(true);
+
+        ArrayList<BodyPart> parts = new ArrayList<>();
+        parts.add(PartFactory.getPart("elephant_head"));
+        parts.add(PartFactory.getPart("elephant_arm"));
+        parts.add(PartFactory.getPart("elephant_arm"));
+        parts.add(PartFactory.getPart("elephant_leg"));
+        parts.add(PartFactory.getPart("elephant_leg"));
+        parts.add(PartFactory.getPart("elephant_tail"));
+        parts.add(PartFactory.getPart("elephant_body"));
+
+        return new Mob("Elephant", 10, 5, 5, parts, image);
     }
 }

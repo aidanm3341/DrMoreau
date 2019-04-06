@@ -103,7 +103,10 @@ public class ResourceLoader {
     private static void loadElephant() throws SlickException {
         images.put("elephant_body", new Image("parts/elephant/Elephant_body.png"));
         images.put("elephant_leg", new Image("parts/elephant/Elephant_leg.png"));
+        images.put("elephant_arm", new Image("parts/elephant/Elephant_arm.png"));
+        images.put("elephant_tail", new Image("parts/elephant/Elephant_tail.png"));
         images.put("elephant_head", new Image("parts/elephant/Elephant.png"));
+
     }
 
     private static void loadGoat() throws SlickException {

@@ -150,6 +150,33 @@ public class PartFactory {
                         new Point(0, lionBody.getHeight()*0.66f));
                 return new BodyBodyPart("lion_body", "body", at1, 5, lionBody,null, connectors);
 
+            case "elephant_head":
+                Image elephantHead = ResourceLoader.getImage("elephant_head");
+                return new BodyPart("elephant_head", "head", at1, 5, elephantHead,
+                        new Point(elephantHead.getWidth() * 0.2f, elephantHead.getHeight() - 100));
+            case "elephant_leg":
+                Image elephantLeg = ResourceLoader.getImage("elephant_leg");
+                return new BodyPart("elephant_leg", "leg", at1, 5, elephantLeg,
+                        new Point(elephantLeg.getWidth()/2, 45));
+            case "elephant_arm":
+                Image elephantArm = ResourceLoader.getImage("elephant_arm").getScaledCopy(0.8f);
+                return new BodyPart("elephant_arm", "arm", at1, 5, elephantArm,
+                        new Point(elephantArm.getWidth()*0.4f, 20));
+            case "elephant_tail":
+                Image elephantTail = ResourceLoader.getImage("elephant_tail");
+                return new BodyPart("elephant_tail", "tail", at1, 5, elephantTail,
+                        new Point (elephantTail.getWidth() - 15 , elephantTail.getHeight()/2 + 10));
+            case "elephant_body":
+                Image elephantBody = ResourceLoader.getImage("elephant_body");
+                connectors = new BodyConnectors(
+                        new Point(elephantBody.getWidth()*0.8f, (elephantBody.getHeight()*0.3f)),
+                        new Point(elephantBody.getWidth()*0.67f, elephantBody.getHeight()*0.6f),
+                        new Point(elephantBody.getWidth()*0.57f, elephantBody.getHeight()*0.55f),
+                        new Point (elephantBody.getWidth()*0.25f, elephantBody.getHeight()*0.66f),
+                        new Point (elephantBody.getWidth()*0.2f, elephantBody.getHeight()*0.6f),
+                        new Point(0, elephantBody.getHeight()*0.66f));
+                return new BodyBodyPart("elephant_body", "body", at1, 5, elephantBody,null, connectors);
+
             default:
                 throw new SlickException("Not a valid animal part.");
         }

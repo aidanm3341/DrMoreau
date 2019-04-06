@@ -126,6 +126,29 @@ public class PartFactory {
                         new Point(0, penguinBody.getHeight()*0.66f));
                 return new BodyBodyPart("penguin_body", "body", at1, 5, penguinBody,null, connectors);
 
+            case "lion_head":
+                Image lionHead = ResourceLoader.getImage("lion_head");
+                return new BodyPart("lion_head", "head", at1, 5, lionHead,
+                        new Point(lionHead.getWidth() * 0.4f, lionHead.getHeight() - 40));
+            case "lion_leg":
+                Image lionLeg = ResourceLoader.getImage("lion_leg");
+                return new BodyPart("lion_leg", "leg", at1, 5, lionLeg,
+                        new Point(lionLeg.getWidth()/2, 45));
+            case "lion_arm":
+                Image lionArm = ResourceLoader.getImage("lion_arm").getScaledCopy(0.8f);
+                return new BodyPart("lion_arm", "arm", at1, 5, lionArm,
+                        new Point(lionArm.getWidth()*0.4f, 20));
+
+            case "lion_body":
+                Image lionBody = ResourceLoader.getImage("lion_body");
+                connectors = new BodyConnectors(
+                        new Point(lionBody.getWidth()*0.8f, (lionBody.getHeight()*0.3f)),
+                        new Point(lionBody.getWidth()*0.67f, lionBody.getHeight()*0.6f),
+                        new Point(lionBody.getWidth()*0.57f, lionBody.getHeight()*0.55f),
+                        new Point (lionBody.getWidth()*0.25f, lionBody.getHeight()*0.66f),
+                        new Point (lionBody.getWidth()*0.2f, lionBody.getHeight()*0.6f),
+                        new Point(0, lionBody.getHeight()*0.66f));
+                return new BodyBodyPart("lion_body", "body", at1, 5, lionBody,null, connectors);
 
             default:
                 throw new SlickException("Not a valid animal part.");

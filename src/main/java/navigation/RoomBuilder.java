@@ -18,7 +18,7 @@ public class RoomBuilder {
     public static Room buildRoom(String theme) throws SlickException{
         red = new Pool<>();
         grey = new Pool<>();
-        red.add(MobData.getMob("bunny"));
+        red.add(MobData.getMob("lion"));
         red.add(MobData.getMob("penguin"));
         red.add(MobData.getMob("dog"));
         grey.add(MobData.getMob("rat"));

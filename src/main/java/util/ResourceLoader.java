@@ -114,6 +114,7 @@ public class ResourceLoader {
 
     private static void loadLion() throws SlickException {
         images.put("lion_body", new Image("parts/lion/Lion_body.png"));
+        images.put("lion_arm", new Image("parts/lion/lion_arm.png"));
         images.put("lion_leg", new Image("parts/lion/Lion_leg.png"));
         images.put("lion_head", new Image("parts/lion/Lion.png"));
     }

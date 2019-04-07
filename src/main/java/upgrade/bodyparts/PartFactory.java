@@ -100,30 +100,30 @@ public class PartFactory {
                 return new BodyBodyPart("bunny_body", "body", at1, 5, bunnyBody,null, connectors);
 
             case "penguin_head":
-                Image penguinHead = ResourceLoader.getImage("penguin_head");
+                Image penguinHead = ResourceLoader.getImage("penguin_head").getScaledCopy(0.5f);
                 return new BodyPart("penguin_head", "head", at1, 5, penguinHead,
-                        new Point(penguinHead.getWidth() * 0.4f, penguinHead.getHeight() - 40));
+                        new Point(penguinHead.getWidth() * 0.75f, penguinHead.getHeight()-30));
             case "penguin_leg":
-                Image penguinLeg = ResourceLoader.getImage("penguin_leg");
+                Image penguinLeg = ResourceLoader.getImage("penguin_leg").getScaledCopy(0.5f);
                 return new BodyPart("penguin_leg", "leg", at1, 5, penguinLeg,
-                        new Point(penguinLeg.getWidth()/2, 45));
+                        new Point(penguinLeg.getWidth()/2, 200));
             case "penguin_arm":
-                Image penguinArm = ResourceLoader.getImage("penguin_arm").getScaledCopy(0.8f);
+                Image penguinArm = ResourceLoader.getImage("penguin_arm").getScaledCopy(0.5f);
                 return new BodyPart("penguin_arm", "arm", at1, 5, penguinArm,
-                        new Point(penguinArm.getWidth()*0.4f, 20));
+                        new Point(penguinArm.getWidth()*0.75f, 200));
             case "penguin_tail":
-                Image penguinTail = ResourceLoader.getImage("penguin_tail");
+                Image penguinTail = ResourceLoader.getImage("penguin_tail").getScaledCopy(0.5f);
                 return new BodyPart("penguin_tail", "tail", at1, 5, penguinTail,
-                        new Point (penguinTail.getWidth()* 0.55f, penguinTail.getHeight()/2));
+                        new Point (penguinTail.getWidth()* 0.1f, penguinTail.getHeight()*0.9f));
             case "penguin_body":
-                Image penguinBody = ResourceLoader.getImage("penguin_body");
+                Image penguinBody = ResourceLoader.getImage("penguin_body").getScaledCopy(0.5f);
                 connectors = new BodyConnectors(
                         new Point(penguinBody.getWidth()*0.8f, (penguinBody.getHeight()*0.3f)),
-                        new Point(penguinBody.getWidth()*0.67f, penguinBody.getHeight()*0.6f),
-                        new Point(penguinBody.getWidth()*0.57f, penguinBody.getHeight()*0.55f),
-                        new Point (penguinBody.getWidth()*0.25f, penguinBody.getHeight()*0.66f),
-                        new Point (penguinBody.getWidth()*0.2f, penguinBody.getHeight()*0.6f),
-                        new Point(0, penguinBody.getHeight()*0.66f));
+                        new Point(penguinBody.getWidth()*0.74f, penguinBody.getHeight()*0.75f),
+                        new Point(penguinBody.getWidth()*0.83f, penguinBody.getHeight()*0.62f),
+                        new Point (penguinBody.getWidth()*0.5f, penguinBody.getHeight()*1.02f),
+                        new Point (penguinBody.getWidth()*0.55f, penguinBody.getHeight()*1f),
+                        new Point(50, penguinBody.getHeight()*1.32f));
                 return new BodyBodyPart("penguin_body", "body", at1, 5, penguinBody,null, connectors);
 
             case "lion_head":

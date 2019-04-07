@@ -18,10 +18,11 @@ public class RoomBuilder {
     public static Room buildRoom(String theme) throws SlickException{
         red = new Pool<>();
         grey = new Pool<>();
-        red.add(MobData.getMob("bunny"));
-        red.add(MobData.getMob("elephant"));
+        //red.add(MobData.getMob("bunny"));
+        //red.add(MobData.getMob("elephant"));
         red.add(MobData.getMob("penguin"));
-        grey.add(MobData.getMob("rat"));
+        grey.add(MobData.getMob("penguin"));
+        //grey.add(MobData.getMob("rat"));
 
         int type;
         Random rand = new Random();

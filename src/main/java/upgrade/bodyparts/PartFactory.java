@@ -102,7 +102,7 @@ public class PartFactory {
             case "penguin_head":
                 Image penguinHead = ResourceLoader.getImage("penguin_head").getScaledCopy(0.5f);
                 return new BodyPart("penguin_head", "head", at1, 5, penguinHead,
-                        new Point(penguinHead.getWidth() * 0.75f, penguinHead.getHeight()-30));
+                        new Point(penguinHead.getWidth() * 0.75f, penguinHead.getHeight()-130));
             case "penguin_leg":
                 Image penguinLeg = ResourceLoader.getImage("penguin_leg").getScaledCopy(0.5f);
                 return new BodyPart("penguin_leg", "leg", at1, 5, penguinLeg,

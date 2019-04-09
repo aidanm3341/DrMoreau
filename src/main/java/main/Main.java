@@ -21,6 +21,7 @@ public class Main extends StateBasedGame {
     public static final int UPGRADE  = 3;
     public static final int TRAVEL   = 4;
     public static final int CONFIRM  = 5;
+    public static final int GAMEOVER = 6;
 
     // Application Properties
     public static final int WIDTH   = 1680;

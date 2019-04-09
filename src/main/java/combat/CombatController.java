@@ -49,12 +49,18 @@ public class CombatController extends Screen {
         this.mob = mob;
     }
 
-    public void doAttack1(){mob.setHp(at1.getDmg());}
-    public void doAttack2(){mob.setHp(at2.getDmg());}
-    public void doAttack3(){mob.setHp(at3.getDmg());}
-    public void doAttack4(){mob.setHp(at4.getDmg());}
-    public void doAttack5(){mob.setHp(at5.getDmg());}
-    public void doAttack6(){mob.setHp(at6.getDmg());}
+    public void doAttack1(){doAttack(at1);}
+    public void doAttack2(){doAttack(at2);}
+    public void doAttack3(){doAttack(at3);}
+    public void doAttack4(){doAttack(at4);}
+    public void doAttack5(){doAttack(at5);}
+    public void doAttack6(){doAttack(at6);}
+
+    private void doAttack(Attack atk)
+    {
+        mob.setHp(atk.getDmg());
+        main.getSidekick().attack(mob.getAttStat());
+    }
 
 
 

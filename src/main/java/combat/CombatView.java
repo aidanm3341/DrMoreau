@@ -64,6 +64,12 @@ public class CombatView implements ComponentListener {
         att5_button.render(gc, g);
         att6_button.render(gc, g);
 
+        renderMobHealthBar(g);
+        renderSidekickHealthBar(g);
+    }
+
+    private void renderMobHealthBar(Graphics g)
+    {
         g.setColor(Color.white);
         g.drawString(ctrl.getMob().getName(), 1100, 55);
         // health bar
@@ -74,6 +80,20 @@ public class CombatView implements ComponentListener {
                 ((float) ctrl.getMob().getCurrentHp()/(float) ctrl.getMob().getMaxHp())*400, 30);
         g.setColor(Color.white);
         g.drawString(" "+ctrl.getMob().getCurrentHp() + " / " + ctrl.getMob().getMaxHp(), 1150, 145);
+    }
+
+    private void renderSidekickHealthBar(Graphics g)
+    {
+        g.setColor(Color.white);
+        g.drawString("Sidekick", 200, 55);
+        // health bar
+        g.setColor(Color.red);
+        g.fillRect(200, 100, 400, 30);
+        g.setColor(Color.green);
+        g.fillRect(200, 100,
+                ((float) ctrl.getSidekick().getCurrentHp()/(float) ctrl.getSidekick().getMaxHp())*400, 30);
+        g.setColor(Color.white);
+        g.drawString(" "+ctrl.getSidekick().getCurrentHp() + " / " + ctrl.getSidekick().getMaxHp(), 250, 145);
     }
 
     public void componentActivated(AbstractComponent c) {

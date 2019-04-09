@@ -33,12 +33,6 @@ public class RoomBuilder {
         Pool<BodyPart> parts = new Pool<>();
         ArrayList<BodyPart> rewards;
 
-
-        if(rand.nextInt(10) < 5)
-            type = Room.BATTLE;
-        else
-            type = Room.TREASURE;
-
         switch (theme) {
             default:
             case "red":
@@ -50,8 +44,16 @@ public class RoomBuilder {
                 mob = grey.get();
         }
 
-        parts.addAll(mob.getParts());
-        rewards = parts.popX(3);
+        if(rand.nextInt(10) < 5) {
+            type = Room.BATTLE;
+            parts.addAll(mob.getParts());
+            rewards = parts.popX(3);
+        }
+        else {
+            type = Room.TREASURE;
+            parts.addAll(mob.getParts());
+            rewards = parts.popX(3);
+        }
 
         return new Room(type, theme, mob, navigationImage, rewards);
     }

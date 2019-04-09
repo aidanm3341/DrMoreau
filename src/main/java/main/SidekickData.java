@@ -1,19 +1,16 @@
 package main;
 
 import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Point;
 import upgrade.bodyparts.*;
 import util.CreatureComposer;
-import util.ResourceLoader;
 import util.SuperImage;
 
 public class SidekickData {
 
     private Attack at1, at2, at3, at4, at5, at6;
     private AbstractBodyPart head, armLeft, armRight, legLeft, legRight, tail, body;
-    private int hp;
+    private int currentHp, maxHP;
     private SuperImage image;
 
     public SidekickData(){
@@ -50,26 +47,45 @@ public class SidekickData {
     
     public void addBody(AbstractBodyPart newPart){
         body = newPart;
+        updateMaxHp();
     }
     public void addHead(AbstractBodyPart newPart){
         head = newPart;
+        updateMaxHp();
     }
     public void addLegLeft(AbstractBodyPart newPart){
         legLeft = newPart;
+        updateMaxHp();
     }
     public void addLegRight(AbstractBodyPart newPart){
         legRight = newPart;
+        updateMaxHp();
     }
     public void addArmLeft(AbstractBodyPart newPart){
         armLeft = newPart;
+        updateMaxHp();
     }
     public void addArmRight(AbstractBodyPart newPart){
         armRight = newPart;
+        updateMaxHp();
     }
     public void addTail(AbstractBodyPart newPart){
         tail = newPart;
+        updateMaxHp();
     }
 
+    public void updateMaxHp() {
+        int newHp = 0;
+        newHp += body.getHp();
+        newHp += head.getHp();
+        newHp += legLeft.getHp();
+        newHp += legRight.getHp();
+        newHp += armLeft.getHp();
+        newHp += armRight.getHp();
+        newHp += tail.getHp();
+        maxHP = newHp;
+        currentHp = maxHP;
+    }
 
     private void composeImage() {
         image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
@@ -78,7 +94,15 @@ public class SidekickData {
 
 
     public void attack(int dmg){
-        hp -= dmg;
+        currentHp -= dmg;
+    }
+
+    public int getMaxHp(){
+        return maxHP;
+    }
+
+    public int getCurrentHp() {
+        return currentHp;
     }
 
     public Attack getAt1() {

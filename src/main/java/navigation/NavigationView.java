@@ -6,6 +6,7 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.gui.MouseOverArea;
 import org.newdawn.slick.state.StateBasedGame;
+import util.AttackButton;
 import util.MyFont;
 import util.ResourceLoader;
 
@@ -16,6 +17,7 @@ public class NavigationView {
 
     private NavigationController ctrl;
     private MouseOverArea left, right;
+    private AttackButton bossButton;
     private Image border;
     private UnicodeFont font;
 
@@ -31,6 +33,10 @@ public class NavigationView {
         } catch (FontFormatException e) {
             e.printStackTrace();
         }
+
+        bossButton = new AttackButton("BOSS", gc.getWidth()/2, 40);
+        bossButton.init(gc);
+        bossButton.addListener(ctrl);
 
         left = new MouseOverArea(gc, ResourceLoader.getImage("brickRoute"), 110, 180);
         left.addListener(ctrl);
@@ -58,6 +64,7 @@ public class NavigationView {
         g.setFont(font);
         g.setColor(Color.red);
         g.drawString("Which Way?", gc.getWidth()/2 - 175, gc.getHeight() - 150);
+        bossButton.render(gc, g);
     }
 
     public MouseOverArea getLeft() {
@@ -66,5 +73,9 @@ public class NavigationView {
 
     public MouseOverArea getRight() {
         return right;
+    }
+
+    public AttackButton getBossButton() {
+        return bossButton;
     }
 }

@@ -58,6 +58,9 @@ public class MobData {
                 return makeElephant();
             case "beaver":
                 return makeBeaver();
+            case "Dr.Moreau":
+                image.addImage(new PositionedImage(ResourceLoader.getImage("Dr.Moreau"), 0, 0));
+                return new Mob("Dr.Moreau", 100, 15, 30, new ArrayList<>(), image);
         }
         return null;
     }

@@ -53,6 +53,8 @@ public class NavigationController extends Screen implements ComponentListener {
     }
 
     public void componentActivated(AbstractComponent c) {
+        if(view.getBossButton().equals(c))
+            System.out.println("BOSS");
         if(view.getLeft().equals(c))
             activeRoom = left;
         else if(view.getRight().equals(c))

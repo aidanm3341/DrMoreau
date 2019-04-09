@@ -134,6 +134,7 @@ public class ResourceLoader {
         images.put("burning_arm", new Image("parts/misc/burning_arm.png"));
         images.put("frozen_leg", new Image("parts/misc/frozen_leg.png"));
         images.put("golden_monkey_arm", new Image("parts/misc/golden_monkey_arm.png"));
+        images.put("Dr.Moreau", new Image("boss.png"));
     }
 
     public static Image getImage(String name)

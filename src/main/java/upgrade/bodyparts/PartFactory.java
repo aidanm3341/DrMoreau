@@ -118,12 +118,12 @@ public class PartFactory {
             case "penguin_body":
                 Image penguinBody = ResourceLoader.getImage("penguin_body").getScaledCopy(0.5f);
                 connectors = new BodyConnectors(
-                        new Point(penguinBody.getWidth()*0.8f, (penguinBody.getHeight()*0.3f)),
-                        new Point(penguinBody.getWidth()*0.74f, penguinBody.getHeight()*0.75f),
-                        new Point(penguinBody.getWidth()*0.83f, penguinBody.getHeight()*0.62f),
-                        new Point (penguinBody.getWidth()*0.5f, penguinBody.getHeight()*1.02f),
-                        new Point (penguinBody.getWidth()*0.55f, penguinBody.getHeight()*1f),
-                        new Point(50, penguinBody.getHeight()*1.32f));
+                        new Point(penguinBody.getWidth()*1.3f, (penguinBody.getHeight()*0.6f)),
+                        new Point(penguinBody.getWidth()*0.74f, penguinBody.getHeight()*0.45f),
+                        new Point(penguinBody.getWidth()*0.78f, penguinBody.getHeight()*0.55f),
+                        new Point (penguinBody.getWidth()*0.24f, penguinBody.getHeight()*0.5f),
+                        new Point (penguinBody.getWidth()*0.29f, penguinBody.getHeight()*0.52f),
+                        new Point(-70, penguinBody.getHeight()*0.91f));
                 return new BodyBodyPart("penguin_body", "body", at1, 5, penguinBody,null, connectors);
 
             case "lion_head":

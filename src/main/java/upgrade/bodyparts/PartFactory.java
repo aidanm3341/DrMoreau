@@ -177,6 +177,33 @@ public class PartFactory {
                         new Point(0, elephantBody.getHeight()*0.66f));
                 return new BodyBodyPart("elephant_body", "body", at1, 5, elephantBody,null, connectors);
 
+            case "beaver_head":
+                Image beaverHead = ResourceLoader.getImage("beaver_head");
+                return new BodyPart("beaver_head", "head", at1, 2, beaverHead,
+                        new Point(beaverHead.getWidth() * 0.2f, beaverHead.getHeight() * 0.8f - 30));
+            case "beaver_leg":
+                Image beaverLeg = ResourceLoader.getImage("beaver_limb");
+                return new BodyPart("beaver_leg", "leg", at1, 5, beaverLeg,
+                        new Point(beaverLeg.getWidth()* 0.2f/2, 10));
+            case "beaver_arm":
+                Image beaverArm = ResourceLoader.getImage("beaver_limb").getScaledCopy(0.8f);
+                return new BodyPart("beaver_arm", "arm", at1, 3, beaverArm,
+                        new Point(beaverArm.getWidth()/2f, 10));
+            case "beaver_tail":
+                Image beaverTail = ResourceLoader.getImage("beaver_tail");
+                return new BodyPart("beaver_tail", "tail", at1, 8, beaverTail,
+                        new Point (beaverTail.getWidth()* 0.7f, beaverTail.getHeight()* 1f/2));
+            case "beaver_body":
+                Image beaverBody = ResourceLoader.getImage("beaver_body");
+                connectors = new BodyConnectors(
+                        new Point(beaverBody.getWidth()*0.8f, (beaverBody.getHeight()*0.1f)),
+                        new Point(beaverBody.getWidth()*0.9f, beaverBody.getHeight()*0.5f),
+                        new Point(beaverBody.getWidth()*0.8f, beaverBody.getHeight()*0.4f),
+                        new Point (beaverBody.getWidth()*0.1f, beaverBody.getHeight()*0.4f),
+                        new Point (beaverBody.getWidth()*0.2f, beaverBody.getHeight()*0.4f),
+                        new Point(-30, beaverBody.getHeight()*0.65f));
+                return new BodyBodyPart("beaver_body", "body", at1, 6, beaverBody,null, connectors);
+
             default:
                 throw new SlickException("Not a valid animal part.");
         }

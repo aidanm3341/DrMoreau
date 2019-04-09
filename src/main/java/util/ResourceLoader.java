@@ -50,7 +50,7 @@ public class ResourceLoader {
         loadElephant();
         loadGoat();
         loadLion();
-        loadSquid();
+        loadBeaver();
         loadMisc();
 
         images.put("ostrich_head", new Image("parts/ostrich_head.png"));
@@ -122,10 +122,11 @@ public class ResourceLoader {
         images.put("lion_head", new Image("parts/lion/Lion.png"));
     }
 
-    private static void loadSquid() throws SlickException {
-        images.put("squid_body", new Image("parts/squid/squid_body.png"));
-        images.put("squid_left_leg", new Image("parts/squid/squid_left_legs.png"));
-        images.put("squid_right_leg", new Image("parts/squid/squid_right_legs.png"));
+    private static void loadBeaver() throws SlickException {
+        images.put("beaver_body", new Image("parts/beaver/beaver_body.png"));
+        images.put("beaver_limb", new Image("parts/beaver/beaver_limb.png"));
+        images.put("beaver_tail", new Image("parts/beaver/beaver_tail.png"));
+        images.put("beaver_head", new Image("parts/beaver/beaver_head.png"));
     }
 
 

@@ -3,9 +3,9 @@ package main;
 public class Attack {
 
     private String name;
-    private int dmg;
+    private float dmg;
 
-    public Attack(String name, int dmg)
+    public Attack(String name, float dmg)
     {
         this.name = name;
         this.dmg = dmg;
@@ -15,7 +15,7 @@ public class Attack {
         return name;
     }
 
-    public int getDmg() {
+    public float getDmg() {
         return dmg;
     }
 }

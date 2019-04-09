@@ -99,6 +99,10 @@ public class MainController {
         sbg.enterState(ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
     }
 
+    public int getLevel() {
+        return level;
+    }
+
     public Room getActiveRoom(){
         return navigation.getActiveRoom();
     }

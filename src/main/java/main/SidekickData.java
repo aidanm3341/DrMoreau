@@ -10,7 +10,7 @@ public class SidekickData {
 
     private Attack at1, at2, at3, at4, at5, at6;
     private AbstractBodyPart head, armLeft, armRight, legLeft, legRight, tail, body;
-    private int currentHp, maxHP;
+    private float currentHp, maxHP;
     private SuperImage image;
 
     public SidekickData(){
@@ -40,13 +40,13 @@ public class SidekickData {
 
     public void loadDefaultSidekick() throws SlickException
     {
-        addBody(PartFactory.getPart("dog_body"));
-        addLegLeft(PartFactory.getPart("dog_leg"));
-        addArmLeft(PartFactory.getPart("dog_arm"));
-        addLegRight(PartFactory.getPart("dog_leg"));
-        addArmRight(PartFactory.getPart("dog_arm"));
-        addTail(PartFactory.getPart("dog_tail"));
-        addHead(PartFactory.getPart("dog_head"));
+        addBody(PartFactory.getPart("dog_body", 1));
+        addLegLeft(PartFactory.getPart("dog_leg", 1));
+        addArmLeft(PartFactory.getPart("dog_arm", 1));
+        addLegRight(PartFactory.getPart("dog_leg", 1));
+        addArmRight(PartFactory.getPart("dog_arm", 1));
+        addTail(PartFactory.getPart("dog_tail", 1));
+        addHead(PartFactory.getPart("dog_head", 1));
     }
 
     
@@ -104,18 +104,18 @@ public class SidekickData {
     }
 
 
-    public void attack(int dmg){
+    public void attack(float dmg){
         if(currentHp - dmg < 0)
             currentHp = 0;
         else
             currentHp -= dmg;
     }
 
-    public int getMaxHp(){
+    public float getMaxHp(){
         return maxHP;
     }
 
-    public int getCurrentHp() {
+    public float getCurrentHp() {
         return currentHp;
     }
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Mob {
 
     private String name;
-    private int currentHp, maxHp, attStat, defStat;
+    private float currentHp, maxHp, attStat, defStat;
     private ArrayList<BodyPart> parts;
     private SuperImage mobImage;
 
@@ -25,7 +25,7 @@ public class Mob {
 
     public String getName(){return name;}
 
-    public void setHp(int dmgDealt){
+    public void setHp(float dmgDealt){
         if(currentHp - dmgDealt < 0)
             currentHp = 0;
         else if(currentHp - dmgDealt > maxHp)
@@ -34,19 +34,19 @@ public class Mob {
             currentHp -= dmgDealt;
     }
 
-    public int getCurrentHp(){
+    public float getCurrentHp(){
         return currentHp;
     }
 
-    public int getMaxHp() {
+    public float getMaxHp() {
         return maxHp;
     }
 
-    public int getAttStat(){
+    public float getAttStat(){
         return attStat;
     }
 
-    public int getDefStat(){
+    public float getDefStat(){
         return defStat;
     }
 

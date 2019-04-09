@@ -17,22 +17,22 @@ public class RoomBuilder {
     private static Pool<Mob> red, grey;
     private static Pool<BodyPart> treasure;
 
-    public static Room buildRoom(String theme) throws SlickException{
+    public static Room buildRoom(String theme, int level) throws SlickException{
         red = new Pool<>();
         grey = new Pool<>();
         treasure = new Pool<>();
-        red.add(MobData.getMob("bunny"));
-        red.add(MobData.getMob("elephant"));
-        red.add(MobData.getMob("lion"));
+        red.add(MobData.getMob("bunny", level));
+        red.add(MobData.getMob("elephant", level));
+        red.add(MobData.getMob("lion", level));
         //grey.add(MobData.getMob("penguin"));
-        grey.add(MobData.getMob("rat"));
-        grey.add(MobData.getMob("dog"));
-        grey.add(MobData.getMob("beaver"));
+        grey.add(MobData.getMob("rat", level));
+        grey.add(MobData.getMob("dog", level));
+        grey.add(MobData.getMob("beaver", level));
 
-        treasure.add(PartFactory.getPart("bull_head"));
-        treasure.add(PartFactory.getPart("burning_arm"));
-        treasure.add(PartFactory.getPart("frozen_leg"));
-        treasure.add(PartFactory.getPart("golden_monkey_arm"));
+        treasure.add(PartFactory.getPart("bull_head", level));
+        treasure.add(PartFactory.getPart("burning_arm", level));
+        treasure.add(PartFactory.getPart("frozen_leg", level));
+        treasure.add(PartFactory.getPart("golden_monkey_arm", level));
 
         int type;
         Random rand = new Random();

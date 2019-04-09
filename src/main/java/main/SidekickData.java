@@ -99,7 +99,10 @@ public class SidekickData {
 
 
     public void attack(int dmg){
-        currentHp -= dmg;
+        if(currentHp - dmg < 0)
+            currentHp = 0;
+        else
+            currentHp -= dmg;
     }
 
     public int getMaxHp(){

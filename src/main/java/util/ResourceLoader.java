@@ -129,9 +129,12 @@ public class ResourceLoader {
         images.put("beaver_head", new Image("parts/beaver/beaver_head.png"));
     }
 
-
-
-    private static void loadMisc() throws SlickException{}
+    private static void loadMisc() throws SlickException{
+        images.put("bull_head", new Image("parts/misc/bull_head.png"));
+        images.put("burning_arm", new Image("parts/misc/burning_arm.png"));
+        images.put("frozen_leg", new Image("parts/misc/frozen_leg.png"));
+        images.put("golden_monkey_arm", new Image("parts/misc/golden_monkey_arm.png"));
+    }
 
     public static Image getImage(String name)
     {

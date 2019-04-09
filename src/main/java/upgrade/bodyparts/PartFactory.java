@@ -204,6 +204,23 @@ public class PartFactory {
                         new Point(-30, beaverBody.getHeight()*0.65f));
                 return new BodyBodyPart("beaver_body", "body", at1, 6, beaverBody,null, connectors);
 
+
+            case "bull_head":
+                Image bullHead = ResourceLoader.getImage("bull_head");
+                return new BodyPart("bull_head", "head", at1, 15, bullHead,
+                        new Point(5, bullHead.getHeight()*0.75f));
+            case "burning_arm":
+                Image burningArm = ResourceLoader.getImage("burning_arm");
+                return new BodyPart("burning_arm", "arm", at1, 7, burningArm,
+                        new Point(burningArm.getWidth()*0.66f, 20));
+            case "frozen_leg":
+                Image frozenLeg = ResourceLoader.getImage("frozen_leg");
+                return new BodyPart("frozen_leg", "leg", at1, 10, frozenLeg,
+                        new Point(frozenLeg.getWidth()/2, 30));
+            case "golden_monkey_arm":
+                Image goldenMonkeyArm = ResourceLoader.getImage("golden_monkey_arm");
+                return new BodyPart("golden_monkey_arm", "arm", at1, 6, goldenMonkeyArm,
+                        new Point(goldenMonkeyArm.getWidth()/2, 20));
             default:
                 throw new SlickException("Not a valid animal part.");
         }

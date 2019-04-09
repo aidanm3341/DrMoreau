@@ -54,8 +54,10 @@ public class GameOver extends Screen implements ComponentListener {
     }
 
     public void componentActivated(AbstractComponent c) {
-        if(respawnButton.equals(c))
+        if(respawnButton.equals(c)) {
+            try { main.reset(); } catch (SlickException e) { }
             main.enterState(Main.MAINMENU);
+        }
         else if(quitButton.equals(c))
             System.exit(0);
     }

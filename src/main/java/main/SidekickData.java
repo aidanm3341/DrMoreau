@@ -35,6 +35,11 @@ public class SidekickData {
 
         image = new SuperImage();
 
+        loadDefaultSidekick();
+    }
+
+    public void loadDefaultSidekick() throws SlickException
+    {
         addBody(PartFactory.getPart("dog_body"));
         addLegLeft(PartFactory.getPart("dog_leg"));
         addArmLeft(PartFactory.getPart("dog_arm"));

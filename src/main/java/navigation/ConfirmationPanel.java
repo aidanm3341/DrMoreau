@@ -55,8 +55,12 @@ public class ConfirmationPanel extends Screen implements ComponentListener {
     }
 
     public void componentActivated(AbstractComponent c) {
-        if(confirmButton.equals(c))
-            main.enterState(Main.FIGHT);
+        if(confirmButton.equals(c)) {
+            if(main.getActiveRoom().getType() == Room.BATTLE)
+                main.enterState(Main.FIGHT);
+            else if(main.getActiveRoom().getType() == Room.TREASURE)
+                main.enterState(Main.UPGRADE);
+        }
         else if(cancelButton.equals(c))
             main.enterState(Main.TRAVEL);
     }

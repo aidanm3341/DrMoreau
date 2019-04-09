@@ -51,4 +51,8 @@ public class BodyPart implements AbstractBodyPart {
     public float getHeight(){
         return image.getHeight();
     }
+
+    public Attack getAttack() {
+        return attack;
+    }
 }

@@ -56,26 +56,32 @@ public class SidekickData {
     }
     public void addHead(AbstractBodyPart newPart){
         head = newPart;
+        at1 = head.getAttack();
         updateMaxHp();
     }
     public void addLegLeft(AbstractBodyPart newPart){
         legLeft = newPart;
+        at2 = legLeft.getAttack();
         updateMaxHp();
     }
     public void addLegRight(AbstractBodyPart newPart){
         legRight = newPart;
+        at3 = legRight.getAttack();
         updateMaxHp();
     }
     public void addArmLeft(AbstractBodyPart newPart){
         armLeft = newPart;
+        at4 = armLeft.getAttack();
         updateMaxHp();
     }
     public void addArmRight(AbstractBodyPart newPart){
         armRight = newPart;
+        at5 = armRight.getAttack();
         updateMaxHp();
     }
     public void addTail(AbstractBodyPart newPart){
         tail = newPart;
+        at6 = tail.getAttack();
         updateMaxHp();
     }
 

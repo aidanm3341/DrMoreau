@@ -26,8 +26,9 @@ public class MainController {
     private Victory victory;
     private StateBasedGame sbg;
 
-    public MainController(GameContainer gc, StateBasedGame sbg) throws SlickException
-    {
+    private int level;
+
+    public MainController(GameContainer gc, StateBasedGame sbg) throws SlickException {
         this.sbg = sbg;
     }
 
@@ -61,7 +62,8 @@ public class MainController {
         sbg.addState(gameOver);
         sbg.addState(victory);
         sbg.addState(new ConfirmationPanel(this));
-        //updateSidekick();
+
+        level = 0;
     }
 
     public void attack(int dmg){
@@ -86,11 +88,14 @@ public class MainController {
 
     public void reset() throws SlickException
     {
+        level = 0;
         sidekick.loadDefaultSidekick();
     }
 
     public void enterState(int ID)
     {
+        if(ID == Main.FIGHT)
+            level++;
         sbg.enterState(ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
     }
 

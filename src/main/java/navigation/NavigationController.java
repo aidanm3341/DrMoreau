@@ -1,5 +1,6 @@
 package navigation;
 
+import combat.MobData;
 import main.Main;
 import main.MainController;
 import org.newdawn.slick.GameContainer;
@@ -10,6 +11,7 @@ import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.state.StateBasedGame;
 import screens.Screen;
 import util.Pool;
+import util.ResourceLoader;
 
 public class NavigationController extends Screen implements ComponentListener {
     public int getID() {
@@ -52,9 +54,13 @@ public class NavigationController extends Screen implements ComponentListener {
         return activeRoom;
     }
 
-    public void componentActivated(AbstractComponent c) {
-        if(view.getBossButton().equals(c))
-            System.out.println("BOSS");
+    public void componentActivated(AbstractComponent c){
+        if(view.getBossButton().equals(c)) {
+            try {
+                activeRoom = new Room(Room.BATTLE, "Boss", MobData.getMob("Dr.Moreau"),
+                        ResourceLoader.getImage("null"), null);
+            } catch (SlickException e) {}
+        }
         if(view.getLeft().equals(c))
             activeRoom = left;
         else if(view.getRight().equals(c))

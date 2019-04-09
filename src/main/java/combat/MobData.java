@@ -16,26 +16,6 @@ import java.util.HashMap;
 
 public class MobData {
 
-    private static HashMap<String, Mob> mobs;
-
-    private static void loadMobs() {
-        mobs = new HashMap<>();
-        SuperImage test = new SuperImage();
-        test.addImage(new PositionedImage(ResourceLoader.getImage("ostrich_head"), 10, 10));
-        test.flipH(true);
-        mobs.put("test", new Mob("Test",
-                50, 50, 50,  new ArrayList<>(),
-                test));
-    }
-
-//    public static Mob getMob(String name)
-//    {
-//        if (mobs == null)
-//            loadMobs();
-//
-//        return mobs.get(name);
-//    }
-
     public static Mob getMob(String name) throws SlickException
     {
         SuperImage image = new SuperImage();
@@ -59,7 +39,8 @@ public class MobData {
             case "beaver":
                 return makeBeaver();
             case "Dr.Moreau":
-                image.addImage(new PositionedImage(ResourceLoader.getImage("Dr.Moreau"), 0, 0));
+                image = new SuperImage();
+                image.addImage(new PositionedImage(ResourceLoader.getImage("Dr.Moreau").getScaledCopy(0.38f), -350, -330));
                 return new Mob("Dr.Moreau", 100, 15, 30, new ArrayList<>(), image);
         }
         return null;

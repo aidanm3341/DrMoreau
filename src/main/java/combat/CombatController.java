@@ -67,7 +67,9 @@ public class CombatController extends Screen {
     public void update(GameContainer gc, StateBasedGame sbg, int delta){
         if(main.getSidekick().getCurrentHp() <= 0)
             main.enterState(Main.GAMEOVER);
-        if(mob.getCurrentHp() <= 0)
+        else if(mob.getName().equals("Dr.Moreau") && mob.getCurrentHp() <= 0)
+            main.enterState(Main.VICTORY);
+        else if(mob.getCurrentHp() <= 0)
             main.enterState(Main.UPGRADE);
     }
 

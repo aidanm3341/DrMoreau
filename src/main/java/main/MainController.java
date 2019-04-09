@@ -11,6 +11,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.state.transition.FadeInTransition;
 import org.newdawn.slick.state.transition.FadeOutTransition;
 import screens.GameOver;
+import screens.Victory;
 import upgrade.UpgradeController;
 
 public class MainController {
@@ -22,6 +23,7 @@ public class MainController {
     private NavigationController navigation;
     private UpgradeController upgrade;
     private GameOver gameOver;
+    private Victory victory;
     private StateBasedGame sbg;
 
     public MainController(GameContainer gc, StateBasedGame sbg) throws SlickException
@@ -49,11 +51,15 @@ public class MainController {
         gameOver = new GameOver(this);
         gameOver.init(gc, sbg);
 
+        victory = new Victory(this);
+        victory.init(gc, sbg);
+
         sbg.addState(intro);
         sbg.addState(combat);
         sbg.addState(navigation);
         sbg.addState(upgrade);
         sbg.addState(gameOver);
+        sbg.addState(victory);
         sbg.addState(new ConfirmationPanel(this));
         //updateSidekick();
     }

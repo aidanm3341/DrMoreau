@@ -147,7 +147,7 @@ public class PartFactory {
                 Image lionHead = ResourceLoader.getImage("lion_head");
                 atk = new Attack("Roar", (2*level+5)/2);
                 return new BodyPart("lion_head", "head", atk, 5, lionHead,
-                        new Point(lionHead.getWidth() * 0.4f, lionHead.getHeight() - 40));
+                        new Point(lionHead.getWidth() *0.2f, lionHead.getHeight() - 0));
             case "lion_leg":
                 Image lionLeg = ResourceLoader.getImage("lion_leg");
                 atk = new Attack("Pounce", level+5);
@@ -162,7 +162,7 @@ public class PartFactory {
             case "lion_body":
                 Image lionBody = ResourceLoader.getImage("lion_body");
                 connectors = new BodyConnectors(
-                        new Point(lionBody.getWidth()*0.8f, (lionBody.getHeight()*0.3f)),
+                        new Point(lionBody.getWidth()*0.8f, (lionBody.getHeight()*0.7f)),
                         new Point(lionBody.getWidth()*0.67f, lionBody.getHeight()*0.6f),
                         new Point(lionBody.getWidth()*0.57f, lionBody.getHeight()*0.55f),
                         new Point (lionBody.getWidth()*0.25f, lionBody.getHeight()*0.66f),
@@ -174,7 +174,7 @@ public class PartFactory {
                 Image elephantHead = ResourceLoader.getImage("elephant_head");
                 atk = new Attack("Charge", 5);
                 return new BodyPart("elephant_head", "head", atk, 5, elephantHead,
-                        new Point(elephantHead.getWidth() * 0.2f, elephantHead.getHeight() - 100));
+                        new Point(elephantHead.getWidth() * 0.2f, elephantHead.getHeight() - 40));
             case "elephant_leg":
                 Image elephantLeg = ResourceLoader.getImage("elephant_leg");
                 atk = new Attack("Kick", 3);
@@ -193,7 +193,7 @@ public class PartFactory {
             case "elephant_body":
                 Image elephantBody = ResourceLoader.getImage("elephant_body");
                 connectors = new BodyConnectors(
-                        new Point(elephantBody.getWidth()*0.8f, (elephantBody.getHeight()*0.3f)),
+                        new Point(elephantBody.getWidth()*0.8f, (elephantBody.getHeight()*0.7f)),
                         new Point(elephantBody.getWidth()*0.67f, elephantBody.getHeight()*0.6f),
                         new Point(elephantBody.getWidth()*0.57f, elephantBody.getHeight()*0.55f),
                         new Point (elephantBody.getWidth()*0.25f, elephantBody.getHeight()*0.66f),

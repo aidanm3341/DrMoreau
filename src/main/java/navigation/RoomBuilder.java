@@ -24,6 +24,7 @@ public class RoomBuilder {
         red.add(MobData.getMob("bunny", level));
         red.add(MobData.getMob("elephant", level));
         red.add(MobData.getMob("lion", level));
+        //red.add(MobData.getMob("ostrich", level));
         //grey.add(MobData.getMob("penguin"));
         grey.add(MobData.getMob("rat", level));
         grey.add(MobData.getMob("dog", level));

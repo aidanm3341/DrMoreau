@@ -52,9 +52,8 @@ public class ResourceLoader {
         loadGoat();
         loadLion();
         loadBeaver();
+        loadOstrich();
         loadMisc();
-
-        images.put("ostrich_head", new Image("parts/ostrich_head.png"));
     }
 
     private static void loadDog() throws SlickException {
@@ -128,6 +127,14 @@ public class ResourceLoader {
         images.put("beaver_limb", new Image("parts/beaver/beaver_limb.png"));
         images.put("beaver_tail", new Image("parts/beaver/beaver_tail.png"));
         images.put("beaver_head", new Image("parts/beaver/beaver_head.png"));
+    }
+
+    private static void loadOstrich() throws SlickException{
+        images.put("ostrich_head", new Image("parts/ostrich/ostrich_head.png"));
+        images.put("ostrich_body", new Image("parts/ostrich/ostrich_body.png").getScaledCopy(1/24f).getFlippedCopy(true, false));
+        images.put("ostrich_leg", new Image("parts/ostrich/ostrich_leg.png").getScaledCopy(1/24f).getFlippedCopy(true, false));
+        images.put("ostrich_arm", new Image("parts/ostrich/ostrich_arm.png").getScaledCopy(1/24f).getFlippedCopy(true, false));
+        images.put("ostrich_tail", new Image("parts/ostrich/ostrich_tail.png").getScaledCopy(1/48f).getFlippedCopy(true, false));
     }
 
     private static void loadMisc() throws SlickException{

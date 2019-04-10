@@ -38,6 +38,8 @@ public class MobData {
                 return makeElephant(level);
             case "beaver":
                 return makeBeaver(level);
+            case "ostrich":
+                return makeOstrich(level);
             case "Dr.Moreau":
                 image = new SuperImage();
                 image.addImage(new PositionedImage(ResourceLoader.getImage("Dr.Moreau").getScaledCopy(0.38f), -350, -330));
@@ -129,7 +131,7 @@ public class MobData {
         parts.add(PartFactory.getPart("bunny_tail", level));
         parts.add(PartFactory.getPart("bunny_body", level));
 
-        return new Mob("Bunny", level + 8, 5, 5, parts, image);
+        return new Mob("Bunny", level + 8, 3, 5, parts, image);
     }
 
     private static Mob makePenguin(int level) throws SlickException
@@ -155,7 +157,7 @@ public class MobData {
         parts.add(PartFactory.getPart("penguin_tail", level));
         parts.add(PartFactory.getPart("penguin_body", level));
 
-        return new Mob("Penguin", level, 5, 5, parts, image);
+        return new Mob("Penguin", level, 4, 5, parts, image);
     }
 
     private static Mob makeLion(int level) throws SlickException
@@ -181,7 +183,7 @@ public class MobData {
         parts.add(PartFactory.getPart("dog_tail", level));
         parts.add(PartFactory.getPart("lion_body", level));
 
-        return new Mob("Lion", 2*level + 5, 5, 5, parts, image);
+        return new Mob("Lion", 2*level + 5, 4, 5, parts, image);
     }
     private static Mob makeElephant(int level) throws SlickException
     {
@@ -206,7 +208,7 @@ public class MobData {
         parts.add(PartFactory.getPart("elephant_tail", level));
         parts.add(PartFactory.getPart("elephant_body", level));
 
-        return new Mob("Elephant", 3*level - 1, 5, 5, parts, image);
+        return new Mob("Elephant", 3*(level/2) + 5, 4, 5, parts, image);
     }
 
     private static Mob makeBeaver(int level) throws SlickException
@@ -232,6 +234,32 @@ public class MobData {
         parts.add(PartFactory.getPart("beaver_tail", level));
         parts.add(PartFactory.getPart("beaver_body", level));
 
-        return new Mob("Beaver", level+3, 5, 5, parts, image);
+        return new Mob("Beaver", level+3, 4, 5, parts, image);
+    }
+
+    private static Mob makeOstrich(int level) throws SlickException
+    {
+        BodyPart body = PartFactory.getPart("ostrich_body", level);
+
+        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+                PartFactory.getPart("ostrich_head", level),
+                PartFactory.getPart("ostrich_arm", level),
+                PartFactory.getPart("ostrich_arm", level),
+                PartFactory.getPart("ostrich_leg", level),
+                PartFactory.getPart("ostrich_leg", level),
+                PartFactory.getPart("ostrich_tail", level),
+                PartFactory.getPart("ostrich_body", level));
+        image.flipH(true);
+
+        ArrayList<BodyPart> parts = new ArrayList<>();
+        parts.add(PartFactory.getPart("ostrich_head", level));
+        parts.add(PartFactory.getPart("ostrich_arm", level));
+        parts.add(PartFactory.getPart("ostrich_arm", level));
+        parts.add(PartFactory.getPart("ostrich_leg", level));
+        parts.add(PartFactory.getPart("ostrich_leg", level));
+        parts.add(PartFactory.getPart("ostrich_tail", level));
+        parts.add(PartFactory.getPart("ostrich_body", level));
+
+        return new Mob("Ostrich", level*2 + 4, 4, 5, parts, image);
     }
 }

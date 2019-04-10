@@ -44,12 +44,6 @@ public class PartFactory {
                         new Point(0, dogBody.getHeight()*0.4f));
                 return new BodyBodyPart("dog_body", "body", null, level/2+5, dogBody, null, connectors);
 
-            case "ostrich_head":
-                Image ostrichHead = ResourceLoader.getImage("ostrich_head");
-                atk = new Attack("Peck", level*2 - 1);
-                return new BodyPart("ostrich_head", "head", atk, level-2, ostrichHead,
-                        new Point(0, ostrichHead.getHeight() - 20));
-
             case "rat_leg":
                 Image ratLeg = ResourceLoader.getImage("rat_leg");
                 atk = new Attack("Kick", level);
@@ -178,7 +172,7 @@ public class PartFactory {
             case "elephant_leg":
                 Image elephantLeg = ResourceLoader.getImage("elephant_leg");
                 atk = new Attack("Kick", 2);
-                return new BodyPart("elephant_leg", "leg", atk, 2*level, elephantLeg,
+                return new BodyPart("elephant_leg", "leg", atk, 2*level+3, elephantLeg,
                         new Point(elephantLeg.getWidth()/2, 45));
             case "elephant_arm":
                 Image elephantArm = ResourceLoader.getImage("elephant_arm").getScaledCopy(0.8f);
@@ -232,6 +226,37 @@ public class PartFactory {
                         new Point(-30, beaverBody.getHeight()*0.65f));
                 return new BodyBodyPart("beaver_body", "body", null, level+6, beaverBody,null, connectors);
 
+            case "ostrich_head":
+                Image ostrichHead = ResourceLoader.getImage("ostrich_head");
+                atk = new Attack("Peck", level*2 - 1);
+                return new BodyPart("ostrich_head", "head", atk, level, ostrichHead,
+                        new Point(0, ostrichHead.getHeight() - 20));
+            case "ostrich_arm":
+                Image ostrichArm = ResourceLoader.getImage("ostrich_arm");
+                atk = new Attack("Flap", level);
+                return new BodyPart("ostrich_arm", "arm", atk, level-2, ostrichArm,
+                        new Point(ostrichArm.getWidth()*1/6, ostrichArm.getHeight()/2));
+            case "ostrich_leg":
+                Image ostrichLeg = ResourceLoader.getImage("ostrich_leg");
+                atk = new Attack("Stomp", level*2 - 1);
+                return new BodyPart("ostrich_leg", "leg", atk, level*2+4, ostrichLeg,
+                        new Point(ostrichLeg.getWidth()*2/5, ostrichLeg.getHeight()*1/6));
+            case "ostrich_tail":
+                Image ostrichTail = ResourceLoader.getImage("ostrich_tail");
+                atk = new Attack("Fan", level);
+                return new BodyPart("ostrich_tail", "tail", atk, level+4, ostrichTail,
+                        new Point(ostrichTail.getWidth()/2-5, ostrichTail.getHeight()-20));
+            case "ostrich_body":
+                Image ostrichBody = ResourceLoader.getImage("ostrich_body");
+                connectors = new BodyConnectors(
+                        new Point(ostrichBody.getWidth()-20, ostrichBody.getHeight()/10),
+                        new Point(ostrichBody.getWidth()/4, ostrichBody.getHeight()/2),
+                        new Point (ostrichBody.getWidth()/4-20, ostrichBody.getHeight()/2-20),
+                        new Point(ostrichBody.getWidth()/3.5f, ostrichBody.getHeight()/2.5f),
+                        new Point(ostrichBody.getWidth()/3.5f-20, ostrichBody.getHeight()/2.5f-20),
+                        new Point(10, ostrichBody.getHeight()/3
+                ));
+                return new BodyBodyPart("ostrich_body", "body", null,level*2, ostrichBody, null, connectors);
 
             case "bull_head":
                 Image bullHead = ResourceLoader.getImage("bull_head");

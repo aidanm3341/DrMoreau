@@ -46,7 +46,7 @@ public class Victory extends Screen implements ComponentListener {
 
         g.setFont(gc.getDefaultFont());
         g.setColor(new Color(227, 255, 86));
-        g.drawString("VICTORY!", gc.getWidth()/2 - 570, 110);
+        g.drawString("VICTORY!", gc.getWidth()/2 - 380, 110);
 
         respawnButton.render(gc, g);
         quitButton.render(gc, g);

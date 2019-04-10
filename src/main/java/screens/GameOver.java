@@ -47,7 +47,7 @@ public class GameOver extends Screen implements ComponentListener {
 
         g.setFont(gc.getDefaultFont());
         g.setColor(new Color(255, 0, 0));
-        g.drawString("GAME OVER", gc.getWidth()/2 - 570, 110);
+        g.drawString("GAME OVER", gc.getWidth()/2 - 420, 110);
 
         respawnButton.render(gc, g);
         quitButton.render(gc, g);

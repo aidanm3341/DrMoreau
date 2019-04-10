@@ -44,7 +44,6 @@ public class IntroTxt extends Screen implements ComponentListener {
         g.scale(0.27f, 0.27f);
         g.setColor(new Color(227, 255, 86));
         g.drawString(txt, gc.getWidth()/2 - 570, 700);
-        g.
     }
 
     public void componentActivated(AbstractComponent abstractComponent) {

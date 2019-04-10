@@ -1,14 +1,12 @@
 package main;
 
-import org.newdawn.slick.Color;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.gui.MouseOverArea;
 import org.newdawn.slick.state.StateBasedGame;
 import screens.Screen;
+import util.MyFont;
 import util.ResourceLoader;
 
 public class IntroTxt extends Screen implements ComponentListener {
@@ -40,10 +38,12 @@ public class IntroTxt extends Screen implements ComponentListener {
 
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         bg.render(gc, g);
-        g.setFont(gc.getDefaultFont());
-        g.scale(0.27f, 0.27f);
+        try {
+        g.setFont(MyFont.createFont(24));
+        } catch (Exception e) { e.printStackTrace(); }
+        //g.scale(0.27f, 0.27f);
         g.setColor(new Color(227, 255, 86));
-        g.drawString(txt, gc.getWidth()/2 - 570, 700);
+        g.drawString(txt, 164, 246);
     }
 
     public void componentActivated(AbstractComponent abstractComponent) {

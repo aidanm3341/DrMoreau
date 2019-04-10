@@ -46,6 +46,6 @@ public class MainMenu extends Screen implements ComponentListener {
 
 
     public void componentActivated(AbstractComponent abstractComponent) {
-        main.enterState(Main.INTRO);
+        main.enterState(Main.INTROTXT);
     }
 }

@@ -62,6 +62,7 @@ public class MainController {
         sbg.addState(gameOver);
         sbg.addState(victory);
         sbg.addState(new ConfirmationPanel(this));
+        sbg.addState(new IntroTxt(this));
 
         level = 0;
     }

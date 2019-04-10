@@ -2,6 +2,7 @@ package main;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.gui.MouseOverArea;
@@ -24,7 +25,7 @@ public class Intro extends Screen implements ComponentListener {
         intro.addListener(this);
     }
 
-    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) {
+    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         intro.render(gc, g);
     }
 

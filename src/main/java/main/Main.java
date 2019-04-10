@@ -23,6 +23,7 @@ public class Main extends StateBasedGame {
     public static final int CONFIRM  = 5;
     public static final int GAMEOVER = 6;
     public static final int VICTORY  = 7;
+    public static final int INTROTXT = 8;
 
     // Application Properties
     public static final int WIDTH   = 1680;

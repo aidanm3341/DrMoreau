@@ -52,7 +52,7 @@ public class RoomBuilder {
                 mob = grey.get();
         }
 
-        if(rand.nextInt(10) > 2) {
+        if(rand.nextInt(10) > 1) {
             type = Room.BATTLE;
             parts.addAll(mob.getParts());
             rewards = parts.popX(3);

@@ -77,7 +77,7 @@ public class MobData {
         parts.add(PartFactory.getPart("dog_body", level));
 
 
-        return new Mob("Dog", 20, 10, 5, parts, image);
+        return new Mob("Dog", level + 9, 10, 5, parts, image);
     }
 
     private static Mob makeRat(int level) throws SlickException
@@ -103,7 +103,7 @@ public class MobData {
         parts.add(PartFactory.getPart("rat_tail", level));
         parts.add(PartFactory.getPart("rat_body", level));
 
-        return new Mob("Rat", 10, 5, 5, parts, image);
+        return new Mob("Rat", 2*level + 5, 5, 5, parts, image);
     }
 
     private static Mob makeBunny(int level) throws SlickException
@@ -129,7 +129,7 @@ public class MobData {
         parts.add(PartFactory.getPart("bunny_tail", level));
         parts.add(PartFactory.getPart("bunny_body", level));
 
-        return new Mob("Bunny", 10, 5, 5, parts, image);
+        return new Mob("Bunny", level + 8, 5, 5, parts, image);
     }
 
     private static Mob makePenguin(int level) throws SlickException
@@ -155,7 +155,7 @@ public class MobData {
         parts.add(PartFactory.getPart("penguin_tail", level));
         parts.add(PartFactory.getPart("penguin_body", level));
 
-        return new Mob("Penguin", 10, 5, 5, parts, image);
+        return new Mob("Penguin", level, 5, 5, parts, image);
     }
 
     private static Mob makeLion(int level) throws SlickException
@@ -181,7 +181,7 @@ public class MobData {
         parts.add(PartFactory.getPart("dog_tail", level));
         parts.add(PartFactory.getPart("lion_body", level));
 
-        return new Mob("Lion", 10, 5, 5, parts, image);
+        return new Mob("Lion", 2*level + 5, 5, 5, parts, image);
     }
     private static Mob makeElephant(int level) throws SlickException
     {
@@ -206,7 +206,7 @@ public class MobData {
         parts.add(PartFactory.getPart("elephant_tail", level));
         parts.add(PartFactory.getPart("elephant_body", level));
 
-        return new Mob("Elephant", 10, 5, 5, parts, image);
+        return new Mob("Elephant", 3*level - 1, 5, 5, parts, image);
     }
 
     private static Mob makeBeaver(int level) throws SlickException
@@ -232,6 +232,6 @@ public class MobData {
         parts.add(PartFactory.getPart("beaver_tail", level));
         parts.add(PartFactory.getPart("beaver_body", level));
 
-        return new Mob("Beaver", 10, 5, 5, parts, image);
+        return new Mob("Beaver", level+3, 5, 5, parts, image);
     }
 }

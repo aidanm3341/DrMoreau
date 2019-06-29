@@ -13,12 +13,12 @@ public class PartFactory {
 
     private static HashMap<String, BodyPart> parts;
 
-    public static BodyPart getPart(String name, int level) throws SlickException
+    public static AbstractBodyPart getPart(String name, int level) throws SlickException
     {
         if(parts == null)
             parts = JSONPartReader.readParts();
 
-        return parts.get(name);
+        return parts.get(name).clone(level);
 
         //Attack atk;
 /*

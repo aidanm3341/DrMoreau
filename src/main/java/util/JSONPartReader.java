@@ -27,7 +27,7 @@ public class JSONPartReader {
         jsonPart.put("hp", part.getHp());
         JSONObject attack = new JSONObject();
         attack.put("name", part.getAttack().getName());
-        attack.put("damage", part.getAttack().getDmg(1));
+        attack.put("damage", part.getAttack().getDmg());
         jsonPart.put("attack", attack);
         JSONObject attachPoint = new JSONObject();
         attachPoint.put("x", part.getAttachPoint().getX());
@@ -67,7 +67,7 @@ public class JSONPartReader {
                     int add = atkDmgObj.containsKey("additive") ? (int) atkDmgObj.get("additive") : 0;
 
 
-                    attack = new Attack((String) atkObj.get("name"), mult, add);
+                    attack = new Attack((String) atkObj.get("name"), 0, mult, add);
                 }
                 int hp = ((Long) obj.get("hp")).intValue();
 
@@ -82,11 +82,11 @@ public class JSONPartReader {
                             pointExtractor((JSONObject) pointObj.get("leg_right")),
                             pointExtractor((JSONObject) pointObj.get("leg_left")),
                             pointExtractor((JSONObject) pointObj.get("tail")));
-                    p = new BodyBodyPart(name, type, hp, connectors);
+                    p = new BodyBodyPart(name, type, hp, connectors, 1);
                 }
                 else {
                     Point point = pointExtractor(pointObj);
-                    p = new BodyPart(name, type, attack, hp, point);
+                    p = new BodyPart(name, type, attack, hp, point, 1);
                 }
 
 

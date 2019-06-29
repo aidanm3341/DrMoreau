@@ -2,6 +2,7 @@ package upgrade.bodyparts;
 
 import combat.Attack;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
 import util.ResourceLoader;
 
@@ -35,6 +36,9 @@ public class NullBodyPart implements AbstractBodyPart {
         return 0;
     }
 
-    @Override
-    public Attack getAttack() { return new Attack("Null", 0, 0); }
+    public Attack getAttack() { return new Attack("Null", 0, 0,0); }
+
+    public int getLevel() { return 0; }
+
+    public AbstractBodyPart clone(int level) throws SlickException { return this; }
 }

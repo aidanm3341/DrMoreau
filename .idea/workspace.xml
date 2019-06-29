@@ -2,125 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/json-simple-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/bodyparts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/parts/beaver/beaver_leg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/LevelBasedFloat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DrMoreau.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DrMoreau.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Attack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Mob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Attack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/AbstractBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/AbstractBodyPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/boss.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/boss.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ctl.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ctl.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/basicButton.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/basicButton.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/basicButtonHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/basicButtonHover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/basicButtonPressed.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/basicButtonPressed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/blackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/blackground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/intro.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/menuButton.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/menuButton.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/menuButtonHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/menuButtonHover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/upgradePuddle.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/upgradePuddle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/null.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/null.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/beaver/beaver_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/beaver/beaver_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/beaver/beaver_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/beaver/beaver_head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/beaver/beaver_limb.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/beaver/beaver_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/beaver/beaver_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/beaver/beaver_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/boar/boar_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/boar/boar_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/boar/boar_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/boar/boar_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/boar/boar_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/boar/boar_head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/boar/boar_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/boar/boar_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/boar/boar_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/boar/boar_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/bunny/bunny_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/bunny/bunny_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/bunny/bunny_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/bunny/bunny_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/bunny/bunny_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/bunny/bunny_head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/bunny/bunny_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/bunny/bunny_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/bunny/bunny_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/bunny/bunny_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/cat_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/cat_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/dog/dog_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/dog/dog_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/dog/dog_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/dog/dog_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/dog/dog_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/dog/dog_head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/dog/dog_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/dog/dog_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/dog/dog_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/dog/dog_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/duck/DuckHead.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/duck/DuckHead.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/duck/duck_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/duck/duck_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/duck/duck_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/duck/duck_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/elephant/Elephant.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/elephant/Elephant.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/elephant/Elephant_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/elephant/Elephant_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/elephant/Elephant_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/elephant/Elephant_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/elephant/Elephant_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/elephant/Elephant_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/elephant/Elephant_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/elephant/Elephant_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/goat/Goat.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/goat/Goat.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/goat/Goat_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/goat/Goat_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/goat/goat_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/goat/goat_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/lion/Lion.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/lion/Lion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/lion/Lion_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/lion/Lion_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/lion/Lion_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/lion/Lion_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/lion/Lion_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/lion/Lion_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/misc/bull_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/misc/bull_head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/misc/burning_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/misc/burning_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/misc/frozen_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/misc/frozen_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/misc/golden_monkey_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/misc/golden_monkey_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/misc/green_arm.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/misc/green_arm.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/misc/human_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/misc/human_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/misc/pigeon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/misc/pigeon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/ostrich/ostrich_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/ostrich/ostrich_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/ostrich/ostrich_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/ostrich/ostrich_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/ostrich/ostrich_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/penguin/penguin_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/penguin/penguin_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/penguin/penguin_head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/penguin/penguin_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/penguin/penguin_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/penguin/penguin_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/rat/rat_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/rat/rat_arm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/rat/rat_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/rat/rat_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/rat/rat_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/rat/rat_head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/rat/rat_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/rat/rat_leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/rat/rat_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/rat/rat_tail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/squid/squid_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/squid/squid_body.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/squid/squid_left_legs.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/squid/squid_left_legs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/squid/squid_right_legs.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/squid/squid_right_legs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/turtle/Flipper.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/turtle/Flipper.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/turtle/Turtle_Head.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/turtle/Turtle_Head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/turtle/Turtle_Leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/turtle/Turtle_Leg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parts/turtle/Turtle_Shell.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/parts/turtle/Turtle_Shell.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/travel/brickRoute.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/travel/brickRoute.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/travel/brickRouteHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/travel/brickRouteHover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/travel/greyRoute.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/travel/greyRoute.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/travel/greyRouteHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/travel/greyRouteHover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/travel/travelBorder.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/travel/travelBorder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/travel/travelHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/travel/travelHover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/combat/MobData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/MobData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Attack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/SidekickData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/SidekickData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/RoomBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/RoomBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/beaver/beaver_limb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/ostrich_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/GameOver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/GameOver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/Victory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/Victory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/AbstractBodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/AbstractBodyPart.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyBodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyBodyPart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyConnectors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyConnectors.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyPart.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/NullBodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/NullBodyPart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/PartFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/PartFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -137,79 +43,80 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+            <state relative-caret-position="918">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
+              <folding>
+                <element signature="e#2703#2704#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="5" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/SidekickData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="94" column="33" lean-forward="true" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+            <state relative-caret-position="-522">
+              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/util/JSONPartReader.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="82" column="78" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
+            <state relative-caret-position="-602">
+              <caret line="104" column="43" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#writePart#0;class#JSONPartReader#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/combat/MobData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="98">
+              <caret line="114" column="60" lean-forward="true" selection-start-line="114" selection-start-column="60" selection-end-line="114" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyBodyPart.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/combat/Mob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="338">
+              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state relative-caret-position="18">
+              <caret line="33" column="62" lean-forward="true" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
               <folding>
-                <element signature="e#1318#1319#0" expanded="true" />
-                <element signature="e#1347#1348#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -217,8 +124,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/combat/Attack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="384">
+              <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+              <folding>
+                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#502#503#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -258,39 +171,39 @@
         <option value="$PROJECT_DIR$/src/main/java/screens/draganddrop/DragAndDropManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/CreatureComposer.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/PositionedImage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/navigation/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/Pool.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/screens/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/Intro.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/SuperImage.java" />
         <option value="$PROJECT_DIR$/src/main/java/navigation/ConfirmationPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/navigation/NavigationView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/AbstractBodyPart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/Attack.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/Mob.java" />
         <option value="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/screens/GameOver.java" />
         <option value="$PROJECT_DIR$/src/main/java/screens/Victory.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/Button.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/MobData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" />
         <option value="$PROJECT_DIR$/bodyparts.json" />
         <option value="$PROJECT_DIR$/src/main/java/util/LevelBasedInt.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/LevelBasedFloat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/Attack.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/SidekickData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/combat/CombatController.java" />
         <option value="$PROJECT_DIR$/src/main/java/combat/CombatView.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/AbstractBodyPart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/CombatController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/SidekickData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/Attack.java" />
         <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyBodyPart.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/MobData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/combat/Mob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/navigation/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" />
       </list>
     </option>
   </component>
@@ -326,24 +239,6 @@
             <path>
               <item name="DrMoreau" type="b2602c69:ProjectViewProjectNode" />
               <item name="DrMoreau" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DrMoreau" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DrMoreau" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DrMoreau" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DrMoreau" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DrMoreau" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DrMoreau" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
-              <item name="rat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DrMoreau" type="b2602c69:ProjectViewProjectNode" />
@@ -385,6 +280,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DrMoreau" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DrMoreau" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="upgrade" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -414,7 +317,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561837632081" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561840175257" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/json-simple-1.1.1.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -767,14 +670,21 @@
       <option name="project" value="LOCAL" />
       <updated>1554915044530</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Changed how body parts are stored, so it is now external to code.">
+      <created>1561837859055</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1561837859055</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15503356" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15503356" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -783,7 +693,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.22096318" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.22096318" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -831,7 +741,6 @@
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="made random navigating images appear" />
     <MESSAGE value="room selection in navigation is now meaningful in the next combat" />
     <MESSAGE value="Combat now drops the appropriate rewards" />
     <MESSAGE value="Fixed bug where bodyConnectors were not swapping out correctly" />
@@ -856,12 +765,10 @@
     <MESSAGE value="Attacks are now based off the body parts" />
     <MESSAGE value="balance changes" />
     <MESSAGE value="repositioned gameover and victory text" />
-    <option name="LAST_COMMIT_MESSAGE" value="repositioned gameover and victory text" />
+    <MESSAGE value="Changed how body parts are stored, so it is now external to code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed how body parts are stored, so it is now external to code." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/parts/misc/bull_head.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/boss.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -869,20 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/AbstractBodyPart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -908,13 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="26" column="86" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/Mob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -944,13 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="82" column="50" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -999,13 +878,6 @@
     <entry file="file://$PROJECT_DIR$/resources/parts/rat/rat_tail.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/MobData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/parts/bunny/bunny_head.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1047,27 +919,6 @@
     <entry file="file://$PROJECT_DIR$/resources/bodyparts.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding>
-            <element signature="e#1318#1319#0" expanded="true" />
-            <element signature="e#1347#1348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/util/LevelBasedFloat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1078,27 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1106,29 +936,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/combat/Attack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/parts/dog/dog_body.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/SidekickData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="94" column="33" lean-forward="true" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyBodyPart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1137,24 +946,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/parts/rat/rat_body.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/AbstractBodyPart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="38" column="63" lean-forward="true" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyBodyPart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/util/JSONPartReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="82" column="78" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
+        <state relative-caret-position="142">
+          <caret line="84" column="70" selection-start-line="84" selection-start-column="70" selection-end-line="84" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#writePart#0;class#JSONPartReader#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/parts/rat/rat_body.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/CombatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#2703#2704#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/Attack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="60" column="29" lean-forward="true" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+          <folding>
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1223#1224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="5" selection-end-column="36" />
+        <state relative-caret-position="96">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/MobData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="114" column="60" lean-forward="true" selection-start-line="114" selection-start-column="60" selection-end-line="114" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/combat/Mob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/navigation/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="33" column="62" lean-forward="true" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-602">
+          <caret line="104" column="43" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/SidekickData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-522">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
         </state>
       </provider>
     </entry>

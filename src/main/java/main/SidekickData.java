@@ -19,12 +19,6 @@ public class SidekickData {
     }
 
     public void init(GameContainer gc) throws SlickException {
-        //at1 = new Attack("Punch!", 1, 2);
-        //at2 = new Attack("Kick!", 1,1);
-        //at3 = new Attack("Shoot!", 10);
-        //at4 = new Attack("Exterminate!!", 15);
-        //at5 = new Attack("Push :/", 1);
-        //at6 = new Attack("Handshake.", -1);
 
         head = new NullBodyPart();
         armLeft = new NullBodyPart();

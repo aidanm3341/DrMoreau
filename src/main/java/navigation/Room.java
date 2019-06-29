@@ -4,6 +4,7 @@ import combat.Mob;
 import main.Main;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+import upgrade.bodyparts.AbstractBodyPart;
 import upgrade.bodyparts.BodyPart;
 import util.ResourceLoader;
 
@@ -17,9 +18,9 @@ public class Room {
     private String theme;
     private Image navigationImage, navigationImageHover;
     private Mob mob;
-    private ArrayList<BodyPart> rewards;
+    private ArrayList<AbstractBodyPart> rewards;
 
-    public Room(int type, String theme, Mob mob, Image navigationImage, ArrayList<BodyPart> rewards) throws SlickException
+    public Room(int type, String theme, Mob mob, Image navigationImage, ArrayList<AbstractBodyPart> rewards) throws SlickException
     {
         this.type = type;
         this.theme = theme;
@@ -51,7 +52,7 @@ public class Room {
         return mob;
     }
 
-    public ArrayList<BodyPart> getRewards() {
+    public ArrayList<AbstractBodyPart> getRewards() {
         return rewards;
     }
 }

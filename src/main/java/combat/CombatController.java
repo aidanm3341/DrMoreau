@@ -62,7 +62,7 @@ public class CombatController extends Screen {
 
     private void doAttack(Attack atk)
     {
-        mob.setHp(atk.getDmg(main.getLevel()));
+        mob.setHp(atk.getDmg());
         if(checkWins()) return;
         main.getSidekick().attack(mob.getAttStat());
     }

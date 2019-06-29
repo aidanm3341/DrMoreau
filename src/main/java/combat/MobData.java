@@ -2,10 +2,7 @@ package combat;
 
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
-import upgrade.bodyparts.BodyBodyPart;
-import upgrade.bodyparts.BodyConnectors;
-import upgrade.bodyparts.BodyPart;
-import upgrade.bodyparts.PartFactory;
+import upgrade.bodyparts.*;
 import util.CreatureComposer;
 import util.PositionedImage;
 import util.ResourceLoader;
@@ -52,7 +49,7 @@ public class MobData {
 
     private static Mob makeDog(int level) throws SlickException
     {
-        BodyPart body = PartFactory.getPart("dog_body", level);
+        AbstractBodyPart body = PartFactory.getPart("dog_body", level);
         BodyConnectors connectors = ((BodyBodyPart) body).getConnectors();
 
         SuperImage image = CreatureComposer.composeImage(connectors,
@@ -65,7 +62,7 @@ public class MobData {
                 PartFactory.getPart("dog_body", level));
         image.flipH(true);
 
-        ArrayList<BodyPart> parts = new ArrayList<>();
+        ArrayList<AbstractBodyPart> parts = new ArrayList<>();
         parts.add(PartFactory.getPart("dog_head", level));
         parts.add(PartFactory.getPart("dog_arm", level));
         parts.add(PartFactory.getPart("dog_arm", level));
@@ -80,7 +77,7 @@ public class MobData {
 
     private static Mob makeRat(int level) throws SlickException
     {
-        BodyPart body = PartFactory.getPart("rat_body", level);
+        AbstractBodyPart body = PartFactory.getPart("rat_body", level);
 
         SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
                 PartFactory.getPart("rat_head", level),
@@ -92,7 +89,7 @@ public class MobData {
                 PartFactory.getPart("rat_body", level));
         image.flipH(true);
 
-        ArrayList<BodyPart> parts = new ArrayList<>();
+        ArrayList<AbstractBodyPart> parts = new ArrayList<>();
         parts.add(PartFactory.getPart("rat_head", level));
         parts.add(PartFactory.getPart("rat_arm", level));
         parts.add(PartFactory.getPart("rat_arm", level));
@@ -104,158 +101,158 @@ public class MobData {
         return new Mob("Rat", 2*level + 5, 5, 5, parts, image);
     }
 
-    private static Mob makeBunny(int level) throws SlickException
-    {
-        BodyPart body = PartFactory.getPart("bunny_body", level);
+//    private static Mob makeBunny(int level) throws SlickException
+//    {
+//        BodyPart body = PartFactory.getPart("bunny_body", level);
+//
+//        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+//                PartFactory.getPart("bunny_head", level),
+//                PartFactory.getPart("bunny_arm", level),
+//                PartFactory.getPart("bunny_arm", level),
+//                PartFactory.getPart("bunny_leg", level),
+//                PartFactory.getPart("bunny_leg", level),
+//                PartFactory.getPart("bunny_tail", level),
+//                PartFactory.getPart("bunny_body", level));
+//        image.flipH(true);
+//
+//        ArrayList<BodyPart> parts = new ArrayList<>();
+//        parts.add(PartFactory.getPart("bunny_head", level));
+//        parts.add(PartFactory.getPart("bunny_arm", level));
+//        parts.add(PartFactory.getPart("bunny_arm", level));
+//        parts.add(PartFactory.getPart("bunny_leg", level));
+//        parts.add(PartFactory.getPart("bunny_leg", level));
+//        parts.add(PartFactory.getPart("bunny_tail", level));
+//        parts.add(PartFactory.getPart("bunny_body", level));
+//
+//        return new Mob("Bunny", level + 8, 3, 5, parts, image);
+//    }
 
-        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
-                PartFactory.getPart("bunny_head", level),
-                PartFactory.getPart("bunny_arm", level),
-                PartFactory.getPart("bunny_arm", level),
-                PartFactory.getPart("bunny_leg", level),
-                PartFactory.getPart("bunny_leg", level),
-                PartFactory.getPart("bunny_tail", level),
-                PartFactory.getPart("bunny_body", level));
-        image.flipH(true);
-
-        ArrayList<BodyPart> parts = new ArrayList<>();
-        parts.add(PartFactory.getPart("bunny_head", level));
-        parts.add(PartFactory.getPart("bunny_arm", level));
-        parts.add(PartFactory.getPart("bunny_arm", level));
-        parts.add(PartFactory.getPart("bunny_leg", level));
-        parts.add(PartFactory.getPart("bunny_leg", level));
-        parts.add(PartFactory.getPart("bunny_tail", level));
-        parts.add(PartFactory.getPart("bunny_body", level));
-
-        return new Mob("Bunny", level + 8, 3, 5, parts, image);
-    }
-
-    private static Mob makePenguin(int level) throws SlickException
-    {
-        BodyPart body = PartFactory.getPart("penguin_body", level);
-
-        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
-                PartFactory.getPart("penguin_head", level),
-                PartFactory.getPart("penguin_arm", level),
-                PartFactory.getPart("penguin_arm", level),
-                PartFactory.getPart("penguin_leg", level),
-                PartFactory.getPart("penguin_leg", level),
-                PartFactory.getPart("penguin_tail", level),
-                PartFactory.getPart("penguin_body", level));
-        image.flipH(true);
-
-        ArrayList<BodyPart> parts = new ArrayList<>();
-        parts.add(PartFactory.getPart("penguin_head", level));
-        parts.add(PartFactory.getPart("penguin_arm", level));
-        parts.add(PartFactory.getPart("penguin_arm", level));
-        parts.add(PartFactory.getPart("penguin_leg", level));
-        parts.add(PartFactory.getPart("penguin_leg", level));
-        parts.add(PartFactory.getPart("penguin_tail", level));
-        parts.add(PartFactory.getPart("penguin_body", level));
-
-        return new Mob("Penguin", level, 4, 5, parts, image);
-    }
-
-    private static Mob makeLion(int level) throws SlickException
-    {
-        BodyPart body = PartFactory.getPart("lion_body", level);
-
-        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
-                PartFactory.getPart("lion_head", level),
-                PartFactory.getPart("lion_arm", level),
-                PartFactory.getPart("lion_arm", level),
-                PartFactory.getPart("lion_leg", level),
-                PartFactory.getPart("lion_leg", level),
-                PartFactory.getPart("dog_tail", level),
-                PartFactory.getPart("lion_body", level));
-        image.flipH(true);
-
-        ArrayList<BodyPart> parts = new ArrayList<>();
-        parts.add(PartFactory.getPart("lion_head", level));
-        parts.add(PartFactory.getPart("lion_arm", level));
-        parts.add(PartFactory.getPart("lion_arm", level));
-        parts.add(PartFactory.getPart("lion_leg", level));
-        parts.add(PartFactory.getPart("lion_leg", level));
-        parts.add(PartFactory.getPart("dog_tail", level));
-        parts.add(PartFactory.getPart("lion_body", level));
-
-        return new Mob("Lion", 2*level + 5, 4, 5, parts, image);
-    }
-    private static Mob makeElephant(int level) throws SlickException
-    {
-        BodyPart body = PartFactory.getPart("elephant_body", level);
-
-        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
-                PartFactory.getPart("elephant_head", level),
-                PartFactory.getPart("elephant_arm", level),
-                PartFactory.getPart("elephant_arm", level),
-                PartFactory.getPart("elephant_leg", level),
-                PartFactory.getPart("elephant_leg", level),
-                PartFactory.getPart("elephant_tail", level),
-                PartFactory.getPart("elephant_body", level));
-        image.flipH(true);
-
-        ArrayList<BodyPart> parts = new ArrayList<>();
-        parts.add(PartFactory.getPart("elephant_head", level));
-        parts.add(PartFactory.getPart("elephant_arm", level));
-        parts.add(PartFactory.getPart("elephant_arm", level));
-        parts.add(PartFactory.getPart("elephant_leg", level));
-        parts.add(PartFactory.getPart("elephant_leg", level));
-        parts.add(PartFactory.getPart("elephant_tail", level));
-        parts.add(PartFactory.getPart("elephant_body", level));
-
-        return new Mob("Elephant", 3*(level/2) + 5, 4, 5, parts, image);
-    }
-
-    private static Mob makeBeaver(int level) throws SlickException
-    {
-        BodyPart body = PartFactory.getPart("beaver_body", level);
-
-        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
-                PartFactory.getPart("beaver_head", level),
-                PartFactory.getPart("beaver_arm", level),
-                PartFactory.getPart("beaver_arm", level),
-                PartFactory.getPart("beaver_leg", level),
-                PartFactory.getPart("beaver_leg", level),
-                PartFactory.getPart("beaver_tail", level),
-                PartFactory.getPart("beaver_body", level));
-        image.flipH(true);
-
-        ArrayList<BodyPart> parts = new ArrayList<>();
-        parts.add(PartFactory.getPart("beaver_head", level));
-        parts.add(PartFactory.getPart("beaver_arm", level));
-        parts.add(PartFactory.getPart("beaver_arm", level));
-        parts.add(PartFactory.getPart("beaver_leg", level));
-        parts.add(PartFactory.getPart("beaver_leg", level));
-        parts.add(PartFactory.getPart("beaver_tail", level));
-        parts.add(PartFactory.getPart("beaver_body", level));
-
-        return new Mob("Beaver", level+3, 4, 5, parts, image);
-    }
-
-    private static Mob makeOstrich(int level) throws SlickException
-    {
-        BodyPart body = PartFactory.getPart("ostrich_body", level);
-
-        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
-                PartFactory.getPart("ostrich_head", level),
-                PartFactory.getPart("ostrich_arm", level),
-                PartFactory.getPart("ostrich_arm", level),
-                PartFactory.getPart("ostrich_leg", level),
-                PartFactory.getPart("ostrich_leg", level),
-                PartFactory.getPart("ostrich_tail", level),
-                PartFactory.getPart("ostrich_body", level));
-        image.flipH(true);
-
-        ArrayList<BodyPart> parts = new ArrayList<>();
-        parts.add(PartFactory.getPart("ostrich_head", level));
-        parts.add(PartFactory.getPart("ostrich_arm", level));
-        parts.add(PartFactory.getPart("ostrich_arm", level));
-        parts.add(PartFactory.getPart("ostrich_leg", level));
-        parts.add(PartFactory.getPart("ostrich_leg", level));
-        parts.add(PartFactory.getPart("ostrich_tail", level));
-        parts.add(PartFactory.getPart("ostrich_body", level));
-
-        return new Mob("Ostrich", level*2 + 4, 4, 5, parts, image);
-    }
+//    private static Mob makePenguin(int level) throws SlickException
+//    {
+//        BodyPart body = PartFactory.getPart("penguin_body", level);
+//
+//        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+//                PartFactory.getPart("penguin_head", level),
+//                PartFactory.getPart("penguin_arm", level),
+//                PartFactory.getPart("penguin_arm", level),
+//                PartFactory.getPart("penguin_leg", level),
+//                PartFactory.getPart("penguin_leg", level),
+//                PartFactory.getPart("penguin_tail", level),
+//                PartFactory.getPart("penguin_body", level));
+//        image.flipH(true);
+//
+//        ArrayList<BodyPart> parts = new ArrayList<>();
+//        parts.add(PartFactory.getPart("penguin_head", level));
+//        parts.add(PartFactory.getPart("penguin_arm", level));
+//        parts.add(PartFactory.getPart("penguin_arm", level));
+//        parts.add(PartFactory.getPart("penguin_leg", level));
+//        parts.add(PartFactory.getPart("penguin_leg", level));
+//        parts.add(PartFactory.getPart("penguin_tail", level));
+//        parts.add(PartFactory.getPart("penguin_body", level));
+//
+//        return new Mob("Penguin", level, 4, 5, parts, image);
+//    }
+//
+//    private static Mob makeLion(int level) throws SlickException
+//    {
+//        BodyPart body = PartFactory.getPart("lion_body", level);
+//
+//        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+//                PartFactory.getPart("lion_head", level),
+//                PartFactory.getPart("lion_arm", level),
+//                PartFactory.getPart("lion_arm", level),
+//                PartFactory.getPart("lion_leg", level),
+//                PartFactory.getPart("lion_leg", level),
+//                PartFactory.getPart("dog_tail", level),
+//                PartFactory.getPart("lion_body", level));
+//        image.flipH(true);
+//
+//        ArrayList<BodyPart> parts = new ArrayList<>();
+//        parts.add(PartFactory.getPart("lion_head", level));
+//        parts.add(PartFactory.getPart("lion_arm", level));
+//        parts.add(PartFactory.getPart("lion_arm", level));
+//        parts.add(PartFactory.getPart("lion_leg", level));
+//        parts.add(PartFactory.getPart("lion_leg", level));
+//        parts.add(PartFactory.getPart("dog_tail", level));
+//        parts.add(PartFactory.getPart("lion_body", level));
+//
+//        return new Mob("Lion", 2*level + 5, 4, 5, parts, image);
+//    }
+//    private static Mob makeElephant(int level) throws SlickException
+//    {
+//        BodyPart body = PartFactory.getPart("elephant_body", level);
+//
+//        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+//                PartFactory.getPart("elephant_head", level),
+//                PartFactory.getPart("elephant_arm", level),
+//                PartFactory.getPart("elephant_arm", level),
+//                PartFactory.getPart("elephant_leg", level),
+//                PartFactory.getPart("elephant_leg", level),
+//                PartFactory.getPart("elephant_tail", level),
+//                PartFactory.getPart("elephant_body", level));
+//        image.flipH(true);
+//
+//        ArrayList<BodyPart> parts = new ArrayList<>();
+//        parts.add(PartFactory.getPart("elephant_head", level));
+//        parts.add(PartFactory.getPart("elephant_arm", level));
+//        parts.add(PartFactory.getPart("elephant_arm", level));
+//        parts.add(PartFactory.getPart("elephant_leg", level));
+//        parts.add(PartFactory.getPart("elephant_leg", level));
+//        parts.add(PartFactory.getPart("elephant_tail", level));
+//        parts.add(PartFactory.getPart("elephant_body", level));
+//
+//        return new Mob("Elephant", 3*(level/2) + 5, 4, 5, parts, image);
+//    }
+//
+//    private static Mob makeBeaver(int level) throws SlickException
+//    {
+//        BodyPart body = PartFactory.getPart("beaver_body", level);
+//
+//        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+//                PartFactory.getPart("beaver_head", level),
+//                PartFactory.getPart("beaver_arm", level),
+//                PartFactory.getPart("beaver_arm", level),
+//                PartFactory.getPart("beaver_leg", level),
+//                PartFactory.getPart("beaver_leg", level),
+//                PartFactory.getPart("beaver_tail", level),
+//                PartFactory.getPart("beaver_body", level));
+//        image.flipH(true);
+//
+//        ArrayList<BodyPart> parts = new ArrayList<>();
+//        parts.add(PartFactory.getPart("beaver_head", level));
+//        parts.add(PartFactory.getPart("beaver_arm", level));
+//        parts.add(PartFactory.getPart("beaver_arm", level));
+//        parts.add(PartFactory.getPart("beaver_leg", level));
+//        parts.add(PartFactory.getPart("beaver_leg", level));
+//        parts.add(PartFactory.getPart("beaver_tail", level));
+//        parts.add(PartFactory.getPart("beaver_body", level));
+//
+//        return new Mob("Beaver", level+3, 4, 5, parts, image);
+//    }
+//
+//    private static Mob makeOstrich(int level) throws SlickException
+//    {
+//        BodyPart body = PartFactory.getPart("ostrich_body", level);
+//
+//        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+//                PartFactory.getPart("ostrich_head", level),
+//                PartFactory.getPart("ostrich_arm", level),
+//                PartFactory.getPart("ostrich_arm", level),
+//                PartFactory.getPart("ostrich_leg", level),
+//                PartFactory.getPart("ostrich_leg", level),
+//                PartFactory.getPart("ostrich_tail", level),
+//                PartFactory.getPart("ostrich_body", level));
+//        image.flipH(true);
+//
+//        ArrayList<BodyPart> parts = new ArrayList<>();
+//        parts.add(PartFactory.getPart("ostrich_head", level));
+//        parts.add(PartFactory.getPart("ostrich_arm", level));
+//        parts.add(PartFactory.getPart("ostrich_arm", level));
+//        parts.add(PartFactory.getPart("ostrich_leg", level));
+//        parts.add(PartFactory.getPart("ostrich_leg", level));
+//        parts.add(PartFactory.getPart("ostrich_tail", level));
+//        parts.add(PartFactory.getPart("ostrich_body", level));
+//
+//        return new Mob("Ostrich", level*2 + 4, 4, 5, parts, image);
+//    }
 }

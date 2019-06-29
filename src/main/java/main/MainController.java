@@ -64,7 +64,7 @@ public class MainController {
         sbg.addState(new ConfirmationPanel(this));
         sbg.addState(new IntroTxt(this));
 
-        level = 0;
+        level = 1;
     }
 
     public void attack(int dmg){
@@ -76,7 +76,7 @@ public class MainController {
         return sidekick;
     }
 
-    public void updateSidekick()
+    public void updateSidekick() throws SlickException
     {
         sidekick.addBody(upgrade.getBody());
         sidekick.addArmRight(upgrade.getArmRight());

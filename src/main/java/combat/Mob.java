@@ -1,5 +1,6 @@
 package combat;
 
+import upgrade.bodyparts.AbstractBodyPart;
 import upgrade.bodyparts.BodyPart;
 import util.SuperImage;
 
@@ -9,10 +10,10 @@ public class Mob {
 
     private String name;
     private float currentHp, maxHp, attStat, defStat;
-    private ArrayList<BodyPart> parts;
+    private ArrayList<AbstractBodyPart> parts;
     private SuperImage mobImage;
 
-    public Mob(String name, int hp, int attStat, int defStat, ArrayList<BodyPart> parts, SuperImage image)
+    public Mob(String name, int hp, int attStat, int defStat, ArrayList<AbstractBodyPart> parts, SuperImage image)
     {
         this.name = name;
         this.maxHp = hp;
@@ -50,7 +51,7 @@ public class Mob {
         return defStat;
     }
 
-    public ArrayList<BodyPart> getParts() {
+    public ArrayList<AbstractBodyPart> getParts() {
         return parts;
     }
 

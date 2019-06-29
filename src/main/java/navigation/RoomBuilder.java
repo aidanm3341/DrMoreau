@@ -4,6 +4,7 @@ import combat.Mob;
 import combat.MobData;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+import upgrade.bodyparts.AbstractBodyPart;
 import upgrade.bodyparts.BodyPart;
 import upgrade.bodyparts.PartFactory;
 import util.Pool;
@@ -37,8 +38,8 @@ public class RoomBuilder {
         int type;
         Image navigationImage;
         Mob mob;
-        Pool<BodyPart> parts = new Pool<>();
-        ArrayList<BodyPart> rewards;
+        Pool<AbstractBodyPart> parts = new Pool<>();
+        ArrayList<AbstractBodyPart> rewards;
 
         switch (theme) {
             default:

@@ -106,7 +106,7 @@ public class UpgradeController extends Screen implements ComponentListener {
         draggables.add(new PartDraggable(armRightArea, sidekick.getArmRight()));
         draggables.add(new PartDraggable(tailArea, sidekick.getTail()));
 
-        Pool<BodyPart> rewards = new Pool<>();
+        Pool<AbstractBodyPart> rewards = new Pool<>();
         rewards.addAll(main.getActiveRoom().getRewards());
 
         draggables.add(new PartDraggable(puddle1, rewards.pop()));
@@ -120,37 +120,37 @@ public class UpgradeController extends Screen implements ComponentListener {
         }
     }
 
-    public void leave(GameContainer gc, StateBasedGame sbg)
+    public void leave(GameContainer gc, StateBasedGame sbg) throws SlickException
     {
         main.updateSidekick();
     }
 
 
-    public AbstractBodyPart getHead(){
+    public AbstractBodyPart getHead() throws SlickException{
         return headArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getBody(){
+    public AbstractBodyPart getBody() throws SlickException{
         return bodyArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getLegLeft(){
+    public AbstractBodyPart getLegLeft()throws SlickException{
         return legLeftArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getLegRight(){
+    public AbstractBodyPart getLegRight()throws SlickException{
         return legRightArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getArmLeft(){
+    public AbstractBodyPart getArmLeft()throws SlickException{
         return armLeftArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getArmRight(){
+    public AbstractBodyPart getArmRight()throws SlickException{
         return armRightArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getTail(){
+    public AbstractBodyPart getTail()throws SlickException{
         return tailArea.getPart().getPart();
     }
 

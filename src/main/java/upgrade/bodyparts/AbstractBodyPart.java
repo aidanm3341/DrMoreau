@@ -2,6 +2,7 @@ package upgrade.bodyparts;
 
 import combat.Attack;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
 
 public interface AbstractBodyPart {
@@ -14,4 +15,7 @@ public interface AbstractBodyPart {
     float getWidth();
     float getHeight();
     Attack getAttack();
+    int getLevel();
+
+    AbstractBodyPart clone(int level) throws SlickException;
 }

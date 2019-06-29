@@ -6,10 +6,12 @@ public class Attack {
     private String name;
     private float multipler;
     private int additive;
+    private int level;
 
-    public Attack(String name, float multiplier, int additive)
+    public Attack(String name, int level, float multiplier, int additive)
     {
         this.name = name;
+        this.level = level;
         this.multipler = multiplier;
         this.additive = additive;
     }
@@ -18,8 +20,12 @@ public class Attack {
         return name;
     }
 
-    public float getDmg(int level) {
+    public float getDmg() {
         return (level * multipler) + additive;
-        //return dmg.getVal();
+    }
+
+    public Attack clone(int level)
+    {
+        return new Attack(name, level, multipler, additive);
     }
 }

@@ -9,12 +9,17 @@ public class BodyBodyPart extends BodyPart{
     public BodyConnectors connectors;
 
     public BodyBodyPart(String name, String type, int hp,
-                        BodyConnectors connectors) throws SlickException {
-        super(name, type, null, hp, null);
+                        BodyConnectors connectors, int level) throws SlickException {
+        super(name, type, null, hp, null, level);
         this.connectors = connectors;
     }
 
     public BodyConnectors getConnectors() {
         return connectors;
+    }
+
+    public AbstractBodyPart clone(int level) throws SlickException
+    {
+        return new BodyBodyPart(getName(), getType(), getHp(), connectors, level);
     }
 }

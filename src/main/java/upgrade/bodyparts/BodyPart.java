@@ -14,8 +14,9 @@ public class BodyPart implements AbstractBodyPart {
     private Attack attack;
 
     private Point attachPoint;
+    private int level;
 
-    public BodyPart(String name, String type, Attack attack, int hp, Point attachPoint) throws SlickException
+    public BodyPart(String name, String type, Attack attack, int hp, Point attachPoint, int level) throws SlickException
     {
         this.name = name;
         this.type = type;
@@ -23,6 +24,7 @@ public class BodyPart implements AbstractBodyPart {
         this.hp = hp;
         this.image = ResourceLoader.getImage(name);
         this.attachPoint = attachPoint;
+        this.level = level;
     }
 
     public String getName(){return name;}
@@ -49,6 +51,15 @@ public class BodyPart implements AbstractBodyPart {
     }
 
     public Attack getAttack() {
-        return attack;
+        return attack.clone(level);
+    }
+
+    public int getLevel(){
+        return level;
+    }
+
+    public AbstractBodyPart clone(int level) throws SlickException
+    {
+        return new BodyPart(name, type, attack, hp, attachPoint, level);
     }
 }

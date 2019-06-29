@@ -1,6 +1,6 @@
 package upgrade.bodyparts;
 
-import main.Attack;
+import combat.Attack;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.geom.Point;
 

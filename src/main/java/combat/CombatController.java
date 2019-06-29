@@ -1,6 +1,5 @@
 package combat;
 
-import main.Attack;
 import main.Main;
 import main.MainController;
 import main.SidekickData;
@@ -63,19 +62,32 @@ public class CombatController extends Screen {
 
     private void doAttack(Attack atk)
     {
-        mob.setHp(atk.getDmg());
+        mob.setHp(atk.getDmg(main.getLevel()));
+        if(checkWins()) return;
         main.getSidekick().attack(mob.getAttStat());
     }
 
 
 
     public void update(GameContainer gc, StateBasedGame sbg, int delta){
-        if(main.getSidekick().getCurrentHp() <= 0)
+        checkWins();
+    }
+
+    private boolean checkWins()
+    {
+        if(main.getSidekick().getCurrentHp() <= 0) {
             main.enterState(Main.GAMEOVER);
-        else if(mob.getName().equals("Dr.Moreau") && mob.getCurrentHp() <= 0)
+            return true;
+        }
+        else if(mob.getName().equals("Dr.Moreau") && mob.getCurrentHp() <= 0) {
             main.enterState(Main.VICTORY);
-        else if(mob.getCurrentHp() <= 0)
+            return true;
+        }
+        else if(mob.getCurrentHp() <= 0) {
             main.enterState(Main.UPGRADE);
+            return true;
+        }
+        return false;
     }
 
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g)

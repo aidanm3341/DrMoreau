@@ -124,7 +124,8 @@ public class ResourceLoader {
 
     private static void loadBeaver() throws SlickException {
         images.put("beaver_body", new Image("parts/beaver/beaver_body.png"));
-        images.put("beaver_limb", new Image("parts/beaver/beaver_limb.png"));
+        images.put("beaver_arm", new Image("parts/beaver/beaver_arm.png"));
+        images.put("beaver_leg", new Image("parts/beaver/beaver_leg.png"));
         images.put("beaver_tail", new Image("parts/beaver/beaver_tail.png"));
         images.put("beaver_head", new Image("parts/beaver/beaver_head.png"));
     }

@@ -21,22 +21,20 @@ public class RoomBuilder {
         red = new Pool<>();
         grey = new Pool<>();
         treasure = new Pool<>();
-        red.add(MobData.getMob("bunny", level));
-        red.add(MobData.getMob("elephant", level));
-        red.add(MobData.getMob("lion", level));
-        //red.add(MobData.getMob("ostrich", level));
-        //grey.add(MobData.getMob("penguin"));
-        grey.add(MobData.getMob("rat", level));
-        grey.add(MobData.getMob("dog", level));
-        grey.add(MobData.getMob("beaver", level));
+        red.add(MobData.getMob("dog", level));
+        //red.add(MobData.getMob("elephant", level));
+        //red.add(MobData.getMob("lion", level));
 
-        treasure.add(PartFactory.getPart("bull_head", level));
-        treasure.add(PartFactory.getPart("burning_arm", level));
-        treasure.add(PartFactory.getPart("frozen_leg", level));
-        treasure.add(PartFactory.getPart("golden_monkey_arm", level));
+        grey.add(MobData.getMob("rat", level));
+        //grey.add(MobData.getMob("dog", level));
+        //grey.add(MobData.getMob("beaver", level));
+
+        //treasure.add(PartFactory.getPart("bull_head", level));
+        //treasure.add(PartFactory.getPart("burning_arm", level));
+        //treasure.add(PartFactory.getPart("frozen_leg", level));
+        //treasure.add(PartFactory.getPart("golden_monkey_arm", level));
 
         int type;
-        Random rand = new Random();
         Image navigationImage;
         Mob mob;
         Pool<BodyPart> parts = new Pool<>();
@@ -53,15 +51,15 @@ public class RoomBuilder {
                 mob = grey.get();
         }
 
-        if(rand.nextInt(10) > 1) {
+        //if(rand.nextInt(10) > 1) {
             type = Room.BATTLE;
             parts.addAll(mob.getParts());
             rewards = parts.popX(3);
-        }
-        else {
-            type = Room.TREASURE;
-            rewards = treasure.popX(3);
-        }
+        //}
+        //else {
+        //    type = Room.TREASURE;
+        //    rewards = treasure.popX(3);
+        //}
 
         return new Room(type, theme, mob, navigationImage, rewards);
     }

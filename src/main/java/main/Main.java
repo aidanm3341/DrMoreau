@@ -6,6 +6,8 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.state.transition.Transition;
 import screens.MainMenu;
+import upgrade.bodyparts.PartFactory;
+import util.JSONPartReader;
 import util.MyFont;
 import util.ResourceLoader;
 

@@ -1,80 +1,90 @@
 package upgrade.bodyparts;
 
-import main.Attack;
+import combat.Attack;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
-import upgrade.bodyparts.BodyPart;
+import util.JSONPartReader;
 import util.ResourceLoader;
+
+import java.util.HashMap;
 
 public class PartFactory {
 
+    private static HashMap<String, BodyPart> parts;
+
     public static BodyPart getPart(String name, int level) throws SlickException
     {
-        Attack atk;
+        if(parts == null)
+            parts = JSONPartReader.readParts();
+
+        return parts.get(name);
+
+        //Attack atk;
+/*
         switch(name)
         {
             case "dog_leg":
-                Image dogLeg = ResourceLoader.getImage("dog_leg");
-                atk = new Attack("Kick", (2*level + 3)/2);
-                return new BodyPart("dog_leg", "leg", atk, level/2+1, dogLeg,
-                        new Point(dogLeg.getWidth()/2, 20));
+                return parts.get("dog_leg");
+//                atk = new Attack("Kick", 1,1);
+//                BodyPart part = new BodyPart("dog_leg", "leg", atk, level/2+1,
+//                        new Point(40, 20));
+//                return part;
             case "dog_arm":
-                Image dogArm = ResourceLoader.getImage("dog_arm");
-                atk = new Attack("Scratch", level + 3);
-                return new BodyPart("dog_arm", "arm", atk, level/2+1, dogArm,
-                        new Point(dogArm.getWidth()/2, 15));
+                return parts.get("dog_arm");
+//                atk = new Attack("Scratch", 1,1);
+//                return new BodyPart("dog_arm", "arm", atk, level/2+1,
+//                        new Point(36, 15));
             case "dog_head":
-                Image dogHead = ResourceLoader.getImage("dog_head");
-                atk = new Attack("Push", level + 1);
-                return new BodyPart("dog_head", "head", atk, level/2+1, dogHead,
-                        new Point(0, dogHead.getHeight() - 40));
+                return parts.get("dog_head");
+//                atk = new Attack("Rabid Bite", 1,0);
+//                return new BodyPart("dog_head", "head", atk, level*10,
+//                        new Point(0, 72));
             case "dog_tail":
-                Image dogTail = ResourceLoader.getImage("dog_tail");
-                atk = new Attack("Wag", level);
-                return new BodyPart("dog_tail", "tail", atk, level/3, dogTail,
-                        new Point (dogTail.getWidth()-15, dogTail.getHeight()/2));
+                return parts.get("dog_tail");
+//                atk = new Attack("Tail Whip", 1,0);
+//                return new BodyPart("dog_tail", "tail", atk, level/3,
+//                        new Point (79, 19));
             case "dog_body":
-                Image dogBody = ResourceLoader.getImage("dog_body");
-                BodyConnectors connectors = new BodyConnectors(new Point(dogBody.getWidth()*0.9f, (dogBody.getHeight()*0.33f)),
-                        new Point(dogBody.getWidth()*0.8f, dogBody.getHeight()*0.4f),
-                        new Point(dogBody.getWidth()*0.7f, dogBody.getHeight()*0.3f),
-                        new Point (dogBody.getWidth()*0.3f, dogBody.getHeight()*0.3f),
-                        new Point (dogBody.getWidth()*0.2f, dogBody.getHeight()*0.2f),
-                        new Point(0, dogBody.getHeight()*0.4f));
-                return new BodyBodyPart("dog_body", "body", null, level/2+5, dogBody, null, connectors);
+                return parts.get("dog_body");
+//                Image dogBody = ResourceLoader.getImage("dog_body");
+//                BodyConnectors connectors = new BodyConnectors(new Point(dogBody.getWidth()*0.9f, (dogBody.getHeight()*0.33f)),
+//                        new Point(dogBody.getWidth()*0.8f, dogBody.getHeight()*0.4f),
+//                        new Point(dogBody.getWidth()*0.7f, dogBody.getHeight()*0.3f),
+//                        new Point (dogBody.getWidth()*0.3f, dogBody.getHeight()*0.3f),
+//                        new Point (dogBody.getWidth()*0.2f, dogBody.getHeight()*0.2f),
+//                        new Point(0, dogBody.getHeight()*0.4f));
+//                return new BodyBodyPart("dog_body", "body", null, level/2+5, null, connectors);
 
             case "rat_leg":
-                Image ratLeg = ResourceLoader.getImage("rat_leg");
-                atk = new Attack("Kick", level);
-                return new BodyPart("rat_leg", "leg", atk, level/2, ratLeg,
-                        new Point(ratLeg.getWidth()/2, 20));
+                atk = new Attack("Kick", 2, 1);
+                return new BodyPart("rat_leg", "leg", atk, level/2,
+                        new Point(36, 20));
             case "rat_arm":
-                Image ratArm = ResourceLoader.getImage("rat_arm").getScaledCopy(0.8f);
-                atk = new Attack("Scratch", 2*level / 3);
-                return new BodyPart("rat_arm", "arm", atk, level/2, ratArm,
-                        new Point(ratArm.getWidth()/1.66f, 20));
+                atk = new Attack("Scratch", 3, -2);
+                return new BodyPart("rat_arm", "arm", atk, level/2,
+                        new Point(43, 20));
             case "rat_head":
-                Image ratHead = ResourceLoader.getImage("rat_head");
-                atk = new Attack("Nibble", (level+2)/2);
-                return new BodyPart("rat_head", "head", atk, level/2+1, ratHead,
-                        new Point(20, ratHead.getHeight() - 40));
+                atk = new Attack("Nibble", 1, 1);
+                return new BodyPart("rat_head", "head", atk, level/2+1,
+                        new Point(20, 70));
             case "rat_tail":
-                Image ratTail = ResourceLoader.getImage("rat_tail");
-                atk = new Attack("Whip", (level + 4)/2);
-                return new BodyPart("rat_tail", "tail", atk, level/2, ratTail,
-                        new Point (ratTail.getWidth()-15, ratTail.getHeight()/2));
+                atk = new Attack("Whip", 3, 10);
+                return new BodyPart("rat_tail", "tail", atk, level/2,
+                        new Point (85, 20));
             case "rat_body":
                 Image ratBody = ResourceLoader.getImage("rat_body");
-                connectors = new BodyConnectors(
+                BodyConnectors connectors = new BodyConnectors(
                         new Point(ratBody.getWidth()*0.95f, (ratBody.getHeight()*0.8f)),
                         new Point(ratBody.getWidth()*0.8f, ratBody.getHeight()*0.7f),
                         new Point(ratBody.getWidth()*0.7f, ratBody.getHeight()*0.6f),
                         new Point (ratBody.getWidth()*0.3f, ratBody.getHeight()*0.7f),
                         new Point (ratBody.getWidth()*0.2f, ratBody.getHeight()*0.6f),
                         new Point(-10, ratBody.getHeight()*0.65f));
-                return new BodyBodyPart("rat_body", "body", null, level+3, ratBody,null, connectors);
+                return new BodyBodyPart("rat_body", "body", level+3, connectors);
 
+
+                /*
             case "bunny_head":
                 Image bunnyHead = ResourceLoader.getImage("bunny_head");
                 atk = new Attack("Chew", level+1);
@@ -201,12 +211,12 @@ public class PartFactory {
                 return new BodyPart("beaver_head", "head", atk, level, beaverHead,
                         new Point(beaverHead.getWidth() * 0.2f, beaverHead.getHeight() * 0.8f - 30));
             case "beaver_leg":
-                Image beaverLeg = ResourceLoader.getImage("beaver_limb");
+                Image beaverLeg = ResourceLoader.getImage("beaver_leg");
                 atk = new Attack("Waddle", 1);
                 return new BodyPart("beaver_leg", "leg", atk, level/2, beaverLeg,
                         new Point(beaverLeg.getWidth()* 0.2f/2, 10));
             case "beaver_arm":
-                Image beaverArm = ResourceLoader.getImage("beaver_limb").getScaledCopy(0.8f);
+                Image beaverArm = ResourceLoader.getImage("beaver_arm").getScaledCopy(0.8f);
                 atk = new Attack("Paw", 1);
                 return new BodyPart("beaver_arm", "arm", atk, level/2, beaverArm,
                         new Point(beaverArm.getWidth()/2f, 10));
@@ -278,8 +288,9 @@ public class PartFactory {
                 atk = new Attack("GRAB", level+7);
                 return new BodyPart("golden_monkey_arm", "arm", atk, level+7, goldenMonkeyArm,
                         new Point(goldenMonkeyArm.getWidth()/2, 20));
-            default:
-                throw new SlickException("Not a valid animal part.");
-        }
+                        */
+       //     default:
+       //         throw new SlickException("Not a valid animal part.");
+       // }
     }
 }

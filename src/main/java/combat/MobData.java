@@ -28,6 +28,7 @@ public class MobData {
                 return makeDog(level);
             case "rat":
                 return makeRat(level);
+                /*
             case "bunny":
                 return makeBunny(level);
             case "penguin":
@@ -40,6 +41,7 @@ public class MobData {
                 return makeBeaver(level);
             case "ostrich":
                 return makeOstrich(level);
+                */
             case "Dr.Moreau":
                 image = new SuperImage();
                 image.addImage(new PositionedImage(ResourceLoader.getImage("Dr.Moreau").getScaledCopy(0.38f), -350, -330));
@@ -51,13 +53,7 @@ public class MobData {
     private static Mob makeDog(int level) throws SlickException
     {
         BodyPart body = PartFactory.getPart("dog_body", level);
-        BodyConnectors connectors = new BodyConnectors(
-                new Point(body.getWidth()*0.9f, (body.getHeight()*0.33f)),
-                new Point(body.getWidth()*0.8f, body.getHeight()*0.4f),
-                new Point(body.getWidth()*0.7f, body.getHeight()*0.3f),
-                new Point (body.getWidth()*0.3f, body.getHeight()*0.3f),
-                new Point (body.getWidth()*0.2f, body.getHeight()*0.2f),
-                new Point(0, body.getHeight()*0.4f));
+        BodyConnectors connectors = ((BodyBodyPart) body).getConnectors();
 
         SuperImage image = CreatureComposer.composeImage(connectors,
                 PartFactory.getPart("dog_head", level),

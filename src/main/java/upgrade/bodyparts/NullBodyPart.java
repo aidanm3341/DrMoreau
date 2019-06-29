@@ -1,9 +1,8 @@
 package upgrade.bodyparts;
 
-import main.Attack;
+import combat.Attack;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.geom.Point;
-import upgrade.bodyparts.AbstractBodyPart;
 import util.ResourceLoader;
 
 public class NullBodyPart implements AbstractBodyPart {
@@ -37,5 +36,5 @@ public class NullBodyPart implements AbstractBodyPart {
     }
 
     @Override
-    public Attack getAttack() { return new Attack("Null", 0); }
+    public Attack getAttack() { return new Attack("Null", 0, 0); }
 }

@@ -1,0 +1,135 @@
+[
+  {
+    "name": "dog_head",
+    "type": "head",
+    "hp": 100,
+    "attack": {
+      "name": "Rabid Bite",
+      "damage": {}
+    },
+    "point": {
+      "x": 0,
+      "y": 72
+    }
+  },
+  {
+    "name": "dog_arm",
+    "type": "arm",
+    "hp": 100,
+    "attack": {
+      "name": "Claw",
+      "damage": {}
+    },
+    "point": {
+      "x": 36,
+      "y": 15
+    }
+  },
+  {
+    "name": "dog_leg",
+    "type": "leg",
+    "hp": 100,
+    "attack": {
+      "name": "Kick",
+      "damage": {}
+    },
+    "point": {
+      "x": 40,
+      "y": 20
+    }
+  },
+  {
+    "name": "dog_tail",
+    "type": "tail",
+    "hp": 100,
+    "attack": {
+      "name": "Tail Whip",
+      "damage": {}
+    },
+    "point": {
+      "x": 79,
+      "y": 19
+    }
+  },
+  {
+    "name": "dog_body",
+    "type": "body",
+    "hp": 100,
+    "point": {
+      "head":      {"x": 220, "y": 38},
+      "arm_right": {"x": 195, "y": 47},
+      "arm_left":  {"x": 171, "y": 35},
+      "leg_right": {"x": 73, "y": 35},
+      "leg_left":  {"x": 49, "y": 23},
+      "tail":      {"x": 0, "y": 46}
+    }
+  },
+
+
+
+  {
+    "name": "rat_head",
+    "type": "head",
+    "hp": 5,
+    "attack": {
+      "name": "Nibble",
+      "damage": {}
+    },
+    "point": {
+      "x": 20,
+      "y": 70
+    }
+  },
+  {
+    "name": "rat_arm",
+    "type": "arm",
+    "hp": 1,
+    "attack": {
+      "name": "Scratch",
+      "damage": {}
+    },
+    "point": {
+      "x": 43,
+      "y": 20
+    }
+  },
+  {
+    "name": "rat_leg",
+    "type": "leg",
+    "hp": 10,
+    "attack": {
+      "name": "Kick",
+      "damage": {}
+    },
+    "point": {
+      "x": 36,
+      "y": 20
+    }
+  },
+  {
+    "name": "rat_tail",
+    "type": "tail",
+    "hp": 5,
+    "attack": {
+      "name": "Tail Flick",
+      "damage": {}
+    },
+    "point": {
+      "x": 85,
+      "y": 20
+    }
+  },
+  {
+    "name": "rat_body",
+    "type": "body",
+    "hp": 100,
+    "point": {
+      "head":      {"x": 238, "y": 98},
+      "arm_right": {"x": 200, "y": 84},
+      "arm_left":  {"x": 175, "y": 72},
+      "leg_right": {"x": 75, "y": 84},
+      "leg_left":  {"x": 50, "y": 72},
+      "tail":      {"x": -10, "y": 78}
+    }
+  },
+]

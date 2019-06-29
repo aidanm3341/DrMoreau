@@ -1,9 +1,10 @@
 package upgrade.bodyparts;
 
-import main.Attack;
+import combat.Attack;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
+import util.ResourceLoader;
 
 public class BodyPart implements AbstractBodyPart {
 
@@ -14,19 +15,14 @@ public class BodyPart implements AbstractBodyPart {
 
     private Point attachPoint;
 
-    public BodyPart(String name, String type, Attack attack, int hp, Image image, Point attachPoint) throws SlickException
+    public BodyPart(String name, String type, Attack attack, int hp, Point attachPoint) throws SlickException
     {
         this.name = name;
         this.type = type;
         this.attack = attack;
         this.hp = hp;
-        this.image = image;
+        this.image = ResourceLoader.getImage(name);
         this.attachPoint = attachPoint;
-//        if(attachPoint != null) {
-//            image.getGraphics().setColor(Color.black);
-//            image.getGraphics().drawOval(attachPoint.getX(), attachPoint.getY(), 10, 10);
-//            image.getGraphics().flush();
-//        }
     }
 
     public String getName(){return name;}

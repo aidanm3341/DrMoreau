@@ -1,7 +1,6 @@
 package upgrade.bodyparts;
 
-import main.Attack;
-import org.newdawn.slick.Image;
+import combat.Attack;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
 
@@ -9,9 +8,9 @@ public class BodyBodyPart extends BodyPart{
 
     public BodyConnectors connectors;
 
-    public BodyBodyPart(String name, String type, Attack attack, int hp, Image image, Point attachPoint,
+    public BodyBodyPart(String name, String type, int hp,
                         BodyConnectors connectors) throws SlickException {
-        super(name, type, attack, hp, image, attachPoint);
+        super(name, type, null, hp, null);
         this.connectors = connectors;
     }
 

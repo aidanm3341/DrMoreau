@@ -35,13 +35,13 @@ public class SidekickData {
 
     public void loadDefaultSidekick() throws SlickException
     {
-        addBody(PartFactory.getPart("dog_body", 1));
-        addLegLeft(PartFactory.getPart("dog_leg", 1));
-        addArmLeft(PartFactory.getPart("dog_arm", 1));
-        addLegRight(PartFactory.getPart("dog_leg", 1));
-        addArmRight(PartFactory.getPart("dog_arm", 1));
-        addTail(PartFactory.getPart("dog_tail", 1));
-        addHead(PartFactory.getPart("dog_head", 1));
+        addBody(PartFactory.getPart("dog_body", 2));
+        addLegLeft(PartFactory.getPart("dog_leg", 2));
+        addArmLeft(PartFactory.getPart("dog_arm", 2));
+        addLegRight(PartFactory.getPart("dog_leg", 2));
+        addArmRight(PartFactory.getPart("dog_arm", 2));
+        addTail(PartFactory.getPart("dog_tail", 2));
+        addHead(PartFactory.getPart("dog_head", 2));
     }
 
     

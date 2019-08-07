@@ -51,15 +51,10 @@ public class BodyPart implements AbstractBodyPart {
     }
 
     public Attack getAttack() {
-        return attack.clone(level);
+        return attack;
     }
 
     public int getLevel(){
         return level;
-    }
-
-    public AbstractBodyPart clone(int level) throws SlickException
-    {
-        return new BodyPart(name, type, attack, hp, attachPoint, level);
     }
 }

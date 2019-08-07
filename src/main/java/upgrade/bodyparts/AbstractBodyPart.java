@@ -16,6 +16,4 @@ public interface AbstractBodyPart {
     float getHeight();
     Attack getAttack();
     int getLevel();
-
-    AbstractBodyPart clone(int level) throws SlickException;
 }

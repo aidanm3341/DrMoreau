@@ -1,11 +1,7 @@
 package upgrade.bodyparts;
 
-import combat.Attack;
-import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Point;
 import util.JSONPartReader;
-import util.ResourceLoader;
 
 import java.util.HashMap;
 

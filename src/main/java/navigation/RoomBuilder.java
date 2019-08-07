@@ -6,12 +6,10 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import upgrade.bodyparts.AbstractBodyPart;
 import upgrade.bodyparts.BodyPart;
-import upgrade.bodyparts.PartFactory;
 import util.Pool;
 import util.ResourceLoader;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class RoomBuilder {
 

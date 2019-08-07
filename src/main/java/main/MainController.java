@@ -89,7 +89,7 @@ public class MainController {
 
     public void reset() throws SlickException
     {
-        level = 0;
+        level = 1;
         sidekick.loadDefaultSidekick();
     }
 

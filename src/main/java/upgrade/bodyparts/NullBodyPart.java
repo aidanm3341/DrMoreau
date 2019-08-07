@@ -36,9 +36,7 @@ public class NullBodyPart implements AbstractBodyPart {
         return 0;
     }
 
-    public Attack getAttack() { return new Attack("Null", 0, 0,0); }
+    public Attack getAttack() { return new Attack("Null", 0,0); }
 
     public int getLevel() { return 0; }
-
-    public AbstractBodyPart clone(int level) throws SlickException { return this; }
 }

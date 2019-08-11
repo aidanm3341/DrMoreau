@@ -1,5 +1,6 @@
 package main;
 
+import combat.MobData;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
@@ -73,6 +74,7 @@ public class Main extends StateBasedGame {
     // main.Main Method
     public static void main(String[] args) {
         try {
+            MobData.getMobFromLua("dog");
             AppGameContainer app = new AppGameContainer(new Main("Dr.Moreau v" + VERSION));
             app.setDisplayMode(WIDTH, HEIGHT, false);
             app.setTargetFrameRate(FPS);

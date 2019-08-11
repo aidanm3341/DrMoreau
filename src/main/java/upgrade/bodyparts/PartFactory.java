@@ -14,7 +14,7 @@ public class PartFactory {
         if(parts == null)
             parts = JSONPartReader.readParts();
 
-        return parts.get(name).clone(level);
+        return parts.get(name);
 
         //Attack atk;
 /*

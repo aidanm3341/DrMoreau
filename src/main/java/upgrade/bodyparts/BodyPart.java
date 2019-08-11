@@ -16,7 +16,7 @@ public class BodyPart implements AbstractBodyPart {
     private Point attachPoint;
     private int level;
 
-    public BodyPart(String name, String type, Attack attack, int hp, Point attachPoint, int level) throws SlickException
+    public BodyPart(String name, String type, Attack attack, int hp, Point attachPoint, int level)
     {
         this.name = name;
         this.type = type;
@@ -36,7 +36,6 @@ public class BodyPart implements AbstractBodyPart {
     public Point getAttachPoint(){
         return attachPoint;
     }
-
 
     public Image getImage() {
         return image;

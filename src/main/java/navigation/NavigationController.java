@@ -66,6 +66,6 @@ public class NavigationController extends Screen implements ComponentListener {
         else if(view.getRight().equals(c))
             activeRoom = right;
 
-        main.enterState(Main.CONFIRM);
+        main.enterState(Main.FIGHT);
     }
 }

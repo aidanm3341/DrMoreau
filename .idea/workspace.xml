@@ -2,139 +2,101 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/sqlite-jdbc-3.27.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/DatabaseEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/MobLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/SQLiteMobLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/Connection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/Part.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/DrMoreau.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DrMoreau.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/bodyparts.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/bodyparts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/boss.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/boss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ctl.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/res/ctl.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/gui/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/basicButton.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/gui/basicButton.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/basicButtonHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/gui/basicButtonHover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/basicButtonPressed.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/gui/basicButtonPressed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/blackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/gui/blackground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/gui/intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/menuButton.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/gui/menuButton.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/menuButtonHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/gui/menuButtonHover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/upgradePuddle.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/gui/upgradePuddle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lua/dog.lua" beforeDir="false" afterPath="$PROJECT_DIR$/res/lua/dog.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/null.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/null.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/beaver/beaver_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/beaver/beaver_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/beaver/beaver_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/beaver/beaver_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/beaver/beaver_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/beaver/beaver_head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/beaver/beaver_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/beaver/beaver_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/beaver/beaver_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/beaver/beaver_tail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/boar/boar_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/boar/boar_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/boar/boar_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/boar/boar_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/boar/boar_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/boar/boar_head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/boar/boar_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/boar/boar_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/boar/boar_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/boar/boar_tail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/bunny/bunny_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/bunny/bunny_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/bunny/bunny_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/bunny/bunny_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/bunny/bunny_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/bunny/bunny_head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/bunny/bunny_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/bunny/bunny_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/bunny/bunny_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/bunny/bunny_tail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/cat_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/cat_tail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/dog/dog_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/dog/dog_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/dog/dog_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/dog/dog_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/dog/dog_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/dog/dog_head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/dog/dog_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/dog/dog_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/dog/dog_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/dog/dog_tail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/duck/DuckHead.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/duck/DuckHead.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/duck/duck_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/duck/duck_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/duck/duck_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/duck/duck_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/elephant/Elephant.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/elephant/Elephant.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/elephant/Elephant_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/elephant/Elephant_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/elephant/Elephant_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/elephant/Elephant_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/elephant/Elephant_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/elephant/Elephant_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/elephant/Elephant_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/elephant/Elephant_tail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/goat/Goat.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/goat/Goat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/goat/Goat_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/goat/Goat_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/goat/goat_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/goat/goat_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/lion/Lion.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/lion/Lion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/lion/Lion_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/lion/Lion_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/lion/Lion_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/lion/Lion_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/lion/Lion_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/lion/Lion_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/misc/bull_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/misc/bull_head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/misc/burning_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/misc/burning_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/misc/frozen_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/misc/frozen_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/misc/golden_monkey_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/misc/golden_monkey_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/misc/green_arm.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/misc/green_arm.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/misc/human_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/misc/human_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/misc/pigeon.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/misc/pigeon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/ostrich/ostrich_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/ostrich/ostrich_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/ostrich/ostrich_head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/ostrich/ostrich_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/ostrich/ostrich_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/ostrich/ostrich_tail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/penguin/penguin_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/penguin/penguin_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/penguin/penguin_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/penguin/penguin_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/penguin/penguin_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/penguin/penguin_head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/penguin/penguin_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/penguin/penguin_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/penguin/penguin_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/penguin/penguin_tail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/rat/rat_arm.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/rat/rat_arm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/rat/rat_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/rat/rat_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/rat/rat_head.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/rat/rat_head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/rat/rat_leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/rat/rat_leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/rat/rat_tail.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/rat/rat_tail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/squid/squid_body.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/squid/squid_body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/squid/squid_left_legs.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/squid/squid_left_legs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/squid/squid_right_legs.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/squid/squid_right_legs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/turtle/Flipper.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/turtle/Flipper.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/turtle/Turtle_Head.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/turtle/Turtle_Head.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/turtle/Turtle_Leg.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/turtle/Turtle_Leg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/parts/turtle/Turtle_Shell.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/parts/turtle/Turtle_Shell.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/travel/brickRoute.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/travel/brickRoute.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/travel/brickRouteHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/travel/brickRouteHover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/travel/greyRoute.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/travel/greyRoute.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/travel/greyRouteHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/travel/greyRouteHover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/travel/travelBorder.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/travel/travelBorder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/travel/travelHover.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/travel/travelHover.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/PrintObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/MyFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MyFont.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/DrMoreau.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/Mob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/Mob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/MobData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/MobData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ctl.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/basicButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/basicButtonHover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/basicButtonPressed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/blackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/intro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/menuButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/menuButtonHover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/upgradePuddle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Intro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Intro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/IntroTxt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/IntroTxt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/ConfirmationPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/SidekickData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/SidekickData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/ConfirmationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/ConfirmationPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/RoomBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/RoomBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/null.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/beaver/beaver_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/beaver/beaver_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/beaver/beaver_tail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/boar/boar_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/boar/boar_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/boar/boar_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/boar/boar_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/boar/boar_tail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_tail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/cat_tail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog/dog_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog/dog_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog/dog_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog/dog_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/dog/dog_tail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/duck/DuckHead.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/duck/duck_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/duck/duck_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant_tail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/goat/Goat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/goat/Goat_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/goat/goat_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/lion/Lion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/lion/Lion_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/lion/Lion_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/lion/Lion_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/misc/bull_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/misc/burning_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/misc/frozen_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/misc/golden_monkey_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/misc/green_arm.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/misc/human_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/misc/pigeon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_tail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/rat/rat_arm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/rat/rat_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/rat/rat_head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/rat/rat_leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/rat/rat_tail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/squid/squid_body.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/squid/squid_left_legs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/squid/squid_right_legs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/turtle/Flipper.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/turtle/Turtle_Head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/turtle/Turtle_Leg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parts/turtle/Turtle_Shell.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/GameOver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/GameOver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/Screen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/Victory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/Victory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/PartDraggable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/draganddrop/PartDraggable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/travel/brickRoute.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/travel/brickRouteHover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/travel/greyRoute.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/travel/greyRouteHover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/travel/travelBorder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/travel/travelHover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/AbstractBodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/AbstractBodyPart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyBodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyBodyPart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyConnectors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyConnectors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyPart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/NullBodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/NullBodyPart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/PartFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/PartFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/AttackButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/AttackButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/Button.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/Button.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/CreatureComposer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/CreatureComposer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/MyFont.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/MyFont.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/Pool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/Pool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/PositionedImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/PositionedImage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/SuperImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/SuperImage.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +159,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -273,7 +235,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="1304000" />
+      <workItem from="1573851725766" duration="3554000" />
     </task>
     <task id="LOCAL-00001" summary="FINALLY managed to combine everything">
       <created>1554070542263</created>
@@ -590,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565538017029</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="a whole bunch of changes...">
+      <created>1573853052632</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1573853052632</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +579,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed bug where bodyConnectors were not swapping out correctly.&#10;Also fixed bug with left arm not swapping properly" />
     <MESSAGE value="fixed bug with rewards dropping multiple of the same part" />
     <MESSAGE value="refactored resources" />
     <MESSAGE value="added all the bunny images, and the bunny head part" />
@@ -635,6 +603,7 @@
     <MESSAGE value="Fixed bodyparts having the wrong damage" />
     <MESSAGE value="Changed the way damage is represented" />
     <MESSAGE value="Added the ability for lua integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the ability for lua integration" />
+    <MESSAGE value="a whole bunch of changes..." />
+    <option name="LAST_COMMIT_MESSAGE" value="a whole bunch of changes..." />
   </component>
 </project>

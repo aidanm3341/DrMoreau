@@ -48,7 +48,7 @@ public class JSONPartReader {
 
         try {
 
-            FileReader reader = new FileReader("resources/bodyparts.json");
+            FileReader reader = new FileReader("res/bodyparts.json");
 
             JSONArray parts = (JSONArray) parser.parse(reader);
 

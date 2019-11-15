@@ -25,7 +25,7 @@ public class MainMenu extends Screen implements ComponentListener {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
 
-        startButton = new Button("Start", ResourceLoader.getImage("menuButton"), gc.getWidth()/2, gc.getHeight()/2);
+        startButton = new Button("Start", ResourceLoader.getImage("menuButton"), Main.WIDTH/2, Main.HEIGHT/2);
         startButton.init(gc);
         startButton.addHoverOverImage(ResourceLoader.getImage("menuButtonHover"));
         startButton.addListener(this);
@@ -36,7 +36,7 @@ public class MainMenu extends Screen implements ComponentListener {
 
         g.setFont(gc.getDefaultFont());
         g.setColor(new Color(227, 255, 86));
-        g.drawString("Dr. Moreau", gc.getWidth()/2 - 315, 150);
+        g.drawString("Dr. Moreau", Main.WIDTH/2 - 315, 150);
 
         startButton.render(gc, g);
     }

@@ -8,8 +8,6 @@ import util.ResourceLoader;
 import util.SuperImage;
 
 import java.util.ArrayList;
-import org.luaj.vm2.*;
-import org.luaj.vm2.lib.jse.*;
 
 public class MobData {
 

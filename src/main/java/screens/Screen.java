@@ -1,5 +1,6 @@
 package screens;
 
+import main.Main;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -21,7 +22,7 @@ public abstract class Screen extends BasicGameState {
     public  void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
     {
         g.setColor(bg);
-        g.fillRect(0, 0, gc.getWidth(), gc.getHeight());
+        g.fillRect(0, 0, Main.WIDTH, Main.HEIGHT);
     }
 
     public void update(GameContainer gc, StateBasedGame sbg, int i) throws SlickException{}

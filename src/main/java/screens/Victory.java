@@ -28,13 +28,13 @@ public class Victory extends Screen implements ComponentListener {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
 
-        respawnButton = new Button("Respawn", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.3f, gc.getHeight()/2);
+        respawnButton = new Button("Respawn", ResourceLoader.getImage("basicButton"), Main.WIDTH*0.3f, Main.HEIGHT/2);
         respawnButton.init(gc);
         respawnButton.addListener(this);
         respawnButton.addHoverOverImage(ResourceLoader.getImage("basicButtonHover"));
         respawnButton.addPressedImage(ResourceLoader.getImage("basicButtonPressed"));
 
-        quitButton = new Button("Quit", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.66f, gc.getHeight()/2);
+        quitButton = new Button("Quit", ResourceLoader.getImage("basicButton"), Main.WIDTH*0.66f, Main.HEIGHT/2);
         quitButton.init(gc);
         quitButton.addListener(this);
         quitButton.addHoverOverImage(ResourceLoader.getImage("basicButtonHover"));
@@ -46,7 +46,7 @@ public class Victory extends Screen implements ComponentListener {
 
         g.setFont(gc.getDefaultFont());
         g.setColor(new Color(227, 255, 86));
-        g.drawString("VICTORY!", gc.getWidth()/2 - 380, 110);
+        g.drawString("VICTORY!", Main.WIDTH/2 - 380, 110);
 
         respawnButton.render(gc, g);
         quitButton.render(gc, g);

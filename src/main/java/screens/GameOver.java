@@ -29,13 +29,13 @@ public class GameOver extends Screen implements ComponentListener {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
 
-        respawnButton = new Button("Respawn", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.3f, gc.getHeight()/2);
+        respawnButton = new Button("Respawn", ResourceLoader.getImage("basicButton"), Main.WIDTH*0.3f, Main.HEIGHT/2);
         respawnButton.init(gc);
         respawnButton.addListener(this);
         respawnButton.addHoverOverImage(ResourceLoader.getImage("basicButtonHover"));
         respawnButton.addPressedImage(ResourceLoader.getImage("basicButtonPressed"));
 
-        quitButton = new Button("Quit", ResourceLoader.getImage("basicButton"), gc.getWidth()*0.66f, gc.getHeight()/2);
+        quitButton = new Button("Quit", ResourceLoader.getImage("basicButton"), Main.WIDTH*0.66f, Main.HEIGHT/2);
         quitButton.init(gc);
         quitButton.addListener(this);
         quitButton.addHoverOverImage(ResourceLoader.getImage("basicButtonHover"));
@@ -47,7 +47,7 @@ public class GameOver extends Screen implements ComponentListener {
 
         g.setFont(gc.getDefaultFont());
         g.setColor(new Color(255, 0, 0));
-        g.drawString("GAME OVER", gc.getWidth()/2 - 420, 110);
+        g.drawString("GAME OVER", Main.WIDTH/2 - 420, 110);
 
         respawnButton.render(gc, g);
         quitButton.render(gc, g);

@@ -1,5 +1,6 @@
 package navigation;
 
+import main.Main;
 import org.newdawn.slick.*;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
@@ -34,13 +35,13 @@ public class NavigationView {
             e.printStackTrace();
         }
 
-        bossButton = new AttackButton("BOSS", gc.getWidth()/2, 40);
+        bossButton = new AttackButton("BOSS", Main.WIDTH/2, 40);
         bossButton.init(gc);
         bossButton.addListener(ctrl);
 
         left = new MouseOverArea(gc, ResourceLoader.getImage("brickRoute"), 110, 180);
         left.addListener(ctrl);
-        right = new MouseOverArea(gc, ResourceLoader.getImage("greyRoute"), gc.getWidth()/2 + 80, 180);
+        right = new MouseOverArea(gc, ResourceLoader.getImage("greyRoute"), Main.WIDTH/2 + 80, 180);
         right.addListener(ctrl);
         border = ResourceLoader.getImage("travelBorder");
     }
@@ -63,7 +64,7 @@ public class NavigationView {
         g.drawImage(border, 0, 0);
         g.setFont(font);
         g.setColor(Color.red);
-        g.drawString("Which Way?", gc.getWidth()/2 - 175, gc.getHeight() - 150);
+        g.drawString("Which Way?", Main.WIDTH/2 - 175, Main.HEIGHT - 150);
         bossButton.render(gc, g);
     }
 

@@ -32,12 +32,10 @@ public class Main extends StateBasedGame {
     public static final int INTROTXT = 8;
 
     // Application Properties
-    public static final int WIDTH   = 1650;//1280;//1680;
-    public static final int HEIGHT  = 1050;//720;//920;
+    public static final int WIDTH   = 1680;//fullscreen = 1650;
+    public static final int HEIGHT  = 920;//fullscreen = 1050;
     public static final int FPS     = 60;
     public static final double VERSION = 1.0;
-
-    private GameContainer gc;
 
     // Class Constructor
     public Main(String appName) {
@@ -46,7 +44,6 @@ public class Main extends StateBasedGame {
 
     // Initialize your game states (calls init method of each gamestate, and set's the state ID)
     public void initStatesList(GameContainer gc) throws SlickException {
-        this.gc = gc;
         try {
             gc.setDefaultFont(MyFont.createFont(100));
 
@@ -77,24 +74,11 @@ public class Main extends StateBasedGame {
 //            } catch (SQLException e) {
 //                e.printStackTrace();
 //            }
-            DisplayMode[] modes = new DisplayMode[0];
-            try {
-                modes = Display.getAvailableDisplayModes();
-            } catch (LWJGLException e) {
-                e.printStackTrace();
-            }
-
-            for (int i=0;i<modes.length;i++) {
-                DisplayMode current = modes[i];
-                System.out.println(current.getWidth() + "x" + current.getHeight() + "x" +
-                        current.getBitsPerPixel() + " " + current.getFrequency() + "Hz");
-            }
-
 
             //AppGameContainer app = new AppGameContainer(new Main("Dr.Moreau v" + VERSION));
             AppGameContainer app = new AppGameContainer(new ScalableGame(new Main("Dr.Moreau v" + VERSION),
                     WIDTH, HEIGHT, true));
-            app.setDisplayMode(WIDTH, HEIGHT, true);
+            app.setDisplayMode((int) (WIDTH*0.7f), (int) (HEIGHT*0.7f), false);
             app.setTargetFrameRate(FPS);
             app.setShowFPS(false);
             app.start();

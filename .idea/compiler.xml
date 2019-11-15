@@ -11,8 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="DrMoreau" target="8" />
-      <module name="States" target="8" />
+      <module name="DrMoreau" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

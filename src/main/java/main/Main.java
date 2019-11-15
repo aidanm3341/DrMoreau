@@ -1,8 +1,10 @@
 package main;
 
 import combat.MobData;
+import data.DatabaseEditor;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.ScalableGame;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.state.transition.Transition;
@@ -14,6 +16,7 @@ import util.ResourceLoader;
 
 import java.awt.*;
 import java.io.IOException;
+import java.sql.*;
 
 public class Main extends StateBasedGame {
 
@@ -29,8 +32,8 @@ public class Main extends StateBasedGame {
     public static final int INTROTXT = 8;
 
     // Application Properties
-    public static final int WIDTH   = 1680;
-    public static final int HEIGHT  = 920;
+    public static final int WIDTH   = 1280;//1680;
+    public static final int HEIGHT  = 720;//920;
     public static final int FPS     = 60;
     public static final double VERSION = 1.0;
 
@@ -47,7 +50,7 @@ public class Main extends StateBasedGame {
         try {
             gc.setDefaultFont(MyFont.createFont(100));
 
-        } catch (IOException e) { e.printStackTrace(); } catch (FontFormatException e) { e.printStackTrace(); }
+        } catch (IOException | FontFormatException e) { e.printStackTrace(); }
 
 
         ResourceLoader.loadImages();
@@ -61,12 +64,6 @@ public class Main extends StateBasedGame {
     public void enterState(int id, Transition x, Transition y)
     {
         super.enterState(id, x, y);
-
-//        try {
-//            this.getState(id).init(gc, this);
-//        } catch (SlickException e) {
-//            e.printStackTrace();
-//        }
     }
 
 
@@ -74,8 +71,17 @@ public class Main extends StateBasedGame {
     // main.Main Method
     public static void main(String[] args) {
         try {
-            MobData.getMobFromLua("dog");
+//            DatabaseEditor d = new DatabaseEditor();
+//            try {
+//                d.insert();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+
+
             AppGameContainer app = new AppGameContainer(new Main("Dr.Moreau v" + VERSION));
+//            AppGameContainer app = new AppGameContainer(new ScalableGame(new Main("Dr.Moreau v" + VERSION),
+//                    WIDTH, HEIGHT));
             app.setDisplayMode(WIDTH, HEIGHT, false);
             app.setTargetFrameRate(FPS);
             app.setShowFPS(false);

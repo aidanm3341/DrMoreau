@@ -1,6 +1,5 @@
 package combat;
 
-import main.PrintObject;
 import org.newdawn.slick.SlickException;
 import upgrade.bodyparts.*;
 import util.CreatureComposer;
@@ -13,19 +12,6 @@ import org.luaj.vm2.*;
 import org.luaj.vm2.lib.jse.*;
 
 public class MobData {
-
-    public static Mob getMobFromLua(String name) throws SlickException{
-        Globals globals = JsePlatform.standardGlobals();
-        globals.get("dofile").call( LuaValue.valueOf("lua/dog.lua"));
-
-        //LuaValue dog = globals.loadfile("lua/dog.lua");
-        LuaValue fact = globals.get("javaPrint");
-
-        PrintObject obj = new PrintObject();
-        LuaValue x = fact.call(CoerceJavaToLua.coerce(obj));
-        System.out.println(x.tojstring());
-        return null;
-    }
 
     public static Mob getMob(String name, int level) throws SlickException
     {

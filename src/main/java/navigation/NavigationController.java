@@ -57,7 +57,7 @@ public class NavigationController extends Screen implements ComponentListener {
     public void componentActivated(AbstractComponent c){
         if(view.getBossButton().equals(c)) {
             try {
-                activeRoom = new Room(Room.BATTLE, "Boss", MobData.getMob("Dr.Moreau", 100),
+                activeRoom = new Room(Main.FIGHT, "Boss", MobData.getMob("Dr.Moreau", 100),
                         ResourceLoader.getImage("null"), null);
             } catch (SlickException e) {}
         }

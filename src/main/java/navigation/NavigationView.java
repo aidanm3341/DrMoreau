@@ -29,9 +29,7 @@ public class NavigationView {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         try {
             font = MyFont.createFont(50);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (FontFormatException e) {
+        } catch (IOException | FontFormatException e) {
             e.printStackTrace();
         }
 

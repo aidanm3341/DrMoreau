@@ -1,9 +1,9 @@
 package data;
 
-import combat.Mob;
+import navigation.RoomBlueprint;
 
 import java.util.List;
 
 public interface MobLoader {
-    List<Mob> loadMobs();
+    List<RoomBlueprint> getRooms();
 }

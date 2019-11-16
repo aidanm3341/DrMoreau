@@ -2,6 +2,7 @@ package navigation;
 
 import combat.Mob;
 import combat.MobData;
+import main.Main;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import upgrade.bodyparts.AbstractBodyPart;
@@ -51,7 +52,7 @@ public class RoomBuilder {
         }
 
         //if(rand.nextInt(10) > 1) {
-            type = Room.BATTLE;
+            type = Main.FIGHT;
             parts.addAll(mob.getParts());
             rewards = parts.popX(3);
         //}
@@ -60,6 +61,6 @@ public class RoomBuilder {
         //    rewards = treasure.popX(3);
         //}
 
-        return new Room(type, theme, mob, navigationImage, rewards);
+        return new Room(type, mob, navigationImage, rewards);
     }
 }

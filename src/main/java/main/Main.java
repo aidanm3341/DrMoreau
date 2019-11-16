@@ -26,10 +26,9 @@ public class Main extends StateBasedGame {
     public static final int FIGHT    = 2;
     public static final int UPGRADE  = 3;
     public static final int TRAVEL   = 4;
-    public static final int CONFIRM  = 5;
-    public static final int GAMEOVER = 6;
-    public static final int VICTORY  = 7;
-    public static final int INTROTXT = 8;
+    public static final int GAMEOVER = 5;
+    public static final int VICTORY  = 6;
+    public static final int INTROTXT = 7;
 
     // Application Properties
     public static final int WIDTH   = 1680;//fullscreen = 1650;

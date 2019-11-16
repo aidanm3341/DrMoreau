@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/navigation/RoomBlueprint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/BasicRoomBlueprintLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/MobLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/MobLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/MobLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/RoomBlueprintLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/SQLiteMobLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/NavigationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/NavigationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/RoomBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/IntroTxt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/IntroTxt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/navigation/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/navigation/RoomBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/RoomBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screens/GameOver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/GameOver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screens/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screens/Victory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/Victory.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +156,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="7674000" />
+      <workItem from="1573851725766" duration="8909000" />
     </task>
     <task id="LOCAL-00001" summary="FINALLY managed to combine everything">
       <created>1554070542263</created>
@@ -485,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573856368189</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="added RoomBlueprint idea">
+      <created>1573903752260</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1573903752260</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +521,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added all the bunny images, and the bunny head part" />
     <MESSAGE value="Fixed naming bug, and added bunny to the pool of &quot;red&quot; theme" />
     <MESSAGE value="Added the intro in!!" />
     <MESSAGE value="[WARNING SLOW] added &quot;debugger&quot; which shows the attachment point &#10;for animals" />
@@ -530,6 +545,7 @@
     <MESSAGE value="a whole bunch of changes..." />
     <MESSAGE value="Fixed screen size kind of, AND removed confirmation screen" />
     <MESSAGE value="actually fixed sizing issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="actually fixed sizing issues" />
+    <MESSAGE value="added RoomBlueprint idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="added RoomBlueprint idea" />
   </component>
 </project>

@@ -1,6 +1,8 @@
 package navigation;
 
 import combat.MobData;
+import data.BasicRoomBlueprintLoader;
+import data.RoomBlueprintLoader;
 import main.Main;
 import main.MainController;
 import org.newdawn.slick.GameContainer;
@@ -13,6 +15,9 @@ import screens.Screen;
 import util.Pool;
 import util.ResourceLoader;
 
+import java.util.List;
+import java.util.Random;
+
 public class NavigationController extends Screen implements ComponentListener {
     public int getID() {
         return Main.TRAVEL;
@@ -21,6 +26,7 @@ public class NavigationController extends Screen implements ComponentListener {
     private MainController main;
     private NavigationView view;
     private Pool<String> themes;
+    private RoomBlueprintLoader roomBlueprintLoader;
     private Room left, right, activeRoom;
 
     public NavigationController(MainController main){
@@ -30,17 +36,19 @@ public class NavigationController extends Screen implements ComponentListener {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
     {
         super.init(gc, sbg);
+        roomBlueprintLoader = new BasicRoomBlueprintLoader();
         view = new NavigationView(this);
         view.init(gc, sbg);
         themes = new Pool<>();
         themes.add("red");
         themes.add("grey");
-        activeRoom = RoomBuilder.buildRoom("grey", main.getLevel());
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException{
-        left = RoomBuilder.buildRoom(themes.get(), main.getLevel());
-        right = RoomBuilder.buildRoom(themes.get(), main.getLevel());
+        List<RoomBlueprint> roomBlueprints = roomBlueprintLoader.getRoomBlueprints();
+        Random rand = new Random();
+        left = roomBlueprints.get(rand.nextInt(roomBlueprints.size())).buildRoom();
+        right = roomBlueprints.get(rand.nextInt(roomBlueprints.size())).buildRoom();
         view.setLeftImage(left.getNavigationImage(), left.getNavigationImageHover());
         view.setRightImage(right.getNavigationImage(), right.getNavigationImageHover());
     }

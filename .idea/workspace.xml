@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/res/Rocketeer_Gothic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/inland.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/madhouse.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/RoomBlueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/RoomBlueprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/MyFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MyFont.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/MyFont.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/MyFont.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,19 +75,19 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau\src\main\resources\parts\beaver" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res" />
+      <recent name="$PROJECT_DIR$/libs" />
+      <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau" />
+      <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau\src\main\resources" />
       <recent name="C:\Users\Windows\Desktop\DrMoreau\src\main\resources\parts\penguin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="screens" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/libs" />
-      <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau" />
-      <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau\src\main\resources\parts\beaver" />
       <recent name="C:\Users\Windows\Desktop\DrMoreau\src\main\resources\parts\penguin" />
-      <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau\src\main\resources\parts\misc" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -144,14 +148,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="9654000" />
-    </task>
-    <task id="LOCAL-00002" summary="Deleted old files, and made the game flow properly">
-      <created>1554073588050</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1554073588050</updated>
+      <workItem from="1573851725766" duration="10775000" />
     </task>
     <task id="LOCAL-00003" summary="Refactored how the changing of states happens, to be more in line with the class diagram">
       <created>1554148879406</created>
@@ -489,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573907024953</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="integrated new room blueprint method, and deleted RoomBuilder">
+      <created>1573907931981</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1573907931981</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added the intro in!!" />
     <MESSAGE value="[WARNING SLOW] added &quot;debugger&quot; which shows the attachment point &#10;for animals" />
     <MESSAGE value="Changed bunny proportions slightly" />
     <MESSAGE value="Added a health bar" />
@@ -534,6 +537,7 @@
     <MESSAGE value="actually fixed sizing issues" />
     <MESSAGE value="added RoomBlueprint idea" />
     <MESSAGE value="added a basic RoomBlueprint loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a basic RoomBlueprint loader" />
+    <MESSAGE value="integrated new room blueprint method, and deleted RoomBuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrated new room blueprint method, and deleted RoomBuilder" />
   </component>
 </project>

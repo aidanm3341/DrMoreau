@@ -67,7 +67,7 @@ public class NavigationController extends Screen implements ComponentListener {
             try {
                 activeRoom = new Room(Main.FIGHT, MobData.getMob("Dr.Moreau", 100),
                         ResourceLoader.getImage("null"), null);
-            } catch (SlickException e) {}
+            } catch (SlickException e) {e.printStackTrace();}
         }
         if(view.getLeft().equals(c))
             activeRoom = left;

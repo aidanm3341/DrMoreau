@@ -11,7 +11,7 @@ public class MyFont {
 
     public static UnicodeFont createFont(float size) throws SlickException, IOException, FontFormatException {
 
-        Font newFont = Font.createFont(Font.TRUETYPE_FONT, org.newdawn.slick.util.ResourceLoader.getResourceAsStream("ctl.ttf"));
+        Font newFont = Font.createFont(Font.TRUETYPE_FONT, org.newdawn.slick.util.ResourceLoader.getResourceAsStream("inland.ttf"));
         Font javaFont = newFont.deriveFont(size);
 
         UnicodeFont uniFont = new UnicodeFont(javaFont);

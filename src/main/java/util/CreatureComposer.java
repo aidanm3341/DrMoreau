@@ -1,6 +1,6 @@
 package util;
 
-import upgrade.bodyparts.AbstractBodyPart;
+import data.framework.BodyPart;
 import upgrade.bodyparts.BodyConnectors;
 
 public class CreatureComposer {
@@ -8,9 +8,9 @@ public class CreatureComposer {
     //private AbstractBodyPart head, armLeft, armRight, legLeft, legRight, tail, body;
     //private BodyConnectors connectors;
 
-    public static SuperImage composeImage(BodyConnectors connectors, AbstractBodyPart head, AbstractBodyPart armLeft,
-                                    AbstractBodyPart armRight, AbstractBodyPart legLeft,
-                                    AbstractBodyPart legRight, AbstractBodyPart tail, AbstractBodyPart body) {
+    public static SuperImage composeImage(BodyConnectors connectors, BodyPart head, BodyPart armLeft,
+                                          BodyPart armRight, BodyPart legLeft,
+                                          BodyPart legRight, BodyPart tail, BodyPart body) {
         SuperImage image = new SuperImage();
 
         image.addImage(new PositionedImage(legLeft.getImage(),

@@ -2,6 +2,7 @@ package data;
 
 import combat.Mob;
 import combat.MobData;
+import data.framework.RoomBlueprintLoader;
 import navigation.RoomBlueprint;
 import org.newdawn.slick.SlickException;
 import util.ResourceLoader;
@@ -9,7 +10,7 @@ import util.ResourceLoader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BasicRoomBlueprintLoader implements RoomBlueprintLoader{
+public class BasicRoomBlueprintLoader implements RoomBlueprintLoader {
     public List<RoomBlueprint> getRoomBlueprints() throws SlickException {
         List<RoomBlueprint> rooms = new ArrayList<>();
         rooms.add(redRoom());

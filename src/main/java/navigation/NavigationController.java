@@ -2,7 +2,7 @@ package navigation;
 
 import combat.MobData;
 import data.BasicRoomBlueprintLoader;
-import data.RoomBlueprintLoader;
+import data.framework.RoomBlueprintLoader;
 import main.Main;
 import main.MainController;
 import org.newdawn.slick.GameContainer;
@@ -12,7 +12,6 @@ import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.state.StateBasedGame;
 import screens.Screen;
-import util.Pool;
 import util.ResourceLoader;
 
 import java.util.List;
@@ -25,7 +24,6 @@ public class NavigationController extends Screen implements ComponentListener {
 
     private MainController main;
     private NavigationView view;
-    private Pool<String> themes;
     private RoomBlueprintLoader roomBlueprintLoader;
     private Room left, right, activeRoom;
 
@@ -39,9 +37,6 @@ public class NavigationController extends Screen implements ComponentListener {
         roomBlueprintLoader = new BasicRoomBlueprintLoader();
         view = new NavigationView(this);
         view.init(gc, sbg);
-        themes = new Pool<>();
-        themes.add("red");
-        themes.add("grey");
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException{

@@ -1,12 +1,12 @@
 package upgrade.bodyparts;
 
 import combat.Attack;
+import data.framework.BodyPart;
 import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
 import util.ResourceLoader;
 
-public class NullBodyPart implements AbstractBodyPart {
+public class NullBodyPart implements BodyPart {
 
     public String getName() {
         return "";

@@ -3,7 +3,7 @@ package screens.draganddrop;
 import org.newdawn.slick.*;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.gui.GUIContext;
-import upgrade.bodyparts.AbstractBodyPart;
+import data.framework.BodyPart;
 
 public class PartDraggable {
 
@@ -11,10 +11,10 @@ public class PartDraggable {
     private Rectangle rect;
     private boolean isClicked;
 
-    private AbstractBodyPart part;
+    private BodyPart part;
     private float scale = 0.5f;
 
-    public PartDraggable(DragArea home, AbstractBodyPart part)
+    public PartDraggable(DragArea home, BodyPart part)
     {
         home.link(this);
         rect = new Rectangle(0, 0, 100, 100);
@@ -74,7 +74,7 @@ public class PartDraggable {
         rect.setCenterY(home.getHomey());
     }
 
-    public AbstractBodyPart getPart() {
+    public BodyPart getPart() {
         return part;
     }
 }

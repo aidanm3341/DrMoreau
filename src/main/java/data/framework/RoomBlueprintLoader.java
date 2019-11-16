@@ -1,4 +1,4 @@
-package data;
+package data.framework;
 
 import navigation.RoomBlueprint;
 import org.newdawn.slick.SlickException;

@@ -1,12 +1,12 @@
 package upgrade.bodyparts;
 
 import combat.Attack;
+import data.framework.BodyPart;
 import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
 import util.ResourceLoader;
 
-public class BodyPart implements AbstractBodyPart {
+public class ConcreteBodyPart implements BodyPart {
 
     private String name, type;
     private int hp;
@@ -16,7 +16,7 @@ public class BodyPart implements AbstractBodyPart {
     private Point attachPoint;
     private int level;
 
-    public BodyPart(String name, String type, Attack attack, int hp, Point attachPoint, int level)
+    public ConcreteBodyPart(String name, String type, Attack attack, int hp, Point attachPoint, int level)
     {
         this.name = name;
         this.type = type;

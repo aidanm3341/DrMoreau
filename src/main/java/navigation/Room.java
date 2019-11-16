@@ -1,24 +1,20 @@
 package navigation;
 
 import combat.Mob;
-import combat.MobData;
-import main.Main;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import upgrade.bodyparts.AbstractBodyPart;
-import upgrade.bodyparts.BodyPart;
+import data.framework.BodyPart;
 import util.ResourceLoader;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Room {
     private int type;
     private Image navigationImage, navigationImageHover;
     private Mob mob;
-    private ArrayList<AbstractBodyPart> rewards;
+    private ArrayList<BodyPart> rewards;
 
-    public Room(int type, Mob mob, Image navigationImage, ArrayList<AbstractBodyPart> rewards) throws SlickException
+    public Room(int type, Mob mob, Image navigationImage, ArrayList<BodyPart> rewards) throws SlickException
     {
         this.type = type;
         this.mob = mob;
@@ -45,7 +41,7 @@ public class Room {
         return mob;
     }
 
-    public ArrayList<AbstractBodyPart> getRewards() {
+    public ArrayList<BodyPart> getRewards() {
         return rewards;
     }
 }

@@ -13,9 +13,7 @@ import screens.Screen;
 import screens.draganddrop.DragAndDropManager;
 import screens.draganddrop.DragArea;
 import screens.draganddrop.PartDraggable;
-import upgrade.bodyparts.AbstractBodyPart;
-import upgrade.bodyparts.BodyPart;
-import upgrade.bodyparts.PartFactory;
+import data.framework.BodyPart;
 import util.Pool;
 
 import java.util.ArrayList;
@@ -106,7 +104,7 @@ public class UpgradeController extends Screen implements ComponentListener {
         draggables.add(new PartDraggable(armRightArea, sidekick.getArmRight()));
         draggables.add(new PartDraggable(tailArea, sidekick.getTail()));
 
-        Pool<AbstractBodyPart> rewards = new Pool<>();
+        Pool<BodyPart> rewards = new Pool<>();
         rewards.addAll(main.getActiveRoom().getRewards());
 
         draggables.add(new PartDraggable(puddle1, rewards.pop()));
@@ -126,31 +124,31 @@ public class UpgradeController extends Screen implements ComponentListener {
     }
 
 
-    public AbstractBodyPart getHead() throws SlickException{
+    public BodyPart getHead() throws SlickException{
         return headArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getBody() throws SlickException{
+    public BodyPart getBody() throws SlickException{
         return bodyArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getLegLeft()throws SlickException{
+    public BodyPart getLegLeft()throws SlickException{
         return legLeftArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getLegRight()throws SlickException{
+    public BodyPart getLegRight()throws SlickException{
         return legRightArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getArmLeft()throws SlickException{
+    public BodyPart getArmLeft()throws SlickException{
         return armLeftArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getArmRight()throws SlickException{
+    public BodyPart getArmRight()throws SlickException{
         return armRightArea.getPart().getPart();
     }
 
-    public AbstractBodyPart getTail()throws SlickException{
+    public BodyPart getTail()throws SlickException{
         return tailArea.getPart().getPart();
     }
 

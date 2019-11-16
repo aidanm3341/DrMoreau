@@ -1,11 +1,10 @@
-package upgrade.bodyparts;
+package data.framework;
 
 import combat.Attack;
 import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
 
-public interface AbstractBodyPart {
+public interface BodyPart {
 
     String getName();
     String getType();

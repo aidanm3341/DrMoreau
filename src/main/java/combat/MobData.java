@@ -1,5 +1,6 @@
 package combat;
 
+import data.framework.BodyPart;
 import org.newdawn.slick.SlickException;
 import upgrade.bodyparts.*;
 import util.CreatureComposer;
@@ -47,8 +48,8 @@ public class MobData {
 
     private static Mob makeDog(int level) throws SlickException
     {
-        AbstractBodyPart body = PartFactory.getPart("dog_body", level);
-        BodyConnectors connectors = ((BodyBodyPart) body).getConnectors();
+        BodyPart body = PartFactory.getPart("dog_body", level);
+        BodyConnectors connectors = ((BodyConcreteBodyPart) body).getConnectors();
 
         SuperImage image = CreatureComposer.composeImage(connectors,
                 PartFactory.getPart("dog_head", level),
@@ -60,7 +61,7 @@ public class MobData {
                 PartFactory.getPart("dog_body", level));
         image.flipH(true);
 
-        ArrayList<AbstractBodyPart> parts = new ArrayList<>();
+        ArrayList<BodyPart> parts = new ArrayList<>();
         parts.add(PartFactory.getPart("dog_head", level));
         parts.add(PartFactory.getPart("dog_arm", level));
         parts.add(PartFactory.getPart("dog_arm", level));
@@ -75,9 +76,9 @@ public class MobData {
 
     private static Mob makeRat(int level) throws SlickException
     {
-        AbstractBodyPart body = PartFactory.getPart("rat_body", level);
+        BodyPart body = PartFactory.getPart("rat_body", level);
 
-        SuperImage image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+        SuperImage image = CreatureComposer.composeImage(((BodyConcreteBodyPart) body).getConnectors(),
                 PartFactory.getPart("rat_head", level),
                 PartFactory.getPart("rat_arm", level),
                 PartFactory.getPart("rat_arm", level),
@@ -87,7 +88,7 @@ public class MobData {
                 PartFactory.getPart("rat_body", level));
         image.flipH(true);
 
-        ArrayList<AbstractBodyPart> parts = new ArrayList<>();
+        ArrayList<BodyPart> parts = new ArrayList<>();
         parts.add(PartFactory.getPart("rat_head", level));
         parts.add(PartFactory.getPart("rat_arm", level));
         parts.add(PartFactory.getPart("rat_arm", level));

@@ -2,14 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/res/Rocketeer_Gothic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/inland.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/madhouse.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/framework/BodyPartLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Mob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/BasicRoomBlueprintLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/BasicRoomBlueprintLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/RoomBlueprintLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/framework/RoomBlueprintLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/MyFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MyFont.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/RoomBlueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/RoomBlueprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/draganddrop/PartDraggable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/draganddrop/PartDraggable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/AbstractBodyPart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConcreteBodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/Connection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/ConcreteBodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/CreatureComposer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/CreatureComposer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/MyFont.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/MyFont.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +64,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -148,14 +164,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="10775000" />
-    </task>
-    <task id="LOCAL-00003" summary="Refactored how the changing of states happens, to be more in line with the class diagram">
-      <created>1554148879406</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1554148879406</updated>
+      <workItem from="1573851725766" duration="13891000" />
     </task>
     <task id="LOCAL-00004" summary="Fixed some warnings, and made the confirmation screen buttons work appropriately">
       <created>1554149791372</created>
@@ -493,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573907931981</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="changed font">
+      <created>1573909267260</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1573909267260</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +529,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[WARNING SLOW] added &quot;debugger&quot; which shows the attachment point &#10;for animals" />
     <MESSAGE value="Changed bunny proportions slightly" />
     <MESSAGE value="Added a health bar" />
     <MESSAGE value="added sidekick health" />
@@ -538,6 +553,7 @@
     <MESSAGE value="added RoomBlueprint idea" />
     <MESSAGE value="added a basic RoomBlueprint loader" />
     <MESSAGE value="integrated new room blueprint method, and deleted RoomBuilder" />
-    <option name="LAST_COMMIT_MESSAGE" value="integrated new room blueprint method, and deleted RoomBuilder" />
+    <MESSAGE value="changed font" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed font" />
   </component>
 </project>

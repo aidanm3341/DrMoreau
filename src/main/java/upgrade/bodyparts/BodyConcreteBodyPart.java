@@ -2,12 +2,12 @@ package upgrade.bodyparts;
 
 import org.newdawn.slick.SlickException;
 
-public class BodyBodyPart extends BodyPart{
+public class BodyConcreteBodyPart extends ConcreteBodyPart {
 
     public BodyConnectors connectors;
 
-    public BodyBodyPart(String name, String type, int hp,
-                        BodyConnectors connectors, int level) throws SlickException {
+    public BodyConcreteBodyPart(String name, String type, int hp,
+                                BodyConnectors connectors, int level) throws SlickException {
         super(name, type, null, hp, null, level);
         this.connectors = connectors;
     }

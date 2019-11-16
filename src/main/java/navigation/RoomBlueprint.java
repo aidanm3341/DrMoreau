@@ -4,7 +4,7 @@ import combat.Mob;
 import main.Main;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import upgrade.bodyparts.AbstractBodyPart;
+import data.framework.BodyPart;
 import util.Pool;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public class RoomBlueprint {
 
     public Room buildRoom() throws SlickException {
         Mob mob = possibleMobs.get(new Random().nextInt(possibleMobs.size()));
-        Pool<AbstractBodyPart> parts = new Pool<>();
+        Pool<BodyPart> parts = new Pool<>();
         parts.addAll(mob.getParts());
 
         return new Room(

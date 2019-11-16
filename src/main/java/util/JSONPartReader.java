@@ -1,15 +1,17 @@
 package util;
 
 import combat.Attack;
+import data.framework.BodyPart;
+import data.framework.BodyPartLoader;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Point;
-import upgrade.bodyparts.BodyBodyPart;
+import upgrade.bodyparts.BodyConcreteBodyPart;
 import upgrade.bodyparts.BodyConnectors;
-import upgrade.bodyparts.BodyPart;
+import upgrade.bodyparts.ConcreteBodyPart;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -17,7 +19,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class JSONPartReader {
+public class JSONPartReader implements BodyPartLoader {
 
     public static void writePart(BodyPart part) throws IOException {
         JSONArray jsonArray = new JSONArray();
@@ -42,7 +44,7 @@ public class JSONPartReader {
         writer.flush();
     }
 
-    public static HashMap<String, BodyPart> readParts() throws SlickException {
+    public HashMap<String, BodyPart> getBodyParts() throws SlickException {
         JSONParser parser = new JSONParser();
         HashMap<String, BodyPart> partsHash = new HashMap<>();
 
@@ -82,11 +84,11 @@ public class JSONPartReader {
                             pointExtractor((JSONObject) pointObj.get("leg_right")),
                             pointExtractor((JSONObject) pointObj.get("leg_left")),
                             pointExtractor((JSONObject) pointObj.get("tail")));
-                    p = new BodyBodyPart(name, type, hp, connectors, 1);
+                    p = new BodyConcreteBodyPart(name, type, hp, connectors, 1);
                 }
                 else {
                     Point point = pointExtractor(pointObj);
-                    p = new BodyPart(name, type, attack, hp, point, 1);
+                    p = new ConcreteBodyPart(name, type, attack, hp, point, 1);
                 }
 
 

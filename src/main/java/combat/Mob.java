@@ -1,7 +1,6 @@
 package combat;
 
-import upgrade.bodyparts.AbstractBodyPart;
-import upgrade.bodyparts.BodyPart;
+import data.framework.BodyPart;
 import util.SuperImage;
 
 import java.util.ArrayList;
@@ -10,10 +9,10 @@ public class Mob {
 
     private String name;
     private float currentHp, maxHp, attStat, defStat;
-    private ArrayList<AbstractBodyPart> parts;
+    private ArrayList<BodyPart> parts;
     private SuperImage mobImage;
 
-    public Mob(String name, int hp, int attStat, int defStat, ArrayList<AbstractBodyPart> parts, SuperImage image)
+    public Mob(String name, int hp, int attStat, int defStat, ArrayList<BodyPart> parts, SuperImage image)
     {
         this.name = name;
         this.maxHp = hp;
@@ -51,7 +50,7 @@ public class Mob {
         return defStat;
     }
 
-    public ArrayList<AbstractBodyPart> getParts() {
+    public ArrayList<BodyPart> getParts() {
         return parts;
     }
 

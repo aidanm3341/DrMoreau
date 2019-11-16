@@ -1,6 +1,7 @@
 package main;
 
 import combat.Attack;
+import data.framework.BodyPart;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 import upgrade.bodyparts.*;
@@ -10,7 +11,7 @@ import util.SuperImage;
 public class SidekickData {
 
     private Attack at1, at2, at3, at4, at5, at6;
-    private AbstractBodyPart head, armLeft, armRight, legLeft, legRight, tail, body;
+    private BodyPart head, armLeft, armRight, legLeft, legRight, tail, body;
     private float currentHp, maxHP;
     private SuperImage image;
 
@@ -45,36 +46,36 @@ public class SidekickData {
     }
 
     
-    public void addBody(AbstractBodyPart newPart){
+    public void addBody(BodyPart newPart){
         body = newPart;
         updateMaxHp();
     }
-    public void addHead(AbstractBodyPart newPart){
+    public void addHead(BodyPart newPart){
         head = newPart;
         at1 = head.getAttack();
         updateMaxHp();
     }
-    public void addLegLeft(AbstractBodyPart newPart){
+    public void addLegLeft(BodyPart newPart){
         legLeft = newPart;
         at2 = legLeft.getAttack();
         updateMaxHp();
     }
-    public void addLegRight(AbstractBodyPart newPart){
+    public void addLegRight(BodyPart newPart){
         legRight = newPart;
         at3 = legRight.getAttack();
         updateMaxHp();
     }
-    public void addArmLeft(AbstractBodyPart newPart){
+    public void addArmLeft(BodyPart newPart){
         armLeft = newPart;
         at4 = armLeft.getAttack();
         updateMaxHp();
     }
-    public void addArmRight(AbstractBodyPart newPart){
+    public void addArmRight(BodyPart newPart){
         armRight = newPart;
         at5 = armRight.getAttack();
         updateMaxHp();
     }
-    public void addTail(AbstractBodyPart newPart){
+    public void addTail(BodyPart newPart){
         tail = newPart;
         at6 = tail.getAttack();
         updateMaxHp();
@@ -94,7 +95,7 @@ public class SidekickData {
     }
 
     private void composeImage() {
-        image = CreatureComposer.composeImage(((BodyBodyPart) body).getConnectors(),
+        image = CreatureComposer.composeImage(((BodyConcreteBodyPart) body).getConnectors(),
                 head, armLeft, armRight, legLeft, legRight, tail, body);
     }
 
@@ -133,25 +134,25 @@ public class SidekickData {
         return at6;
     }
 
-    public AbstractBodyPart getHead() {
+    public BodyPart getHead() {
         return head;
     }
-    public AbstractBodyPart getArmLeft() {
+    public BodyPart getArmLeft() {
         return armLeft;
     }
-    public AbstractBodyPart getArmRight() {
+    public BodyPart getArmRight() {
         return armRight;
     }
-    public AbstractBodyPart getLegLeft() {
+    public BodyPart getLegLeft() {
         return legLeft;
     }
-    public AbstractBodyPart getLegRight() {
+    public BodyPart getLegRight() {
         return legRight;
     }
-    public AbstractBodyPart getTail() {
+    public BodyPart getTail() {
         return tail;
     }
-    public AbstractBodyPart getBody() {
+    public BodyPart getBody() {
         return body;
     }
 

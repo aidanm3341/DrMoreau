@@ -10,9 +10,9 @@ public class BodyConcreteBodyPart extends ConcreteBodyPart {
 
     public BodyConnectors connectors;
 
-    public BodyConcreteBodyPart(String name, String type, int hp,
+    public BodyConcreteBodyPart(String name, int hp,
                                 BodyConnectors connectors, int level){
-        super(name, type, null, hp, null, level);
+        super(name, null, hp, null, level);
         this.connectors = connectors;
     }
 
@@ -32,6 +32,6 @@ public class BodyConcreteBodyPart extends ConcreteBodyPart {
     }
 
     public BodyConcreteBodyPart clone() {
-        return new BodyConcreteBodyPart(name, type, hp, connectors, level);
+        return new BodyConcreteBodyPart(name, hp, connectors, level);
     }
 }

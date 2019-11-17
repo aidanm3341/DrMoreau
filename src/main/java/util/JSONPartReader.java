@@ -58,11 +58,11 @@ public class JSONPartReader implements BodyPartLoader {
                             pointExtractor((JSONObject) pointObj.get("leg_right")),
                             pointExtractor((JSONObject) pointObj.get("leg_left")),
                             pointExtractor((JSONObject) pointObj.get("tail")));
-                    p = new BodyConcreteBodyPart(name, type, hp, connectors, 1);
+                    p = new BodyConcreteBodyPart(name, hp, connectors, 1);
                 }
                 else {
                     Point point = pointExtractor(pointObj);
-                    p = new ConcreteBodyPart(name, type, attack, hp, point, 1);
+                    p = new ConcreteBodyPart(name, attack, hp, point, 1);
                 }
 
 

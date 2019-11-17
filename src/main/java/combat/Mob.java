@@ -15,17 +15,14 @@ public class Mob {
     private String name;
     private float currentHp, maxHp, attStat, defStat;
     private Map<PartType, BodyPart> parts;
-    private SuperImage mobImage;
-    private MobView view;
 
-    public Mob(String name, int hp, int attStat, int defStat, Map<PartType, BodyPart> parts, SuperImage image) {
+    public Mob(String name, int hp, int attStat, int defStat, Map<PartType, BodyPart> parts) {
         this.name = name;
         this.maxHp = hp;
         this.currentHp = maxHp;
         this.attStat = attStat;
         this.defStat = defStat;
         this.parts = parts;
-        this.mobImage = image;
     }
 
     public String getName(){return name;}

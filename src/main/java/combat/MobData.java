@@ -21,10 +21,6 @@ public class MobData {
     {
         SuperImage image = new SuperImage();
         switch(name) {
-            case "test":
-                image.addImage(new PositionedImage(ResourceLoader.getImage("ostrich_head"), 10, 10));
-                image.flipH(true);
-                return new Mob("Test", 50, 50, 50, new HashMap<>(), image);
             case "dog":
                 return makeDog(level);
             case "rat":
@@ -44,28 +40,16 @@ public class MobData {
                 return makeOstrich(level);
                 */
             case "Dr.Moreau":
-                image = new SuperImage();
-                image.addImage(new PositionedImage(ResourceLoader.getImage("Dr.Moreau").getScaledCopy(0.38f), -350, -330));
-                return new Mob("Dr.Moreau", 100, 15, 30, new HashMap<>(), image);
+                Map<PartType, BodyPart> parts = new HashMap<>();
+                BodyPart body = new BodyConcreteBodyPart("Dr.Moreau", 100, null, 100);
+                parts.put(PartType.BODY, body);
+                return new Mob("Dr.Moreau", 100, 15, 30, parts);
         }
         return null;
     }
 
     private static Mob makeDog(int level) throws SlickException
     {
-        BodyPart body = PartFactory.getPart("dog_body", level);
-        BodyConnectors connectors = ((BodyConcreteBodyPart) body).getConnectors();
-
-        SuperImage image = CreatureComposer.composeImage(connectors,
-                PartFactory.getPart("dog_head", level),
-                PartFactory.getPart("dog_arm", level),
-                PartFactory.getPart("dog_arm", level),
-                PartFactory.getPart("dog_leg", level),
-                PartFactory.getPart("dog_leg", level),
-                PartFactory.getPart("dog_tail", level),
-                PartFactory.getPart("dog_body", level));
-        image.flipH(true);
-
         Map<PartType, BodyPart> parts = new TreeMap<>();
         parts.put(PartType.HEAD, PartFactory.getPart("dog_head", level));
         parts.put(PartType.LEFT_ARM, PartFactory.getPart("dog_arm", level));
@@ -76,23 +60,11 @@ public class MobData {
         parts.put(PartType.BODY, PartFactory.getPart("dog_body", level));
 
 
-        return new Mob("Dog", level + 9, 10, 5, parts, image);
+        return new Mob("Dog", level + 9, 10, 5, parts);
     }
 
     private static Mob makeRat(int level) throws SlickException
     {
-        BodyPart body = PartFactory.getPart("rat_body", level);
-
-        SuperImage image = CreatureComposer.composeImage(((BodyConcreteBodyPart) body).getConnectors(),
-                PartFactory.getPart("rat_head", level),
-                PartFactory.getPart("rat_arm", level),
-                PartFactory.getPart("rat_arm", level),
-                PartFactory.getPart("rat_leg", level),
-                PartFactory.getPart("rat_leg", level),
-                PartFactory.getPart("rat_tail", level),
-                PartFactory.getPart("rat_body", level));
-        image.flipH(true);
-
         Map<PartType, BodyPart> parts = new TreeMap<>();
         parts.put(PartType.HEAD, PartFactory.getPart("rat_head", level));
         parts.put(PartType.RIGHT_ARM, PartFactory.getPart("rat_arm", level));
@@ -102,7 +74,7 @@ public class MobData {
         parts.put(PartType.TAIL, PartFactory.getPart("rat_tail", level));
         parts.put(PartType.BODY, PartFactory.getPart("rat_body", level));
 
-        return new Mob("Rat", 2*level + 5, 5, 5, parts, image);
+        return new Mob("Rat", 2*level + 5, 5, 5, parts);
     }
 
 //    private static Mob makeBunny(int level) throws SlickException

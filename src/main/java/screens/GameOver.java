@@ -9,7 +9,7 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.state.StateBasedGame;
-import util.Button;
+import util.buttons.Button;
 import util.ResourceLoader;
 
 public class GameOver extends Screen implements ComponentListener {

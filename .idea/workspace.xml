@@ -2,14 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/PlayerMobController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/framework/MobController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/buttons/MoveListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Mob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/RoomBlueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/RoomBlueprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/NavigationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/NavigationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/GameOver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/Victory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/Victory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConcreteBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConcreteBodyPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/ConcreteBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/ConcreteBodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/AttackButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/AttackButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/combat/Mob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/Mob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/MobData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/MobData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screens/GameOver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/GameOver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screens/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screens/Victory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/Victory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/AttackButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/Button.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,9 +71,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -148,14 +172,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="31357000" />
-    </task>
-    <task id="LOCAL-00008" summary="You can now permanently add parts to the sidekick in the upgrade screen">
-      <created>1554242424368</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1554242424368</updated>
+      <workItem from="1573851725766" duration="38160000" />
     </task>
     <task id="LOCAL-00009" summary="Refactored body parts">
       <created>1554242941264</created>
@@ -493,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573988518331</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Moved MobView code into CombatView instead of Mob">
+      <created>1573990500140</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1573990500140</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added boss image and mob" />
     <MESSAGE value="trying to resolve conflicts" />
     <MESSAGE value="trying to resolve conflicts2" />
     <MESSAGE value="Added boss into game properly" />
@@ -538,6 +561,7 @@
     <MESSAGE value="COMPLETELY reworked out mob view is computed" />
     <MESSAGE value="mobs now face correct direction" />
     <MESSAGE value="optimised imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimised imports" />
+    <MESSAGE value="Moved MobView code into CombatView instead of Mob" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved MobView code into CombatView instead of Mob" />
   </component>
 </project>

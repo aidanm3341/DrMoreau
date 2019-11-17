@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class ConcreteBodyPart implements BodyPart {
 
-    protected String name, type;
+    protected String name;
     protected int hp;
     protected Image image;
     protected Attack attack;
@@ -20,10 +20,9 @@ public class ConcreteBodyPart implements BodyPart {
     protected Point attachPoint;
     protected int level;
 
-    public ConcreteBodyPart(String name, String type, Attack attack, int hp, Point attachPoint, int level)
+    public ConcreteBodyPart(String name, Attack attack, int hp, Point attachPoint, int level)
     {
         this.name = name;
-        this.type = type;
         this.attack = attack;
         this.hp = hp;
         this.image = ResourceLoader.getImage(name);
@@ -62,6 +61,6 @@ public class ConcreteBodyPart implements BodyPart {
     }
 
     public BodyPart clone(){
-        return new ConcreteBodyPart(name, type, attack, hp, attachPoint, level);
+        return new ConcreteBodyPart(name, attack, hp, attachPoint, level);
     }
 }

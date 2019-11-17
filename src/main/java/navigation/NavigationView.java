@@ -7,7 +7,7 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.*;
 import org.newdawn.slick.gui.MouseOverArea;
 import org.newdawn.slick.state.StateBasedGame;
-import util.AttackButton;
+import util.buttons.Button;
 import util.MyFont;
 import util.ResourceLoader;
 
@@ -18,7 +18,7 @@ public class NavigationView {
 
     private NavigationController ctrl;
     private MouseOverArea left, right;
-    private AttackButton bossButton;
+    private Button bossButton;
     private Image border;
     private UnicodeFont font;
 
@@ -33,8 +33,10 @@ public class NavigationView {
             e.printStackTrace();
         }
 
-        bossButton = new AttackButton("BOSS", Main.WIDTH/2, 40);
+        bossButton = new Button("BOSS", ResourceLoader.getImage("basicButton"), Main.WIDTH/2, 40);
         bossButton.init(gc);
+        bossButton.addHoverOverImage(ResourceLoader.getImage("basicButtonHover"));
+        bossButton.addPressedImage(ResourceLoader.getImage("basicButtonPressed"));
         bossButton.addListener(ctrl);
 
         left = new MouseOverArea(gc, ResourceLoader.getImage("brickRoute"), 110, 180);
@@ -74,7 +76,7 @@ public class NavigationView {
         return right;
     }
 
-    public AttackButton getBossButton() {
+    public Button getBossButton() {
         return bossButton;
     }
 }

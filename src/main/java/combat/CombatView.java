@@ -1,13 +1,9 @@
 package combat;
 
-import data.framework.MobController;
+import combat.mobview.MobView;
+import combat.mobview.MobViewBuilder;
 import data.framework.PartType;
-import org.newdawn.slick.Color;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.gui.AbstractComponent;
-import org.newdawn.slick.gui.ComponentListener;
+import org.newdawn.slick.*;
 import upgrade.bodyparts.BodyConcreteBodyPart;
 import util.buttons.AttackButton;
 import util.MyFont;
@@ -23,8 +19,7 @@ public class CombatView {
     private MobView mobView;
 
     public CombatView(CombatController ctrl, PlayerMobController mobController,
-                      Attack at1, Attack at2, Attack at3, Attack at4, Attack at5, Attack at6)
-    {
+                      Attack at1, Attack at2, Attack at3, Attack at4, Attack at5, Attack at6) throws SlickException {
         att1_button = new AttackButton(at1, 150, 700);
         att2_button = new AttackButton(at2, 400, 700);
         att3_button = new AttackButton(at3, 650, 700);
@@ -35,12 +30,15 @@ public class CombatView {
         this.ctrl = ctrl;
         background = ResourceLoader.getImage("battleBackground");
 
-        mobView = new MobView((BodyConcreteBodyPart) ctrl.getMob().getParts().get(PartType.BODY), 1300, 510);
+
+        BodyConcreteBodyPart body = (BodyConcreteBodyPart) ctrl.getMob().getParts().get(PartType.BODY);
         ctrl.getMob().getParts().remove(PartType.BODY);
 
+        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 1300, 510);
         for(PartType type : ctrl.getMob().getParts().keySet()){
-            mobView.addPart(type, ctrl.getMob().getParts().get(type));
+            mobViewBuilder.addPart(type, ctrl.getMob().getParts().get(type));
         }
+        mobView = mobViewBuilder.finalise();
     }
 
     public void init(GameContainer gc){
@@ -63,8 +61,7 @@ public class CombatView {
         att6_button.addListener(player);
     }
 
-    public void render(GameContainer gc, Graphics g)
-    {
+    public void render(GameContainer gc, Graphics g) throws SlickException {
         g.drawImage(background, 0, 0);
         try {
             g.setFont(MyFont.createFont(12));
@@ -82,6 +79,7 @@ public class CombatView {
         renderMobHealthBar(g);
         renderSidekickHealthBar(g);
         mobView.render(gc, g);
+        //g.drawImage(mobImage, 1300, 510);
     }
 
     private void renderMobHealthBar(Graphics g)

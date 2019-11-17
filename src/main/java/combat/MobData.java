@@ -25,20 +25,6 @@ public class MobData {
                 return makeDog(level);
             case "rat":
                 return makeRat(level);
-                /*
-            case "bunny":
-                return makeBunny(level);
-            case "penguin":
-                return makePenguin(level);
-            case  "lion":
-                return makeLion(level);
-            case  "elephant":
-                return makeElephant(level);
-            case "beaver":
-                return makeBeaver(level);
-            case "ostrich":
-                return makeOstrich(level);
-                */
             case "Dr.Moreau":
                 Map<PartType, BodyPart> parts = new HashMap<>();
                 BodyPart body = new BodyConcreteBodyPart("Dr.Moreau", 100, null, 100);

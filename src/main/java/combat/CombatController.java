@@ -81,8 +81,7 @@ public class CombatController extends Screen {
         return false;
     }
 
-    public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
-    {
+    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         view.render(gc, g);
     }
 

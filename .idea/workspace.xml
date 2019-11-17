@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/combat/MobView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/framework/PartType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Mob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConcreteBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConcreteBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/ConcreteBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/ConcreteBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/CreatureComposer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/CreatureComposer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/LevelBasedFloat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Pool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Pool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/Mob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/Mob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/MobData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/MobData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyConnectors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/BodyConnectors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/NullBodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/NullBodyPart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/PartFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/PartFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/CreatureComposer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/CreatureComposer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/Pool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/Pool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,14 +142,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="28661000" />
-    </task>
-    <task id="LOCAL-00005" summary="Made the sidekick visible again!!">
-      <created>1554224954161</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1554224954161</updated>
+      <workItem from="1573851725766" duration="29195000" />
     </task>
     <task id="LOCAL-00006" summary="refactored sidekick for reuse">
       <created>1554227713685</created>
@@ -514,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573926569403</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="COMPLETELY reworked out mob view is computed">
+      <created>1573987323315</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1573987323315</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a health bar" />
     <MESSAGE value="added sidekick health" />
     <MESSAGE value="Added special treasure items" />
     <MESSAGE value="Added boss image and mob" />
@@ -559,6 +531,7 @@
     <MESSAGE value="integrated new room blueprint method, and deleted RoomBuilder" />
     <MESSAGE value="changed font" />
     <MESSAGE value="refactored body part loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored body part loader" />
+    <MESSAGE value="COMPLETELY reworked out mob view is computed" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMPLETELY reworked out mob view is computed" />
   </component>
 </project>

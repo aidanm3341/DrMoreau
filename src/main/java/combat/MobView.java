@@ -40,7 +40,8 @@ public class MobView {
     public void render(GameContainer gc, Graphics g){
         for(PartType type : parts.keySet()){
             BodyPart bp = parts.get(type);
-            g.drawImage(bp.getImage(), x + offsets.get(bp).x, y + offsets.get(bp).y);
+            g.drawImage(bp.getImage().getFlippedCopy(true, false),
+                    x - offsets.get(bp).x - bp.getImage().getWidth(), y + offsets.get(bp).y);
         }
     }
 }

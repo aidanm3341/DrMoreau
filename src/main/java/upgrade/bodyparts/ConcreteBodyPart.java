@@ -33,8 +33,6 @@ public class ConcreteBodyPart implements BodyPart {
 
     public String getName(){return name;}
 
-    public String getType(){return type;}
-
     public int getHp(){return hp;}
 
     public Point getAttachPoint(){
@@ -61,10 +59,6 @@ public class ConcreteBodyPart implements BodyPart {
 
     public Attack getAttack() {
         return attack;
-    }
-
-    public int getLevel(){
-        return level;
     }
 
     public BodyPart clone(){

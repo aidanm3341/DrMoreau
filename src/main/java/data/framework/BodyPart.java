@@ -8,7 +8,6 @@ import java.util.Map;
 
 public interface BodyPart extends Cloneable {
     String getName();
-    String getType();
     int getHp();
     Point getAttachPoint();
     Map<PartType, Point> getAttachPoints();

@@ -1,11 +1,13 @@
 package combat;
 
+import data.framework.PartType;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
+import upgrade.bodyparts.BodyConcreteBodyPart;
 import util.AttackButton;
 import util.MyFont;
 import util.ResourceLoader;
@@ -15,6 +17,7 @@ public class CombatView implements ComponentListener {
     private AttackButton att1_button, att2_button, att3_button, att4_button, att5_button, att6_button;
     private CombatController ctrl;
     private Image background;
+    private MobView mobView;
 
     public CombatView(CombatController ctrl, String at1, String at2, String at3, String at4, String at5, String at6)
     {
@@ -26,6 +29,13 @@ public class CombatView implements ComponentListener {
         att6_button = new AttackButton(at6, 650, 800);
         this.ctrl = ctrl;
         background = ResourceLoader.getImage("battleBackground");
+
+        mobView = new MobView((BodyConcreteBodyPart) ctrl.getMob().getParts().get(PartType.BODY), 1300, 510);
+        ctrl.getMob().getParts().remove(PartType.BODY);
+
+        for(PartType type : ctrl.getMob().getParts().keySet()){
+            mobView.addPart(type, ctrl.getMob().getParts().get(type));
+        }
     }
 
     public void init(GameContainer gc){
@@ -56,7 +66,6 @@ public class CombatView implements ComponentListener {
         } catch (Exception e) { e.printStackTrace(); }
         ctrl.getSidekick().getImage().render(300, 420, g);
         //ctrl.getMob().getMobImage().render(1300, 510, g);
-        ctrl.getMob().render(gc, g);
 
         att1_button.render(gc, g);
         att2_button.render(gc, g);
@@ -67,6 +76,7 @@ public class CombatView implements ComponentListener {
 
         renderMobHealthBar(g);
         renderSidekickHealthBar(g);
+        mobView.render(gc, g);
     }
 
     private void renderMobHealthBar(Graphics g)
@@ -78,9 +88,9 @@ public class CombatView implements ComponentListener {
         g.fillRect(1100, 100, 400, 30);
         g.setColor(Color.green);
         g.fillRect(1100, 100,
-                ((float) ctrl.getMob().getCurrentHp()/(float) ctrl.getMob().getMaxHp())*400, 30);
+                (ctrl.getMob().getCurrentHp()/ctrl.getMob().getMaxHp())*400, 30);
         g.setColor(Color.white);
-        g.drawString(" "+ctrl.getMob().getCurrentHp() + " / " + ctrl.getMob().getMaxHp(), 1150, 145);
+        g.drawString(" "+ctrl.getMob().getCurrentHp() + " : " + ctrl.getMob().getMaxHp(), 1150, 145);
     }
 
     private void renderSidekickHealthBar(Graphics g)
@@ -92,9 +102,9 @@ public class CombatView implements ComponentListener {
         g.fillRect(200, 100, 400, 30);
         g.setColor(Color.green);
         g.fillRect(200, 100,
-                ((float) ctrl.getSidekick().getCurrentHp()/(float) ctrl.getSidekick().getMaxHp())*400, 30);
+                (ctrl.getSidekick().getCurrentHp()/ctrl.getSidekick().getMaxHp())*400, 30);
         g.setColor(Color.white);
-        g.drawString(" "+ctrl.getSidekick().getCurrentHp() + " / " + ctrl.getSidekick().getMaxHp(), 250, 145);
+        g.drawString(" "+ctrl.getSidekick().getCurrentHp() + " : " + ctrl.getSidekick().getMaxHp(), 250, 145);
     }
 
     public void componentActivated(AbstractComponent c) {

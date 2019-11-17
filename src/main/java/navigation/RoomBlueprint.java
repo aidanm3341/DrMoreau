@@ -22,7 +22,7 @@ public class RoomBlueprint {
     public Room buildRoom() throws SlickException {
         Mob mob = possibleMobs.get(new Random().nextInt(possibleMobs.size()));
         Pool<BodyPart> parts = new Pool<>();
-        parts.addAll(mob.getParts());
+        parts.addAll(mob.getParts().values());
 
         return new Room(
                 Main.FIGHT,

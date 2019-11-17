@@ -26,17 +26,6 @@ public class Mob {
         this.defStat = defStat;
         this.parts = parts;
         this.mobImage = image;
-
-        constructView();
-    }
-
-    private void constructView(){
-        this.view = new MobView((BodyConcreteBodyPart) parts.get(PartType.BODY), 1300, 510);
-        parts.remove(PartType.BODY);
-
-        for(PartType type : parts.keySet()){
-            view.addPart(type, parts.get(type));
-        }
     }
 
     public String getName(){return name;}
@@ -62,11 +51,7 @@ public class Mob {
         return attStat;
     }
 
-    public Collection<BodyPart> getParts() {
-        return parts.values();
-    }
-
-    public void render(GameContainer gc, Graphics g){
-        view.render(gc, g);
+    public Map<PartType, BodyPart> getParts() {
+        return parts;
     }
 }

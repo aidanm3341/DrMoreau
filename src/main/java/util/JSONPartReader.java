@@ -8,41 +8,15 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Point;
 import upgrade.bodyparts.BodyConcreteBodyPart;
 import upgrade.bodyparts.BodyConnectors;
 import upgrade.bodyparts.ConcreteBodyPart;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
 public class JSONPartReader implements BodyPartLoader {
-
-    public static void writePart(BodyPart part) throws IOException {
-        JSONArray jsonArray = new JSONArray();
-        JSONObject jsonPart = new JSONObject();
-        jsonPart.put("name", part.getName());
-        jsonPart.put("type", part.getType());
-        jsonPart.put("hp", part.getHp());
-        JSONObject attack = new JSONObject();
-        attack.put("name", part.getAttack().getName());
-        attack.put("damage", part.getAttack().getDmg(1));
-        jsonPart.put("attack", attack);
-        JSONObject attachPoint = new JSONObject();
-        attachPoint.put("x", part.getAttachPoint().getX());
-        attachPoint.put("y", part.getAttachPoint().getY());
-        jsonPart.put("point", attachPoint);
-
-
-        jsonArray.add(jsonPart);
-
-        FileWriter writer = new FileWriter("resources/bodyparts.json");
-        writer.write(jsonArray.toJSONString());
-        writer.flush();
-    }
 
     public HashMap<String, BodyPart> getBodyParts() throws SlickException {
         JSONParser parser = new JSONParser();
@@ -96,11 +70,7 @@ public class JSONPartReader implements BodyPartLoader {
                 partsHash.put(name, p);
             }
 
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ParseException | IOException e) {
             e.printStackTrace();
         }
 

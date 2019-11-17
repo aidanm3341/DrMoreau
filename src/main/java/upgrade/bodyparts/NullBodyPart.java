@@ -2,9 +2,13 @@ package upgrade.bodyparts;
 
 import combat.Attack;
 import data.framework.BodyPart;
+import data.framework.PartType;
 import org.newdawn.slick.Image;
-import org.newdawn.slick.geom.Point;
+import util.Point;
 import util.ResourceLoader;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class NullBodyPart implements BodyPart {
 
@@ -24,6 +28,10 @@ public class NullBodyPart implements BodyPart {
         return new Point(0,0);
     }
 
+    public Map<PartType, Point> getAttachPoints() {
+        return new HashMap<>();
+    }
+
     public Image getImage() {
         return ResourceLoader.getImage("null");
     }
@@ -39,4 +47,8 @@ public class NullBodyPart implements BodyPart {
     public Attack getAttack() { return new Attack("Null", 0,0); }
 
     public int getLevel() { return 0; }
+
+    public NullBodyPart clone(){
+        return new NullBodyPart();
+    }
 }

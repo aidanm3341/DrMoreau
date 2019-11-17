@@ -1,6 +1,7 @@
 package combat;
 
 import data.framework.BodyPart;
+import data.framework.PartType;
 import org.newdawn.slick.SlickException;
 import upgrade.bodyparts.*;
 import util.CreatureComposer;
@@ -9,6 +10,9 @@ import util.ResourceLoader;
 import util.SuperImage;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class MobData {
 
@@ -19,7 +23,7 @@ public class MobData {
             case "test":
                 image.addImage(new PositionedImage(ResourceLoader.getImage("ostrich_head"), 10, 10));
                 image.flipH(true);
-                return new Mob("Test", 50, 50, 50, new ArrayList<>(), image);
+                return new Mob("Test", 50, 50, 50, new HashMap<>(), image);
             case "dog":
                 return makeDog(level);
             case "rat":
@@ -41,7 +45,7 @@ public class MobData {
             case "Dr.Moreau":
                 image = new SuperImage();
                 image.addImage(new PositionedImage(ResourceLoader.getImage("Dr.Moreau").getScaledCopy(0.38f), -350, -330));
-                return new Mob("Dr.Moreau", 100, 15, 30, new ArrayList<>(), image);
+                return new Mob("Dr.Moreau", 100, 15, 30, new HashMap<>(), image);
         }
         return null;
     }
@@ -61,14 +65,14 @@ public class MobData {
                 PartFactory.getPart("dog_body", level));
         image.flipH(true);
 
-        ArrayList<BodyPart> parts = new ArrayList<>();
-        parts.add(PartFactory.getPart("dog_head", level));
-        parts.add(PartFactory.getPart("dog_arm", level));
-        parts.add(PartFactory.getPart("dog_arm", level));
-        parts.add(PartFactory.getPart("dog_leg", level));
-        parts.add(PartFactory.getPart("dog_leg", level));
-        parts.add(PartFactory.getPart("dog_tail", level));
-        parts.add(PartFactory.getPart("dog_body", level));
+        Map<PartType, BodyPart> parts = new TreeMap<>();
+        parts.put(PartType.HEAD, PartFactory.getPart("dog_head", level));
+        parts.put(PartType.LEFT_ARM, PartFactory.getPart("dog_arm", level));
+        parts.put(PartType.RIGHT_ARM, PartFactory.getPart("dog_arm", level));
+        parts.put(PartType.LEFT_LEG, PartFactory.getPart("dog_leg", level));
+        parts.put(PartType.RIGHT_LEG, PartFactory.getPart("dog_leg", level));
+        parts.put(PartType.TAIL, PartFactory.getPart("dog_tail", level));
+        parts.put(PartType.BODY, PartFactory.getPart("dog_body", level));
 
 
         return new Mob("Dog", level + 9, 10, 5, parts, image);
@@ -88,14 +92,14 @@ public class MobData {
                 PartFactory.getPart("rat_body", level));
         image.flipH(true);
 
-        ArrayList<BodyPart> parts = new ArrayList<>();
-        parts.add(PartFactory.getPart("rat_head", level));
-        parts.add(PartFactory.getPart("rat_arm", level));
-        parts.add(PartFactory.getPart("rat_arm", level));
-        parts.add(PartFactory.getPart("rat_leg", level));
-        parts.add(PartFactory.getPart("rat_leg", level));
-        parts.add(PartFactory.getPart("rat_tail", level));
-        parts.add(PartFactory.getPart("rat_body", level));
+        Map<PartType, BodyPart> parts = new TreeMap<>();
+        parts.put(PartType.HEAD, PartFactory.getPart("rat_head", level));
+        parts.put(PartType.RIGHT_ARM, PartFactory.getPart("rat_arm", level));
+        parts.put(PartType.LEFT_ARM, PartFactory.getPart("rat_arm", level));
+        parts.put(PartType.RIGHT_LEG, PartFactory.getPart("rat_leg", level));
+        parts.put(PartType.LEFT_LEG, PartFactory.getPart("rat_leg", level));
+        parts.put(PartType.TAIL, PartFactory.getPart("rat_tail", level));
+        parts.put(PartType.BODY, PartFactory.getPart("rat_body", level));
 
         return new Mob("Rat", 2*level + 5, 5, 5, parts, image);
     }

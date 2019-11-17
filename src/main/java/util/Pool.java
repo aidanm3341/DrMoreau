@@ -1,11 +1,10 @@
 package util;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 public class Pool<E> {
 
-    private ArrayList<E> things;
+    private List<E> things;
     private Random rand;
 
     public Pool()
@@ -18,15 +17,15 @@ public class Pool<E> {
         things.add(e);
     }
 
-    public void addAll(ArrayList<E> es){
+    public void addAll(Collection<E> es){
         things.addAll(es);
     }
 
-    public ArrayList<E> popX(int number) {
+    public List<E> popX(int number) {
         if(number > things.size())
             throw new IndexOutOfBoundsException("Number given is greater than Pool size.");
 
-        ArrayList<E> returns = new ArrayList<>();
+        List<E> returns = new ArrayList<>();
 
         for(int i=number; i>0; i--) {
             E thing = things.get(rand.nextInt(things.size()));
@@ -44,11 +43,11 @@ public class Pool<E> {
         return e;
     }
 
-    public ArrayList<E> getX(int number) {
+    public List<E> getX(int number) {
         if(number > things.size())
             throw new IndexOutOfBoundsException("Number given is greater than Pool size.");
 
-        ArrayList<E> returns = new ArrayList<>();
+        List<E> returns = new ArrayList<>();
 
         for(int i=number; i>0; i--)
             returns.add(things.get(rand.nextInt(things.size())));

@@ -14,32 +14,32 @@ public class CreatureComposer {
         SuperImage image = new SuperImage();
 
         image.addImage(new PositionedImage(legLeft.getImage(),
-                connectors.getLegLeftP().getX() - legLeft.getAttachPoint().getX(),
-                connectors.getLegLeftP().getY() - legLeft.getAttachPoint().getY()));
+                connectors.getLegLeftP().x - legLeft.getAttachPoint().x,
+                connectors.getLegLeftP().y - legLeft.getAttachPoint().y));
 
         image.addImage(new PositionedImage(armLeft.getImage(),
-                connectors.getArmLeftP().getX() - armLeft.getAttachPoint().getX(),
-                connectors.getArmLeftP().getY() - armLeft.getAttachPoint().getY()));
+                connectors.getArmLeftP().x - armLeft.getAttachPoint().x,
+                connectors.getArmLeftP().y - armLeft.getAttachPoint().y));
 
         // NOTE : NEEDS TO BE HERE TO BE RENDERED PROPERLY
         image.addImage(new PositionedImage(body.getImage(), 0, 0));
         //
 
         image.addImage(new PositionedImage(legRight.getImage(),
-                connectors.getLegRightP().getX() - legRight.getAttachPoint().getX(),
-                connectors.getLegRightP().getY() - legRight.getAttachPoint().getY()));
+                connectors.getLegRightP().x - legRight.getAttachPoint().x,
+                connectors.getLegRightP().y - legRight.getAttachPoint().y));
 
         image.addImage(new PositionedImage(armRight.getImage(),
-                connectors.getArmRightP().getX() - armRight.getAttachPoint().getX(),
-                connectors.getArmRightP().getY() - armRight.getAttachPoint().getY()));
+                connectors.getArmRightP().x - armRight.getAttachPoint().x,
+                connectors.getArmRightP().y - armRight.getAttachPoint().y));
 
         image.addImage(new PositionedImage(tail.getImage(),
-                connectors.getTailP().getX() - tail.getAttachPoint().getX(),
-                connectors.getTailP().getY() - tail.getAttachPoint().getY()));
+                connectors.getTailP().x - tail.getAttachPoint().x,
+                connectors.getTailP().y - tail.getAttachPoint().y));
 
         image.addImage(new PositionedImage(head.getImage(),
-                connectors.getHeadP().getX() - head.getAttachPoint().getX(),
-                connectors.getHeadP().getY() - head.getAttachPoint().getY()));
+                connectors.getHeadP().x - head.getAttachPoint().x,
+                connectors.getHeadP().y - head.getAttachPoint().y));
 
         return image;
     }

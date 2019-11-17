@@ -7,14 +7,15 @@ import data.framework.BodyPart;
 import util.ResourceLoader;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Room {
     private int type;
     private Image navigationImage, navigationImageHover;
     private Mob mob;
-    private ArrayList<BodyPart> rewards;
+    private List<BodyPart> rewards;
 
-    public Room(int type, Mob mob, Image navigationImage, ArrayList<BodyPart> rewards) throws SlickException
+    public Room(int type, Mob mob, Image navigationImage, List<BodyPart> rewards) throws SlickException
     {
         this.type = type;
         this.mob = mob;
@@ -41,7 +42,7 @@ public class Room {
         return mob;
     }
 
-    public ArrayList<BodyPart> getRewards() {
+    public List<BodyPart> getRewards() {
         return rewards;
     }
 }

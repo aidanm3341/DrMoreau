@@ -19,7 +19,7 @@ public class PartFactory {
         if(parts == null)
             parts = loader.getBodyParts();
 
-        return parts.get(name);
+        return parts.get(name).clone();
 
         //Attack atk;
 /*

@@ -55,7 +55,8 @@ public class CombatView implements ComponentListener {
             g.setFont(MyFont.createFont(12));
         } catch (Exception e) { e.printStackTrace(); }
         ctrl.getSidekick().getImage().render(300, 420, g);
-        ctrl.getMob().getMobImage().render(1300, 510, g);
+        //ctrl.getMob().getMobImage().render(1300, 510, g);
+        ctrl.getMob().render(gc, g);
 
         att1_button.render(gc, g);
         att2_button.render(gc, g);

@@ -2,19 +2,23 @@ package upgrade.bodyparts;
 
 import combat.Attack;
 import data.framework.BodyPart;
+import data.framework.PartType;
 import org.newdawn.slick.Image;
-import org.newdawn.slick.geom.Point;
+import util.Point;
 import util.ResourceLoader;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ConcreteBodyPart implements BodyPart {
 
-    private String name, type;
-    private int hp;
-    private Image image;
-    private Attack attack;
+    protected String name, type;
+    protected int hp;
+    protected Image image;
+    protected Attack attack;
 
-    private Point attachPoint;
-    private int level;
+    protected Point attachPoint;
+    protected int level;
 
     public ConcreteBodyPart(String name, String type, Attack attack, int hp, Point attachPoint, int level)
     {
@@ -37,6 +41,12 @@ public class ConcreteBodyPart implements BodyPart {
         return attachPoint;
     }
 
+    public Map<PartType, Point> getAttachPoints() {
+        Map<PartType, Point> map = new HashMap<>();
+        map.put(PartType.BODY, attachPoint);
+        return map;
+    }
+
     public Image getImage() {
         return image;
     }
@@ -55,5 +65,9 @@ public class ConcreteBodyPart implements BodyPart {
 
     public int getLevel(){
         return level;
+    }
+
+    public BodyPart clone(){
+        return new ConcreteBodyPart(name, type, attack, hp, attachPoint, level);
     }
 }

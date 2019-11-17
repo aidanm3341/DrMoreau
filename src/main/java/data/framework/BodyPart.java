@@ -2,17 +2,19 @@ package data.framework;
 
 import combat.Attack;
 import org.newdawn.slick.Image;
-import org.newdawn.slick.geom.Point;
+import util.Point;
 
-public interface BodyPart {
+import java.util.Map;
 
+public interface BodyPart extends Cloneable {
     String getName();
     String getType();
     int getHp();
     Point getAttachPoint();
+    Map<PartType, Point> getAttachPoints();
     Image getImage();
     float getWidth();
     float getHeight();
     Attack getAttack();
-    int getLevel();
+    BodyPart clone();
 }

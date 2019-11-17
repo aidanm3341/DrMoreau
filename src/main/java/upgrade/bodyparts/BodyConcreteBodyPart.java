@@ -1,7 +1,6 @@
 package upgrade.bodyparts;
 
 import data.framework.PartType;
-import org.newdawn.slick.SlickException;
 import util.Point;
 
 import java.util.HashMap;

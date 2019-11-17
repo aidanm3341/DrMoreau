@@ -7,7 +7,9 @@ import org.newdawn.slick.Graphics;
 import upgrade.bodyparts.BodyConcreteBodyPart;
 import util.Point;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class MobView {
     private int x, y;

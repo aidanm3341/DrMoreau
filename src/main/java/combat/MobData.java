@@ -3,13 +3,14 @@ package combat;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
-import upgrade.bodyparts.*;
+import upgrade.bodyparts.BodyConcreteBodyPart;
+import upgrade.bodyparts.BodyConnectors;
+import upgrade.bodyparts.PartFactory;
 import util.CreatureComposer;
 import util.PositionedImage;
 import util.ResourceLoader;
 import util.SuperImage;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;

@@ -1,10 +1,10 @@
 package navigation;
 
 import combat.Mob;
+import data.framework.BodyPart;
 import main.Main;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import data.framework.BodyPart;
 import util.Pool;
 
 import java.util.List;

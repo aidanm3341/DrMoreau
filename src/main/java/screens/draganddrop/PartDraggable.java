@@ -1,9 +1,11 @@
 package screens.draganddrop;
 
-import org.newdawn.slick.*;
+import data.framework.BodyPart;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.gui.GUIContext;
-import data.framework.BodyPart;
 
 public class PartDraggable {
 

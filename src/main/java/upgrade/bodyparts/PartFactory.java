@@ -5,7 +5,6 @@ import data.framework.BodyPartLoader;
 import org.newdawn.slick.SlickException;
 import util.JSONPartReader;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class PartFactory {

@@ -1,5 +1,6 @@
 package upgrade;
 
+import data.framework.BodyPart;
 import main.Main;
 import main.MainController;
 import main.SidekickData;
@@ -13,7 +14,6 @@ import screens.Screen;
 import screens.draganddrop.DragAndDropManager;
 import screens.draganddrop.DragArea;
 import screens.draganddrop.PartDraggable;
-import data.framework.BodyPart;
 import util.Pool;
 
 import java.util.ArrayList;

@@ -5,14 +5,9 @@ import data.framework.PartType;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import upgrade.bodyparts.BodyConcreteBodyPart;
-import upgrade.bodyparts.BodyConnectors;
-import upgrade.bodyparts.NullBodyPart;
-import util.Point;
 import util.SuperImage;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 
 public class Mob {

@@ -1,12 +1,11 @@
 package navigation;
 
 import combat.Mob;
+import data.framework.BodyPart;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import data.framework.BodyPart;
 import util.ResourceLoader;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Room {

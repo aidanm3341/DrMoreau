@@ -48,6 +48,10 @@ public class ConcreteBodyPart implements BodyPart {
         return image;
     }
 
+    public void setImage(Image image){
+        this.image = image;
+    }
+
     public float getWidth(){
         return image.getWidth();
     }

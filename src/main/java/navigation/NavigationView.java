@@ -7,9 +7,9 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.*;
 import org.newdawn.slick.gui.MouseOverArea;
 import org.newdawn.slick.state.StateBasedGame;
-import util.buttons.Button;
 import util.MyFont;
 import util.ResourceLoader;
+import util.buttons.Button;
 
 import java.awt.*;
 import java.io.IOException;

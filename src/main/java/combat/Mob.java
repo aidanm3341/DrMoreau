@@ -2,12 +2,7 @@ package combat;
 
 import data.framework.BodyPart;
 import data.framework.PartType;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import upgrade.bodyparts.BodyConcreteBodyPart;
-import util.SuperImage;
 
-import java.util.Collection;
 import java.util.Map;
 
 public class Mob {

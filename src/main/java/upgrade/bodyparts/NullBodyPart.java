@@ -36,6 +36,8 @@ public class NullBodyPart implements BodyPart {
         return ResourceLoader.getImage("null");
     }
 
+    public void setImage(Image image){}
+
     public float getWidth() {
         return 0;
     }

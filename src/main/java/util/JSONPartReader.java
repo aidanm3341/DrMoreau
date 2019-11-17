@@ -24,7 +24,7 @@ public class JSONPartReader implements BodyPartLoader {
 
         try {
 
-            FileReader reader = new FileReader("res/bodyparts.json");
+            FileReader reader = new FileReader("resources/bodyparts.json");
 
             JSONArray parts = (JSONArray) parser.parse(reader);
 

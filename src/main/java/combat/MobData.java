@@ -4,12 +4,7 @@ import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
 import upgrade.bodyparts.BodyConcreteBodyPart;
-import upgrade.bodyparts.BodyConnectors;
 import upgrade.bodyparts.PartFactory;
-import util.CreatureComposer;
-import util.PositionedImage;
-import util.ResourceLoader;
-import util.SuperImage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +14,6 @@ public class MobData {
 
     public static Mob getMob(String name, int level) throws SlickException
     {
-        SuperImage image = new SuperImage();
         switch(name) {
             case "dog":
                 return makeDog(level);

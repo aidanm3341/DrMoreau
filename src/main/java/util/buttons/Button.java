@@ -5,9 +5,6 @@ import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.gui.MouseOverArea;
 import util.MyFont;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Button {
 
     private Image button;

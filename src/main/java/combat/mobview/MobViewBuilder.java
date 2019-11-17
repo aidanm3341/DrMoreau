@@ -2,10 +2,6 @@ package combat.mobview;
 
 import data.framework.BodyPart;
 import data.framework.PartType;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Rectangle;
 import upgrade.bodyparts.BodyConcreteBodyPart;
 import util.Point;
 

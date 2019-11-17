@@ -5,9 +5,9 @@ import combat.mobview.MobViewBuilder;
 import data.framework.PartType;
 import org.newdawn.slick.*;
 import upgrade.bodyparts.BodyConcreteBodyPart;
-import util.buttons.AttackButton;
 import util.MyFont;
 import util.ResourceLoader;
+import util.buttons.AttackButton;
 
 public class CombatView {
 
@@ -34,7 +34,7 @@ public class CombatView {
         BodyConcreteBodyPart body = (BodyConcreteBodyPart) ctrl.getMob().getParts().get(PartType.BODY);
         ctrl.getMob().getParts().remove(PartType.BODY);
 
-        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 1300, 510);
+        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 1450, 400);
         for(PartType type : ctrl.getMob().getParts().keySet()){
             mobViewBuilder.addPart(type, ctrl.getMob().getParts().get(type));
         }
@@ -79,7 +79,6 @@ public class CombatView {
         renderMobHealthBar(g);
         renderSidekickHealthBar(g);
         mobView.render(gc, g);
-        //g.drawImage(mobImage, 1300, 510);
     }
 
     private void renderMobHealthBar(Graphics g)
@@ -109,19 +108,4 @@ public class CombatView {
         g.setColor(Color.white);
         g.drawString(" "+ctrl.getSidekick().getCurrentHp() + " : " + ctrl.getSidekick().getMaxHp(), 250, 145);
     }
-
-//    public void componentActivated(AbstractComponent c) {
-//        if (att1_button.equals(c))
-//            ctrl.doAttack1();
-//        else if (att2_button.equals(c))
-//            ctrl.doAttack2();
-//        else if (att3_button.equals(c))
-//            ctrl.doAttack3();
-//        else if (att4_button.equals(c))
-//            ctrl.doAttack4();
-//        else if (att5_button.equals(c))
-//            ctrl.doAttack5();
-//        else if (att6_button.equals(c))
-//            ctrl.doAttack6();
-//    }
 }

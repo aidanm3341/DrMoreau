@@ -1,6 +1,6 @@
 package navigation;
 
-import combat.Mob;
+import data.Mob;
 import data.framework.BodyPart;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;

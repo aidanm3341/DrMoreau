@@ -1,6 +1,6 @@
 package upgrade;
 
-import combat.Mob;
+import data.Mob;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import main.Main;

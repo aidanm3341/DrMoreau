@@ -1,6 +1,7 @@
 package combat;
 
 import combat.stats.Stat;
+import data.Mob;
 import main.Main;
 import main.MainController;
 import org.newdawn.slick.GameContainer;

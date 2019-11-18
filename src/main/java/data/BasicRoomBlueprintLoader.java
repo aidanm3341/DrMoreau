@@ -1,7 +1,5 @@
 package data;
 
-import combat.Mob;
-import combat.MobData;
 import data.framework.RoomBlueprintLoader;
 import navigation.RoomBlueprint;
 import org.newdawn.slick.SlickException;

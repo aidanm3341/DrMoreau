@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/HealthBar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Mob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Mob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/MobData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/BasicRoomBlueprintLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/BasicRoomBlueprintLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/RoomBlueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/RoomBlueprint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/SidekickData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/SidekickData.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,14 +153,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="63285000" />
-    </task>
-    <task id="LOCAL-00022" summary="refactored resources">
-      <created>1554324590770</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1554324590770</updated>
+      <workItem from="1573851725766" duration="64155000" />
     </task>
     <task id="LOCAL-00023" summary="added all the bunny images, and the bunny head part">
       <created>1554325160149</created>
@@ -496,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574108278455</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Turned sidekick into regular mob. Deleted sidekickdata">
+      <created>1574109387240</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1574109387240</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +518,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="a whole bunch of changes..." />
     <MESSAGE value="Fixed screen size kind of, AND removed confirmation screen" />
     <MESSAGE value="actually fixed sizing issues" />
     <MESSAGE value="added RoomBlueprint idea" />
@@ -541,6 +542,7 @@
     <MESSAGE value="deleted old attack code in sidekick and combat controller" />
     <MESSAGE value="Properly implemented VERY basic stats" />
     <MESSAGE value="changed stats to work with floats instead of int" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed stats to work with floats instead of int" />
+    <MESSAGE value="Turned sidekick into regular mob. Deleted sidekickdata" />
+    <option name="LAST_COMMIT_MESSAGE" value="Turned sidekick into regular mob. Deleted sidekickdata" />
   </component>
 </project>

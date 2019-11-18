@@ -1,7 +1,7 @@
 package main;
 
 import combat.CombatController;
-import combat.Mob;
+import data.Mob;
 import data.bodyparts.PartFactory;
 import data.framework.BodyPart;
 import data.framework.PartType;

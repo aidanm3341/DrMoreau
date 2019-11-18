@@ -1,6 +1,6 @@
 package navigation;
 
-import combat.MobData;
+import data.MobData;
 import data.BasicRoomBlueprintLoader;
 import data.framework.RoomBlueprintLoader;
 import main.Main;

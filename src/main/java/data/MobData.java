@@ -1,4 +1,4 @@
-package combat;
+package data;
 
 import combat.stats.Stat;
 import combat.stats.Stats;

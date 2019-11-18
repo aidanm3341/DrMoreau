@@ -7,11 +7,8 @@ import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.*;
 import util.MyFont;
-import util.Point;
 import util.ResourceLoader;
 import util.buttons.AttackButton;
-
-import java.util.Map;
 
 public class CombatView {
 
@@ -21,6 +18,7 @@ public class CombatView {
     private CombatController ctrl;
     private Image background;
     private MobView mobView, playerView;
+    private HealthBar mobHealth, playerHealth;
 
     public CombatView(CombatController ctrl, PlayerMobController mobController){
         Attack basicAttack = new Attack("Basic Attack", 1, ctrl.getSidekick().getStat(Stat.ATTACK_DMG));
@@ -29,9 +27,11 @@ public class CombatView {
         this.ctrl = ctrl;
         background = ResourceLoader.getImage("battleBackground");
 
-
         createEnemyView();
         createPlayerView();
+
+        mobHealth = new HealthBar(ctrl.getMob(), 1100, 55);
+        playerHealth = new HealthBar(ctrl.getSidekick(), 200, 55);
     }
 
     private void createPlayerView(){
@@ -69,37 +69,9 @@ public class CombatView {
 
         att1_button.render(gc, g);
 
-        renderMobHealthBar(g);
-        renderSidekickHealthBar(g);
+        mobHealth.render(g);
+        playerHealth.render(g);
         mobView.render(gc, g);
         playerView.render(gc, g);
-    }
-
-    private void renderMobHealthBar(Graphics g)
-    {
-        g.setColor(Color.white);
-        g.drawString(ctrl.getMob().getName(), 1100, 55);
-        // health bar
-        g.setColor(Color.red);
-        g.fillRect(1100, 100, 400, 30);
-        g.setColor(Color.green);
-        g.fillRect(1100, 100,
-                (ctrl.getMob().getStat(Stat.CURRENT_HP)/ctrl.getMob().getStat(Stat.MAX_HP))*400, 30);
-        g.setColor(Color.white);
-        g.drawString(" "+ctrl.getMob().getStat(Stat.CURRENT_HP) + " : " + ctrl.getMob().getStat(Stat.MAX_HP), 1150, 145);
-    }
-
-    private void renderSidekickHealthBar(Graphics g)
-    {
-        g.setColor(Color.white);
-        g.drawString("Sidekick", 200, 55);
-        // health bar
-        g.setColor(Color.red);
-        g.fillRect(200, 100, 400, 30);
-        g.setColor(Color.green);
-        g.fillRect(200, 100,
-                (ctrl.getSidekick().getStat(Stat.CURRENT_HP)/ctrl.getSidekick().getStat(Stat.MAX_HP))*400, 30);
-        g.setColor(Color.white);
-        g.drawString(" "+ctrl.getSidekick().getStat(Stat.CURRENT_HP) + " : " + ctrl.getSidekick().getStat(Stat.MAX_HP), 250, 145);
     }
 }

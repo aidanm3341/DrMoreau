@@ -1,6 +1,7 @@
 package upgrade.bodyparts;
 
 import combat.Attack;
+import combat.stats.Stat;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.Image;
@@ -14,6 +15,11 @@ public class NullBodyPart implements BodyPart {
 
     public String getName() {
         return "";
+    }
+
+    @Override
+    public Map<Stat, Integer> getStats() {
+        return new HashMap<>();
     }
 
     public String getType() {

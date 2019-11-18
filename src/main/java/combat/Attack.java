@@ -18,7 +18,7 @@ public class Attack {
         return name;
     }
 
-    public float getDmg(int level) {
-        return (level * multipler) + additive;
+    public int getDmg(int level) {
+        return (int) (level * multipler) + additive;
     }
 }

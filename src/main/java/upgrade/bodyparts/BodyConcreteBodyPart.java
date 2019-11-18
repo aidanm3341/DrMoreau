@@ -1,5 +1,6 @@
 package upgrade.bodyparts;
 
+import combat.stats.Stat;
 import data.framework.PartType;
 import util.Point;
 
@@ -32,6 +33,6 @@ public class BodyConcreteBodyPart extends ConcreteBodyPart {
     }
 
     public BodyConcreteBodyPart clone() {
-        return new BodyConcreteBodyPart(name, hp, connectors, level);
+        return new BodyConcreteBodyPart(name, stats.get(Stat.MAX_HP), connectors, level);
     }
 }

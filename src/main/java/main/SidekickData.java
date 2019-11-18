@@ -1,6 +1,7 @@
 package main;
 
 import combat.Attack;
+import combat.stats.Stat;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
@@ -27,7 +28,7 @@ public class SidekickData {
     private void updateMaxHp() {
         int newHp = 0;
         for(BodyPart part : parts.values())
-            newHp += part.getHp();
+            newHp += part.getStats().get(Stat.MAX_HP);
 
         maxHP = newHp;
         currentHp = maxHP;

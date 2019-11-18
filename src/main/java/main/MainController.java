@@ -35,7 +35,6 @@ public class MainController {
     public void init(GameContainer gc) throws SlickException
     {
         sidekick = new SidekickData();
-        sidekick.init(gc);
 
         intro = new Intro(this);
         intro.init(gc, sbg);

@@ -7,10 +7,7 @@
       "name": "Rabid Bite",
       "damage": {}
     },
-    "point": {
-      "x": 0,
-      "y": 72
-    }
+    "points": [{"body": {"x": 0, "y": 72}}]
   },
   {
     "name": "dog_arm",
@@ -20,10 +17,7 @@
       "name": "Claw",
       "damage": {}
     },
-    "point": {
-      "x": 36,
-      "y": 15
-    }
+    "points": [{"body": {"x": 36, "y": 15}}]
   },
   {
     "name": "dog_leg",
@@ -33,10 +27,7 @@
       "name": "Kick",
       "damage": {}
     },
-    "point": {
-      "x": 40,
-      "y": 20
-    }
+    "points": [{"body": {"x": 40, "y": 20}}]
   },
   {
     "name": "dog_tail",
@@ -46,23 +37,20 @@
       "name": "Tail Whip",
       "damage": {}
     },
-    "point": {
-      "x": 79,
-      "y": 19
-    }
+    "points": [{"body": {"x": 79, "y": 19}}]
   },
   {
     "name": "dog_body",
     "type": "body",
     "hp": 100,
-    "point": {
-      "head":      {"x": 220, "y": 38},
-      "arm_right": {"x": 195, "y": 47},
-      "arm_left":  {"x": 171, "y": 35},
-      "leg_right": {"x": 73, "y": 35},
-      "leg_left":  {"x": 49, "y": 23},
-      "tail":      {"x": 0, "y": 46}
-    }
+    "points": [
+      {"head":      {"x": 220, "y": 38}},
+      {"arm_right": {"x": 195, "y": 47}},
+      {"arm_left":  {"x": 171, "y": 35}},
+      {"leg_right": {"x": 73, "y": 35}},
+      {"leg_left":  {"x": 49, "y": 23}},
+      {"tail":      {"x": 0, "y": 46}}
+    ]
   },
 
 
@@ -75,10 +63,7 @@
       "name": "Nibble",
       "damage": {}
     },
-    "point": {
-      "x": 20,
-      "y": 70
-    }
+    "points": [{"body": {"x": 20, "y": 70}}]
   },
   {
     "name": "rat_arm",
@@ -88,10 +73,7 @@
       "name": "Scratch",
       "damage": {}
     },
-    "point": {
-      "x": 43,
-      "y": 20
-    }
+    "points": [{"body": {"x": 43, "y": 20}}]
   },
   {
     "name": "rat_leg",
@@ -101,10 +83,7 @@
       "name": "Kick",
       "damage": {}
     },
-    "point": {
-      "x": 36,
-      "y": 20
-    }
+    "points": [{"body": {"x": 36, "y": 20}}]
   },
   {
     "name": "rat_tail",
@@ -114,22 +93,19 @@
       "name": "Tail Flick",
       "damage": {}
     },
-    "point": {
-      "x": 85,
-      "y": 20
-    }
+    "points": [{"body": {"x": 85, "y": 20}}]
   },
   {
     "name": "rat_body",
     "type": "body",
     "hp": 100,
-    "point": {
-      "head":      {"x": 238, "y": 98},
-      "arm_right": {"x": 200, "y": 84},
-      "arm_left":  {"x": 175, "y": 72},
-      "leg_right": {"x": 75, "y": 84},
-      "leg_left":  {"x": 50, "y": 72},
-      "tail":      {"x": -10, "y": 78}
-    }
-  },
+    "points": [
+      {"head":      {"x": 238, "y": 98}},
+      {"arm_right": {"x": 200, "y": 84}},
+      {"arm_left":  {"x": 175, "y": 72}},
+      {"leg_right": {"x": 75, "y": 84}},
+      {"leg_left":  {"x": 50, "y": 72}},
+      {"tail":      {"x": -10, "y": 78}}
+    ]
+  }
 ]

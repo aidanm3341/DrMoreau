@@ -3,7 +3,7 @@ package combat;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
-import upgrade.bodyparts.BodyConcreteBodyPart;
+import upgrade.bodyparts.ConcreteBodyPart;
 import upgrade.bodyparts.PartFactory;
 
 import java.util.HashMap;
@@ -21,7 +21,7 @@ public class MobData {
                 return makeRat(level);
             case "Dr.Moreau":
                 Map<PartType, BodyPart> parts = new HashMap<>();
-                BodyPart body = new BodyConcreteBodyPart("Dr.Moreau", 100, null, 100);
+                BodyPart body = new ConcreteBodyPart("Dr.Moreau", new Attack("boosh", 10, 1), 100,null, 100);
                 parts.put(PartType.BODY, body);
                 return new Mob("Dr.Moreau", 100, 15, 30, parts);
         }

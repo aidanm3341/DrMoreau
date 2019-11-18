@@ -2,7 +2,6 @@ package combat.mobview;
 
 import data.framework.BodyPart;
 import data.framework.PartType;
-import upgrade.bodyparts.BodyConcreteBodyPart;
 import util.Point;
 
 import java.util.HashMap;
@@ -13,9 +12,9 @@ public class MobViewBuilder {
     private float x, y, overallOffsetX, overallOffsetY;
     private Map<BodyPart, Point> offsets;
     private Map<PartType, BodyPart> parts;
-    private BodyConcreteBodyPart body;
+    private BodyPart body;
 
-    public MobViewBuilder(BodyConcreteBodyPart body, int x, int y){
+    public MobViewBuilder(BodyPart body, int x, int y){
         offsets = new HashMap<>();
         parts = new TreeMap<>();
 

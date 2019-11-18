@@ -22,18 +22,6 @@ public class NullBodyPart implements BodyPart {
         return new HashMap<>();
     }
 
-    public String getType() {
-        return "";
-    }
-
-    public int getHp() {
-        return 0;
-    }
-
-    public Point getAttachPoint() {
-        return new Point(0,0);
-    }
-
     public Map<PartType, Point> getAttachPoints() {
         return new HashMap<>();
     }

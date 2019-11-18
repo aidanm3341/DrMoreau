@@ -2,12 +2,15 @@ package combat;
 
 import combat.mobview.MobView;
 import combat.mobview.MobViewBuilder;
+import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.*;
-import upgrade.bodyparts.BodyConcreteBodyPart;
 import util.MyFont;
+import util.Point;
 import util.ResourceLoader;
 import util.buttons.AttackButton;
+
+import java.util.Map;
 
 public class CombatView {
 
@@ -36,7 +39,7 @@ public class CombatView {
     }
 
     private void createPlayerView(){
-        BodyConcreteBodyPart body = (BodyConcreteBodyPart) ctrl.getSidekick().getParts().get(PartType.BODY);
+        BodyPart body = ctrl.getSidekick().getParts().get(PartType.BODY);
 
         MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 200, 380);
         for(PartType type : ctrl.getSidekick().getParts().keySet()){
@@ -47,7 +50,7 @@ public class CombatView {
     }
 
     private void createEnemyView(){
-        BodyConcreteBodyPart body = (BodyConcreteBodyPart) ctrl.getMob().getParts().get(PartType.BODY);
+        BodyPart body = ctrl.getMob().getParts().get(PartType.BODY);
 
         MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 1150, 400);
         for(PartType type : ctrl.getMob().getParts().keySet()){

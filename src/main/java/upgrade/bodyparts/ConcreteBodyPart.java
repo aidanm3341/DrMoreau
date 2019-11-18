@@ -17,17 +17,17 @@ public class ConcreteBodyPart implements BodyPart {
     protected Image image;
     protected Attack attack;
     protected Map<Stat, Integer> stats;
+    protected Map<PartType, Point> attachPoints;
 
-    protected Point attachPoint;
     protected int level;
 
-    public ConcreteBodyPart(String name, Attack attack, int hp, Point attachPoint, int level)
+    public ConcreteBodyPart(String name, Attack attack, int hp, Map<PartType, Point> attachPoints, int level)
     {
         this.name = name;
         this.attack = attack;
         this.image = ResourceLoader.getImage(name);
-        this.attachPoint = attachPoint;
         this.level = level;
+        this.attachPoints = attachPoints;
 
         stats = new HashMap<>();
         stats.put(Stat.MAX_HP, hp);
@@ -42,9 +42,7 @@ public class ConcreteBodyPart implements BodyPart {
 
 
     public Map<PartType, Point> getAttachPoints() {
-        Map<PartType, Point> map = new HashMap<>();
-        map.put(PartType.BODY, attachPoint);
-        return map;
+        return attachPoints;
     }
 
     public Image getImage() {
@@ -68,6 +66,6 @@ public class ConcreteBodyPart implements BodyPart {
     }
 
     public BodyPart clone(){
-        return new ConcreteBodyPart(name, attack, stats.get(Stat.MAX_HP), attachPoint, level);
+        return new ConcreteBodyPart(name, attack, stats.get(Stat.MAX_HP), attachPoints, level);
     }
 }

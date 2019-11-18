@@ -3,18 +3,18 @@ package util;
 import combat.Attack;
 import data.framework.BodyPart;
 import data.framework.BodyPartLoader;
+import data.framework.PartType;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.newdawn.slick.SlickException;
-import upgrade.bodyparts.BodyConcreteBodyPart;
-import upgrade.bodyparts.BodyConnectors;
 import upgrade.bodyparts.ConcreteBodyPart;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 
 public class JSONPartReader implements BodyPartLoader {
 
@@ -49,25 +49,53 @@ public class JSONPartReader implements BodyPartLoader {
 
 
                 BodyPart p;
-                JSONObject pointObj = (JSONObject) obj.get("point");
-                if(type.equals("body"))
-                {
-                    BodyConnectors connectors = new BodyConnectors(pointExtractor((JSONObject) pointObj.get("head")),
-                            pointExtractor((JSONObject) pointObj.get("arm_right")),
-                            pointExtractor((JSONObject) pointObj.get("arm_left")),
-                            pointExtractor((JSONObject) pointObj.get("leg_right")),
-                            pointExtractor((JSONObject) pointObj.get("leg_left")),
-                            pointExtractor((JSONObject) pointObj.get("tail")));
-                    p = new BodyConcreteBodyPart(name, hp, connectors, 1);
+                JSONArray points = (JSONArray) obj.get("points");
+                Map<PartType, Point> attachPoints = new HashMap<>();
+                for(Object ob : points){
+                    JSONObject point = (JSONObject) ob;
+                    for(Object ob2 : point.keySet()){   //should only be 1 thing
+                        String partType = (String) ob2;
+                        point.get(partType);
+
+                        PartType thePartType;
+                        switch (partType){
+                            case "body":
+                                thePartType = PartType.BODY; break;
+                            case "head":
+                                thePartType = PartType.HEAD; break;
+                            case "arm_left":
+                                thePartType = PartType.LEFT_ARM; break;
+                            case "arm_right":
+                                thePartType = PartType.RIGHT_ARM; break;
+                            case "leg_left":
+                                thePartType = PartType.LEFT_LEG; break;
+                            case "leg_right":
+                                thePartType = PartType.RIGHT_LEG; break;
+                            case "tail":
+                                thePartType = PartType.TAIL; break;
+                            default:
+                                thePartType = PartType.BODY;
+                        }
+
+                        attachPoints.put(thePartType, pointExtractor((JSONObject) point.get(partType)));
+                    }
                 }
-                else {
-                    Point point = pointExtractor(pointObj);
-                    p = new ConcreteBodyPart(name, attack, hp, point, 1);
-                }
+//                if(type.equals("body"))
+//                {
+//                    BodyConnectors connectors = new BodyConnectors(pointExtractor((JSONObject) pointObj.get("head")),
+//                            pointExtractor((JSONObject) pointObj.get("arm_right")),
+//                            pointExtractor((JSONObject) pointObj.get("arm_left")),
+//                            pointExtractor((JSONObject) pointObj.get("leg_right")),
+//                            pointExtractor((JSONObject) pointObj.get("leg_left")),
+//                            pointExtractor((JSONObject) pointObj.get("tail")));
+//                    p = new BodyConcreteBodyPart(name, hp, connectors, 1);
+//                }
+//                else {
+//                    Point point = pointExtractor(pointObj);
+//                    p = new ConcreteBodyPart(name, attack, hp, point, 1);
+//                }
 
-
-
-                partsHash.put(name, p);
+                partsHash.put(name, new ConcreteBodyPart(name, attack, hp, attachPoints, 1));
             }
 
         } catch (ParseException | IOException e) {

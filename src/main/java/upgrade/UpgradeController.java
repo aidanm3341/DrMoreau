@@ -1,6 +1,7 @@
 package upgrade;
 
 import data.framework.BodyPart;
+import data.framework.PartType;
 import main.Main;
 import main.MainController;
 import main.SidekickData;
@@ -96,13 +97,13 @@ public class UpgradeController extends Screen implements ComponentListener {
         draggables = new ArrayList<>();
 
         SidekickData sidekick = main.getSidekick();
-        draggables.add(new PartDraggable(headArea, sidekick.getHead()));
-        draggables.add(new PartDraggable(bodyArea, sidekick.getBody()));
-        draggables.add(new PartDraggable(legLeftArea, sidekick.getLegLeft()));
-        draggables.add(new PartDraggable(legRightArea, sidekick.getLegRight()));
-        draggables.add(new PartDraggable(armLeftArea, sidekick.getArmLeft()));
-        draggables.add(new PartDraggable(armRightArea, sidekick.getArmRight()));
-        draggables.add(new PartDraggable(tailArea, sidekick.getTail()));
+        draggables.add(new PartDraggable(headArea, sidekick.getParts().get(PartType.HEAD)));
+        draggables.add(new PartDraggable(bodyArea,  sidekick.getParts().get(PartType.BODY)));
+        draggables.add(new PartDraggable(legLeftArea,  sidekick.getParts().get(PartType.LEFT_LEG)));
+        draggables.add(new PartDraggable(legRightArea,  sidekick.getParts().get(PartType.RIGHT_LEG)));
+        draggables.add(new PartDraggable(armLeftArea,  sidekick.getParts().get(PartType.LEFT_ARM)));
+        draggables.add(new PartDraggable(armRightArea,  sidekick.getParts().get(PartType.RIGHT_ARM)));
+        draggables.add(new PartDraggable(tailArea,  sidekick.getParts().get(PartType.TAIL)));
 
         Pool<BodyPart> rewards = new Pool<>();
         rewards.addAll(main.getActiveRoom().getRewards());

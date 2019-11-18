@@ -85,8 +85,6 @@ public class CombatView {
         try {
             g.setFont(MyFont.createFont(12));
         } catch (Exception e) { e.printStackTrace(); }
-        //ctrl.getSidekick().getImage().render(300, 420, g);
-        //ctrl.getMob().getMobImage().render(1300, 510, g);
 
         att1_button.render(gc, g);
         att2_button.render(gc, g);

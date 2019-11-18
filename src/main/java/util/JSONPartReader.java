@@ -95,7 +95,7 @@ public class JSONPartReader implements BodyPartLoader {
 //                    p = new ConcreteBodyPart(name, attack, hp, point, 1);
 //                }
 
-                partsHash.put(name, new ConcreteBodyPart(name, attack, hp, attachPoints, 1));
+                partsHash.put(name, new ConcreteBodyPart(name, attack, hp, attachPoints));
             }
 
         } catch (ParseException | IOException e) {

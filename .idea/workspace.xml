@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/bodyparts.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/bodyparts.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/mobview/MobViewBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/mobview/MobViewBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConcreteBodyPart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/BodyConnectors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/ConcreteBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/ConcreteBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/MobData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/MobData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/NullBodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/NullBodyPart.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,14 +143,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="57316000" />
-    </task>
-    <task id="LOCAL-00016" summary="upgraded the background to be less blurry">
-      <created>1554298371501</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1554298371501</updated>
+      <workItem from="1573851725766" duration="57660000" />
     </task>
     <task id="LOCAL-00017" summary="made random navigating images appear">
       <created>1554302159993</created>
@@ -499,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574093846242</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="FINALLY fixed that bodybodypart nonsense">
+      <created>1574096682605</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1574096682605</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="balance changes" />
     <MESSAGE value="repositioned gameover and victory text" />
     <MESSAGE value="Changed how body parts are stored, so it is now external to code." />
     <MESSAGE value="Fixed bodyparts having the wrong damage" />
@@ -544,6 +532,7 @@
     <MESSAGE value="updated sidekick to be more like Mob" />
     <MESSAGE value="Deleted obsolete classes" />
     <MESSAGE value="Added framework for new Stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added framework for new Stats" />
+    <MESSAGE value="FINALLY fixed that bodybodypart nonsense" />
+    <option name="LAST_COMMIT_MESSAGE" value="FINALLY fixed that bodybodypart nonsense" />
   </component>
 </project>

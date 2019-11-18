@@ -13,20 +13,17 @@ import java.util.Map;
 
 public class ConcreteBodyPart implements BodyPart {
 
-    protected String name;
-    protected Image image;
-    protected Attack attack;
-    protected Map<Stat, Integer> stats;
-    protected Map<PartType, Point> attachPoints;
+    private String name;
+    private Image image;
+    private Attack attack;
+    private Map<Stat, Integer> stats;
+    private Map<PartType, Point> attachPoints;
 
-    protected int level;
-
-    public ConcreteBodyPart(String name, Attack attack, int hp, Map<PartType, Point> attachPoints, int level)
+    public ConcreteBodyPart(String name, Attack attack, int hp, Map<PartType, Point> attachPoints)
     {
         this.name = name;
         this.attack = attack;
         this.image = ResourceLoader.getImage(name);
-        this.level = level;
         this.attachPoints = attachPoints;
 
         stats = new HashMap<>();
@@ -66,6 +63,6 @@ public class ConcreteBodyPart implements BodyPart {
     }
 
     public BodyPart clone(){
-        return new ConcreteBodyPart(name, attack, stats.get(Stat.MAX_HP), attachPoints, level);
+        return new ConcreteBodyPart(name, attack, stats.get(Stat.MAX_HP), attachPoints);
     }
 }

@@ -1,10 +1,10 @@
 package upgrade;
 
+import combat.Mob;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import main.Main;
 import main.MainController;
-import main.SidekickData;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -96,14 +96,14 @@ public class UpgradeController extends Screen implements ComponentListener {
     {
         draggables = new ArrayList<>();
 
-        SidekickData sidekick = main.getSidekick();
-        draggables.add(new PartDraggable(headArea, sidekick.getParts().get(PartType.HEAD)));
-        draggables.add(new PartDraggable(bodyArea,  sidekick.getParts().get(PartType.BODY)));
-        draggables.add(new PartDraggable(legLeftArea,  sidekick.getParts().get(PartType.LEFT_LEG)));
-        draggables.add(new PartDraggable(legRightArea,  sidekick.getParts().get(PartType.RIGHT_LEG)));
-        draggables.add(new PartDraggable(armLeftArea,  sidekick.getParts().get(PartType.LEFT_ARM)));
-        draggables.add(new PartDraggable(armRightArea,  sidekick.getParts().get(PartType.RIGHT_ARM)));
-        draggables.add(new PartDraggable(tailArea,  sidekick.getParts().get(PartType.TAIL)));
+        Mob sidekick = main.getSidekick();
+        draggables.add(new PartDraggable(headArea, sidekick.getPart(PartType.HEAD)));
+        draggables.add(new PartDraggable(bodyArea,  sidekick.getPart(PartType.BODY)));
+        draggables.add(new PartDraggable(legLeftArea,  sidekick.getPart(PartType.LEFT_LEG)));
+        draggables.add(new PartDraggable(legRightArea,  sidekick.getPart(PartType.RIGHT_LEG)));
+        draggables.add(new PartDraggable(armLeftArea,  sidekick.getPart(PartType.LEFT_ARM)));
+        draggables.add(new PartDraggable(armRightArea,  sidekick.getPart(PartType.RIGHT_ARM)));
+        draggables.add(new PartDraggable(tailArea,  sidekick.getPart(PartType.TAIL)));
 
         Pool<BodyPart> rewards = new Pool<>();
         rewards.addAll(main.getActiveRoom().getRewards());

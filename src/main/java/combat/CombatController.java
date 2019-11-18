@@ -3,7 +3,6 @@ package combat;
 import combat.stats.Stat;
 import main.Main;
 import main.MainController;
-import main.SidekickData;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -42,7 +41,7 @@ public class CombatController extends Screen {
     }
 
     public void doAttack(Attack atk) {
-        mob.setHp(atk.getDmg(main.getLevel()));
+        mob.attack(atk.getDmg(main.getLevel()));
         if(checkWins()) return;
         main.getSidekick().attack(mob.getStat(Stat.ATTACK_DMG));
     }
@@ -54,7 +53,7 @@ public class CombatController extends Screen {
     }
 
     private boolean checkWins() {
-        if(main.getSidekick().getCurrentHp() <= 0) {
+        if(main.getSidekick().getStat(Stat.CURRENT_HP) <= 0) {
             main.enterState(Main.GAMEOVER);
             return true;
         }
@@ -77,7 +76,7 @@ public class CombatController extends Screen {
         return mob;
     }
 
-    public SidekickData getSidekick(){
+    public Mob getSidekick(){
         return main.getSidekick();
     }
 }

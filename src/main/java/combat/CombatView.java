@@ -35,23 +35,23 @@ public class CombatView {
     }
 
     private void createPlayerView(){
-        BodyPart body = ctrl.getSidekick().getParts().get(PartType.BODY);
+        BodyPart body = ctrl.getSidekick().getPart(PartType.BODY);
 
         MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 200, 380);
-        for(PartType type : ctrl.getSidekick().getParts().keySet()){
+        for(PartType type : PartType.values()){
             if(type != PartType.BODY)
-                mobViewBuilder.addPart(type, ctrl.getSidekick().getParts().get(type));
+                mobViewBuilder.addPart(type, ctrl.getSidekick().getPart(type));
         }
         playerView = mobViewBuilder.finalise(false);
     }
 
     private void createEnemyView(){
-        BodyPart body = ctrl.getMob().getParts().get(PartType.BODY);
+        BodyPart body = ctrl.getMob().getPart(PartType.BODY);
 
         MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 1150, 400);
-        for(PartType type : ctrl.getMob().getParts().keySet()){
+        for(PartType type : PartType.values()){
             if(type != PartType.BODY)
-                mobViewBuilder.addPart(type, ctrl.getMob().getParts().get(type));
+                mobViewBuilder.addPart(type, ctrl.getMob().getPart(type));
         }
         mobView = mobViewBuilder.finalise(true);
     }
@@ -98,8 +98,8 @@ public class CombatView {
         g.fillRect(200, 100, 400, 30);
         g.setColor(Color.green);
         g.fillRect(200, 100,
-                (ctrl.getSidekick().getCurrentHp()/ctrl.getSidekick().getMaxHp())*400, 30);
+                (ctrl.getSidekick().getStat(Stat.CURRENT_HP)/ctrl.getSidekick().getStat(Stat.MAX_HP))*400, 30);
         g.setColor(Color.white);
-        g.drawString(" "+ctrl.getSidekick().getCurrentHp() + " : " + ctrl.getSidekick().getMaxHp(), 250, 145);
+        g.drawString(" "+ctrl.getSidekick().getStat(Stat.CURRENT_HP) + " : " + ctrl.getSidekick().getStat(Stat.MAX_HP), 250, 145);
     }
 }

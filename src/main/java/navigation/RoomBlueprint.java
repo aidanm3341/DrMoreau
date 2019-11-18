@@ -2,6 +2,7 @@ package navigation;
 
 import combat.Mob;
 import data.framework.BodyPart;
+import data.framework.PartType;
 import main.Main;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
@@ -22,7 +23,8 @@ public class RoomBlueprint {
     public Room buildRoom() throws SlickException {
         Mob mob = possibleMobs.get(new Random().nextInt(possibleMobs.size()));
         Pool<BodyPart> parts = new Pool<>();
-        parts.addAll(mob.getParts().values());
+        for(PartType part : PartType.values())
+            parts.add(mob.getPart(part));
 
         return new Room(
                 Main.FIGHT,

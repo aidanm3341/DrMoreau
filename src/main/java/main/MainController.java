@@ -1,6 +1,9 @@
 package main;
 
 import combat.CombatController;
+import combat.Mob;
+import data.bodyparts.PartFactory;
+import data.framework.BodyPart;
 import data.framework.PartType;
 import navigation.NavigationController;
 import navigation.Room;
@@ -14,9 +17,12 @@ import screens.GameOver;
 import screens.Victory;
 import upgrade.UpgradeController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainController {
 
-    private SidekickData sidekick;
+    private Mob sidekick;
 
     private Intro intro;
     private CombatController combat;
@@ -34,7 +40,7 @@ public class MainController {
 
     public void init(GameContainer gc) throws SlickException
     {
-        sidekick = new SidekickData();
+        loadDefaultSidekick();
 
         intro = new Intro(this);
         intro.init(gc, sbg);
@@ -69,7 +75,7 @@ public class MainController {
         sidekick.attack(dmg);
     }
 
-    public SidekickData getSidekick(){
+    public Mob getSidekick(){
         //updateSidekick();
         return sidekick;
     }
@@ -88,7 +94,19 @@ public class MainController {
     public void reset() throws SlickException
     {
         level = 1;
-        sidekick.loadDefaultSidekick();
+        loadDefaultSidekick();
+    }
+
+    private void loadDefaultSidekick() throws SlickException {
+        Map<PartType, BodyPart> parts = new HashMap<>();
+        parts.put(PartType.BODY, PartFactory.getPart("dog_body", 2));
+        parts.put(PartType.LEFT_ARM, PartFactory.getPart("dog_arm", 2));
+        parts.put(PartType.RIGHT_ARM, PartFactory.getPart("dog_arm", 2));
+        parts.put(PartType.LEFT_LEG, PartFactory.getPart("dog_leg", 2));
+        parts.put(PartType.RIGHT_LEG, PartFactory.getPart("dog_leg", 2));
+        parts.put(PartType.TAIL, PartFactory.getPart("dog_tail", 2));
+        parts.put(PartType.HEAD, PartFactory.getPart("dog_head", 2));
+        sidekick = new Mob("Sidekick", parts);
     }
 
     public void enterState(int ID)

@@ -4,9 +4,7 @@ import combat.Attack;
 import data.framework.BodyPart;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
-import upgrade.bodyparts.BodyConcreteBodyPart;
-import upgrade.bodyparts.NullBodyPart;
-import upgrade.bodyparts.PartFactory;
+import upgrade.bodyparts.*;
 import util.CreatureComposer;
 import util.SuperImage;
 

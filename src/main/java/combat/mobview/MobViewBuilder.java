@@ -43,8 +43,11 @@ public class MobViewBuilder {
         overallOffsetY = Math.min(newY, overallOffsetY);
     }
 
-    public MobView finalise(){
+    public MobView finalise(boolean flipped){
         offsets.replaceAll((b, v) -> new Point(offsets.get(b).x - overallOffsetX, offsets.get(b).y - overallOffsetY));
-        return new MobView(x, y, offsets, parts);
+        MobView view = new MobView(x, y, offsets, parts);
+        if(flipped)
+            view.flip();
+        return view;
     }
 }

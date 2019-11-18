@@ -34,11 +34,11 @@ public class CombatView {
         BodyConcreteBodyPart body = (BodyConcreteBodyPart) ctrl.getMob().getParts().get(PartType.BODY);
         ctrl.getMob().getParts().remove(PartType.BODY);
 
-        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 1450, 400);
+        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 1150, 400);
         for(PartType type : ctrl.getMob().getParts().keySet()){
             mobViewBuilder.addPart(type, ctrl.getMob().getParts().get(type));
         }
-        mobView = mobViewBuilder.finalise();
+        mobView = mobViewBuilder.finalise(true);
     }
 
     public void init(GameContainer gc){

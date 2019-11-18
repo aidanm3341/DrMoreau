@@ -23,7 +23,6 @@ public class MobView {
         this.y = y;
 
         width = calcWidth();
-        flip();
     }
 
     public Rectangle getBoundingRectangle(){
@@ -56,7 +55,7 @@ public class MobView {
     }
 
     public void flip(){
-        x -= width;
+        //x -= width;
         for(PartType type : parts.keySet()){
             BodyPart bp = parts.get(type);
             bp.setImage(bp.getImage().getFlippedCopy(true, false));

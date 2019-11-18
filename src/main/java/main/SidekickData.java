@@ -63,25 +63,6 @@ public class SidekickData {
         return stats.get(Stat.CURRENT_HP);
     }
 
-    public Attack getAt1() {
-        return parts.get(PartType.HEAD).getAttack();
-    }
-    public Attack getAt2() {
-        return parts.get(PartType.LEFT_LEG).getAttack();
-    }
-    public Attack getAt3() {
-        return parts.get(PartType.RIGHT_LEG).getAttack();
-    }
-    public Attack getAt4() {
-        return parts.get(PartType.LEFT_ARM).getAttack();
-    }
-    public Attack getAt5() {
-        return parts.get(PartType.RIGHT_ARM).getAttack();
-    }
-    public Attack getAt6() {
-        return parts.get(PartType.TAIL).getAttack();
-    }
-
     public int getStat(Stat stat){
         return stats.get(stat);
     }

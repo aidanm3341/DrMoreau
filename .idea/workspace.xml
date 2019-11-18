@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/HardCodedLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="deleted old attack code in sidekick and combat controller">
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SidekickData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/draganddrop/DragAndDropManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/draganddrop/DragAndDropManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/draganddrop/DragArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/draganddrop/DragArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/ConcreteBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/ConcreteBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/bodyparts/PartFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/PartFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/MobData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/MobData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/SidekickData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/SidekickData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/NullBodyPart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/bodyparts/PartFactory.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,14 +147,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="60767000" />
-    </task>
-    <task id="LOCAL-00018" summary="room selection in navigation is now meaningful in the next combat">
-      <created>1554319688418</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1554319688418</updated>
+      <workItem from="1573851725766" duration="61012000" />
     </task>
     <task id="LOCAL-00019" summary="Combat now drops the appropriate rewards">
       <created>1554320796793</created>
@@ -504,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574099422705</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="got rid of old attack method">
+      <created>1574106882325</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1574106882326</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed how body parts are stored, so it is now external to code." />
     <MESSAGE value="Fixed bodyparts having the wrong damage" />
     <MESSAGE value="Changed the way damage is represented" />
     <MESSAGE value="Added the ability for lua integration" />
@@ -549,6 +536,7 @@
     <MESSAGE value="Added framework for new Stats" />
     <MESSAGE value="FINALLY fixed that bodybodypart nonsense" />
     <MESSAGE value="removed level from bodypart" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed level from bodypart" />
+    <MESSAGE value="got rid of old attack method" />
+    <option name="LAST_COMMIT_MESSAGE" value="got rid of old attack method" />
   </component>
 </project>

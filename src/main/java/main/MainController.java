@@ -39,7 +39,7 @@ public class MainController {
         intro = new Intro(this);
         intro.init(gc, sbg);
 
-        combat = new CombatController(this, sidekick.getAt1(), sidekick.getAt2(), sidekick.getAt3(), sidekick.getAt4(), sidekick.getAt5(), sidekick.getAt6());
+        combat = new CombatController(this);
         combat.init(gc, sbg);
 
         navigation = new NavigationController(this);

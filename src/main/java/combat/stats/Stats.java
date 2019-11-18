@@ -16,7 +16,7 @@ public class Stats implements Cloneable{
         stats.put(stat, value);
     }
 
-    public void addModifer(Stat stat, Float value){
+    public void addModifier(Stat stat, Float value){
         stats.put(stat, stats.get(stat) + value);
     }
 

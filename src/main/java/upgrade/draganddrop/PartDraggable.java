@@ -1,4 +1,4 @@
-package screens.draganddrop;
+package upgrade.draganddrop;
 
 import data.framework.BodyPart;
 import org.newdawn.slick.GameContainer;

@@ -1,4 +1,4 @@
-package screens.draganddrop;
+package upgrade.draganddrop;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.util.InputAdapter;

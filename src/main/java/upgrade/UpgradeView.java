@@ -6,8 +6,8 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
-import screens.draganddrop.DragArea;
-import screens.draganddrop.PartDraggable;
+import upgrade.draganddrop.DragArea;
+import upgrade.draganddrop.PartDraggable;
 import util.ResourceLoader;
 import util.buttons.Button;
 

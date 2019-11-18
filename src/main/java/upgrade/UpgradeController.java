@@ -12,25 +12,26 @@ import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.state.StateBasedGame;
 import screens.Screen;
-import screens.draganddrop.DragAndDropManager;
-import screens.draganddrop.DragArea;
-import screens.draganddrop.PartDraggable;
+import upgrade.draganddrop.DragAndDropManager;
+import upgrade.draganddrop.DragArea;
+import upgrade.draganddrop.PartDraggable;
 import util.Pool;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UpgradeController extends Screen implements ComponentListener {
-
-    private MainController main;
-    private UpgradeView view;
-
-    private DragAndDropManager dndManager;
-    private ArrayList<PartDraggable> draggables;
-    private ArrayList<DragArea> dragAreas;
-    private DragArea headArea, bodyArea, armLeftArea, armRightArea, legLeftArea, legRightArea, tailArea, puddle1, puddle2, puddle3;
     public int getID() {
         return Main.UPGRADE;
     }
+
+    private MainController main;
+
+    private UpgradeView view;
+    private DragAndDropManager dndManager;
+    private List<PartDraggable> draggables;
+    private List<DragArea> dragAreas;
+    private DragArea headArea, bodyArea, armLeftArea, armRightArea, legLeftArea, legRightArea, tailArea, puddle1, puddle2, puddle3;
 
     public UpgradeController(MainController main)
     {
@@ -71,23 +72,6 @@ public class UpgradeController extends Screen implements ComponentListener {
         dragAreas.add(puddle2);
         dragAreas.add(puddle3);
 
-
-        //draggables.add(new PartDraggable(headArea, PartFactory.getPart("dog_head")));
-        //draggables.add(new PartDraggable(bodyArea,  PartFactory.getPart("dog_body")));
-        //draggables.add(new PartDraggable(legRightArea, PartFactory.getPart("dog_leg")));
-        //draggables.add(new PartDraggable(legLeftArea,  PartFactory.getPart("dog_leg")));
-        //draggables.add(new PartDraggable(armRightArea,  PartFactory.getPart("dog_arm")));
-        //draggables.add(new PartDraggable(armLeftArea,  PartFactory.getPart("dog_arm")));
-        //draggables.add(new PartDraggable(tailArea,  PartFactory.getPart("dog_tail")));
-
-        //draggables.add(new PartDraggable(puddle1,  PartFactory.getPart("dog_leg")));
-        //draggables.add(new PartDraggable(puddle2, PartFactory.getPart("dog_body")));
-        //draggables.add(new PartDraggable(puddle3, PartFactory.getPart("dog_leg")));
-
-//        for(PartDraggable d : draggables) {
-//            d.init(gc);
-//            dndManager.attach(d);
-//        }
         for(DragArea da : dragAreas)
             dndManager.attach(da);
     }
@@ -125,40 +109,40 @@ public class UpgradeController extends Screen implements ComponentListener {
     }
 
 
-    public BodyPart getHead() throws SlickException{
+    public BodyPart getHead(){
         return headArea.getPart().getPart();
     }
 
-    public BodyPart getBody() throws SlickException{
+    public BodyPart getBody(){
         return bodyArea.getPart().getPart();
     }
 
-    public BodyPart getLegLeft()throws SlickException{
+    public BodyPart getLegLeft(){
         return legLeftArea.getPart().getPart();
     }
 
-    public BodyPart getLegRight()throws SlickException{
+    public BodyPart getLegRight(){
         return legRightArea.getPart().getPart();
     }
 
-    public BodyPart getArmLeft()throws SlickException{
+    public BodyPart getArmLeft(){
         return armLeftArea.getPart().getPart();
     }
 
-    public BodyPart getArmRight()throws SlickException{
+    public BodyPart getArmRight(){
         return armRightArea.getPart().getPart();
     }
 
-    public BodyPart getTail()throws SlickException{
+    public BodyPart getTail(){
         return tailArea.getPart().getPart();
     }
 
 
-    public ArrayList<PartDraggable> getDraggables() {
+    public List<PartDraggable> getDraggables() {
         return draggables;
     }
 
-    public ArrayList<DragArea> getDragAreas() {
+    public List<DragArea> getDragAreas() {
         return dragAreas;
     }
 
@@ -167,8 +151,6 @@ public class UpgradeController extends Screen implements ComponentListener {
         view.render(gc, sbg, g);
     }
 
-
-    @Override
     public void componentActivated(AbstractComponent abstractComponent) {
         main.enterState(Main.TRAVEL);
     }

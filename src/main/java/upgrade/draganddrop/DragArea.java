@@ -1,4 +1,4 @@
-package screens.draganddrop;
+package upgrade.draganddrop;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;

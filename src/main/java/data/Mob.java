@@ -5,7 +5,6 @@ import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class Mob {
@@ -22,7 +21,7 @@ public class Mob {
         for(BodyPart part : parts.values()) {
             Stats partStats = part.getStats();
             for(Stat stat : Stat.values())
-                stats.addModifer(stat, partStats.get(stat));
+                stats.addModifier(stat, partStats.get(stat));
         }
     }
 

@@ -28,7 +28,7 @@ public class SidekickData {
     }
 
     private void updateMaxHp() {
-        int newHp = 0;
+        float newHp = 0;
         for(BodyPart part : parts.values())
             newHp += part.getStats().get(Stat.MAX_HP);
 
@@ -39,9 +39,9 @@ public class SidekickData {
 
     public void attack(float dmg){
         if(stats.get(Stat.CURRENT_HP) - dmg < 0)
-            stats.put(Stat.CURRENT_HP, 0);
+            stats.put(Stat.CURRENT_HP, 0f);
         else
-            stats.put(Stat.CURRENT_HP, (int) (stats.get(Stat.CURRENT_HP) - dmg));
+            stats.put(Stat.CURRENT_HP, (stats.get(Stat.CURRENT_HP) - dmg));
     }
 
     public void loadDefaultSidekick() throws SlickException {
@@ -62,7 +62,7 @@ public class SidekickData {
         return stats.get(Stat.CURRENT_HP);
     }
 
-    public int getStat(Stat stat){
+    public float getStat(Stat stat){
         return stats.get(stat);
     }
 

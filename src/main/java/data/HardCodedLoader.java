@@ -24,7 +24,7 @@ public class HardCodedLoader implements BodyPartLoader {
 
     public void loadDogParts(){
         Stats stats = new Stats();
-        stats.put(Stat.MAX_HP, 10);
+        stats.put(Stat.MAX_HP, 10f);
         stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
 
         parts.put("dog_head", new ConcreteBodyPart("dog_head", stats.clone(), makeBodyAttachPoint(new Point(0, 72))));
@@ -44,7 +44,7 @@ public class HardCodedLoader implements BodyPartLoader {
 
     public void loadRatParts(){
         Stats stats = new Stats();
-        stats.put(Stat.MAX_HP, 10);
+        stats.put(Stat.MAX_HP, 10f);
         stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
 
         parts.put("rat_head", new ConcreteBodyPart("rat_head", stats.clone(), makeBodyAttachPoint(new Point(20, 70))));

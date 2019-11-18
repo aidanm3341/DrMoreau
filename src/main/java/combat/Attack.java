@@ -5,9 +5,9 @@ public class Attack {
 
     private String name;
     private float multipler;
-    private int additive;
+    private float additive;
 
-    public Attack(String name, float multiplier, int additive)
+    public Attack(String name, float multiplier, float additive)
     {
         this.name = name;
         this.multipler = multiplier;
@@ -18,7 +18,7 @@ public class Attack {
         return name;
     }
 
-    public int getDmg(int level) {
-        return (int) (level * multipler) + additive;
+    public float getDmg(int level) {
+        return (level * multipler) + additive;
     }
 }

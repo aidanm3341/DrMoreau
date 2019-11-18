@@ -84,9 +84,9 @@ public class CombatView {
         g.fillRect(1100, 100, 400, 30);
         g.setColor(Color.green);
         g.fillRect(1100, 100,
-                (ctrl.getMob().getCurrentHp()/ctrl.getMob().getMaxHp())*400, 30);
+                (ctrl.getMob().getStat(Stat.CURRENT_HP)/ctrl.getMob().getStat(Stat.MAX_HP))*400, 30);
         g.setColor(Color.white);
-        g.drawString(" "+ctrl.getMob().getCurrentHp() + " : " + ctrl.getMob().getMaxHp(), 1150, 145);
+        g.drawString(" "+ctrl.getMob().getStat(Stat.CURRENT_HP) + " : " + ctrl.getMob().getStat(Stat.MAX_HP), 1150, 145);
     }
 
     private void renderSidekickHealthBar(Graphics g)

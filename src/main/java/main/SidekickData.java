@@ -2,6 +2,7 @@ package main;
 
 import combat.Attack;
 import combat.stats.Stat;
+import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
@@ -13,13 +14,11 @@ import java.util.Map;
 public class SidekickData {
 
     private Map<PartType, BodyPart> parts;
-    private Map<Stat, Integer> stats;
+    private Stats stats;
 
     public SidekickData() throws SlickException {
         parts = new HashMap<>();
-        stats = new HashMap<>();
-        for(Stat stat : Stat.values())
-            stats.put(stat, 0);
+        stats = new Stats();
         loadDefaultSidekick();
     }
 

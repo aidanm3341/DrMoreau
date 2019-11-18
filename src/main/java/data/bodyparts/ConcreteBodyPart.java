@@ -2,6 +2,7 @@ package data.bodyparts;
 
 import combat.Attack;
 import combat.stats.Stat;
+import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.Image;
@@ -16,10 +17,10 @@ public class ConcreteBodyPart implements BodyPart {
     private String name;
     private Image image;
     private Attack attack;
-    private Map<Stat, Integer> stats;
+    private Stats stats;
     private Map<PartType, Point> attachPoints;
 
-    public ConcreteBodyPart(String name, Map<Stat, Integer> stats, Map<PartType, Point> attachPoints)
+    public ConcreteBodyPart(String name, Stats stats, Map<PartType, Point> attachPoints)
     {
         this.name = name;
         this.stats = stats;
@@ -29,7 +30,7 @@ public class ConcreteBodyPart implements BodyPart {
 
     public String getName(){return name;}
 
-    public Map<Stat, Integer> getStats() {
+    public Stats getStats() {
         return stats;
     }
 

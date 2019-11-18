@@ -1,6 +1,7 @@
 package data;
 
 import combat.stats.Stat;
+import combat.stats.Stats;
 import data.bodyparts.ConcreteBodyPart;
 import data.framework.BodyPart;
 import data.framework.BodyPartLoader;
@@ -22,24 +23,15 @@ public class HardCodedLoader implements BodyPartLoader {
     }
 
     public void loadDogParts(){
-        Map<Stat, Integer> stats = new HashMap<>();
+        Stats stats = new Stats();
         stats.put(Stat.MAX_HP, 10);
-        parts.put("dog_head", new ConcreteBodyPart("dog_head", stats, makeBodyAttachPoint(new Point(0, 72))));
+        stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
 
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, 10);
-        parts.put("dog_leg", new ConcreteBodyPart("dog_leg", stats, makeBodyAttachPoint(new Point(40, 20))));
+        parts.put("dog_head", new ConcreteBodyPart("dog_head", stats.clone(), makeBodyAttachPoint(new Point(0, 72))));
+        parts.put("dog_leg", new ConcreteBodyPart("dog_leg", stats.clone(), makeBodyAttachPoint(new Point(40, 20))));
+        parts.put("dog_arm", new ConcreteBodyPart("dog_arm", stats.clone(), makeBodyAttachPoint(new Point(36, 15))));
+        parts.put("dog_tail", new ConcreteBodyPart("dog_tail", stats.clone(), makeBodyAttachPoint(new Point(79, 19))));
 
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, 10);
-        parts.put("dog_arm", new ConcreteBodyPart("dog_arm", stats, makeBodyAttachPoint(new Point(36, 15))));
-
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, 10);
-        parts.put("dog_tail", new ConcreteBodyPart("dog_tail", stats, makeBodyAttachPoint(new Point(79, 19))));
-
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, 10);
         Map<PartType, Point> points = new HashMap<>();
         points.put(PartType.HEAD, new Point(220, 38));
         points.put(PartType.RIGHT_ARM, new Point(195, 47));
@@ -47,28 +39,19 @@ public class HardCodedLoader implements BodyPartLoader {
         points.put(PartType.RIGHT_LEG, new Point(73, 35));
         points.put(PartType.LEFT_LEG, new Point(49, 23));
         points.put(PartType.TAIL, new Point(0, 46));
-        parts.put("dog_body", new ConcreteBodyPart("dog_body", stats, points));
+        parts.put("dog_body", new ConcreteBodyPart("dog_body", stats.clone(), points));
     }
 
     public void loadRatParts(){
-        Map<Stat, Integer> stats = new HashMap<>();
+        Stats stats = new Stats();
         stats.put(Stat.MAX_HP, 10);
-        parts.put("rat_head", new ConcreteBodyPart("rat_head", stats, makeBodyAttachPoint(new Point(20, 70))));
+        stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
 
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, 10);
-        parts.put("rat_leg", new ConcreteBodyPart("rat_leg", stats, makeBodyAttachPoint(new Point(36, 20))));
+        parts.put("rat_head", new ConcreteBodyPart("rat_head", stats.clone(), makeBodyAttachPoint(new Point(20, 70))));
+        parts.put("rat_leg", new ConcreteBodyPart("rat_leg", stats.clone(), makeBodyAttachPoint(new Point(36, 20))));
+        parts.put("rat_arm", new ConcreteBodyPart("rat_arm", stats.clone(), makeBodyAttachPoint(new Point(43, 20))));
+        parts.put("rat_tail", new ConcreteBodyPart("rat_tail", stats.clone(), makeBodyAttachPoint(new Point(85, 20))));
 
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, 10);
-        parts.put("rat_arm", new ConcreteBodyPart("rat_arm", stats, makeBodyAttachPoint(new Point(43, 20))));
-
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, 10);
-        parts.put("rat_tail", new ConcreteBodyPart("rat_tail", stats, makeBodyAttachPoint(new Point(85, 20))));
-
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, 10);
         Map<PartType, Point> points = new HashMap<>();
         points.put(PartType.HEAD, new Point(238, 98));
         points.put(PartType.RIGHT_ARM, new Point(200, 84));
@@ -76,7 +59,7 @@ public class HardCodedLoader implements BodyPartLoader {
         points.put(PartType.RIGHT_LEG, new Point(75, 84));
         points.put(PartType.LEFT_LEG, new Point(50, 72));
         points.put(PartType.TAIL, new Point(-10, 78));
-        parts.put("rat_body", new ConcreteBodyPart("rat_body", stats, points));
+        parts.put("rat_body", new ConcreteBodyPart("rat_body", stats.clone(), points));
     }
 
     private Map<PartType, Point> makeBodyAttachPoint(Point point){

@@ -1,6 +1,7 @@
 package combat;
 
 import combat.stats.Stat;
+import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
 
@@ -10,16 +11,19 @@ import java.util.Map;
 public class Mob {
 
     private String name;
-    private Map<Stat, Integer> stats;
+    private Stats stats;
     private Map<PartType, BodyPart> parts;
 
-    public Mob(String name, int hp, int attStat, int defStat, Map<PartType, BodyPart> parts) {
+    public Mob(String name, Map<PartType, BodyPart> parts) {
         this.name = name;
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, hp);
-        stats.put(Stat.CURRENT_HP, hp);
-        stats.put(Stat.ATTACK_DMG, attStat);
-        stats.put(Stat.DEFENCE, defStat);
+        stats = new Stats();
+        for(BodyPart part : parts.values()) {
+            Stats partStats = part.getStats();
+            stats.addModifer(Stat.MAX_HP, partStats.get(Stat.MAX_HP));
+            stats.addModifer(Stat.CURRENT_HP, partStats.get(Stat.CURRENT_HP));
+            stats.addModifer(Stat.ATTACK_DMG, partStats.get(Stat.ATTACK_DMG));
+            stats.addModifer(Stat.DEFENCE, partStats.get(Stat.DEFENCE));
+        }
 
         this.parts = parts;
     }

@@ -2,6 +2,7 @@ package data.bodyparts;
 
 import combat.Attack;
 import combat.stats.Stat;
+import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.Image;
@@ -18,8 +19,8 @@ public class NullBodyPart implements BodyPart {
     }
 
     @Override
-    public Map<Stat, Integer> getStats() {
-        return new HashMap<>();
+    public Stats getStats() {
+        return new Stats();
     }
 
     public Map<PartType, Point> getAttachPoints() {

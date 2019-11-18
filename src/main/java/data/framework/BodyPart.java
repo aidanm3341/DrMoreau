@@ -2,6 +2,7 @@ package data.framework;
 
 import combat.Attack;
 import combat.stats.Stat;
+import combat.stats.Stats;
 import org.newdawn.slick.Image;
 import util.Point;
 
@@ -9,7 +10,7 @@ import java.util.Map;
 
 public interface BodyPart extends Cloneable {
     String getName();
-    Map<Stat, Integer> getStats();
+    Stats getStats();
     Map<PartType, Point> getAttachPoints();
     Image getImage();
     void setImage(Image image);

@@ -1,6 +1,7 @@
 package combat;
 
 import combat.stats.Stat;
+import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
@@ -22,12 +23,12 @@ public class MobData {
                 return makeRat(level);
             case "Dr.Moreau":
                 Map<PartType, BodyPart> parts = new HashMap<>();
-                Map<Stat, Integer> stats = new HashMap<>();
+                Stats stats = new Stats();
                 stats.put(Stat.MAX_HP, 100);
                 stats.put(Stat.ATTACK_DMG, 20);
                 BodyPart body = new ConcreteBodyPart("Dr.Moreau", stats,null);
                 parts.put(PartType.BODY, body);
-                return new Mob("Dr.Moreau", 100, 15, 30, parts);
+                return new Mob("Dr.Moreau", parts);
         }
         return null;
     }
@@ -44,7 +45,7 @@ public class MobData {
         parts.put(PartType.BODY, PartFactory.getPart("dog_body", level));
 
 
-        return new Mob("Dog", level + 9, 10, 5, parts);
+        return new Mob("Dog", parts);
     }
 
     private static Mob makeRat(int level) throws SlickException
@@ -58,7 +59,7 @@ public class MobData {
         parts.put(PartType.TAIL, PartFactory.getPart("rat_tail", level));
         parts.put(PartType.BODY, PartFactory.getPart("rat_body", level));
 
-        return new Mob("Rat", 2*level + 5, 5, 5, parts);
+        return new Mob("Rat", parts);
     }
 
 //    private static Mob makeBunny(int level) throws SlickException

@@ -1,6 +1,7 @@
 package main;
 
 import combat.CombatController;
+import data.framework.PartType;
 import navigation.NavigationController;
 import navigation.Room;
 import org.newdawn.slick.Color;
@@ -76,13 +77,13 @@ public class MainController {
 
     public void updateSidekick() throws SlickException
     {
-        sidekick.addBody(upgrade.getBody());
-        sidekick.addArmRight(upgrade.getArmRight());
-        sidekick.addArmLeft(upgrade.getArmLeft());
-        sidekick.addLegLeft(upgrade.getLegLeft());
-        sidekick.addLegRight(upgrade.getLegRight());
-        sidekick.addHead(upgrade.getHead());
-        sidekick.addTail(upgrade.getTail());
+        sidekick.putPart(PartType.BODY, upgrade.getBody());
+        sidekick.putPart(PartType.RIGHT_ARM, upgrade.getArmRight());
+        sidekick.putPart(PartType.LEFT_ARM, upgrade.getArmLeft());
+        sidekick.putPart(PartType.LEFT_LEG, upgrade.getLegLeft());
+        sidekick.putPart(PartType.RIGHT_LEG, upgrade.getLegRight());
+        sidekick.putPart(PartType.HEAD, upgrade.getHead());
+        sidekick.putPart(PartType.TAIL, upgrade.getTail());
     }
 
     public void reset() throws SlickException

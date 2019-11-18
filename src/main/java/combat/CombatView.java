@@ -16,7 +16,7 @@ public class CombatView {
 
     private CombatController ctrl;
     private Image background;
-    private MobView mobView;
+    private MobView mobView, playerView;
 
     public CombatView(CombatController ctrl, PlayerMobController mobController,
                       Attack at1, Attack at2, Attack at3, Attack at4, Attack at5, Attack at6) throws SlickException {
@@ -31,12 +31,28 @@ public class CombatView {
         background = ResourceLoader.getImage("battleBackground");
 
 
+        createEnemyView();
+        createPlayerView();
+    }
+
+    private void createPlayerView(){
+        BodyConcreteBodyPart body = (BodyConcreteBodyPart) ctrl.getSidekick().getParts().get(PartType.BODY);
+
+        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 200, 380);
+        for(PartType type : ctrl.getSidekick().getParts().keySet()){
+            if(type != PartType.BODY)
+                mobViewBuilder.addPart(type, ctrl.getSidekick().getParts().get(type));
+        }
+        playerView = mobViewBuilder.finalise(false);
+    }
+
+    private void createEnemyView(){
         BodyConcreteBodyPart body = (BodyConcreteBodyPart) ctrl.getMob().getParts().get(PartType.BODY);
-        ctrl.getMob().getParts().remove(PartType.BODY);
 
         MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 1150, 400);
         for(PartType type : ctrl.getMob().getParts().keySet()){
-            mobViewBuilder.addPart(type, ctrl.getMob().getParts().get(type));
+            if(type != PartType.BODY)
+                mobViewBuilder.addPart(type, ctrl.getMob().getParts().get(type));
         }
         mobView = mobViewBuilder.finalise(true);
     }
@@ -66,7 +82,7 @@ public class CombatView {
         try {
             g.setFont(MyFont.createFont(12));
         } catch (Exception e) { e.printStackTrace(); }
-        ctrl.getSidekick().getImage().render(300, 420, g);
+        //ctrl.getSidekick().getImage().render(300, 420, g);
         //ctrl.getMob().getMobImage().render(1300, 510, g);
 
         att1_button.render(gc, g);
@@ -79,6 +95,7 @@ public class CombatView {
         renderMobHealthBar(g);
         renderSidekickHealthBar(g);
         mobView.render(gc, g);
+        playerView.render(gc, g);
     }
 
     private void renderMobHealthBar(Graphics g)

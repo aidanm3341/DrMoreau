@@ -15,6 +15,8 @@ public class MobView {
     private Map<BodyPart, Point> offsets;
     private Map<PartType, BodyPart> parts;
 
+    private boolean flipped;
+
     MobView(float x, float y, Map<BodyPart, Point> offsets, Map<PartType, BodyPart> parts){
         this.offsets = offsets;
         this.parts = parts;
@@ -23,6 +25,7 @@ public class MobView {
         this.y = y;
 
         width = calcWidth();
+        flipped = false;
     }
 
     public Rectangle getBoundingRectangle(){
@@ -55,20 +58,17 @@ public class MobView {
     }
 
     public void flip(){
-        //x -= width;
-        for(PartType type : parts.keySet()){
-            BodyPart bp = parts.get(type);
-            bp.setImage(bp.getImage().getFlippedCopy(true, false));
-            offsets.get(bp).x = - offsets.get(bp).x - bp.getImage().getWidth() + width;
-        }
+        flipped = !flipped;
     }
 
-    public void render(GameContainer gc, Graphics g) throws SlickException {
+    public void render(GameContainer gc, Graphics g){
         for(PartType type : parts.keySet()){
             BodyPart bp = parts.get(type);
-//            g.drawImage(bp.getImage().getFlippedCopy(true, false),
-//                    x - offsets.get(bp).x - bp.getImage().getWidth(), y + offsets.get(bp).y);
-            g.drawImage(bp.getImage(),x + offsets.get(bp).x, y + offsets.get(bp).y);
+            if(flipped)
+                g.drawImage(bp.getImage().getFlippedCopy(true, false),
+                        x - offsets.get(bp).x - bp.getImage().getWidth() + width, y + offsets.get(bp).y);
+            else
+                g.drawImage(bp.getImage(),x + offsets.get(bp).x, y + offsets.get(bp).y);
         }
         g.drawOval(x, y, 5, 5);
         g.draw(getBoundingRectangle());

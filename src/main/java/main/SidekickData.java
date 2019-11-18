@@ -5,7 +5,7 @@ import combat.stats.Stat;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
-import upgrade.bodyparts.*;
+import data.bodyparts.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,10 +13,13 @@ import java.util.Map;
 public class SidekickData {
 
     private Map<PartType, BodyPart> parts;
-    private float currentHp, maxHP;
+    private Map<Stat, Integer> stats;
 
     public SidekickData() throws SlickException {
         parts = new HashMap<>();
+        stats = new HashMap<>();
+        for(Stat stat : Stat.values())
+            stats.put(stat, 0);
         loadDefaultSidekick();
     }
 
@@ -30,16 +33,16 @@ public class SidekickData {
         for(BodyPart part : parts.values())
             newHp += part.getStats().get(Stat.MAX_HP);
 
-        maxHP = newHp;
-        currentHp = maxHP;
+        stats.put(Stat.MAX_HP, newHp);
+        stats.put(Stat.CURRENT_HP, newHp);
     }
 
 
     public void attack(float dmg){
-        if(currentHp - dmg < 0)
-            currentHp = 0;
+        if(stats.get(Stat.CURRENT_HP) - dmg < 0)
+            stats.put(Stat.CURRENT_HP, 0);
         else
-            currentHp -= dmg;
+            stats.put(Stat.CURRENT_HP, (int) (stats.get(Stat.CURRENT_HP) - dmg));
     }
 
     public void loadDefaultSidekick() throws SlickException {
@@ -53,11 +56,11 @@ public class SidekickData {
     }
 
     public float getMaxHp(){
-        return maxHP;
+        return stats.get(Stat.MAX_HP);
     }
 
     public float getCurrentHp() {
-        return currentHp;
+        return stats.get(Stat.CURRENT_HP);
     }
 
     public Attack getAt1() {
@@ -77,6 +80,10 @@ public class SidekickData {
     }
     public Attack getAt6() {
         return parts.get(PartType.TAIL).getAttack();
+    }
+
+    public int getStat(Stat stat){
+        return stats.get(stat);
     }
 
     public Map<PartType, BodyPart> getParts() {

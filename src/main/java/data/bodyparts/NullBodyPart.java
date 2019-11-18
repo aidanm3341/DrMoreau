@@ -1,4 +1,4 @@
-package upgrade.bodyparts;
+package data.bodyparts;
 
 import combat.Attack;
 import combat.stats.Stat;

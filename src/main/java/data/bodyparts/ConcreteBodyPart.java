@@ -1,4 +1,4 @@
-package upgrade.bodyparts;
+package data.bodyparts;
 
 import combat.Attack;
 import combat.stats.Stat;
@@ -19,16 +19,12 @@ public class ConcreteBodyPart implements BodyPart {
     private Map<Stat, Integer> stats;
     private Map<PartType, Point> attachPoints;
 
-    public ConcreteBodyPart(String name, Attack attack, int hp, Map<PartType, Point> attachPoints)
+    public ConcreteBodyPart(String name, Map<Stat, Integer> stats, Map<PartType, Point> attachPoints)
     {
         this.name = name;
-        this.attack = attack;
+        this.stats = stats;
         this.image = ResourceLoader.getImage(name);
         this.attachPoints = attachPoints;
-
-        stats = new HashMap<>();
-        stats.put(Stat.MAX_HP, hp);
-        stats.put(Stat.ATTACK_DMG, 1);
     }
 
     public String getName(){return name;}
@@ -63,6 +59,6 @@ public class ConcreteBodyPart implements BodyPart {
     }
 
     public BodyPart clone(){
-        return new ConcreteBodyPart(name, attack, stats.get(Stat.MAX_HP), attachPoints);
+        return new ConcreteBodyPart(name, stats, attachPoints);
     }
 }

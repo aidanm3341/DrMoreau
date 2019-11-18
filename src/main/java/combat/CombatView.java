@@ -2,6 +2,7 @@ package combat;
 
 import combat.mobview.MobView;
 import combat.mobview.MobViewBuilder;
+import combat.stats.Stat;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.*;
@@ -14,21 +15,16 @@ import java.util.Map;
 
 public class CombatView {
 
-    private AttackButton att1_button, att2_button, att3_button, att4_button, att5_button, att6_button;
+    private AttackButton att1_button;
     private PlayerMobController player;
 
     private CombatController ctrl;
     private Image background;
     private MobView mobView, playerView;
 
-    public CombatView(CombatController ctrl, PlayerMobController mobController,
-                      Attack at1, Attack at2, Attack at3, Attack at4, Attack at5, Attack at6) throws SlickException {
-        att1_button = new AttackButton(at1, 150, 700);
-        att2_button = new AttackButton(at2, 400, 700);
-        att3_button = new AttackButton(at3, 650, 700);
-        att4_button = new AttackButton(at4, 150, 800);
-        att5_button = new AttackButton(at5, 400, 800);
-        att6_button = new AttackButton(at6, 650, 800);
+    public CombatView(CombatController ctrl, PlayerMobController mobController){
+        Attack basicAttack = new Attack("Basic Attack", 1, ctrl.getSidekick().getStat(Stat.ATTACK_DMG));
+        att1_button = new AttackButton(basicAttack, 150, 700);
         player = mobController;
         this.ctrl = ctrl;
         background = ResourceLoader.getImage("battleBackground");
@@ -63,21 +59,6 @@ public class CombatView {
     public void init(GameContainer gc){
         att1_button.init(gc);
         att1_button.addListener(player);
-
-        att2_button.init(gc);
-        att2_button.addListener(player);
-
-        att3_button.init(gc);
-        att3_button.addListener(player);
-
-        att4_button.init(gc);
-        att4_button.addListener(player);
-
-        att5_button.init(gc);
-        att5_button.addListener(player);
-
-        att6_button.init(gc);
-        att6_button.addListener(player);
     }
 
     public void render(GameContainer gc, Graphics g) throws SlickException {
@@ -87,11 +68,6 @@ public class CombatView {
         } catch (Exception e) { e.printStackTrace(); }
 
         att1_button.render(gc, g);
-        att2_button.render(gc, g);
-        att3_button.render(gc, g);
-        att4_button.render(gc, g);
-        att5_button.render(gc, g);
-        att6_button.render(gc, g);
 
         renderMobHealthBar(g);
         renderSidekickHealthBar(g);

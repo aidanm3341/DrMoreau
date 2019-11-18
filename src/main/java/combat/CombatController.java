@@ -44,7 +44,7 @@ public class CombatController extends Screen {
         at4 = main.getSidekick().getAt4();
         at5 = main.getSidekick().getAt5();
         at6 = main.getSidekick().getAt6();
-        view = new CombatView(this, playerController, at1, at2, at3, at4, at5, at6);
+        view = new CombatView(this, playerController);
         view.init(gc);
     }
 

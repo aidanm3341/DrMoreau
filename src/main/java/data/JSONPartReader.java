@@ -1,4 +1,4 @@
-package util;
+package data;
 
 import combat.Attack;
 import data.framework.BodyPart;
@@ -9,7 +9,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.newdawn.slick.SlickException;
-import upgrade.bodyparts.ConcreteBodyPart;
+import data.bodyparts.ConcreteBodyPart;
+import util.Point;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -95,7 +96,7 @@ public class JSONPartReader implements BodyPartLoader {
 //                    p = new ConcreteBodyPart(name, attack, hp, point, 1);
 //                }
 
-                partsHash.put(name, new ConcreteBodyPart(name, attack, hp, attachPoints));
+                //partsHash.put(name, new ConcreteBodyPart(name, attack, hp, attachPoints));
             }
 
         } catch (ParseException | IOException e) {

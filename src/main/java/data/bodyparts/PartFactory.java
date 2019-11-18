@@ -1,9 +1,10 @@
-package upgrade.bodyparts;
+package data.bodyparts;
 
+import data.HardCodedLoader;
 import data.framework.BodyPart;
 import data.framework.BodyPartLoader;
 import org.newdawn.slick.SlickException;
-import util.JSONPartReader;
+import data.JSONPartReader;
 
 import java.util.Map;
 
@@ -14,7 +15,7 @@ public class PartFactory {
 
     public static BodyPart getPart(String name, int level) throws SlickException
     {
-        loader = new JSONPartReader();
+        loader = new HardCodedLoader();
         if(parts == null)
             parts = loader.getBodyParts();
 

@@ -1,10 +1,11 @@
 package combat;
 
+import combat.stats.Stat;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
-import upgrade.bodyparts.ConcreteBodyPart;
-import upgrade.bodyparts.PartFactory;
+import data.bodyparts.ConcreteBodyPart;
+import data.bodyparts.PartFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +22,10 @@ public class MobData {
                 return makeRat(level);
             case "Dr.Moreau":
                 Map<PartType, BodyPart> parts = new HashMap<>();
-                BodyPart body = new ConcreteBodyPart("Dr.Moreau", new Attack("boosh", 10, 1), 100,null);
+                Map<Stat, Integer> stats = new HashMap<>();
+                stats.put(Stat.MAX_HP, 100);
+                stats.put(Stat.ATTACK_DMG, 20);
+                BodyPart body = new ConcreteBodyPart("Dr.Moreau", stats,null);
                 parts.put(PartType.BODY, body);
                 return new Mob("Dr.Moreau", 100, 15, 30, parts);
         }

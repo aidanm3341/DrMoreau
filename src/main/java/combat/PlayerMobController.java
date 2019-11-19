@@ -1,9 +1,9 @@
 package combat;
 
 import data.framework.MobController;
-import util.buttons.MoveListener;
+import util.buttons.AbilityListener;
 
-public class PlayerMobController implements MobController, MoveListener {
+public class PlayerMobController implements MobController, AbilityListener {
 
     private CombatController ctrl;
 

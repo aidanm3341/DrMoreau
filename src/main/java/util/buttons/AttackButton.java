@@ -12,7 +12,7 @@ import java.util.List;
 public class AttackButton extends Button implements ComponentListener {
 
     private Attack at;
-    private List<MoveListener> listeners;
+    private List<AbilityListener> listeners;
 
     public AttackButton(Attack at, float x, float y) {
         super(at.getName(), ResourceLoader.getImage("basicButton"), x, y);
@@ -29,13 +29,13 @@ public class AttackButton extends Button implements ComponentListener {
         super.addListener(this);
     }
 
-    public void addListener(MoveListener listener){
+    public void addListener(AbilityListener listener){
         listeners.add(listener);
     }
 
     @Override
     public void componentActivated(AbstractComponent abstractComponent) {
-        for(MoveListener listener : listeners)
+        for(AbilityListener listener : listeners)
             listener.movePerformed(at);
     }
 }

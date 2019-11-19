@@ -15,7 +15,6 @@ import java.util.Map;
 
 public class CombatView {
 
-    private AttackButton att1_button;
     private AbilityButton ability;
     private PlayerMobController player;
 
@@ -24,11 +23,13 @@ public class CombatView {
     private MobView mobView, playerView;
     private HealthBar mobHealth, playerHealth;
 
-    public CombatView(CombatController ctrl, PlayerMobController mobController){
+    public CombatView(CombatController ctrl, PlayerMobController mobController) throws SlickException {
+
         this.ctrl = ctrl;
         Attack basicAttack = new Attack("Basic Attack", 0,0, ctrl.getSidekick().getStat(Stat.ATTACK_DMG));
-        att1_button = new AttackButton(basicAttack, 350, 700);
-        ability = new AbilityButton("Basic Attack", 0, 70);
+        ability = new AbilityButton(basicAttack, 0, 70);
+        ability.addListener(mobController);
+
         player = mobController;
         background = ResourceLoader.getImage("battleBackground");
 
@@ -62,9 +63,6 @@ public class CombatView {
     }
 
     public void init(GameContainer gc) throws SlickException {
-        att1_button.init(gc);
-        att1_button.addListener(player);
-
         ability.init(gc);
     }
 
@@ -72,7 +70,6 @@ public class CombatView {
         g.drawImage(background, 0, 0);
         g.setFont(MyFont.createFont(12));
 
-        att1_button.render(gc, g);
         ability.render(gc, g);
 
         mobHealth.render(g);

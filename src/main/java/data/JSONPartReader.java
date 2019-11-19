@@ -44,7 +44,7 @@ public class JSONPartReader implements BodyPartLoader {
                     int add = atkDmgObj.containsKey("additive") ? (int) atkDmgObj.get("additive") : 0;
 
 
-                    attack = new Attack((String) atkObj.get("name"), mult, add);
+                    //attack = new Attack((String) atkObj.get("name"), mult, add);
                 }
                 int hp = ((Long) obj.get("hp")).intValue();
 

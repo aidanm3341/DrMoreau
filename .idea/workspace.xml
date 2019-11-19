@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/stats/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/stats/Stats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Mob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/draganddrop/DragAndDropManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/draganddrop/DragAndDropManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/draganddrop/DragArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/draganddrop/DragArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/draganddrop/PartDraggable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/draganddrop/PartDraggable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Attack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/HardCodedLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/HardCodedLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragArea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/PartDraggable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,14 +155,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="64824000" />
-    </task>
-    <task id="LOCAL-00024" summary="Fixed naming bug, and added bunny to the pool of &quot;red&quot; theme">
-      <created>1554336637809</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1554336637809</updated>
+      <workItem from="1573851725766" duration="66134000" />
     </task>
     <task id="LOCAL-00025" summary="Added the intro in!!">
       <created>1554337601736</created>
@@ -494,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574110442985</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="prepped Upgrade files to be MAJORLY refactored...">
+      <created>1574113118444</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1574113118444</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="actually fixed sizing issues" />
     <MESSAGE value="added RoomBlueprint idea" />
     <MESSAGE value="added a basic RoomBlueprint loader" />
     <MESSAGE value="integrated new room blueprint method, and deleted RoomBuilder" />
@@ -539,6 +544,7 @@
     <MESSAGE value="changed stats to work with floats instead of int" />
     <MESSAGE value="Turned sidekick into regular mob. Deleted sidekickdata" />
     <MESSAGE value="separated health bar into its own class" />
-    <option name="LAST_COMMIT_MESSAGE" value="separated health bar into its own class" />
+    <MESSAGE value="prepped Upgrade files to be MAJORLY refactored..." />
+    <option name="LAST_COMMIT_MESSAGE" value="prepped Upgrade files to be MAJORLY refactored..." />
   </component>
 </project>

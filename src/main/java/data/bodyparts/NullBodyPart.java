@@ -41,7 +41,7 @@ public class NullBodyPart implements BodyPart {
         return 0;
     }
 
-    public Attack getAttack() { return new Attack("Null", 0,0); }
+    public Attack getAttack() { return new Attack("Null", 0, 0,0); }
 
     public int getLevel() { return 0; }
 

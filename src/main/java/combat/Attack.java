@@ -4,12 +4,12 @@ package combat;
 public class Attack {
 
     private String name;
-    private float multipler;
-    private float additive;
+    private float multipler, additive, base;
 
-    public Attack(String name, float multiplier, float additive)
+    public Attack(String name, float base, float multiplier, float additive)
     {
         this.name = name;
+        this.base = base;
         this.multipler = multiplier;
         this.additive = additive;
     }
@@ -18,7 +18,7 @@ public class Attack {
         return name;
     }
 
-    public float getDmg(int level) {
-        return (level * multipler) + additive;
+    public float getDmg() {
+        return (base * multipler) + additive;
     }
 }

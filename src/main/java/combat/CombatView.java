@@ -21,7 +21,7 @@ public class CombatView {
     private HealthBar mobHealth, playerHealth;
 
     public CombatView(CombatController ctrl, PlayerMobController mobController){
-        Attack basicAttack = new Attack("Basic Attack", 1, ctrl.getSidekick().getStat(Stat.ATTACK_DMG));
+        Attack basicAttack = new Attack("Basic Attack", 0,0, ctrl.getSidekick().getStat(Stat.ATTACK_DMG));
         att1_button = new AttackButton(basicAttack, 150, 700);
         player = mobController;
         this.ctrl = ctrl;

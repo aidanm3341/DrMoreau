@@ -38,10 +38,7 @@ public class Main extends StateBasedGame {
 
     // Initialize your game states (calls init method of each gamestate, and set's the state ID)
     public void initStatesList(GameContainer gc) throws SlickException {
-        try {
-            gc.setDefaultFont(MyFont.createFont(100));
-
-        } catch (IOException | FontFormatException e) { e.printStackTrace(); }
+        gc.setDefaultFont(MyFont.createFont(100));
 
 
         ResourceLoader.loadImages();

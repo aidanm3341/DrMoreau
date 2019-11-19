@@ -28,7 +28,7 @@ public class CombatView {
         this.ctrl = ctrl;
         Attack basicAttack = new Attack("Basic Attack", 0,0, ctrl.getSidekick().getStat(Stat.ATTACK_DMG));
         att1_button = new AttackButton(basicAttack, 350, 700);
-        ability = new AbilityButton(0, 70);
+        ability = new AbilityButton("Basic Attack", 0, 70);
         player = mobController;
         background = ResourceLoader.getImage("battleBackground");
 
@@ -68,11 +68,9 @@ public class CombatView {
         ability.init(gc);
     }
 
-    public void render(GameContainer gc, Graphics g) {
+    public void render(GameContainer gc, Graphics g) throws SlickException {
         g.drawImage(background, 0, 0);
-        try {
-            g.setFont(MyFont.createFont(12));
-        } catch (Exception e) { e.printStackTrace(); }
+        g.setFont(MyFont.createFont(12));
 
         att1_button.render(gc, g);
         ability.render(gc, g);

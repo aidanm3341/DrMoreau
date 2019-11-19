@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/AbilityButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Attack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/HardCodedLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/HardCodedLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Mob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/MobData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/MobData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragAndDropManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/DragArea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/draganddrop/PartDraggable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,14 +151,7 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="66134000" />
-    </task>
-    <task id="LOCAL-00025" summary="Added the intro in!!">
-      <created>1554337601736</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1554337601736</updated>
+      <workItem from="1573851725766" duration="70056000" />
     </task>
     <task id="LOCAL-00026" summary="[WARNING SLOW] added &quot;debugger&quot; which shows the attachment point &#10;for animals">
       <created>1554351288510</created>
@@ -500,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574113118444</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="mob hits back">
+      <created>1574156312689</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1574156312689</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +516,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added RoomBlueprint idea" />
     <MESSAGE value="added a basic RoomBlueprint loader" />
     <MESSAGE value="integrated new room blueprint method, and deleted RoomBuilder" />
     <MESSAGE value="changed font" />
@@ -545,6 +540,7 @@
     <MESSAGE value="Turned sidekick into regular mob. Deleted sidekickdata" />
     <MESSAGE value="separated health bar into its own class" />
     <MESSAGE value="prepped Upgrade files to be MAJORLY refactored..." />
-    <option name="LAST_COMMIT_MESSAGE" value="prepped Upgrade files to be MAJORLY refactored..." />
+    <MESSAGE value="mob hits back" />
+    <option name="LAST_COMMIT_MESSAGE" value="mob hits back" />
   </component>
 </project>

@@ -72,7 +72,7 @@ public class Main extends StateBasedGame {
             //AppGameContainer app = new AppGameContainer(new Main("Dr.Moreau v" + VERSION));
             AppGameContainer app = new AppGameContainer(new ScalableGame(new Main("Dr.Moreau v" + VERSION),
                     WIDTH, HEIGHT, true));
-            app.setDisplayMode((int) (WIDTH*0.7f), (int) (HEIGHT*0.7f), false);
+            app.setDisplayMode((int) (WIDTH*0.75f), (int) (HEIGHT*0.75f), false);
             app.setTargetFrameRate(FPS);
             app.setShowFPS(false);
             app.start();

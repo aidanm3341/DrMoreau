@@ -30,7 +30,7 @@ public class CombatController extends Screen {
         super.init(gc, sbg);
     }
 
-    public void enter(GameContainer gc, StateBasedGame sbg) {
+    public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException {
         startNewCombat(main.getActiveRoom().getMob());
         view = new CombatView(this, playerController);
         view.init(gc);

@@ -57,4 +57,8 @@ public class Mob {
     public BodyPart getPart(PartType part){
         return parts.get(part);
     }
+
+    public boolean hasPart(PartType type){
+        return parts.containsKey(type);
+    }
 }

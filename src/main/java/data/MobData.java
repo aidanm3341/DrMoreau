@@ -25,8 +25,9 @@ public class MobData {
                 Map<PartType, BodyPart> parts = new HashMap<>();
                 Stats stats = new Stats();
                 stats.put(Stat.MAX_HP, 100f);
+                stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
                 stats.put(Stat.ATTACK_DMG, 20f);
-                BodyPart body = new ConcreteBodyPart("Dr.Moreau", stats,null);
+                BodyPart body = new ConcreteBodyPart("Dr.Moreau", stats, new HashMap<>());
                 parts.put(PartType.BODY, body);
                 return new Mob("Dr.Moreau", parts);
         }

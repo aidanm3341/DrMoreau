@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/buttons/AbilitySubject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/Animation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AnimationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AnimationManagerImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/MoveLeftAnimation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/mobview/PhysicalAttributes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/AbilityButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/AbilityButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/PlayerMobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/PlayerMobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/buttons/AttackButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/AttackButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/buttons/MoveListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/AbilityListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/mobview/MobView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/mobview/MobView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/mobview/MobViewBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/mobview/MobViewBuilder.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,14 +151,8 @@
       <workItem from="1573127877201" duration="4097000" />
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
-      <workItem from="1573851725766" duration="75509000" />
-    </task>
-    <task id="LOCAL-00028" summary="Added a health bar">
-      <created>1554400280301</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1554400280301</updated>
+      <workItem from="1573851725766" duration="76489000" />
+      <workItem from="1574245781137" duration="1786000" />
     </task>
     <task id="LOCAL-00029" summary="added sidekick health">
       <created>1554822229571</created>
@@ -494,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574195141391</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="got rid of old attack button">
+      <created>1574195906581</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1574195906581</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed font" />
     <MESSAGE value="refactored body part loader" />
     <MESSAGE value="COMPLETELY reworked out mob view is computed" />
     <MESSAGE value="mobs now face correct direction" />
@@ -539,6 +541,7 @@
     <MESSAGE value="mob hits back" />
     <MESSAGE value="fixed bug with boss" />
     <MESSAGE value="Added new ability button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new ability button" />
+    <MESSAGE value="got rid of old attack button" />
+    <option name="LAST_COMMIT_MESSAGE" value="got rid of old attack button" />
   </component>
 </project>

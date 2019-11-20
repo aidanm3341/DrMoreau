@@ -2,6 +2,7 @@ package combat;
 
 import combat.mobview.MobView;
 import combat.mobview.MobViewBuilder;
+import combat.mobview.PhysicalAttributes;
 import combat.stats.Stat;
 import data.framework.BodyPart;
 import data.framework.PartType;
@@ -43,7 +44,7 @@ public class CombatView {
     private void createPlayerView(){
         BodyPart body = ctrl.getSidekick().getPart(PartType.BODY);
 
-        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 400, 380);
+        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, new PhysicalAttributes(400, 380));
         for(PartType type : PartType.values()){
             if(type != PartType.BODY)
                 mobViewBuilder.addPart(type, ctrl.getSidekick().getPart(type));
@@ -51,10 +52,18 @@ public class CombatView {
         playerView = mobViewBuilder.finalise(false);
     }
 
+    public MobView getPlayerView(){
+        return playerView;
+    }
+
+    public MobView getMobView(){
+        return mobView;
+    }
+
     private void createEnemyView(){
         BodyPart body = ctrl.getMob().getPart(PartType.BODY);
 
-        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, 1150, 400);
+        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, new PhysicalAttributes(1150, 400));
         for(PartType type : PartType.values()){
             if(type != PartType.BODY && ctrl.getMob().hasPart(type))
                 mobViewBuilder.addPart(type, ctrl.getMob().getPart(type));

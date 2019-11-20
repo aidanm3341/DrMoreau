@@ -1,5 +1,8 @@
 package combat;
 
+import combat.animation.AnimationManager;
+import combat.animation.AnimationManagerImp;
+import combat.animation.MoveLeftAnimation;
 import combat.stats.Stat;
 import data.Mob;
 import main.Main;
@@ -20,6 +23,8 @@ public class CombatController extends Screen {
     private CombatView view;
     private Mob mob;
 
+    private AnimationManager animationManager;
+
     public CombatController(MainController main) {
         this.main = main;
         playerController = new PlayerMobController();
@@ -28,6 +33,7 @@ public class CombatController extends Screen {
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
+        animationManager = new AnimationManagerImp();
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException {
@@ -43,6 +49,7 @@ public class CombatController extends Screen {
 
     public void doAttack(Attack atk) {
         mob.attack(atk.getDmg());
+        animationManager.doAnimation(new MoveLeftAnimation(view.getPlayerView().getAttributes()));
         if(checkWins()) return;
         main.getSidekick().attack(mob.getStat(Stat.ATTACK_DMG));
     }
@@ -50,6 +57,7 @@ public class CombatController extends Screen {
 
 
     public void update(GameContainer gc, StateBasedGame sbg, int delta){
+        animationManager.update();
         checkWins();
     }
 

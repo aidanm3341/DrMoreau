@@ -9,17 +9,17 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class MobViewBuilder {
-    private float x, y, overallOffsetX, overallOffsetY;
+    private float overallOffsetX, overallOffsetY;
+    private PhysicalAttributes attributes;
     private Map<BodyPart, Point> offsets;
     private Map<PartType, BodyPart> parts;
     private BodyPart body;
 
-    public MobViewBuilder(BodyPart body, int x, int y){
+    public MobViewBuilder(BodyPart body, PhysicalAttributes attributes){
         offsets = new HashMap<>();
         parts = new TreeMap<>();
 
-        this.x = x;
-        this.y = y;
+        this.attributes = attributes;
 
         overallOffsetX = 0;
         overallOffsetY = 0;
@@ -44,7 +44,7 @@ public class MobViewBuilder {
 
     public MobView finalise(boolean flipped){
         offsets.replaceAll((b, v) -> new Point(offsets.get(b).x - overallOffsetX, offsets.get(b).y - overallOffsetY));
-        MobView view = new MobView(x, y, offsets, parts);
+        MobView view = new MobView(attributes, offsets, parts);
         if(flipped)
             view.flip();
         return view;

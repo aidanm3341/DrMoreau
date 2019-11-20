@@ -10,18 +10,18 @@ import util.Point;
 import java.util.Map;
 
 public class MobView {
-    private float x, y, width;
+    private PhysicalAttributes attributes;
+    private float width;
     private Map<BodyPart, Point> offsets;
     private Map<PartType, BodyPart> parts;
 
     private boolean flipped;
 
-    MobView(float x, float y, Map<BodyPart, Point> offsets, Map<PartType, BodyPart> parts){
+    MobView(PhysicalAttributes attributes, Map<BodyPart, Point> offsets, Map<PartType, BodyPart> parts){
         this.offsets = offsets;
         this.parts = parts;
 
-        this.x = x;
-        this.y = y;
+        this.attributes = attributes;
 
         width = calcWidth();
         flipped = false;
@@ -40,7 +40,7 @@ public class MobView {
             if(offsets.get(part).y < minY)
                 minY = offsets.get(part).y;
         }
-        return new Rectangle(x + minX,y + minY, maxX - minX, maxY - minY);
+        return new Rectangle(attributes.x + minX,attributes.y + minY, maxX - minX, maxY - minY);
     }
 
     private float calcWidth(){
@@ -65,11 +65,15 @@ public class MobView {
             BodyPart bp = parts.get(type);
             if(flipped)
                 g.drawImage(bp.getImage().getFlippedCopy(true, false),
-                        x - offsets.get(bp).x - bp.getImage().getWidth() + width, y + offsets.get(bp).y);
+                        attributes.x - offsets.get(bp).x - bp.getImage().getWidth() + width, attributes.y + offsets.get(bp).y);
             else
-                g.drawImage(bp.getImage(),x + offsets.get(bp).x, y + offsets.get(bp).y);
+                g.drawImage(bp.getImage(),attributes.x + offsets.get(bp).x, attributes.y + offsets.get(bp).y);
         }
 //        g.drawOval(x, y, 5, 5);
 //        g.draw(getBoundingRectangle());
+    }
+
+    public PhysicalAttributes getAttributes(){
+        return attributes;
     }
 }

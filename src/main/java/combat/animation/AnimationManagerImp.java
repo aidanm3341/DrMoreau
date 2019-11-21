@@ -1,7 +1,5 @@
 package combat.animation;
 
-import org.newdawn.slick.GameContainer;
-
 import java.util.ArrayList;
 import java.util.List;
 

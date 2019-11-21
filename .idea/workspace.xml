@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/Animation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AnimationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AnimationManagerImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/MoveLeftAnimation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/combat/mobview/PhysicalAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/CombatTurnManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AttackAnimationToLeft.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/mobview/MobView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/mobview/MobView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/mobview/MobViewBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/mobview/MobViewBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/animation/AnimationManagerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AnimationManagerImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/animation/MoveLeftAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AttackAnimationToRight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,14 +150,9 @@
       <workItem from="1573503260535" duration="1583000" />
       <workItem from="1573850134992" duration="469000" />
       <workItem from="1573851725766" duration="76489000" />
-      <workItem from="1574245781137" duration="1786000" />
-    </task>
-    <task id="LOCAL-00029" summary="added sidekick health">
-      <created>1554822229571</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1554822229572</updated>
+      <workItem from="1574245781137" duration="4820000" />
+      <workItem from="1574290044400" duration="2000" />
+      <workItem from="1574345666698" duration="3633000" />
     </task>
     <task id="LOCAL-00030" summary="Added special treasure items">
       <created>1554828722233</created>
@@ -497,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574195906581</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="basic animation working">
+      <created>1574247854558</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1574247854559</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored body part loader" />
     <MESSAGE value="COMPLETELY reworked out mob view is computed" />
     <MESSAGE value="mobs now face correct direction" />
     <MESSAGE value="optimised imports" />
@@ -542,6 +541,7 @@
     <MESSAGE value="fixed bug with boss" />
     <MESSAGE value="Added new ability button" />
     <MESSAGE value="got rid of old attack button" />
-    <option name="LAST_COMMIT_MESSAGE" value="got rid of old attack button" />
+    <MESSAGE value="basic animation working" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic animation working" />
   </component>
 </project>

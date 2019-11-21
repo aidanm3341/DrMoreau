@@ -2,7 +2,8 @@ package combat;
 
 import combat.animation.AnimationManager;
 import combat.animation.AnimationManagerImp;
-import combat.animation.MoveLeftAnimation;
+import combat.animation.AttackAnimationToLeft;
+import combat.animation.AttackAnimationToRight;
 import combat.stats.Stat;
 import data.Mob;
 import main.Main;
@@ -24,6 +25,8 @@ public class CombatController extends Screen {
     private Mob mob;
 
     private AnimationManager animationManager;
+    //private Thread t;
+    private CombatTurnManager turns;
 
     public CombatController(MainController main) {
         this.main = main;
@@ -48,20 +51,28 @@ public class CombatController extends Screen {
     }
 
     public void doAttack(Attack atk) {
-        mob.attack(atk.getDmg());
-        animationManager.doAnimation(new MoveLeftAnimation(view.getPlayerView().getAttributes()));
-        if(checkWins()) return;
-        main.getSidekick().attack(mob.getStat(Stat.ATTACK_DMG));
+        //mob.attack(atk.getDmg());
+        turns = new CombatTurnManager(this, atk);
+        turns.attack1();
+
+        animationManager.doAnimation(new AttackAnimationToRight(view.getPlayerView().getAttributes()));
+        //if(checkWins()) return;
+        //main.getSidekick().attack(mob.getStat(Stat.ATTACK_DMG));
     }
 
 
 
-    public void update(GameContainer gc, StateBasedGame sbg, int delta){
+    public synchronized void update(GameContainer gc, StateBasedGame sbg, int delta){
         animationManager.update();
+        if(animationManager.isDone() && turns != null) {
+            turns.attack2();
+            turns = null;
+            animationManager.doAnimation(new AttackAnimationToLeft(view.getMobView().getAttributes()));
+        }
         checkWins();
     }
 
-    private boolean checkWins() {
+    public boolean checkWins() {
         if(main.getSidekick().getStat(Stat.CURRENT_HP) <= 0) {
             main.enterState(Main.GAMEOVER);
             return true;
@@ -87,5 +98,9 @@ public class CombatController extends Screen {
 
     public Mob getSidekick(){
         return main.getSidekick();
+    }
+
+    public CombatView getView(){
+        return view;
     }
 }

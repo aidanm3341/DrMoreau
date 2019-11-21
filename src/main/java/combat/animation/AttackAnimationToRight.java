@@ -2,7 +2,7 @@ package combat.animation;
 
 import combat.mobview.PhysicalAttributes;
 
-public class MoveLeftAnimation implements Animation {
+public class AttackAnimationToRight implements Animation {
 
     private PhysicalAttributes subject;
     private float rightPoint;
@@ -10,7 +10,7 @@ public class MoveLeftAnimation implements Animation {
 
     private boolean phaseOneComplete, isDone;
 
-    public MoveLeftAnimation(PhysicalAttributes subject){
+    public AttackAnimationToRight(PhysicalAttributes subject){
         this.subject = subject;
         initialX = subject.x;
         rightPoint = initialX + 50;
@@ -21,13 +21,13 @@ public class MoveLeftAnimation implements Animation {
 
     public void update() {
         if(subject.x < rightPoint && !phaseOneComplete)
-            subject.x += 1;
+            subject.x += 5;
         else if(subject.x >= rightPoint && !phaseOneComplete)
             phaseOneComplete = true;
         else if(phaseOneComplete && subject.x <= initialX)
             isDone = true;
         else if(phaseOneComplete)
-            subject.x -= 2;
+            subject.x -= 4;
     }
 
     public boolean isDone() {

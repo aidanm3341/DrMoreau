@@ -26,7 +26,7 @@ public class CombatController extends Screen {
 
     private AnimationManager animationManager;
     //private Thread t;
-    private CombatTurnManager turns;
+    private AttackManager turns;
 
     public CombatController(MainController main) {
         this.main = main;
@@ -37,6 +37,7 @@ public class CombatController extends Screen {
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
         animationManager = new AnimationManagerImp();
+        turns = new AttackManager(this, animationManager);
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException {
@@ -51,24 +52,14 @@ public class CombatController extends Screen {
     }
 
     public void doAttack(Attack atk) {
-        //mob.attack(atk.getDmg());
-        turns = new CombatTurnManager(this, atk);
-        turns.attack1();
-
+        turns.attack(atk);
         animationManager.doAnimation(new AttackAnimationToRight(view.getPlayerView().getAttributes()));
-        //if(checkWins()) return;
-        //main.getSidekick().attack(mob.getStat(Stat.ATTACK_DMG));
     }
 
 
 
     public synchronized void update(GameContainer gc, StateBasedGame sbg, int delta){
-        animationManager.update();
-        if(animationManager.isDone() && turns != null) {
-            turns.attack2();
-            turns = null;
-            animationManager.doAnimation(new AttackAnimationToLeft(view.getMobView().getAttributes()));
-        }
+        turns.update();
         checkWins();
     }
 

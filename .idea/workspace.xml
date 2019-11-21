@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/combat/CombatTurnManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AttackAnimationToLeft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/animation/AnimationManagerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AnimationManagerImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/animation/MoveLeftAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AttackAnimationToRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatTurnManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/AttackManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,18 +70,19 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau\src\main\resources\parts\beaver" />
+      <recent name="C:\Users\Windows\Desktop\DrMoreau\src\main\resources\parts\penguin" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="combat.animation" />
+      <recent name="screens" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/res" />
       <recent name="$PROJECT_DIR$/libs" />
       <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau" />
       <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau\src\main\resources" />
-      <recent name="C:\Users\Windows\Desktop\DrMoreau\src\main\resources\parts\penguin" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="screens" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Aidan\Documents\Programming\IdeaProjects\DrMoreau\src\main\resources\parts\beaver" />
       <recent name="C:\Users\Windows\Desktop\DrMoreau\src\main\resources\parts\penguin" />
     </key>
   </component>
@@ -152,14 +147,7 @@
       <workItem from="1573851725766" duration="76489000" />
       <workItem from="1574245781137" duration="4820000" />
       <workItem from="1574290044400" duration="2000" />
-      <workItem from="1574345666698" duration="3633000" />
-    </task>
-    <task id="LOCAL-00030" summary="Added special treasure items">
-      <created>1554828722233</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1554828722233</updated>
+      <workItem from="1574345666698" duration="4503000" />
     </task>
     <task id="LOCAL-00031" summary="Added boss image and mob">
       <created>1554830429412</created>
@@ -497,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574247854559</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="got animations with pause working - VERY buggy">
+      <created>1574349943240</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1574349943241</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="COMPLETELY reworked out mob view is computed" />
     <MESSAGE value="mobs now face correct direction" />
     <MESSAGE value="optimised imports" />
     <MESSAGE value="Moved MobView code into CombatView instead of Mob" />
@@ -542,6 +536,7 @@
     <MESSAGE value="Added new ability button" />
     <MESSAGE value="got rid of old attack button" />
     <MESSAGE value="basic animation working" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic animation working" />
+    <MESSAGE value="got animations with pause working - VERY buggy" />
+    <option name="LAST_COMMIT_MESSAGE" value="got animations with pause working - VERY buggy" />
   </component>
 </project>

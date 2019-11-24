@@ -1,4 +1,4 @@
-package combat.animation;
+package combat.view.animation;
 
 public interface AnimationManager {
     void doAnimation(Animation animation);

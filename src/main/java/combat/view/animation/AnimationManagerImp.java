@@ -1,4 +1,4 @@
-package combat.animation;
+package combat.view.animation;
 
 import java.util.ArrayList;
 import java.util.List;

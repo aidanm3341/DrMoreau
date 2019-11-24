@@ -1,4 +1,4 @@
-package combat;
+package combat.view;
 
 import combat.stats.Stat;
 import data.Mob;

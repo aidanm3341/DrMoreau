@@ -1,6 +1,6 @@
-package combat.animation;
+package combat.view.animation;
 
-import combat.mobview.PhysicalAttributes;
+import combat.view.mobview.PhysicalAttributes;
 
 public class AttackAnimationToRight implements Animation {
 

@@ -1,7 +1,8 @@
 package combat;
 
-import combat.animation.AnimationManager;
-import combat.animation.AnimationManagerImp;
+import combat.view.CombatView;
+import combat.view.animation.AnimationManager;
+import combat.view.animation.AnimationManagerImp;
 import combat.stats.Stat;
 import data.Mob;
 import main.Main;
@@ -38,7 +39,7 @@ public class CombatController extends Screen {
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException {
         startNewCombat(main.getActiveRoom().getMob());
-        view = new CombatView(this, playerController);
+        view = new CombatView(this);
         view.init(gc);
         view.addListener((PlayerMobController) playerController);
     }

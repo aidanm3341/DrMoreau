@@ -1,4 +1,4 @@
-package combat.mobview;
+package combat.view.mobview;
 
 import data.framework.BodyPart;
 import data.framework.PartType;

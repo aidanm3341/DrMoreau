@@ -1,6 +1,6 @@
 package combat;
 
-import combat.animation.AttackAnimationToLeft;
+import combat.view.animation.AttackAnimationToLeft;
 import combat.stats.Stat;
 import data.Mob;
 

@@ -1,9 +1,13 @@
-package combat;
+package combat.view;
 
-import combat.animation.AttackAnimationToRight;
-import combat.mobview.MobView;
-import combat.mobview.MobViewBuilder;
-import combat.mobview.PhysicalAttributes;
+import combat.Attack;
+import combat.CombatController;
+import combat.view.AbilityButton;
+import combat.view.HealthBar;
+import combat.view.animation.AttackAnimationToRight;
+import combat.view.mobview.MobView;
+import combat.view.mobview.MobViewBuilder;
+import combat.view.mobview.PhysicalAttributes;
 import combat.stats.Stat;
 import data.framework.BodyPart;
 import data.framework.PartType;
@@ -21,7 +25,7 @@ public class CombatView {
     private MobView mobView, playerView;
     private HealthBar mobHealth, playerHealth;
 
-    public CombatView(CombatController ctrl, MobController mobController) throws SlickException {
+    public CombatView(CombatController ctrl) throws SlickException {
 
         this.ctrl = ctrl;
 

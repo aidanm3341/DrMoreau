@@ -1,6 +1,6 @@
 package combat;
 
-import combat.animation.AnimationManager;
+import combat.view.animation.AnimationManager;
 
 public class AttackManager {
 
@@ -14,9 +14,10 @@ public class AttackManager {
                          MobController attacker, MobController defender){
         this.controller = controller;
         this.animationManager = animationManager;
-        isAttacking = false;
         this.attacker = attacker;
         this.defender = defender;
+
+        isAttacking = false;
     }
 
     public void attack(Attack atk){

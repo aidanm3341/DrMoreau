@@ -1,5 +1,6 @@
-package combat;
+package combat.view;
 
+import combat.Attack;
 import org.newdawn.slick.*;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;

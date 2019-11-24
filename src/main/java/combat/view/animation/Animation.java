@@ -1,6 +1,4 @@
-package combat.animation;
-
-import combat.mobview.PhysicalAttributes;
+package combat.view.animation;
 
 public interface Animation extends Cloneable{
     void update();

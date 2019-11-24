@@ -1,7 +1,7 @@
 package combat;
 
 
-import combat.animation.Animation;
+import combat.view.animation.Animation;
 
 public class Attack {
 

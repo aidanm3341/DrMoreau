@@ -1,4 +1,4 @@
-package combat.mobview;
+package combat.view.mobview;
 
 public class PhysicalAttributes {
     public float x, y;

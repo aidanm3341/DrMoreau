@@ -1,7 +1,7 @@
 package navigation;
 
-import data.MobData;
 import data.BasicRoomBlueprintLoader;
+import data.MobData;
 import data.framework.RoomBlueprintLoader;
 import main.Main;
 import main.MainController;

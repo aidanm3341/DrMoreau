@@ -1,9 +1,9 @@
 package combat;
 
+import combat.stats.Stat;
 import combat.view.CombatView;
 import combat.view.animation.AnimationManager;
 import combat.view.animation.AnimationManagerImp;
-import combat.stats.Stat;
 import data.Mob;
 import main.Main;
 import main.MainController;

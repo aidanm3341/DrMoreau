@@ -4,7 +4,6 @@ import data.HardCodedLoader;
 import data.framework.BodyPart;
 import data.framework.BodyPartLoader;
 import org.newdawn.slick.SlickException;
-import data.JSONPartReader;
 
 import java.util.Map;
 

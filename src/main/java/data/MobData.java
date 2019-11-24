@@ -2,11 +2,11 @@ package data;
 
 import combat.stats.Stat;
 import combat.stats.Stats;
+import data.bodyparts.ConcreteBodyPart;
+import data.bodyparts.PartFactory;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
-import data.bodyparts.ConcreteBodyPart;
-import data.bodyparts.PartFactory;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,7 +1,7 @@
 package combat;
 
-import combat.view.animation.AttackAnimationToLeft;
 import combat.stats.Stat;
+import combat.view.animation.AttackAnimationToLeft;
 import data.Mob;
 
 public class EnemyController implements MobController {

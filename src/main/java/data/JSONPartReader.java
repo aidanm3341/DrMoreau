@@ -9,7 +9,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.newdawn.slick.SlickException;
-import data.bodyparts.ConcreteBodyPart;
 import util.Point;
 
 import java.io.FileReader;

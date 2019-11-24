@@ -1,7 +1,6 @@
 package data.bodyparts;
 
 import combat.Attack;
-import combat.stats.Stat;
 import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
@@ -9,7 +8,6 @@ import org.newdawn.slick.Image;
 import util.Point;
 import util.ResourceLoader;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class ConcreteBodyPart implements BodyPart {

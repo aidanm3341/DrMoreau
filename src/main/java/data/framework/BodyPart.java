@@ -1,7 +1,6 @@
 package data.framework;
 
 import combat.Attack;
-import combat.stats.Stat;
 import combat.stats.Stats;
 import org.newdawn.slick.Image;
 import util.Point;

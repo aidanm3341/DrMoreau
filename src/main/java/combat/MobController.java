@@ -1,6 +1,5 @@
 package combat;
 
-import combat.CombatController;
 import data.Mob;
 
 public interface MobController {

@@ -10,9 +10,6 @@ import screens.MainMenu;
 import util.MyFont;
 import util.ResourceLoader;
 
-import java.awt.*;
-import java.io.IOException;
-
 public class Main extends StateBasedGame {
 
     // Game state identifiers

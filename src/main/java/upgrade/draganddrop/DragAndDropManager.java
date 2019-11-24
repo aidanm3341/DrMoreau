@@ -1,8 +1,8 @@
 package upgrade.draganddrop;
 
+import data.bodyparts.NullBodyPart;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.util.InputAdapter;
-import data.bodyparts.NullBodyPart;
 
 import java.util.ArrayList;
 

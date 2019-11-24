@@ -1,7 +1,6 @@
 package data.bodyparts;
 
 import combat.Attack;
-import combat.stats.Stat;
 import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;

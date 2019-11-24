@@ -15,7 +15,6 @@ import util.buttons.AbilityListener;
 public class CombatView {
 
     private AbilityButton ability;
-    private MobController controller;
 
     private CombatController ctrl;
     private Image background;
@@ -33,9 +32,7 @@ public class CombatView {
                 ctrl.getSidekick().getStat(Stat.ATTACK_DMG),
                 new AttackAnimationToRight(playerView.getAttributes()));
         ability = new AbilityButton(basicAttack, 0, 70);
-        //ability.addListener(mobController);
 
-        controller = mobController;
         background = ResourceLoader.getImage("battleBackground");
 
 

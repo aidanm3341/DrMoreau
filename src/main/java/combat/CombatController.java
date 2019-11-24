@@ -21,7 +21,6 @@ public class CombatController extends Screen {
     private MobController playerController;
     private CombatView view;
     private Mob mob;
-    private MobController enemyController;
 
     private AnimationManager animationManager;
     private AttackManager turns;
@@ -46,7 +45,7 @@ public class CombatController extends Screen {
 
     public void startNewCombat(Mob mob) {
         this.mob = mob;
-        this.enemyController = new EnemyController(mob);
+        MobController enemyController = new EnemyController(mob);
 
         turns = new AttackManager(this, animationManager, playerController, enemyController);
     }

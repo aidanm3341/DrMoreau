@@ -2,7 +2,8 @@ package combat.animation;
 
 import combat.mobview.PhysicalAttributes;
 
-public interface Animation {
+public interface Animation extends Cloneable{
     void update();
     boolean isDone();
+    Animation clone();
 }

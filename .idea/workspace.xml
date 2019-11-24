@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/EnemyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Attack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/AttackManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/AttackManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatTurnManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/AttackManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/PlayerMobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/PlayerMobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/animation/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/animation/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/animation/AttackAnimationToLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AttackAnimationToLeft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/animation/AttackAnimationToRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/animation/AttackAnimationToRight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/framework/MobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/MobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatView.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,14 +159,8 @@
       <workItem from="1573851725766" duration="76489000" />
       <workItem from="1574245781137" duration="4820000" />
       <workItem from="1574290044400" duration="2000" />
-      <workItem from="1574345666698" duration="4503000" />
-    </task>
-    <task id="LOCAL-00031" summary="Added boss image and mob">
-      <created>1554830429412</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1554830429412</updated>
+      <workItem from="1574345666698" duration="9149000" />
+      <workItem from="1574630925863" duration="3466000" />
     </task>
     <task id="LOCAL-00032" summary="trying to resolve conflicts">
       <created>1554830721790</created>
@@ -492,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574349943241</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="refactored attack manager slightly">
+      <created>1574350874783</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1574350874783</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +525,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mobs now face correct direction" />
     <MESSAGE value="optimised imports" />
     <MESSAGE value="Moved MobView code into CombatView instead of Mob" />
     <MESSAGE value="changed the way the combat buttons are controlled" />
@@ -537,6 +549,7 @@
     <MESSAGE value="got rid of old attack button" />
     <MESSAGE value="basic animation working" />
     <MESSAGE value="got animations with pause working - VERY buggy" />
-    <option name="LAST_COMMIT_MESSAGE" value="got animations with pause working - VERY buggy" />
+    <MESSAGE value="refactored attack manager slightly" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored attack manager slightly" />
   </component>
 </project>

@@ -33,4 +33,8 @@ public class AttackAnimationToLeft implements Animation {
     public boolean isDone() {
         return isDone;
     }
+
+    public Animation clone(){
+        return new AttackAnimationToLeft(subject);
+    }
 }

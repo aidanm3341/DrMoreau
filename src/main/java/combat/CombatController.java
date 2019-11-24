@@ -2,8 +2,6 @@ package combat;
 
 import combat.animation.AnimationManager;
 import combat.animation.AnimationManagerImp;
-import combat.animation.AttackAnimationToLeft;
-import combat.animation.AttackAnimationToRight;
 import combat.stats.Stat;
 import data.Mob;
 import main.Main;
@@ -20,63 +18,55 @@ public class CombatController extends Screen {
     }
 
     private MainController main;
-    private PlayerMobController playerController;
+    private MobController playerController;
     private CombatView view;
     private Mob mob;
+    private MobController enemyController;
 
     private AnimationManager animationManager;
-    //private Thread t;
     private AttackManager turns;
 
     public CombatController(MainController main) {
         this.main = main;
-        playerController = new PlayerMobController();
+        playerController = new PlayerMobController(main.getSidekick());
         playerController.enter(this);
     }
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
         animationManager = new AnimationManagerImp();
-        turns = new AttackManager(this, animationManager);
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException {
         startNewCombat(main.getActiveRoom().getMob());
         view = new CombatView(this, playerController);
         view.init(gc);
+        view.addListener((PlayerMobController) playerController);
     }
 
-    public void startNewCombat(Mob mob)
-    {
+    public void startNewCombat(Mob mob) {
         this.mob = mob;
+        this.enemyController = new EnemyController(mob);
+
+        turns = new AttackManager(this, animationManager, playerController, enemyController);
     }
 
     public void doAttack(Attack atk) {
         turns.attack(atk);
-        animationManager.doAnimation(new AttackAnimationToRight(view.getPlayerView().getAttributes()));
     }
 
-
-
-    public synchronized void update(GameContainer gc, StateBasedGame sbg, int delta){
+    public void update(GameContainer gc, StateBasedGame sbg, int delta){
         turns.update();
         checkWins();
     }
 
-    public boolean checkWins() {
-        if(main.getSidekick().getStat(Stat.CURRENT_HP) <= 0) {
+    public void checkWins() {
+        if(main.getSidekick().getStat(Stat.CURRENT_HP) <= 0)
             main.enterState(Main.GAMEOVER);
-            return true;
-        }
-        else if(mob.getName().equals("Dr.Moreau") && mob.getStat(Stat.CURRENT_HP) <= 0) {
+        else if(mob.getName().equals("Dr.Moreau") && mob.getStat(Stat.CURRENT_HP) <= 0)
             main.enterState(Main.VICTORY);
-            return true;
-        }
-        else if(mob.getStat(Stat.CURRENT_HP) <= 0) {
+        else if(mob.getStat(Stat.CURRENT_HP) <= 0)
             main.enterState(Main.UPGRADE);
-            return true;
-        }
-        return false;
     }
 
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {

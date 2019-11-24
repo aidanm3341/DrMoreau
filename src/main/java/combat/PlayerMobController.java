@@ -1,11 +1,16 @@
 package combat;
 
-import data.framework.MobController;
+import data.Mob;
 import util.buttons.AbilityListener;
 
 public class PlayerMobController implements MobController, AbilityListener {
 
     private CombatController ctrl;
+    private Mob mob;
+
+    public PlayerMobController(Mob mob){
+        this.mob = mob;
+    }
 
     public void enter(CombatController ctrl) {
         this.ctrl = ctrl;
@@ -13,5 +18,9 @@ public class PlayerMobController implements MobController, AbilityListener {
 
     public void movePerformed(Attack at) {
         ctrl.doAttack(at);
+    }
+
+    public Mob getMob(){
+        return mob;
     }
 }

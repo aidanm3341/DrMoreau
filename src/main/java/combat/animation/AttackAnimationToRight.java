@@ -33,4 +33,8 @@ public class AttackAnimationToRight implements Animation {
     public boolean isDone() {
         return isDone;
     }
+
+    public Animation clone(){
+        return new AttackAnimationToRight(subject);
+    }
 }

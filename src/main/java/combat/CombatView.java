@@ -1,5 +1,6 @@
 package combat;
 
+import combat.animation.AttackAnimationToRight;
 import combat.mobview.MobView;
 import combat.mobview.MobViewBuilder;
 import combat.mobview.PhysicalAttributes;
@@ -9,37 +10,44 @@ import data.framework.PartType;
 import org.newdawn.slick.*;
 import util.MyFont;
 import util.ResourceLoader;
-import util.buttons.AttackButton;
-
-import java.util.HashMap;
-import java.util.Map;
+import util.buttons.AbilityListener;
 
 public class CombatView {
 
     private AbilityButton ability;
-    private PlayerMobController player;
+    private MobController controller;
 
     private CombatController ctrl;
     private Image background;
     private MobView mobView, playerView;
     private HealthBar mobHealth, playerHealth;
 
-    public CombatView(CombatController ctrl, PlayerMobController mobController) throws SlickException {
+    public CombatView(CombatController ctrl, MobController mobController) throws SlickException {
 
         this.ctrl = ctrl;
-        Attack basicAttack = new Attack("Basic Attack", 0,0, ctrl.getSidekick().getStat(Stat.ATTACK_DMG));
-        ability = new AbilityButton(basicAttack, 0, 70);
-        ability.addListener(mobController);
-
-        player = mobController;
-        background = ResourceLoader.getImage("battleBackground");
 
         createEnemyView();
         createPlayerView();
 
+        Attack basicAttack = new Attack("Basic Attack", 0,0,
+                ctrl.getSidekick().getStat(Stat.ATTACK_DMG),
+                new AttackAnimationToRight(playerView.getAttributes()));
+        ability = new AbilityButton(basicAttack, 0, 70);
+        //ability.addListener(mobController);
+
+        controller = mobController;
+        background = ResourceLoader.getImage("battleBackground");
+
+
+
         mobHealth = new HealthBar(ctrl.getMob(), 1100, 55);
         playerHealth = new HealthBar(ctrl.getSidekick(), 400, 55);
     }
+
+    public void addListener(AbilityListener listener){
+        ability.addListener(listener);
+    }
+
 
     private void createPlayerView(){
         BodyPart body = ctrl.getSidekick().getPart(PartType.BODY);

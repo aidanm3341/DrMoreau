@@ -1,43 +1,43 @@
 package combat;
 
 import combat.animation.AnimationManager;
-import combat.animation.AttackAnimationToLeft;
-import combat.animation.AttackAnimationToRight;
-import combat.stats.Stat;
 
 public class AttackManager {
 
     private CombatController controller;
     private AnimationManager animationManager;
+    private MobController attacker, defender;
 
     private boolean isAttacking;
 
-    public AttackManager(CombatController controller, AnimationManager animationManager){
+    public AttackManager(CombatController controller, AnimationManager animationManager,
+                         MobController attacker, MobController defender){
         this.controller = controller;
         this.animationManager = animationManager;
         isAttacking = false;
+        this.attacker = attacker;
+        this.defender = defender;
     }
 
     public void attack(Attack atk){
-        attack1(atk);
+        defender.getMob().attack(atk.getDmg());
+        animationManager.doAnimation(atk.getAnimation());
+
         isAttacking = true;
-        animationManager.doAnimation(new AttackAnimationToRight(controller.getView().getPlayerView().getAttributes()));
     }
 
     public void update(){
         animationManager.update();
         if(animationManager.isDone() && isAttacking){
-            attack2();
-            animationManager.doAnimation(new AttackAnimationToLeft(controller.getView().getMobView().getAttributes()));
             isAttacking = false;
+            switchAttacker();
         }
     }
 
-    private void attack1(Attack atk){
-        controller.getMob().attack(atk.getDmg());
-    }
-
-    private void attack2(){
-        controller.getSidekick().attack(controller.getMob().getStat(Stat.ATTACK_DMG));
+    private void switchAttacker(){
+        MobController temp = defender;
+        defender = attacker;
+        attacker = temp;
+        attacker.enter(controller);
     }
 }

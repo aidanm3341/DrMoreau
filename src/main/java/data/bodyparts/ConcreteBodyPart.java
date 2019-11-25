@@ -32,17 +32,12 @@ public class ConcreteBodyPart implements BodyPart {
         return stats;
     }
 
-
-    public Map<PartType, Point> getAttachPoints() {
-        return attachPoints;
+    public Point getAttachPointFor(PartType type){
+        return attachPoints.get(type);
     }
 
     public Image getImage() {
         return image;
-    }
-
-    public void setImage(Image image){
-        this.image = image;
     }
 
     public float getWidth(){

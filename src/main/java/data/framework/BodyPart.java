@@ -10,9 +10,8 @@ import java.util.Map;
 public interface BodyPart extends Cloneable {
     String getName();
     Stats getStats();
-    Map<PartType, Point> getAttachPoints();
+    Point getAttachPointFor(PartType type);
     Image getImage();
-    void setImage(Image image);
     float getWidth();
     float getHeight();
     Attack getAttack();

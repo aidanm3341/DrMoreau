@@ -19,7 +19,7 @@ import util.buttons.AbilityListener;
 
 public class CombatView {
 
-    private AbilityButton ability;
+    private AbilityButton abilityButton;
 
     private CombatController ctrl;
     private Image background;
@@ -36,7 +36,7 @@ public class CombatView {
         Attack basicAttack = new Attack("Basic Attack", 0,0,
                 ctrl.getSidekick().getStat(Stat.ATTACK_DMG),
                 new AttackAnimationToRight(playerView.getAttributes()));
-        ability = new AbilityButton(basicAttack, 0, 70);
+        abilityButton = new AbilityButton(basicAttack, 0, 70);
 
         background = ResourceLoader.getImage("battleBackground");
 
@@ -47,7 +47,7 @@ public class CombatView {
     }
 
     public void addListener(AbilityListener listener){
-        ability.addListener(listener);
+        abilityButton.addListener(listener);
     }
 
 
@@ -82,14 +82,14 @@ public class CombatView {
     }
 
     public void init(GameContainer gc) throws SlickException {
-        ability.init(gc);
+        abilityButton.init(gc);
     }
 
     public void render(GameContainer gc, Graphics g) throws SlickException {
         g.drawImage(background, 0, 0);
         g.setFont(MyFont.createFont(12));
 
-        ability.render(gc, g);
+        abilityButton.render(gc, g);
 
         mobHealth.render(g);
         playerHealth.render(g);

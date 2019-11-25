@@ -32,8 +32,8 @@ public class MobViewBuilder {
     public void addPart(PartType type, BodyPart part){
         parts.put(type, part);
 
-        float newX = body.getAttachPoints().get(type).x - parts.get(type).getAttachPoints().get(PartType.BODY).x;
-        float newY = body.getAttachPoints().get(type).y - parts.get(type).getAttachPoints().get(PartType.BODY).y;
+        float newX = body.getAttachPointFor(type).x - parts.get(type).getAttachPointFor(PartType.BODY).x;
+        float newY = body.getAttachPointFor(type).y - parts.get(type).getAttachPointFor(PartType.BODY).y;
 
         Point newPoint = new Point(newX, newY);
         offsets.put(parts.get(type), newPoint);

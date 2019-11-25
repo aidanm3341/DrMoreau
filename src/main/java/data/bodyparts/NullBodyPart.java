@@ -22,15 +22,14 @@ public class NullBodyPart implements BodyPart {
         return new Stats();
     }
 
-    public Map<PartType, Point> getAttachPoints() {
-        return new HashMap<>();
+    @Override
+    public Point getAttachPointFor(PartType type) {
+        return new Point(0, 0);
     }
 
     public Image getImage() {
         return ResourceLoader.getImage("null");
     }
-
-    public void setImage(Image image){}
 
     public float getWidth() {
         return 0;
@@ -41,8 +40,6 @@ public class NullBodyPart implements BodyPart {
     }
 
     public Attack getAttack() { return new Attack("Null", 0, 0,0, null); }
-
-    public int getLevel() { return 0; }
 
     public NullBodyPart clone(){
         return new NullBodyPart();

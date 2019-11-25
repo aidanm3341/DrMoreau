@@ -2,6 +2,7 @@ package combat.view;
 
 import combat.abilities.Ability;
 import combat.CombatController;
+import combat.abilities.effects.ArmorEffect;
 import combat.abilities.effects.DamageEffect;
 import combat.abilities.effects.Effect;
 import combat.stats.Stat;
@@ -24,7 +25,7 @@ import java.util.List;
 
 public class CombatView {
 
-    private AbilityButton abilityButton;
+    private AbilityButton basicAttackButton, basicDefendButton;
 
     private CombatController ctrl;
     private Image background;
@@ -41,7 +42,13 @@ public class CombatView {
         List<Effect> effects = new ArrayList<>();
         effects.add(new DamageEffect(ctrl.getSidekick().getStat(Stat.ATTACK_DMG)));
         Ability basicAttack = new Ability("Basic Attack", effects, new AttackAnimationToRight(playerView.getAttributes()));
-        abilityButton = new AbilityButton(basicAttack, 0, 70);
+        basicAttackButton = new AbilityButton(basicAttack, 0, 70);
+
+
+        effects = new ArrayList<>();
+        effects.add(new ArmorEffect(5, 0));
+        Ability basicDefend = new Ability("Basic Defend", effects, new AttackAnimationToRight(playerView.getAttributes()));
+        basicDefendButton = new AbilityButton(basicDefend, 0, 160);
 
         background = ResourceLoader.getImage("battleBackground");
 
@@ -52,7 +59,8 @@ public class CombatView {
     }
 
     public void addListener(AbilityListener listener){
-        abilityButton.addListener(listener);
+        basicAttackButton.addListener(listener);
+        basicDefendButton.addListener(listener);
     }
 
 
@@ -83,14 +91,16 @@ public class CombatView {
     }
 
     public void init(GameContainer gc) throws SlickException {
-        abilityButton.init(gc);
+        basicAttackButton.init(gc);
+        basicDefendButton.init(gc);
     }
 
     public void render(GameContainer gc, Graphics g) throws SlickException {
         g.drawImage(background, 0, 0);
         g.setFont(MyFont.createFont(12));
 
-        abilityButton.render(gc, g);
+        basicAttackButton.render(gc, g);
+        basicDefendButton.render(gc, g);
 
         mobHealth.render(g);
         playerHealth.render(g);

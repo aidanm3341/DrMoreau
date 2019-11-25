@@ -21,7 +21,7 @@ public class EnemyController implements MobController {
     public void enter(CombatController ctrl) {
         List<Effect> effects = new ArrayList<>();
         effects.add(new DamageEffect(ctrl.getMob().getStat(Stat.ATTACK_DMG)));
-        ctrl.doAttack(new Ability("Basic Attack", effects,
+        ctrl.executeAbility(new Ability("Basic Attack", effects,
                 new AttackAnimationToLeft(ctrl.getView().getMobView().getAttributes())));
     }
 

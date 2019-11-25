@@ -20,14 +20,20 @@ public class HealthBar {
         // name display
         g.setColor(Color.white);
         g.drawString(subject.getName(), x, y);
-        // health bar
+        // max health
         g.setColor(Color.red);
         g.fillRect(x, y+45, 400, 30);
+        // current health
+        float currentHealthWidth = ((subject.getStat(Stat.CURRENT_HP) + subject.getStat(Stat.ARMOR))/(subject.getStat(Stat.MAX_HP) + subject.getStat(Stat.ARMOR)))*400;
         g.setColor(Color.green);
         g.fillRect(x, y+45,
-                (subject.getStat(Stat.CURRENT_HP)/subject.getStat(Stat.MAX_HP))*400, 30);
-        g.setColor(Color.white);
+               currentHealthWidth, 30);
+        // armor
+        float armorWidth = (subject.getStat(Stat.ARMOR)/(subject.getStat(Stat.MAX_HP) + subject.getStat(Stat.ARMOR)))*400;
+        g.setColor(new Color(51, 204, 255));
+        g.fillRect(x + currentHealthWidth, y+45, armorWidth, 30);
         // hp text
-        g.drawString(" "+subject.getStat(Stat.CURRENT_HP) + " : " + subject.getStat(Stat.MAX_HP), x+50, y+90);
+        g.setColor(Color.white);
+        g.drawString(" "+ (subject.getStat(Stat.CURRENT_HP) + subject.getStat(Stat.ARMOR)) + " : " + subject.getStat(Stat.MAX_HP), x+50, y+90);
     }
 }

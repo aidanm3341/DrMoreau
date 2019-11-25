@@ -28,6 +28,6 @@ public class Ability {
     public void execute(AnimationManager animationManager, Mob attacker, Mob defender){
         animationManager.doAnimation(animation.clone());
         for(Effect effect : effects)
-            effect.execute(attacker, defender);
+            effect.attach(attacker, defender);
     }
 }

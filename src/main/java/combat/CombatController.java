@@ -50,10 +50,11 @@ public class CombatController extends Screen {
         MobController enemyController = new EnemyController(mob);
 
         turns = new TurnManager(this, animationManager, playerController, enemyController);
+        getSidekick().clearEffects();
     }
 
-    public void doAttack(Ability atk) {
-        turns.attack(atk);
+    public void executeAbility(Ability atk) {
+        turns.executeAbility(atk);
     }
 
     public void update(GameContainer gc, StateBasedGame sbg, int delta){

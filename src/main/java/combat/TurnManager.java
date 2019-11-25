@@ -21,7 +21,7 @@ public class TurnManager {
         isAttacking = false;
     }
 
-    public void attack(Ability ability){
+    public void executeAbility(Ability ability){
         ability.execute(animationManager, attacker.getMob(), defender.getMob());
 
         isAttacking = true;
@@ -40,5 +40,6 @@ public class TurnManager {
         defender = attacker;
         attacker = temp;
         attacker.enter(controller);
+        attacker.getMob().updateEffects();
     }
 }

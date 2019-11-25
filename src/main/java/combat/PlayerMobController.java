@@ -18,7 +18,7 @@ public class PlayerMobController implements MobController, AbilityListener {
     }
 
     public void movePerformed(Ability at) {
-        ctrl.doAttack(at);
+        ctrl.executeAbility(at);
     }
 
     public Mob getMob(){

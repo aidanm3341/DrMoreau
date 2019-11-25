@@ -1,5 +1,6 @@
 package combat;
 
+import combat.abilities.Ability;
 import combat.view.animation.AnimationManager;
 
 public class TurnManager {
@@ -20,9 +21,8 @@ public class TurnManager {
         isAttacking = false;
     }
 
-    public void attack(Ability atk){
-        defender.getMob().attack(atk.getDmg());
-        animationManager.doAnimation(atk.getAnimation());
+    public void attack(Ability ability){
+        ability.execute(animationManager, attacker.getMob(), defender.getMob());
 
         isAttacking = true;
     }

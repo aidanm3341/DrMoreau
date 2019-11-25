@@ -1,6 +1,6 @@
 package util.buttons;
 
-import combat.Ability;
+import combat.abilities.Ability;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;

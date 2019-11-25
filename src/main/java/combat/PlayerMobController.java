@@ -1,5 +1,6 @@
 package combat;
 
+import combat.abilities.Ability;
 import data.Mob;
 import util.buttons.AbilityListener;
 

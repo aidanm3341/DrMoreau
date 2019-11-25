@@ -1,6 +1,6 @@
 package data;
 
-import combat.Ability;
+import combat.abilities.Ability;
 import data.framework.BodyPart;
 import data.framework.BodyPartLoader;
 import data.framework.PartType;

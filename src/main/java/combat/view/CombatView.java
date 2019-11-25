@@ -1,7 +1,9 @@
 package combat.view;
 
-import combat.Ability;
+import combat.abilities.Ability;
 import combat.CombatController;
+import combat.abilities.effects.DamageEffect;
+import combat.abilities.effects.Effect;
 import combat.stats.Stat;
 import combat.view.animation.AttackAnimationToRight;
 import combat.view.mobview.MobView;
@@ -16,6 +18,9 @@ import org.newdawn.slick.SlickException;
 import util.MyFont;
 import util.ResourceLoader;
 import util.buttons.AbilityListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CombatView {
 
@@ -33,9 +38,9 @@ public class CombatView {
         createEnemyView();
         createPlayerView();
 
-        Ability basicAttack = new Ability("Basic Attack", 0,0,
-                ctrl.getSidekick().getStat(Stat.ATTACK_DMG),
-                new AttackAnimationToRight(playerView.getAttributes()));
+        List<Effect> effects = new ArrayList<>();
+        effects.add(new DamageEffect(ctrl.getSidekick().getStat(Stat.ATTACK_DMG)));
+        Ability basicAttack = new Ability("Basic Attack", effects, new AttackAnimationToRight(playerView.getAttributes()));
         abilityButton = new AbilityButton(basicAttack, 0, 70);
 
         background = ResourceLoader.getImage("battleBackground");

@@ -2,20 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/DamageEffect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/Effect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Ability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/AttackManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/TurnManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Ability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/abilities/Ability.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/EnemyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/EnemyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/PlayerMobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/PlayerMobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/TurnManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/TurnManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/AbilityButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/AbilityButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/CombatView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Mob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/ConcreteBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/ConcreteBodyPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/buttons/AbilityListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/AbilityListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/buttons/AttackButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/AttackButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +61,8 @@
       <list>
         <option value="Enum" />
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -160,14 +166,7 @@
       <workItem from="1574245781137" duration="4820000" />
       <workItem from="1574290044400" duration="2000" />
       <workItem from="1574345666698" duration="9149000" />
-      <workItem from="1574630925863" duration="10542000" />
-    </task>
-    <task id="LOCAL-00037" summary="Added a victory screen, you can now WIN!">
-      <created>1554837276007</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1554837276007</updated>
+      <workItem from="1574630925863" duration="13068000" />
     </task>
     <task id="LOCAL-00038" summary="Attacks are now based off the body parts">
       <created>1554838355847</created>
@@ -505,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574682245966</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="changed some names about">
+      <created>1574694862632</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1574694862632</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +531,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed mobview position and easily flippable" />
     <MESSAGE value="updated sidekick to be more like Mob" />
     <MESSAGE value="Deleted obsolete classes" />
     <MESSAGE value="Added framework for new Stats" />
@@ -550,6 +555,7 @@
     <MESSAGE value="more refactoring of package layout and small unnecessary things" />
     <MESSAGE value="optimised imports" />
     <MESSAGE value="encapsulated collection in BodyParts for attach points" />
-    <option name="LAST_COMMIT_MESSAGE" value="encapsulated collection in BodyParts for attach points" />
+    <MESSAGE value="changed some names about" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed some names about" />
   </component>
 </project>

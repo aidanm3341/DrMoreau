@@ -32,8 +32,6 @@ public class MainController {
     private Victory victory;
     private StateBasedGame sbg;
 
-    private int level;
-
     public MainController(GameContainer gc, StateBasedGame sbg) throws SlickException {
         this.sbg = sbg;
     }
@@ -67,12 +65,6 @@ public class MainController {
         sbg.addState(gameOver);
         sbg.addState(victory);
         sbg.addState(new IntroTxt(this));
-
-        level = 1;
-    }
-
-    public void attack(int dmg){
-        sidekick.attack(dmg);
     }
 
     public Mob getSidekick(){
@@ -80,7 +72,7 @@ public class MainController {
         return sidekick;
     }
 
-    public void updateSidekick() throws SlickException
+    public void updateSidekick()
     {
         sidekick.putPart(PartType.BODY, upgrade.getBody());
         sidekick.putPart(PartType.RIGHT_ARM, upgrade.getArmRight());
@@ -93,7 +85,6 @@ public class MainController {
 
     public void reset() throws SlickException
     {
-        level = 1;
         loadDefaultSidekick();
     }
 
@@ -109,15 +100,8 @@ public class MainController {
         sidekick = new Mob("Sidekick", parts);
     }
 
-    public void enterState(int ID)
-    {
-        if(ID == Main.FIGHT)
-            level++;
+    public void enterState(int ID) {
         sbg.enterState(ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
-    }
-
-    public int getLevel() {
-        return level;
     }
 
     public Room getActiveRoom(){

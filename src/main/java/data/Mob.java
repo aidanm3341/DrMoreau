@@ -27,15 +27,6 @@ public class Mob {
 
     public String getName(){return name;}
 
-    public void attack(float dmgDealt){
-        float currentHp = stats.get(Stat.CURRENT_HP);
-        float maxHp = stats.get(Stat.MAX_HP);
-
-        if(currentHp - dmgDealt < 0)
-            stats.put(Stat.CURRENT_HP, 0f);
-        else stats.put(Stat.CURRENT_HP, Math.min(currentHp - dmgDealt, maxHp));
-    }
-
     public void putPart(PartType type, BodyPart part){
         parts.put(type, part);
         updateMaxHp();
@@ -52,6 +43,10 @@ public class Mob {
 
     public float getStat(Stat stat){
         return stats.get(stat);
+    }
+
+    public void setStat(Stat stat, float value){
+        stats.put(stat, value);
     }
 
     public BodyPart getPart(PartType part){

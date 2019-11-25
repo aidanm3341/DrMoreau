@@ -1,8 +1,14 @@
 package combat;
 
+import combat.abilities.Ability;
+import combat.abilities.effects.DamageEffect;
+import combat.abilities.effects.Effect;
 import combat.stats.Stat;
 import combat.view.animation.AttackAnimationToLeft;
 import data.Mob;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EnemyController implements MobController {
 
@@ -13,7 +19,9 @@ public class EnemyController implements MobController {
     }
 
     public void enter(CombatController ctrl) {
-        ctrl.doAttack(new Ability("Basic Attack", 1, 1, ctrl.getMob().getStat(Stat.ATTACK_DMG),
+        List<Effect> effects = new ArrayList<>();
+        effects.add(new DamageEffect(ctrl.getMob().getStat(Stat.ATTACK_DMG)));
+        ctrl.doAttack(new Ability("Basic Attack", effects,
                 new AttackAnimationToLeft(ctrl.getView().getMobView().getAttributes())));
     }
 

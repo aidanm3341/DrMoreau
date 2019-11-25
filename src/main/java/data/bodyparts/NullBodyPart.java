@@ -1,12 +1,14 @@
 package data.bodyparts;
 
-import combat.Ability;
+import combat.abilities.Ability;
 import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.Image;
 import util.Point;
 import util.ResourceLoader;
+
+import java.util.ArrayList;
 
 public class NullBodyPart implements BodyPart {
 
@@ -36,7 +38,7 @@ public class NullBodyPart implements BodyPart {
         return 0;
     }
 
-    public Ability getAttack() { return new Ability("Null", 0, 0,0, null); }
+    public Ability getAttack() { return new Ability("Null", new ArrayList<>(), null); }
 
     public NullBodyPart clone(){
         return new NullBodyPart();

@@ -1,6 +1,6 @@
 package data.bodyparts;
 
-import combat.Ability;
+import combat.abilities.Ability;
 import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;

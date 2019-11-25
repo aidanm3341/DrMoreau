@@ -1,5 +1,6 @@
 package combat;
 
+import combat.abilities.Ability;
 import combat.stats.Stat;
 import combat.view.CombatView;
 import combat.view.animation.AnimationManager;

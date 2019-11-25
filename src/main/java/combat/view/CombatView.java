@@ -1,6 +1,6 @@
 package combat.view;
 
-import combat.Attack;
+import combat.Ability;
 import combat.CombatController;
 import combat.stats.Stat;
 import combat.view.animation.AttackAnimationToRight;
@@ -33,7 +33,7 @@ public class CombatView {
         createEnemyView();
         createPlayerView();
 
-        Attack basicAttack = new Attack("Basic Attack", 0,0,
+        Ability basicAttack = new Ability("Basic Attack", 0,0,
                 ctrl.getSidekick().getStat(Stat.ATTACK_DMG),
                 new AttackAnimationToRight(playerView.getAttributes()));
         abilityButton = new AbilityButton(basicAttack, 0, 70);
@@ -60,10 +60,6 @@ public class CombatView {
                 mobViewBuilder.addPart(type, ctrl.getSidekick().getPart(type));
         }
         playerView = mobViewBuilder.finalise(false);
-    }
-
-    public MobView getPlayerView(){
-        return playerView;
     }
 
     public MobView getMobView(){

@@ -1,11 +1,9 @@
 package data.framework;
 
-import combat.Attack;
+import combat.Ability;
 import combat.stats.Stats;
 import org.newdawn.slick.Image;
 import util.Point;
-
-import java.util.Map;
 
 public interface BodyPart extends Cloneable {
     String getName();
@@ -14,6 +12,6 @@ public interface BodyPart extends Cloneable {
     Image getImage();
     float getWidth();
     float getHeight();
-    Attack getAttack();
+    Ability getAttack();
     BodyPart clone();
 }

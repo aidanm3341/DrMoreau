@@ -1,7 +1,7 @@
 package util.buttons;
 
-import combat.Attack;
+import combat.Ability;
 
 public interface AbilityListener {
-    void movePerformed(Attack at);
+    void movePerformed(Ability at);
 }

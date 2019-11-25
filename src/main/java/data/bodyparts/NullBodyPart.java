@@ -1,15 +1,12 @@
 package data.bodyparts;
 
-import combat.Attack;
+import combat.Ability;
 import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.Image;
 import util.Point;
 import util.ResourceLoader;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class NullBodyPart implements BodyPart {
 
@@ -39,7 +36,7 @@ public class NullBodyPart implements BodyPart {
         return 0;
     }
 
-    public Attack getAttack() { return new Attack("Null", 0, 0,0, null); }
+    public Ability getAttack() { return new Ability("Null", 0, 0,0, null); }
 
     public NullBodyPart clone(){
         return new NullBodyPart();

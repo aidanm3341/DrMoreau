@@ -1,6 +1,6 @@
 package data;
 
-import combat.Attack;
+import combat.Ability;
 import data.framework.BodyPart;
 import data.framework.BodyPartLoader;
 import data.framework.PartType;
@@ -34,7 +34,7 @@ public class JSONPartReader implements BodyPartLoader {
                 String name = (String) obj.get("name");
                 String type = (String) obj.get("type");
 
-                Attack attack = null;
+                Ability attack = null;
                 if(obj.containsKey("attack")) {
                     JSONObject atkObj = (JSONObject) obj.get("attack");
                     JSONObject atkDmgObj = (JSONObject) atkObj.get("damage");

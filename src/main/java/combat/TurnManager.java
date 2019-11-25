@@ -2,7 +2,7 @@ package combat;
 
 import combat.view.animation.AnimationManager;
 
-public class AttackManager {
+public class TurnManager {
 
     private CombatController controller;
     private AnimationManager animationManager;
@@ -10,8 +10,8 @@ public class AttackManager {
 
     private boolean isAttacking;
 
-    public AttackManager(CombatController controller, AnimationManager animationManager,
-                         MobController attacker, MobController defender){
+    public TurnManager(CombatController controller, AnimationManager animationManager,
+                       MobController attacker, MobController defender){
         this.controller = controller;
         this.animationManager = animationManager;
         this.attacker = attacker;
@@ -20,7 +20,7 @@ public class AttackManager {
         isAttacking = false;
     }
 
-    public void attack(Attack atk){
+    public void attack(Ability atk){
         defender.getMob().attack(atk.getDmg());
         animationManager.doAnimation(atk.getAnimation());
 

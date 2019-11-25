@@ -3,15 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/Ability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/AttackManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/TurnManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/CombatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/EnemyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/EnemyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/PlayerMobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/PlayerMobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/AbilityButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/AbilityButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/CombatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/mobview/MobViewBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/mobview/MobViewBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/ConcreteBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/ConcreteBodyPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/buttons/AbilityListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/AbilityListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/buttons/AttackButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/AttackButton.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,14 +160,7 @@
       <workItem from="1574245781137" duration="4820000" />
       <workItem from="1574290044400" duration="2000" />
       <workItem from="1574345666698" duration="9149000" />
-      <workItem from="1574630925863" duration="8482000" />
-    </task>
-    <task id="LOCAL-00036" summary="Sidekick can no long have negative hp">
-      <created>1554833467413</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1554833467413</updated>
+      <workItem from="1574630925863" duration="10542000" />
     </task>
     <task id="LOCAL-00037" summary="Added a victory screen, you can now WIN!">
       <created>1554837276007</created>
@@ -501,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574637156165</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="encapsulated collection in BodyParts for attach points">
+      <created>1574682245966</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1574682245966</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +525,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FIXED location of mobview even more and delted obsolete classes" />
     <MESSAGE value="fixed mobview position and easily flippable" />
     <MESSAGE value="updated sidekick to be more like Mob" />
     <MESSAGE value="Deleted obsolete classes" />
@@ -546,6 +549,7 @@
     <MESSAGE value="small refactoring" />
     <MESSAGE value="more refactoring of package layout and small unnecessary things" />
     <MESSAGE value="optimised imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimised imports" />
+    <MESSAGE value="encapsulated collection in BodyParts for attach points" />
+    <option name="LAST_COMMIT_MESSAGE" value="encapsulated collection in BodyParts for attach points" />
   </component>
 </project>

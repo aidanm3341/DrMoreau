@@ -1,6 +1,6 @@
 package util.buttons;
 
-import combat.Attack;
+import combat.Ability;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
@@ -11,10 +11,10 @@ import java.util.List;
 
 public class AttackButton extends Button implements ComponentListener {
 
-    private Attack at;
+    private Ability at;
     private List<AbilityListener> listeners;
 
-    public AttackButton(Attack at, float x, float y) {
+    public AttackButton(Ability at, float x, float y) {
         super(at.getName(), ResourceLoader.getImage("basicButton"), x, y);
         this.at = at;
         listeners = new ArrayList<>();

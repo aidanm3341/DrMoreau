@@ -3,13 +3,13 @@ package combat;
 
 import combat.view.animation.Animation;
 
-public class Attack {
+public class Ability {
 
     private String name;
     private float multiplier, additive, base;
     private Animation animation;
 
-    public Attack(String name, float base, float multiplier, float additive, Animation animation)
+    public Ability(String name, float base, float multiplier, float additive, Animation animation)
     {
         this.name = name;
         this.base = base;

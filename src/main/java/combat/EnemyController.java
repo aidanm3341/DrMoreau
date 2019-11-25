@@ -13,7 +13,7 @@ public class EnemyController implements MobController {
     }
 
     public void enter(CombatController ctrl) {
-        ctrl.doAttack(new Attack("Basic Attack", 1, 1, ctrl.getMob().getStat(Stat.ATTACK_DMG),
+        ctrl.doAttack(new Ability("Basic Attack", 1, 1, ctrl.getMob().getStat(Stat.ATTACK_DMG),
                 new AttackAnimationToLeft(ctrl.getView().getMobView().getAttributes())));
     }
 

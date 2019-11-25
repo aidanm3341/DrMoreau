@@ -1,6 +1,6 @@
 package combat.view;
 
-import combat.Attack;
+import combat.Ability;
 import org.newdawn.slick.*;
 import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
@@ -18,13 +18,13 @@ public class AbilityButton implements AbilitySubject, ComponentListener {
 
     private MouseOverArea area;
     private float x, y;
-    private Attack attack;
+    private Ability attack;
 
     private List<AbilityListener> listeners;
 
     private Font font;
 
-    public AbilityButton(Attack attack, float x, float y) throws SlickException {
+    public AbilityButton(Ability attack, float x, float y) throws SlickException {
         this.x = x;
         this.y = y;
         this.attack = attack;

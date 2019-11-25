@@ -1,6 +1,6 @@
 package data.bodyparts;
 
-import combat.Attack;
+import combat.Ability;
 import combat.stats.Stats;
 import data.framework.BodyPart;
 import data.framework.PartType;
@@ -14,7 +14,7 @@ public class ConcreteBodyPart implements BodyPart {
 
     private String name;
     private Image image;
-    private Attack attack;
+    private Ability attack;
     private Stats stats;
     private Map<PartType, Point> attachPoints;
 
@@ -48,7 +48,7 @@ public class ConcreteBodyPart implements BodyPart {
         return image.getHeight();
     }
 
-    public Attack getAttack() {
+    public Ability getAttack() {
         return attack;
     }
 

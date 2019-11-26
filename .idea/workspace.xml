@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/combat/view/animation/StillAnimation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/ArmorEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/ArmorEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/AbilityButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/AbilityButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/CombatView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/HealthBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/HealthBar.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,14 +150,7 @@
       <workItem from="1574245781137" duration="4820000" />
       <workItem from="1574290044400" duration="2000" />
       <workItem from="1574345666698" duration="9149000" />
-      <workItem from="1574630925863" duration="27797000" />
-    </task>
-    <task id="LOCAL-00040" summary="balance changes">
-      <created>1554910051255</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1554910051255</updated>
+      <workItem from="1574630925863" duration="31313000" />
     </task>
     <task id="LOCAL-00041" summary="repositioned gameover and victory text">
       <created>1554915044530</created>
@@ -495,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574716899381</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="added a still animation for passing time">
+      <created>1574760953421</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1574760953421</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +515,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added framework for new Stats" />
     <MESSAGE value="FINALLY fixed that bodybodypart nonsense" />
     <MESSAGE value="removed level from bodypart" />
     <MESSAGE value="got rid of old attack method" />
@@ -540,6 +539,7 @@
     <MESSAGE value="changed some names about" />
     <MESSAGE value="Added new effect system for abilities" />
     <MESSAGE value="added the armor effect" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the armor effect" />
+    <MESSAGE value="added a still animation for passing time" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a still animation for passing time" />
   </component>
 </project>

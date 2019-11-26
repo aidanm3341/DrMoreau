@@ -40,6 +40,7 @@ public class CombatView {
         createEnemyView();
         createPlayerView();
 
+
         List<Effect> effects = new ArrayList<>();
         effects.add(new DamageEffect(ctrl.getSidekick().getStat(Stat.ATTACK_DMG)));
         Ability basicAttack = new Ability("Basic Attack", effects, new AttackAnimationToRight(playerView.getAttributes()));
@@ -51,9 +52,9 @@ public class CombatView {
         Ability basicDefend = new Ability("Basic Defend", effects, new StillAnimation());
         basicDefendButton = new AbilityButton(basicDefend, 0, 160);
 
+
+
         background = ResourceLoader.getImage("battleBackground");
-
-
 
         mobHealth = new HealthBar(ctrl.getMob(), 1100, 55);
         playerHealth = new HealthBar(ctrl.getSidekick(), 400, 55);
@@ -100,8 +101,8 @@ public class CombatView {
         g.drawImage(background, 0, 0);
         g.setFont(MyFont.createFont(12));
 
-        basicAttackButton.render(gc, g);
         basicDefendButton.render(gc, g);
+        basicAttackButton.render(gc, g);
 
         mobHealth.render(g);
         playerHealth.render(g);

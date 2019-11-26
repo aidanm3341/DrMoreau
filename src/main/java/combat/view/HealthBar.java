@@ -10,7 +10,7 @@ public class HealthBar {
     private Mob subject;
     private float x, y;
 
-    public HealthBar(Mob subject, float x, float y){
+    HealthBar(Mob subject, float x, float y){
         this.subject = subject;
         this.x = x;
         this.y = y;

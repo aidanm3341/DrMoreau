@@ -28,7 +28,7 @@ public class ArmorEffect implements Effect {
 
     public void detach(){
         subject.setStat(Stat.ARMOR, Math.min(subject.getStat(Stat.ARMOR) - armor, 0));
-        if(subject.getStat(Stat.ARMOR) < 0) 
+        if(subject.getStat(Stat.ARMOR) < 0)
             subject.setStat(Stat.ARMOR, 0);
 
         subject.setStat(Stat.MAX_HP, subject.getStat(Stat.MAX_HP) - armor);

@@ -7,6 +7,7 @@ import combat.abilities.effects.DamageEffect;
 import combat.abilities.effects.Effect;
 import combat.stats.Stat;
 import combat.view.animation.AttackAnimationToRight;
+import combat.view.animation.StillAnimation;
 import combat.view.mobview.MobView;
 import combat.view.mobview.MobViewBuilder;
 import combat.view.mobview.PhysicalAttributes;
@@ -47,7 +48,7 @@ public class CombatView {
 
         effects = new ArrayList<>();
         effects.add(new ArmorEffect(5, 0));
-        Ability basicDefend = new Ability("Basic Defend", effects, new AttackAnimationToRight(playerView.getAttributes()));
+        Ability basicDefend = new Ability("Basic Defend", effects, new StillAnimation());
         basicDefendButton = new AbilityButton(basicDefend, 0, 160);
 
         background = ResourceLoader.getImage("battleBackground");

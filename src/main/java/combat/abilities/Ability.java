@@ -4,7 +4,7 @@ package combat.abilities;
 import combat.abilities.effects.Effect;
 import combat.view.animation.Animation;
 import combat.view.animation.AnimationManager;
-import data.Mob;
+import data.mob.Mob;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package data;
+package data.mob;
 
 import combat.abilities.effects.Effect;
 import combat.stats.Stat;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class Mob {
+public class Mob{
 
     private String name;
     private Stats stats;
@@ -73,7 +73,6 @@ public class Mob {
         List<Effect> effectsToBeRemoved = new ArrayList<>(effects);
         for(Effect effect : effectsToBeRemoved)
             effect.detach();
-        //effects.removeAll(effectsToBeRemoved);
     }
 
     public float getStat(Stat stat){
@@ -90,5 +89,10 @@ public class Mob {
 
     public boolean hasPart(PartType type){
         return parts.containsKey(type);
+    }
+
+    public void addObserver(MobObserver observer){
+        stats.addListener(observer);
+        stats.notifyListeners();
     }
 }

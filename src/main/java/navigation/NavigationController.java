@@ -1,7 +1,7 @@
 package navigation;
 
 import data.BasicRoomBlueprintLoader;
-import data.MobData;
+import data.mob.MobCreator;
 import data.framework.RoomBlueprintLoader;
 import main.Main;
 import main.MainController;
@@ -60,7 +60,7 @@ public class NavigationController extends Screen implements ComponentListener {
     public void componentActivated(AbstractComponent c){
         if(view.getBossButton().equals(c)) {
             try {
-                activeRoom = new Room(Main.FIGHT, MobData.getMob("Dr.Moreau", 100),
+                activeRoom = new Room(Main.FIGHT, MobCreator.getMob("Dr.Moreau", 100),
                         ResourceLoader.getImage("null"), null);
             } catch (SlickException e) {e.printStackTrace();}
         }

@@ -1,7 +1,7 @@
 package combat.abilities.effects;
 
 import combat.stats.Stat;
-import data.Mob;
+import data.mob.Mob;
 
 public class ArmorEffect implements Effect {
 

@@ -1,7 +1,7 @@
 package combat;
 
 import combat.abilities.Ability;
-import data.Mob;
+import data.mob.Mob;
 import util.buttons.AbilityListener;
 
 public class PlayerMobController implements MobController, AbilityListener {

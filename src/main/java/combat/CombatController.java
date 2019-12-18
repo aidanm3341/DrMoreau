@@ -5,7 +5,7 @@ import combat.stats.Stat;
 import combat.view.CombatView;
 import combat.view.animation.AnimationManager;
 import combat.view.animation.AnimationManagerImp;
-import data.Mob;
+import data.mob.Mob;
 import main.Main;
 import main.MainController;
 import org.newdawn.slick.GameContainer;

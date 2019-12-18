@@ -56,8 +56,11 @@ public class CombatView {
 
         background = ResourceLoader.getImage("battleBackground");
 
-        mobHealth = new HealthBar(ctrl.getMob(), 1100, 55);
-        playerHealth = new HealthBar(ctrl.getSidekick(), 400, 55);
+        mobHealth = new HealthBar(ctrl.getMob().getName(), 1100, 55);
+        playerHealth = new HealthBar(ctrl.getSidekick().getName(), 400, 55);
+
+        ctrl.getMob().addObserver(mobHealth);
+        ctrl.getSidekick().addObserver(playerHealth);
     }
 
     public void addListener(AbilityListener listener){

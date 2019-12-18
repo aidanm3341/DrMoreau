@@ -5,7 +5,7 @@ import combat.abilities.effects.DamageEffect;
 import combat.abilities.effects.Effect;
 import combat.stats.Stat;
 import combat.view.animation.AttackAnimationToLeft;
-import data.Mob;
+import data.mob.Mob;
 
 import java.util.ArrayList;
 import java.util.List;

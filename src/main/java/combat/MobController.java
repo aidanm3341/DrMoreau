@@ -1,6 +1,6 @@
 package combat;
 
-import data.Mob;
+import data.mob.Mob;
 
 public interface MobController {
     void enter(CombatController ctrl);

@@ -1,4 +1,4 @@
-package data;
+package data.mob;
 
 import combat.stats.Stat;
 import combat.stats.Stats;
@@ -6,13 +6,14 @@ import data.bodyparts.ConcreteBodyPart;
 import data.bodyparts.PartFactory;
 import data.framework.BodyPart;
 import data.framework.PartType;
+import data.mob.Mob;
 import org.newdawn.slick.SlickException;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class MobData {
+public class MobCreator {
 
     public static Mob getMob(String name, int level) throws SlickException
     {

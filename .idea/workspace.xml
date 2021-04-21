@@ -4,38 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="refactored bodypart class names">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="a bunch of random changes to how effects work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/ArmorEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/ArmorEffect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/DamageEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/DamageEffect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/Effect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/abilities/effects/Effect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/HealthBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/HealthBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/mob/Mob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/mob/Mob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/abilities/effects/ArmorEffect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/abilities/effects/ArmorEffect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/abilities/effects/DamageEffect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/abilities/effects/DamageEffect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/abilities/effects/Effect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/abilities/effects/Effect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/view/CombatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/view/CombatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/view/HealthBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/view/HealthBar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/view/mobview/MobView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/view/mobview/MobView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/view/mobview/MobViewBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/view/mobview/MobViewBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/HardCodedLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/HardCodedLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/JSONPartReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/JSONPartReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/bodyparts/ConcreteBodyPart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/bodyparts/NullBodyPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/bodyparts/NullBodyPart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/bodyparts/PartFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/bodyparts/PartFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/framework/BodyPart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/framework/BodyPartLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/framework/BodyPartLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/mob/Mob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/mob/Mob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/mob/MobCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/mob/MobCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/RoomBlueprint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/RoomBlueprint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/draganddrop/DragAndDropManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/draganddrop/DragAndDropManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/draganddrop/DragArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/draganddrop/DragArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/draganddrop/PartDraggable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/draganddrop/PartDraggable.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="refactoring" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -144,6 +114,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

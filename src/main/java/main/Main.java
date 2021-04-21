@@ -56,14 +56,6 @@ public class Main extends StateBasedGame {
     // main.Main Method
     public static void main(String[] args) {
         try {
-//            DatabaseEditor d = new DatabaseEditor();
-//            try {
-//                d.insert();
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
-
-            //AppGameContainer app = new AppGameContainer(new Main("Dr.Moreau v" + VERSION));
             AppGameContainer app = new AppGameContainer(new ScalableGame(new Main("Dr.Moreau v" + VERSION),
                     WIDTH, HEIGHT, true));
             app.setDisplayMode((int) (WIDTH*0.75f), (int) (HEIGHT*0.75f), false);

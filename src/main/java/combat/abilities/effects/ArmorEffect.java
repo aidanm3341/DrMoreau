@@ -17,25 +17,27 @@ public class ArmorEffect implements Effect {
     public void attach(Mob attacker, Mob defender) {
         this.subject = attacker;
         subject.applyEffect(this);
-        execute();
+        onAttach();
     }
 
-    public void execute() {
+    public void onAttach() {
         subject.setStat(Stat.ARMOR, armor);
-        subject.setStat(Stat.MAX_HP, subject.getStat(Stat.MAX_HP) + armor);
-        remainingDuration--;
     }
 
-    public void detach(){
+    public void resolveEndOfTurn() {
         subject.setStat(Stat.ARMOR, Math.min(subject.getStat(Stat.ARMOR) - armor, 0));
         if(subject.getStat(Stat.ARMOR) < 0)
             subject.setStat(Stat.ARMOR, 0);
 
-        subject.setStat(Stat.MAX_HP, subject.getStat(Stat.MAX_HP) - armor);
-        subject.removeEffect(this);
+        remainingDuration--;
     }
 
     public int getRemainingDuration(){
         return remainingDuration;
+    }
+
+    @Override
+    public boolean isComplete() {
+        return this.getRemainingDuration() <= 0;
     }
 }

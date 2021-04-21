@@ -9,8 +9,9 @@ import data.framework.PartType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
-public class Mob{
+public class Mob implements MobObserver{
 
     private String name;
     private Stats stats;
@@ -48,31 +49,16 @@ public class Mob{
     }
 
     public void updateEffects(){
-        List<Effect> effectsToBeRemoved = new ArrayList<>();
-
-        for(Effect effect : effects) {
-            if(effect.getRemainingDuration() <= 0)
-                effectsToBeRemoved.add(effect);
-            else
-                effect.execute();
-        }
-
-        for(Effect effect : effectsToBeRemoved)
-            effect.detach();
+        effects.forEach(Effect::resolveEndOfTurn);
+        effects = effects.stream().filter(eff -> !eff.isComplete()).collect(Collectors.toList());
     }
 
     public void applyEffect(Effect effect){
         effects.add(effect);
     }
 
-    public void removeEffect(Effect effect){
-        effects.remove(effect);
-    }
-
     public void clearEffects(){
-        List<Effect> effectsToBeRemoved = new ArrayList<>(effects);
-        for(Effect effect : effectsToBeRemoved)
-            effect.detach();
+        effects.clear();
     }
 
     public float getStat(Stat stat){
@@ -94,5 +80,10 @@ public class Mob{
     public void addObserver(MobObserver observer){
         stats.addListener(observer);
         stats.notifyListeners();
+    }
+
+    @Override
+    public void update(Stats stats) {
+        this.stats = stats;
     }
 }

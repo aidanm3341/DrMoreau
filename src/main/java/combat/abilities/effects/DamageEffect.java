@@ -15,14 +15,10 @@ public class DamageEffect implements Effect{
     public void attach(Mob attacker, Mob defender) {
         this.subject = defender;
         subject.applyEffect(this);
-        execute();
+        onAttach();
     }
 
-    public void detach() {
-        subject.removeEffect(this);
-    }
-
-    public void execute(){
+    public void onAttach() {
         float currentHp = subject.getStat(Stat.CURRENT_HP);
         float armor = subject.getStat(Stat.ARMOR);
         float maxHp = subject.getStat(Stat.MAX_HP);
@@ -41,7 +37,14 @@ public class DamageEffect implements Effect{
         }
     }
 
+    public void resolveEndOfTurn(){}
+
     public int getRemainingDuration(){
         return 0;
+    }
+
+    @Override
+    public boolean isComplete() {
+        return this.getRemainingDuration() <= 0;
     }
 }

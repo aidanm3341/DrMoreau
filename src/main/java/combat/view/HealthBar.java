@@ -23,16 +23,18 @@ public class HealthBar implements MobObserver {
         // name display
         g.setColor(Color.white);
         g.drawString(name, x, y);
+
+        float totalMaxHealth = maxHp + armor;
         // max health
         g.setColor(Color.red);
         g.fillRect(x, y+45, width, 30);
         // current health
+        float armorWidth = (armor/totalMaxHealth)*width;
         g.setColor(Color.green);
-        g.fillRect(x, y+45, (int) (((currentHp + armor)/(maxHp + armor))*width), 30);
+        g.fillRect(x, y+45, (int) (((currentHp + armor)/totalMaxHealth)*width - armorWidth), 30);
         // armor
-        float armorWidth = (armor/(maxHp + armor))*width;
         g.setColor(new Color(51, 204, 255));
-        g.fillRect(x + (int) (((currentHp + armor)/(maxHp + armor))*width), y+45, armorWidth, 30);
+        g.fillRect(x + (int) (((currentHp + armor)/totalMaxHealth)*width)-armorWidth, y+45, armorWidth, 30);
         // hp text
         g.setColor(Color.white);
         g.drawString(" "+ (currentHp + armor) + " : " + maxHp, x+50, y+90);

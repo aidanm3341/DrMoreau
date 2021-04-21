@@ -4,7 +4,8 @@ import data.mob.Mob;
 
 public interface Effect {
     void attach(Mob attacker, Mob defender);
-    void detach();
-    void execute();
+    void onAttach();
+    void resolveEndOfTurn();
     int getRemainingDuration();
+    boolean isComplete();
 }

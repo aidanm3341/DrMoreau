@@ -5,214 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96c04e25-ac64-4d7a-ae1c-ee4d7cc44376" name="Default Changelist" comment="added a bunch of &quot;unversioned&quot; stuff">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/States 2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/parts/misc/cat_tail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/CombatController 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/EnemyController 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/MobController 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/PlayerMobController 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/TurnManager 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/abilities/Ability 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/abilities/effects/ArmorEffect 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/abilities/effects/DamageEffect 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/abilities/effects/Effect 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/stats/Stat 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/stats/Stats 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/AbilityButton 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/CombatView 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/HealthBar 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/animation/Animation 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/animation/AnimationManager 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/animation/AnimationManagerImp 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/animation/AttackAnimationToLeft 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/animation/AttackAnimationToRight 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/animation/StillAnimation 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/mobview/MobView 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/mobview/MobViewBuilder 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/combat/view/mobview/PhysicalAttributes 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/BasicRoomBlueprintLoader 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/DatabaseEditor 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/HardCodedLoader 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/JSONPartReader 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/bodyparts/ConcreteBodyPart 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/bodyparts/NullBodyPart 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/bodyparts/PartFactory 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/framework/BodyPart 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/framework/BodyPartLoader 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/framework/PartType 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/framework/RoomBlueprintLoader 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/mob/Mob 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/mob/MobCreator 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/mob/MobObserver 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data/mob/MobSubject 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui/background 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui/basicButton 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui/basicButtonHover 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui/basicButtonPressed 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui/blackground 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui/intro 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui/menuButton 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui/menuButtonHover 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui/upgradePuddle 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/lua/dog 2.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/main/Intro 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/main/IntroTxt 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/main/Main 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/main/MainController 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationController 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationView 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/navigation/Room 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/navigation/RoomBlueprint 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/beaver/beaver_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/beaver/beaver_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/beaver/beaver_head 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/beaver/beaver_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/beaver/beaver_tail 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/boar/boar_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/boar/boar_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/boar/boar_head 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/boar/boar_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/boar/boar_tail 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_head 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/bunny/bunny_tail 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/dog/dog_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/dog/dog_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/dog/dog_head 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/dog/dog_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/dog/dog_tail 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/duck/DuckHead 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/duck/duck_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/duck/duck_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/elephant/Elephant_tail 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/goat/Goat 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/goat/Goat_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/goat/goat_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/lion/Lion 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/lion/Lion_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/lion/Lion_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/lion/Lion_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/misc/bull_head 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/misc/burning_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/misc/cat_tail 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/misc/frozen_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/misc/golden_monkey_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/misc/green_arm 2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/misc/human_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/misc/pigeon 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/ostrich/ostrich_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/ostrich/ostrich_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/ostrich/ostrich_head 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/ostrich/ostrich_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/ostrich/ostrich_tail 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_head 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/penguin/penguin_tail 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/rat/rat_arm 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/rat/rat_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/rat/rat_head 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/rat/rat_leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/rat/rat_tail 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/squid/squid_body 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/squid/squid_left_legs 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/squid/squid_right_legs 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/turtle/Flipper 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/turtle/Turtle_Head 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/turtle/Turtle_Leg 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/parts/turtle/Turtle_Shell 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/screens/GameOver 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/screens/MainMenu 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/screens/Screen 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/screens/Victory 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/travel/brickRoute 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/travel/brickRouteHover 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/travel/greyRoute 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/travel/greyRouteHover 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/travel/travelBorder 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/travel/travelHover 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/upgrade/draganddrop/DragAndDropManager 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/upgrade/draganddrop/DragArea 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/upgrade/draganddrop/PartDraggable 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/util/MyFont 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/util/Point 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/util/Pool 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/util/ResourceLoader 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/util/buttons/AbilityListener 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/util/buttons/AbilitySubject 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/util/buttons/AttackButton 2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/util/buttons/Button 2.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DrMoreau.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DrMoreau.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_luaj_luaj_jse_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/org_luaj_luaj_jse_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_luaj_luaj_jse_3_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/org_luaj_luaj_jse_3_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/States.iml" beforeDir="false" afterPath="$PROJECT_DIR$/States.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/abilities/Ability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/abilities/Ability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/combat/view/CombatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/combat/view/CombatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/JSONPartReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/ConcreteBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/ConcreteBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/NullBodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/bodyparts/PartFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/bodyparts/PartFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/framework/BodyPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/mob/MobCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/mob/MobCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Intro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Intro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/IntroTxt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/IntroTxt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/NavigationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/NavigationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/NavigationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navigation/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navigation/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/GameOver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/Victory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/Victory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/UpgradeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/draganddrop/DragAndDropManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/draganddrop/DragAndDropManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/draganddrop/DragArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/draganddrop/DragArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/upgrade/draganddrop/PartDraggable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/upgrade/draganddrop/PartDraggable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/MyFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MyFont.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Pool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Pool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ResourceLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/buttons/AttackButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/AttackButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/buttons/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/buttons/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/combat/CombatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/combat/CombatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Intro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Intro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/IntroTxt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/IntroTxt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/NavigationView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/navigation/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/navigation/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/GameOver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/GameOver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/Screen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/screens/Victory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/screens/Victory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/upgrade/UpgradeView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/MyFont.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/MyFont.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/Pool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/Pool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ResourceLoader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,13 +149,6 @@
       <workItem from="1585757634601" duration="330000" />
       <workItem from="1585768441429" duration="604000" />
       <workItem from="1585781319448" duration="59000" />
-    </task>
-    <task id="LOCAL-00044" summary="Changed the way damage is represented">
-      <created>1565189802284</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1565189802284</updated>
     </task>
     <task id="LOCAL-00045" summary="Added the ability for lua integration">
       <created>1565538017029</created>
@@ -700,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619002426433</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="added a bunch of &quot;unversioned&quot; stuff">
+      <created>1619002655150</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1619002655150</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

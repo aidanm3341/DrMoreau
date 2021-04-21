@@ -1,6 +1,6 @@
 package combat.view.mobview;
 
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.PartType;
 import util.Point;
 
@@ -11,11 +11,11 @@ import java.util.TreeMap;
 public class MobViewBuilder {
     private float overallOffsetX, overallOffsetY;
     private PhysicalAttributes attributes;
-    private Map<BodyPart, Point> offsets;
-    private Map<PartType, BodyPart> parts;
-    private BodyPart body;
+    private Map<IBodyPart, Point> offsets;
+    private Map<PartType, IBodyPart> parts;
+    private IBodyPart body;
 
-    public MobViewBuilder(BodyPart body, PhysicalAttributes attributes){
+    public MobViewBuilder(IBodyPart body, PhysicalAttributes attributes){
         offsets = new HashMap<>();
         parts = new TreeMap<>();
 
@@ -29,7 +29,7 @@ public class MobViewBuilder {
         offsets.put(body, new Point(0, 0));
     }
 
-    public void addPart(PartType type, BodyPart part){
+    public void addPart(PartType type, IBodyPart part){
         parts.put(type, part);
 
         float newX = body.getAttachPointFor(type).x - parts.get(type).getAttachPointFor(PartType.BODY).x;

@@ -3,7 +3,7 @@ package data.mob;
 import combat.abilities.effects.Effect;
 import combat.stats.Stat;
 import combat.stats.Stats;
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.PartType;
 
 import java.util.ArrayList;
@@ -14,17 +14,17 @@ public class Mob{
 
     private String name;
     private Stats stats;
-    private Map<PartType, BodyPart> parts;
+    private Map<PartType, IBodyPart> parts;
     private List<Effect> effects;
 
-    public Mob(String name, Map<PartType, BodyPart> parts) {
+    public Mob(String name, Map<PartType, IBodyPart> parts) {
         this.name = name;
         this.parts = parts;
 
         effects = new ArrayList<>();
 
         stats = new Stats();
-        for(BodyPart part : parts.values()) {
+        for(IBodyPart part : parts.values()) {
             Stats partStats = part.getStats();
             for(Stat stat : Stat.values())
                 stats.addModifier(stat, partStats.get(stat));
@@ -33,14 +33,14 @@ public class Mob{
 
     public String getName(){return name;}
 
-    public void putPart(PartType type, BodyPart part){
+    public void putPart(PartType type, IBodyPart part){
         parts.put(type, part);
         updateMaxHp();
     }
 
     private void updateMaxHp() {
         float newHp = 0;
-        for(BodyPart part : parts.values())
+        for(IBodyPart part : parts.values())
             newHp += part.getStats().get(Stat.MAX_HP);
 
         stats.put(Stat.MAX_HP, newHp);
@@ -83,7 +83,7 @@ public class Mob{
         stats.put(stat, value);
     }
 
-    public BodyPart getPart(PartType part){
+    public IBodyPart getPart(PartType part){
         return parts.get(part);
     }
 

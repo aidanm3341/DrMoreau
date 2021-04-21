@@ -1,7 +1,7 @@
 package navigation;
 
 import data.mob.Mob;
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import util.ResourceLoader;
@@ -12,9 +12,9 @@ public class Room {
     private int type;
     private Image navigationImage, navigationImageHover;
     private Mob mob;
-    private List<BodyPart> rewards;
+    private List<IBodyPart> rewards;
 
-    public Room(int type, Mob mob, Image navigationImage, List<BodyPart> rewards) throws SlickException
+    public Room(int type, Mob mob, Image navigationImage, List<IBodyPart> rewards) throws SlickException
     {
         this.type = type;
         this.mob = mob;
@@ -41,7 +41,7 @@ public class Room {
         return mob;
     }
 
-    public List<BodyPart> getRewards() {
+    public List<IBodyPart> getRewards() {
         return rewards;
     }
 }

@@ -1,7 +1,7 @@
 package upgrade;
 
 import data.mob.Mob;
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.PartType;
 import main.Main;
 import main.MainController;
@@ -89,7 +89,7 @@ public class UpgradeController extends Screen implements ComponentListener {
         draggables.add(new PartDraggable(armRightArea,  sidekick.getPart(PartType.RIGHT_ARM)));
         draggables.add(new PartDraggable(tailArea,  sidekick.getPart(PartType.TAIL)));
 
-        Pool<BodyPart> rewards = new Pool<>();
+        Pool<IBodyPart> rewards = new Pool<>();
         rewards.addAll(main.getActiveRoom().getRewards());
 
         draggables.add(new PartDraggable(puddle1, rewards.pop()));
@@ -109,31 +109,31 @@ public class UpgradeController extends Screen implements ComponentListener {
     }
 
 
-    public BodyPart getHead(){
+    public IBodyPart getHead(){
         return headArea.getPart().getPart();
     }
 
-    public BodyPart getBody(){
+    public IBodyPart getBody(){
         return bodyArea.getPart().getPart();
     }
 
-    public BodyPart getLegLeft(){
+    public IBodyPart getLegLeft(){
         return legLeftArea.getPart().getPart();
     }
 
-    public BodyPart getLegRight(){
+    public IBodyPart getLegRight(){
         return legRightArea.getPart().getPart();
     }
 
-    public BodyPart getArmLeft(){
+    public IBodyPart getArmLeft(){
         return armLeftArea.getPart().getPart();
     }
 
-    public BodyPart getArmRight(){
+    public IBodyPart getArmRight(){
         return armRightArea.getPart().getPart();
     }
 
-    public BodyPart getTail(){
+    public IBodyPart getTail(){
         return tailArea.getPart().getPart();
     }
 

@@ -1,7 +1,7 @@
 package data;
 
 import combat.abilities.Ability;
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.BodyPartLoader;
 import data.framework.PartType;
 import org.json.simple.JSONArray;
@@ -18,9 +18,9 @@ import java.util.Map;
 
 public class JSONPartReader implements BodyPartLoader {
 
-    public HashMap<String, BodyPart> getBodyParts() throws SlickException {
+    public HashMap<String, IBodyPart> getBodyParts() throws SlickException {
         JSONParser parser = new JSONParser();
-        HashMap<String, BodyPart> partsHash = new HashMap<>();
+        HashMap<String, IBodyPart> partsHash = new HashMap<>();
 
         try {
 
@@ -48,7 +48,7 @@ public class JSONPartReader implements BodyPartLoader {
                 int hp = ((Long) obj.get("hp")).intValue();
 
 
-                BodyPart p;
+                IBodyPart p;
                 JSONArray points = (JSONArray) obj.get("points");
                 Map<PartType, Point> attachPoints = new HashMap<>();
                 for(Object ob : points){

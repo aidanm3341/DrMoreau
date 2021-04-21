@@ -5,7 +5,7 @@ import combat.stats.Stats;
 import org.newdawn.slick.Image;
 import util.Point;
 
-public interface BodyPart extends Cloneable {
+public interface IBodyPart extends Cloneable {
     String getName();
     Stats getStats();
     Point getAttachPointFor(PartType type);
@@ -13,5 +13,5 @@ public interface BodyPart extends Cloneable {
     float getWidth();
     float getHeight();
     Ability getAttack();
-    BodyPart clone();
+    IBodyPart clone();
 }

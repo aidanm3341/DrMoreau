@@ -1,7 +1,7 @@
 package data.bodyparts;
 
 import data.HardCodedLoader;
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.BodyPartLoader;
 import org.newdawn.slick.SlickException;
 
@@ -9,10 +9,10 @@ import java.util.Map;
 
 public class PartFactory {
 
-    private static Map<String, BodyPart> parts;
+    private static Map<String, IBodyPart> parts;
     private static BodyPartLoader loader;
 
-    public static BodyPart getPart(String name, int level) throws SlickException
+    public static IBodyPart getPart(String name, int level) throws SlickException
     {
         loader = new HardCodedLoader();
         if(parts == null)

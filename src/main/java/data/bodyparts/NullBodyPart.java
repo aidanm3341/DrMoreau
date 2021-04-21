@@ -2,7 +2,7 @@ package data.bodyparts;
 
 import combat.abilities.Ability;
 import combat.stats.Stats;
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.Image;
 import util.Point;
@@ -10,7 +10,7 @@ import util.ResourceLoader;
 
 import java.util.ArrayList;
 
-public class NullBodyPart implements BodyPart {
+public class NullBodyPart implements IBodyPart {
 
     public String getName() {
         return "";

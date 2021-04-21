@@ -1,6 +1,6 @@
 package upgrade.draganddrop;
 
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -13,10 +13,10 @@ public class PartDraggable {
     private Rectangle rect;
     private boolean isClicked;
 
-    private BodyPart part;
+    private IBodyPart part;
     private float scale = 0.5f;
 
-    public PartDraggable(DragArea home, BodyPart part)
+    public PartDraggable(DragArea home, IBodyPart part)
     {
         home.link(this);
         rect = new Rectangle(0, 0, 100, 100);
@@ -76,7 +76,7 @@ public class PartDraggable {
         rect.setCenterY(home.getHomey());
     }
 
-    public BodyPart getPart() {
+    public IBodyPart getPart() {
         return part;
     }
 }

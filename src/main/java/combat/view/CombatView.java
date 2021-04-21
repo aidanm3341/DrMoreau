@@ -11,7 +11,7 @@ import combat.view.animation.StillAnimation;
 import combat.view.mobview.MobView;
 import combat.view.mobview.MobViewBuilder;
 import combat.view.mobview.PhysicalAttributes;
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -70,7 +70,7 @@ public class CombatView {
 
 
     private void createPlayerView(){
-        BodyPart body = ctrl.getSidekick().getPart(PartType.BODY);
+        IBodyPart body = ctrl.getSidekick().getPart(PartType.BODY);
 
         MobViewBuilder mobViewBuilder = new MobViewBuilder(body, new PhysicalAttributes(400, 380));
         for(PartType type : PartType.values()){
@@ -85,7 +85,7 @@ public class CombatView {
     }
 
     private void createEnemyView(){
-        BodyPart body = ctrl.getMob().getPart(PartType.BODY);
+        IBodyPart body = ctrl.getMob().getPart(PartType.BODY);
 
         MobViewBuilder mobViewBuilder = new MobViewBuilder(body, new PhysicalAttributes(1150, 400));
         for(PartType type : PartType.values()){

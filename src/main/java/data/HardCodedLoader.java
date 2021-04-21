@@ -2,8 +2,8 @@ package data;
 
 import combat.stats.Stat;
 import combat.stats.Stats;
-import data.bodyparts.ConcreteBodyPart;
-import data.framework.BodyPart;
+import data.bodyparts.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.BodyPartLoader;
 import data.framework.PartType;
 import org.newdawn.slick.SlickException;
@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class HardCodedLoader implements BodyPartLoader {
 
-    private Map<String, BodyPart> parts;
+    private Map<String, IBodyPart> parts;
 
     public HardCodedLoader(){
         parts = new HashMap<>();
@@ -28,10 +28,10 @@ public class HardCodedLoader implements BodyPartLoader {
         stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
         stats.put(Stat.ATTACK_DMG, 1f);
 
-        parts.put("dog_head", new ConcreteBodyPart("dog_head", stats.clone(), makeBodyAttachPoint(new Point(0, 72))));
-        parts.put("dog_leg", new ConcreteBodyPart("dog_leg", stats.clone(), makeBodyAttachPoint(new Point(40, 20))));
-        parts.put("dog_arm", new ConcreteBodyPart("dog_arm", stats.clone(), makeBodyAttachPoint(new Point(36, 15))));
-        parts.put("dog_tail", new ConcreteBodyPart("dog_tail", stats.clone(), makeBodyAttachPoint(new Point(79, 19))));
+        parts.put("dog_head", new BodyPart("dog_head", stats.clone(), makeBodyAttachPoint(new Point(0, 72))));
+        parts.put("dog_leg", new BodyPart("dog_leg", stats.clone(), makeBodyAttachPoint(new Point(40, 20))));
+        parts.put("dog_arm", new BodyPart("dog_arm", stats.clone(), makeBodyAttachPoint(new Point(36, 15))));
+        parts.put("dog_tail", new BodyPart("dog_tail", stats.clone(), makeBodyAttachPoint(new Point(79, 19))));
 
         Map<PartType, Point> points = new HashMap<>();
         points.put(PartType.HEAD, new Point(220, 38));
@@ -40,7 +40,7 @@ public class HardCodedLoader implements BodyPartLoader {
         points.put(PartType.RIGHT_LEG, new Point(73, 35));
         points.put(PartType.LEFT_LEG, new Point(49, 23));
         points.put(PartType.TAIL, new Point(0, 46));
-        parts.put("dog_body", new ConcreteBodyPart("dog_body", stats.clone(), points));
+        parts.put("dog_body", new BodyPart("dog_body", stats.clone(), points));
     }
 
     public void loadRatParts(){
@@ -49,10 +49,10 @@ public class HardCodedLoader implements BodyPartLoader {
         stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
         stats.put(Stat.ATTACK_DMG, 1f);
 
-        parts.put("rat_head", new ConcreteBodyPart("rat_head", stats.clone(), makeBodyAttachPoint(new Point(20, 70))));
-        parts.put("rat_leg", new ConcreteBodyPart("rat_leg", stats.clone(), makeBodyAttachPoint(new Point(36, 20))));
-        parts.put("rat_arm", new ConcreteBodyPart("rat_arm", stats.clone(), makeBodyAttachPoint(new Point(43, 20))));
-        parts.put("rat_tail", new ConcreteBodyPart("rat_tail", stats.clone(), makeBodyAttachPoint(new Point(85, 20))));
+        parts.put("rat_head", new BodyPart("rat_head", stats.clone(), makeBodyAttachPoint(new Point(20, 70))));
+        parts.put("rat_leg", new BodyPart("rat_leg", stats.clone(), makeBodyAttachPoint(new Point(36, 20))));
+        parts.put("rat_arm", new BodyPart("rat_arm", stats.clone(), makeBodyAttachPoint(new Point(43, 20))));
+        parts.put("rat_tail", new BodyPart("rat_tail", stats.clone(), makeBodyAttachPoint(new Point(85, 20))));
 
         Map<PartType, Point> points = new HashMap<>();
         points.put(PartType.HEAD, new Point(238, 98));
@@ -61,7 +61,7 @@ public class HardCodedLoader implements BodyPartLoader {
         points.put(PartType.RIGHT_LEG, new Point(75, 84));
         points.put(PartType.LEFT_LEG, new Point(50, 72));
         points.put(PartType.TAIL, new Point(-10, 78));
-        parts.put("rat_body", new ConcreteBodyPart("rat_body", stats.clone(), points));
+        parts.put("rat_body", new BodyPart("rat_body", stats.clone(), points));
     }
 
     private Map<PartType, Point> makeBodyAttachPoint(Point point){
@@ -70,7 +70,7 @@ public class HardCodedLoader implements BodyPartLoader {
         return points;
     }
 
-    public Map<String, BodyPart> getBodyParts() throws SlickException {
+    public Map<String, IBodyPart> getBodyParts() throws SlickException {
         return parts;
     }
 }

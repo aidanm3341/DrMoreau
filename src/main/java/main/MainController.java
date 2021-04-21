@@ -3,7 +3,7 @@ package main;
 import combat.CombatController;
 import data.mob.Mob;
 import data.bodyparts.PartFactory;
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.PartType;
 import navigation.NavigationController;
 import navigation.Room;
@@ -89,7 +89,7 @@ public class MainController {
     }
 
     private void loadDefaultSidekick() throws SlickException {
-        Map<PartType, BodyPart> parts = new HashMap<>();
+        Map<PartType, IBodyPart> parts = new HashMap<>();
         parts.put(PartType.BODY, PartFactory.getPart("dog_body", 2));
         parts.put(PartType.LEFT_ARM, PartFactory.getPart("dog_arm", 2));
         parts.put(PartType.RIGHT_ARM, PartFactory.getPart("dog_arm", 2));

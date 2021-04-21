@@ -1,6 +1,6 @@
 package combat.view.mobview;
 
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.PartType;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -12,12 +12,12 @@ import java.util.Map;
 public class MobView {
     private PhysicalAttributes attributes;
     private float width;
-    private Map<BodyPart, Point> offsets;
-    private Map<PartType, BodyPart> parts;
+    private Map<IBodyPart, Point> offsets;
+    private Map<PartType, IBodyPart> parts;
 
     private boolean flipped;
 
-    MobView(PhysicalAttributes attributes, Map<BodyPart, Point> offsets, Map<PartType, BodyPart> parts){
+    MobView(PhysicalAttributes attributes, Map<IBodyPart, Point> offsets, Map<PartType, IBodyPart> parts){
         this.offsets = offsets;
         this.parts = parts;
 
@@ -29,7 +29,7 @@ public class MobView {
 
     public Rectangle getBoundingRectangle(){
         float maxX=0, minX=0, maxY=0, minY=0;
-        for(BodyPart part : parts.values()){
+        for(IBodyPart part : parts.values()){
             if(offsets.get(part).x + part.getWidth() > maxX)
                 maxX = offsets.get(part).x + part.getWidth();
             if(offsets.get(part).y + part.getHeight() > maxY)
@@ -45,7 +45,7 @@ public class MobView {
 
     private float calcWidth(){
         float maxX=0, minX=0;
-        for(BodyPart part : parts.values()){
+        for(IBodyPart part : parts.values()){
             if(offsets.get(part).x + part.getWidth() > maxX)
                 maxX = offsets.get(part).x + part.getWidth();
 
@@ -62,7 +62,7 @@ public class MobView {
 
     public void render(GameContainer gc, Graphics g){
         for(PartType type : parts.keySet()){
-            BodyPart bp = parts.get(type);
+            IBodyPart bp = parts.get(type);
             if(flipped)
                 g.drawImage(bp.getImage().getFlippedCopy(true, false),
                         attributes.x - offsets.get(bp).x - bp.getImage().getWidth() + width, attributes.y + offsets.get(bp).y);

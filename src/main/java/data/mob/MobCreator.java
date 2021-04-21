@@ -2,11 +2,10 @@ package data.mob;
 
 import combat.stats.Stat;
 import combat.stats.Stats;
-import data.bodyparts.ConcreteBodyPart;
+import data.bodyparts.BodyPart;
 import data.bodyparts.PartFactory;
-import data.framework.BodyPart;
+import data.framework.IBodyPart;
 import data.framework.PartType;
-import data.mob.Mob;
 import org.newdawn.slick.SlickException;
 
 import java.util.HashMap;
@@ -23,12 +22,12 @@ public class MobCreator {
             case "rat":
                 return makeRat(level);
             case "Dr.Moreau":
-                Map<PartType, BodyPart> parts = new HashMap<>();
+                Map<PartType, IBodyPart> parts = new HashMap<>();
                 Stats stats = new Stats();
                 stats.put(Stat.MAX_HP, 100f);
                 stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
                 stats.put(Stat.ATTACK_DMG, 20f);
-                BodyPart body = new ConcreteBodyPart("Dr.Moreau", stats, new HashMap<>());
+                IBodyPart body = new BodyPart("Dr.Moreau", stats, new HashMap<>());
                 parts.put(PartType.BODY, body);
                 return new Mob("Dr.Moreau", parts);
         }
@@ -37,7 +36,7 @@ public class MobCreator {
 
     private static Mob makeDog(int level) throws SlickException
     {
-        Map<PartType, BodyPart> parts = new TreeMap<>();
+        Map<PartType, IBodyPart> parts = new TreeMap<>();
         parts.put(PartType.HEAD, PartFactory.getPart("dog_head", level));
         parts.put(PartType.LEFT_ARM, PartFactory.getPart("dog_arm", level));
         parts.put(PartType.RIGHT_ARM, PartFactory.getPart("dog_arm", level));
@@ -52,7 +51,7 @@ public class MobCreator {
 
     private static Mob makeRat(int level) throws SlickException
     {
-        Map<PartType, BodyPart> parts = new TreeMap<>();
+        Map<PartType, IBodyPart> parts = new TreeMap<>();
         parts.put(PartType.HEAD, PartFactory.getPart("rat_head", level));
         parts.put(PartType.RIGHT_ARM, PartFactory.getPart("rat_arm", level));
         parts.put(PartType.LEFT_ARM, PartFactory.getPart("rat_arm", level));

@@ -6,9 +6,9 @@ import util.Point;
 
 import java.util.Map;
 
-public class Dog {
+public class Dog implements MobParts{
 
-    public Map<String, IBodyPart> loadDogParts(){
+    public Map<String, IBodyPart> getParts(){
         MobPointGroup pointGroup = new MobPointGroup(
                 new Point(0, 72),
                 new Point(40, 20),

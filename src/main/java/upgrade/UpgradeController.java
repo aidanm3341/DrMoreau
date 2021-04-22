@@ -1,6 +1,6 @@
 package upgrade;
 
-import data.mob.Mob;
+import data.mob.MobCombatData;
 import data.framework.IBodyPart;
 import data.framework.PartType;
 import main.Main;
@@ -76,11 +76,11 @@ public class UpgradeController extends Screen implements ComponentListener {
             dndManager.attach(da);
     }
 
-    public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException
+    public void enter(GameContainer gc, StateBasedGame sbg)
     {
         draggables = new ArrayList<>();
 
-        Mob sidekick = main.getSidekick();
+        MobCombatData sidekick = main.getSidekick();
         draggables.add(new PartDraggable(headArea, sidekick.getPart(PartType.HEAD)));
         draggables.add(new PartDraggable(bodyArea,  sidekick.getPart(PartType.BODY)));
         draggables.add(new PartDraggable(legLeftArea,  sidekick.getPart(PartType.LEFT_LEG)));
@@ -103,7 +103,7 @@ public class UpgradeController extends Screen implements ComponentListener {
         }
     }
 
-    public void leave(GameContainer gc, StateBasedGame sbg) throws SlickException
+    public void leave(GameContainer gc, StateBasedGame sbg)
     {
         main.updateSidekick();
     }

@@ -5,7 +5,7 @@ import combat.stats.Stat;
 import combat.view.CombatView;
 import combat.view.animation.AnimationManager;
 import combat.view.animation.AnimationManagerImp;
-import data.mob.Mob;
+import data.mob.MobCombatData;
 import main.Main;
 import main.MainController;
 import org.newdawn.slick.GameContainer;
@@ -22,7 +22,7 @@ public class CombatController extends Screen {
     private MainController main;
     private MobController playerController;
     private CombatView view;
-    private Mob mob;
+    private MobCombatData mobCombatData;
 
     private AnimationManager animationManager;
     private TurnManager turns;
@@ -45,9 +45,9 @@ public class CombatController extends Screen {
         view.addListener((PlayerMobController) playerController);
     }
 
-    public void startNewCombat(Mob mob) {
-        this.mob = mob;
-        MobController enemyController = new EnemyController(mob);
+    public void startNewCombat(MobCombatData mobCombatData) {
+        this.mobCombatData = mobCombatData;
+        MobController enemyController = new EnemyController(mobCombatData);
 
         turns = new TurnManager(this, animationManager, playerController, enemyController);
         getSidekick().clearEffects();
@@ -65,9 +65,9 @@ public class CombatController extends Screen {
     public void checkWins() {
         if(main.getSidekick().getStat(Stat.CURRENT_HP) <= 0)
             main.enterState(Main.GAMEOVER);
-        else if(mob.getName().equals("Dr.Moreau") && mob.getStat(Stat.CURRENT_HP) <= 0)
+        else if(mobCombatData.getName().equals("Dr.Moreau") && mobCombatData.getStat(Stat.CURRENT_HP) <= 0)
             main.enterState(Main.VICTORY);
-        else if(mob.getStat(Stat.CURRENT_HP) <= 0)
+        else if(mobCombatData.getStat(Stat.CURRENT_HP) <= 0)
             main.enterState(Main.UPGRADE);
     }
 
@@ -75,11 +75,11 @@ public class CombatController extends Screen {
         view.render(gc, g);
     }
 
-    public Mob getMob(){
-        return mob;
+    public MobCombatData getMob(){
+        return mobCombatData;
     }
 
-    public Mob getSidekick(){
+    public MobCombatData getSidekick(){
         return main.getSidekick();
     }
 

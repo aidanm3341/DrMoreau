@@ -10,11 +10,10 @@ import org.newdawn.slick.SlickException;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class MobCreator {
 
-    public static Mob getMob(String name, int level) throws SlickException {
+    public static MobCombatData getMob(String name, int level) throws SlickException {
         if ("Dr.Moreau".equals(name)) {
             Map<PartType, IBodyPart> parts = new HashMap<>();
             Stats stats = new Stats();
@@ -23,13 +22,13 @@ public class MobCreator {
             stats.put(Stat.ATTACK_DMG, 20f);
             IBodyPart body = new BodyPart("Dr.Moreau", stats, new HashMap<>());
             parts.put(PartType.BODY, body);
-            return new Mob("Dr.Moreau", parts);
+            return new MobCombatData("Dr.Moreau", parts);
         }
 
         return makeAnimal(name, level);
     }
 
-    private static Mob makeAnimal(String name, int level) throws SlickException {
+    private static MobCombatData makeAnimal(String name, int level) throws SlickException {
         Map<PartType, IBodyPart> parts = Map.of(
                 PartType.HEAD, PartFactory.getPart(name + "_head", level),
                 PartType.LEFT_ARM, PartFactory.getPart(name + "_arm", level),
@@ -40,7 +39,7 @@ public class MobCreator {
                 PartType.BODY, PartFactory.getPart(name + "_body", level)
         );
 
-        return new Mob(name, parts);
+        return new MobCombatData(name, parts);
     }
 
 //    private static Mob makeDog(int level) throws SlickException

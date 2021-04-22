@@ -1,9 +1,9 @@
 package combat.abilities.effects;
 
-import data.mob.Mob;
+import data.mob.MobCombatData;
 
 public interface Effect {
-    void attach(Mob attacker, Mob defender);
+    void attach(MobCombatData attacker, MobCombatData defender);
     void onAttach();
     void resolveEndOfTurn();
     int getRemainingDuration();

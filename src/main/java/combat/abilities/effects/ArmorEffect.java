@@ -1,20 +1,20 @@
 package combat.abilities.effects;
 
 import combat.stats.Stat;
-import data.mob.Mob;
+import data.mob.MobCombatData;
 
 public class ArmorEffect implements Effect {
 
     private float armor;
     private int remainingDuration;
-    private Mob subject;
+    private MobCombatData subject;
 
     public ArmorEffect(float armor, int duration){
         this.armor = armor;
         this.remainingDuration = duration;
     }
 
-    public void attach(Mob attacker, Mob defender) {
+    public void attach(MobCombatData attacker, MobCombatData defender) {
         this.subject = attacker;
         subject.applyEffect(this);
         onAttach();

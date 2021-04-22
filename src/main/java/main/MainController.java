@@ -1,7 +1,7 @@
 package main;
 
 import combat.CombatController;
-import data.mob.Mob;
+import data.mob.MobCombatData;
 import data.bodyparts.PartFactory;
 import data.framework.IBodyPart;
 import data.framework.PartType;
@@ -22,7 +22,7 @@ import java.util.Map;
 
 public class MainController {
 
-    private Mob sidekick;
+    private MobCombatData sidekick;
 
     private Intro intro;
     private CombatController combat;
@@ -67,7 +67,7 @@ public class MainController {
         sbg.addState(new IntroTxt(this));
     }
 
-    public Mob getSidekick(){
+    public MobCombatData getSidekick(){
         //updateSidekick();
         return sidekick;
     }
@@ -97,7 +97,7 @@ public class MainController {
         parts.put(PartType.RIGHT_LEG, PartFactory.getPart("dog_leg", 2));
         parts.put(PartType.TAIL, PartFactory.getPart("dog_tail", 2));
         parts.put(PartType.HEAD, PartFactory.getPart("dog_head", 2));
-        sidekick = new Mob("Sidekick", parts);
+        sidekick = new MobCombatData("Sidekick", parts);
     }
 
     public void enterState(int ID) {

@@ -1,8 +1,8 @@
 package combat;
 
-import data.mob.Mob;
+import data.mob.MobCombatData;
 
 public interface MobController {
     void attachController(CombatController ctrl);
-    Mob getMob();
+    MobCombatData getMob();
 }

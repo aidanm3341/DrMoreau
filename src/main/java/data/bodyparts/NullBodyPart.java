@@ -38,7 +38,7 @@ public class NullBodyPart implements IBodyPart {
         return 0;
     }
 
-    public Ability getAttack() { return new Ability("Null", new ArrayList<>(), null); }
+    public Ability getAbility() { return new Ability("Null", new ArrayList<>(), null); }
 
     public NullBodyPart clone(){
         return new NullBodyPart();

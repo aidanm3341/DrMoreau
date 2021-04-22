@@ -4,7 +4,7 @@ package combat.abilities;
 import combat.abilities.effects.Effect;
 import combat.view.animation.Animation;
 import combat.view.animation.AnimationManager;
-import data.mob.Mob;
+import data.mob.MobCombatData;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class Ability {
         return name;
     }
 
-    public void execute(AnimationManager animationManager, Mob attacker, Mob defender){
+    public void execute(AnimationManager animationManager, MobCombatData attacker, MobCombatData defender){
         animationManager.doAnimation(animation.clone());
         for(Effect effect : effects)
             effect.attach(attacker, defender);

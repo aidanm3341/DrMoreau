@@ -11,14 +11,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Mob implements MobObserver{
+public class MobCombatData implements MobObserver{
 
     private String name;
     private Stats stats;
     private Map<PartType, IBodyPart> parts;
     private List<Effect> effects;
 
-    public Mob(String name, Map<PartType, IBodyPart> parts) {
+    public MobCombatData(String name, Map<PartType, IBodyPart> parts) {
         this.name = name;
         this.parts = parts;
 

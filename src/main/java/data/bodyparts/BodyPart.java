@@ -12,11 +12,11 @@ import java.util.Map;
 
 public class BodyPart implements IBodyPart {
 
-    private String name;
-    private Image image;
-    private Ability attack;
-    private Stats stats;
-    private Map<PartType, Point> attachPoints;
+    private final String name;
+    private final Image image;
+    private Ability ability;
+    private final Stats stats;
+    private final Map<PartType, Point> attachPoints;
 
     public BodyPart(String name, Stats stats, Map<PartType, Point> attachPoints)
     {
@@ -48,8 +48,8 @@ public class BodyPart implements IBodyPart {
         return image.getHeight();
     }
 
-    public Ability getAttack() {
-        return attack;
+    public Ability getAbility() {
+        return ability;
     }
 
     public IBodyPart clone(){

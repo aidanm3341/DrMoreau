@@ -1,18 +1,18 @@
 package combat.abilities.effects;
 
 import combat.stats.Stat;
-import data.mob.Mob;
+import data.mob.MobCombatData;
 
 public class DamageEffect implements Effect{
 
     private float damage;
-    private Mob subject;
+    private MobCombatData subject;
 
     public DamageEffect(float damage){
         this.damage = damage;
     }
 
-    public void attach(Mob attacker, Mob defender) {
+    public void attach(MobCombatData attacker, MobCombatData defender) {
         this.subject = defender;
         subject.applyEffect(this);
         onAttach();

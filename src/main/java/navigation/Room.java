@@ -1,6 +1,6 @@
 package navigation;
 
-import data.mob.Mob;
+import data.mob.MobCombatData;
 import data.framework.IBodyPart;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
@@ -11,13 +11,13 @@ import java.util.List;
 public class Room {
     private int type;
     private Image navigationImage, navigationImageHover;
-    private Mob mob;
+    private MobCombatData mobCombatData;
     private List<IBodyPart> rewards;
 
-    public Room(int type, Mob mob, Image navigationImage, List<IBodyPart> rewards) throws SlickException
+    public Room(int type, MobCombatData mobCombatData, Image navigationImage, List<IBodyPart> rewards) throws SlickException
     {
         this.type = type;
-        this.mob = mob;
+        this.mobCombatData = mobCombatData;
         this.navigationImage = navigationImage;
         navigationImageHover = navigationImage.copy();
         navigationImageHover.getGraphics().drawImage(ResourceLoader.getImage("travelHover"), 0, 0);
@@ -37,8 +37,8 @@ public class Room {
         return navigationImageHover;
     }
 
-    public Mob getMob() {
-        return mob;
+    public MobCombatData getMob() {
+        return mobCombatData;
     }
 
     public List<IBodyPart> getRewards() {

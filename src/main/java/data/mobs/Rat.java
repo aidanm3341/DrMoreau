@@ -6,9 +6,9 @@ import util.Point;
 
 import java.util.Map;
 
-public class Rat {
+public class Rat implements MobParts{
 
-    public Map<String, IBodyPart> loadRatParts(){
+    public Map<String, IBodyPart> getParts(){
         MobPointGroup pointGroup = new MobPointGroup(
                 new Point(20, 70),
                 new Point(36, 20),

@@ -1,6 +1,6 @@
 package navigation;
 
-import data.mob.Mob;
+import data.mob.MobCombatData;
 import data.framework.IBodyPart;
 import data.framework.PartType;
 import main.Main;
@@ -12,23 +12,23 @@ import java.util.List;
 import java.util.Random;
 
 public class RoomBlueprint {
-    private List<Mob> possibleMobs;
+    private List<MobCombatData> possibleMobCombatData;
     private Image image;
 
-    public RoomBlueprint(List<Mob> mobs, Image image){
-        this.possibleMobs = mobs;
+    public RoomBlueprint(List<MobCombatData> mobCombatData, Image image){
+        this.possibleMobCombatData = mobCombatData;
         this.image = image;
     }
 
     public Room buildRoom() throws SlickException {
-        Mob mob = possibleMobs.get(new Random().nextInt(possibleMobs.size()));
+        MobCombatData mobCombatData = possibleMobCombatData.get(new Random().nextInt(possibleMobCombatData.size()));
         Pool<IBodyPart> parts = new Pool<>();
         for(PartType part : PartType.values())
-            parts.add(mob.getPart(part));
+            parts.add(mobCombatData.getPart(part));
 
         return new Room(
                 Main.FIGHT,
-                mob,
+                mobCombatData,
                 image,
                 parts.popX(3)
         );

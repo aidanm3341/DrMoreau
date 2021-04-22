@@ -1,16 +1,16 @@
 package combat;
 
 import combat.abilities.Ability;
-import data.mob.Mob;
+import data.mob.MobCombatData;
 import util.buttons.AbilityListener;
 
 public class PlayerMobController implements MobController, AbilityListener {
 
     private CombatController ctrl;
-    private Mob mob;
+    private MobCombatData mobCombatData;
 
-    public PlayerMobController(Mob mob){
-        this.mob = mob;
+    public PlayerMobController(MobCombatData mobCombatData){
+        this.mobCombatData = mobCombatData;
     }
 
     public void attachController(CombatController ctrl) {
@@ -21,7 +21,7 @@ public class PlayerMobController implements MobController, AbilityListener {
         ctrl.executeAbility(at);
     }
 
-    public Mob getMob(){
-        return mob;
+    public MobCombatData getMob(){
+        return mobCombatData;
     }
 }

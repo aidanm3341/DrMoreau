@@ -12,6 +12,6 @@ public interface IBodyPart extends Cloneable {
     Image getImage();
     float getWidth();
     float getHeight();
-    Ability getAttack();
+    Ability getAbility();
     IBodyPart clone();
 }

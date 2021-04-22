@@ -5,17 +5,17 @@ import combat.abilities.effects.DamageEffect;
 import combat.abilities.effects.Effect;
 import combat.stats.Stat;
 import combat.view.animation.AttackAnimationToLeft;
-import data.mob.Mob;
+import data.mob.MobCombatData;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EnemyController implements MobController {
 
-    private Mob mob;
+    private MobCombatData mobCombatData;
 
-    public EnemyController(Mob mob){
-        this.mob = mob;
+    public EnemyController(MobCombatData mobCombatData){
+        this.mobCombatData = mobCombatData;
     }
 
     public void attachController(CombatController ctrl) {
@@ -25,7 +25,7 @@ public class EnemyController implements MobController {
                 new AttackAnimationToLeft(ctrl.getView().getMobView().getAttributes())));
     }
 
-    public Mob getMob(){
-        return mob;
+    public MobCombatData getMob(){
+        return mobCombatData;
     }
 }

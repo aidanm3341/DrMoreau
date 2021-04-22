@@ -22,7 +22,8 @@ public class TurnManager {
     }
 
     public void executeAbility(Ability ability){
-        ability.execute(animationManager, attacker.getMob(), defender.getMob());
+        if(!isAttacking)
+            ability.execute(animationManager, attacker.getMob(), defender.getMob());
 
         isAttacking = true;
     }

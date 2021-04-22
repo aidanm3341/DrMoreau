@@ -40,7 +40,7 @@ public class TurnManager {
         MobController temp = defender;
         defender = attacker;
         attacker = temp;
-        attacker.enter(controller);
+        attacker.attachController(controller);
         attacker.getMob().updateEffects();
     }
 }

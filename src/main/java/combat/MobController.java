@@ -3,6 +3,6 @@ package combat;
 import data.mob.Mob;
 
 public interface MobController {
-    void enter(CombatController ctrl);
+    void attachController(CombatController ctrl);
     Mob getMob();
 }

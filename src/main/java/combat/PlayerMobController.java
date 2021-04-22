@@ -13,7 +13,7 @@ public class PlayerMobController implements MobController, AbilityListener {
         this.mob = mob;
     }
 
-    public void enter(CombatController ctrl) {
+    public void attachController(CombatController ctrl) {
         this.ctrl = ctrl;
     }
 

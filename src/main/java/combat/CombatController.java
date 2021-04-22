@@ -30,7 +30,7 @@ public class CombatController extends Screen {
     public CombatController(MainController main) {
         this.main = main;
         playerController = new PlayerMobController(main.getSidekick());
-        playerController.enter(this);
+        playerController.attachController(this);
     }
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {

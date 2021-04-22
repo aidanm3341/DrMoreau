@@ -14,54 +14,63 @@ import java.util.TreeMap;
 
 public class MobCreator {
 
-    public static Mob getMob(String name, int level) throws SlickException
-    {
-        switch(name) {
-            case "dog":
-                return makeDog(level);
-            case "rat":
-                return makeRat(level);
-            case "Dr.Moreau":
-                Map<PartType, IBodyPart> parts = new HashMap<>();
-                Stats stats = new Stats();
-                stats.put(Stat.MAX_HP, 100f);
-                stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
-                stats.put(Stat.ATTACK_DMG, 20f);
-                IBodyPart body = new BodyPart("Dr.Moreau", stats, new HashMap<>());
-                parts.put(PartType.BODY, body);
-                return new Mob("Dr.Moreau", parts);
+    public static Mob getMob(String name, int level) throws SlickException {
+        if ("Dr.Moreau".equals(name)) {
+            Map<PartType, IBodyPart> parts = new HashMap<>();
+            Stats stats = new Stats();
+            stats.put(Stat.MAX_HP, 100f);
+            stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
+            stats.put(Stat.ATTACK_DMG, 20f);
+            IBodyPart body = new BodyPart("Dr.Moreau", stats, new HashMap<>());
+            parts.put(PartType.BODY, body);
+            return new Mob("Dr.Moreau", parts);
         }
-        return null;
+
+        return makeAnimal(name, level);
     }
 
-    private static Mob makeDog(int level) throws SlickException
-    {
-        Map<PartType, IBodyPart> parts = new TreeMap<>();
-        parts.put(PartType.HEAD, PartFactory.getPart("dog_head", level));
-        parts.put(PartType.LEFT_ARM, PartFactory.getPart("dog_arm", level));
-        parts.put(PartType.RIGHT_ARM, PartFactory.getPart("dog_arm", level));
-        parts.put(PartType.LEFT_LEG, PartFactory.getPart("dog_leg", level));
-        parts.put(PartType.RIGHT_LEG, PartFactory.getPart("dog_leg", level));
-        parts.put(PartType.TAIL, PartFactory.getPart("dog_tail", level));
-        parts.put(PartType.BODY, PartFactory.getPart("dog_body", level));
+    private static Mob makeAnimal(String name, int level) throws SlickException {
+        Map<PartType, IBodyPart> parts = Map.of(
+                PartType.HEAD, PartFactory.getPart(name + "_head", level),
+                PartType.LEFT_ARM, PartFactory.getPart(name + "_arm", level),
+                PartType.RIGHT_ARM, PartFactory.getPart(name + "_arm", level),
+                PartType.LEFT_LEG, PartFactory.getPart(name + "_leg", level),
+                PartType.RIGHT_LEG, PartFactory.getPart(name + "_leg", level),
+                PartType.TAIL, PartFactory.getPart(name + "_tail", level),
+                PartType.BODY, PartFactory.getPart(name + "_body", level)
+        );
 
-
-        return new Mob("Dog", parts);
+        return new Mob(name, parts);
     }
 
-    private static Mob makeRat(int level) throws SlickException
-    {
-        Map<PartType, IBodyPart> parts = new TreeMap<>();
-        parts.put(PartType.HEAD, PartFactory.getPart("rat_head", level));
-        parts.put(PartType.RIGHT_ARM, PartFactory.getPart("rat_arm", level));
-        parts.put(PartType.LEFT_ARM, PartFactory.getPart("rat_arm", level));
-        parts.put(PartType.RIGHT_LEG, PartFactory.getPart("rat_leg", level));
-        parts.put(PartType.LEFT_LEG, PartFactory.getPart("rat_leg", level));
-        parts.put(PartType.TAIL, PartFactory.getPart("rat_tail", level));
-        parts.put(PartType.BODY, PartFactory.getPart("rat_body", level));
-
-        return new Mob("Rat", parts);
-    }
+//    private static Mob makeDog(int level) throws SlickException
+//    {
+//        Map<PartType, IBodyPart> parts = new TreeMap<>();
+//        parts.put(PartType.HEAD, PartFactory.getPart("dog_head", level));
+//        parts.put(PartType.LEFT_ARM, PartFactory.getPart("dog_arm", level));
+//        parts.put(PartType.RIGHT_ARM, PartFactory.getPart("dog_arm", level));
+//        parts.put(PartType.LEFT_LEG, PartFactory.getPart("dog_leg", level));
+//        parts.put(PartType.RIGHT_LEG, PartFactory.getPart("dog_leg", level));
+//        parts.put(PartType.TAIL, PartFactory.getPart("dog_tail", level));
+//        parts.put(PartType.BODY, PartFactory.getPart("dog_body", level));
+//
+//
+//        return new Mob("Dog", parts);
+//    }
+//
+//    private static Mob makeRat(int level) throws SlickException
+//    {
+//        Map<PartType, IBodyPart> parts = new TreeMap<>();
+//        parts.put(PartType.HEAD, PartFactory.getPart("rat_head", level));
+//        parts.put(PartType.RIGHT_ARM, PartFactory.getPart("rat_arm", level));
+//        parts.put(PartType.LEFT_ARM, PartFactory.getPart("rat_arm", level));
+//        parts.put(PartType.RIGHT_LEG, PartFactory.getPart("rat_leg", level));
+//        parts.put(PartType.LEFT_LEG, PartFactory.getPart("rat_leg", level));
+//        parts.put(PartType.TAIL, PartFactory.getPart("rat_tail", level));
+//        parts.put(PartType.BODY, PartFactory.getPart("rat_body", level));
+//
+//        return new Mob("Rat", parts);
+//    }
 
 //    private static Mob makeBunny(int level) throws SlickException
 //    {

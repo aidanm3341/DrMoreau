@@ -12,21 +12,27 @@ import java.util.List;
 
 public class BasicRoomBlueprintLoader implements RoomBlueprintLoader {
     public List<RoomBlueprint> getRoomBlueprints() throws SlickException {
-        List<RoomBlueprint> rooms = new ArrayList<>();
-        rooms.add(redRoom());
-        rooms.add(greyRoom());
-        return rooms;
+        return List.of(
+                redRoom(),
+                greyRoom()
+        );
     }
 
     private RoomBlueprint redRoom() throws SlickException {
-        List<Mob> mobs = new ArrayList<>();
-        mobs.add(MobCreator.getMob("dog", 1));
+        List<Mob> mobs = List.of(
+                MobCreator.getMob("dog", 1)
+//                MobCreator.getMob("bunny", 1),
+//                MobCreator.getMob("elephant", 1)
+        );
         return new RoomBlueprint(mobs, ResourceLoader.getImage("brickRoute"));
     }
 
     private RoomBlueprint greyRoom() throws SlickException {
-        List<Mob> mobs = new ArrayList<>();
-        mobs.add(MobCreator.getMob("rat", 1));
+        List<Mob> mobs = List.of(
+                MobCreator.getMob("rat", 1)
+//                MobCreator.getMob("boar", 1),
+//                MobCreator.getMob("penguin", 1)
+        );
         return new RoomBlueprint(mobs, ResourceLoader.getImage("greyRoute"));
     }
 }

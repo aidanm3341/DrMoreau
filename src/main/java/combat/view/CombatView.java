@@ -34,10 +34,11 @@ public class CombatView {
     private HealthBar mobHealth, playerHealth;
 
     public CombatView(CombatController ctrl) throws SlickException {
-
         this.ctrl = ctrl;
+    }
 
-        createEnemyView();
+    public void init(GameContainer gc) throws SlickException {
+        //createEnemyView();
         createPlayerView();
 
 
@@ -45,22 +46,18 @@ public class CombatView {
         effects.add(new DamageEffect(ctrl.getSidekick().getStat(Stat.ATTACK_DMG)));
         Ability basicAttack = new Ability("Basic Attack", effects, new AttackAnimationToRight(playerView.getAttributes()));
         basicAttackButton = new AbilityButton(basicAttack, 0, 70);
+        basicAttackButton.init(gc);
 
 
         effects = new ArrayList<>();
         effects.add(new ArmorEffect(5, 0));
         Ability basicDefend = new Ability("Basic Defend", effects, new StillAnimation());
         basicDefendButton = new AbilityButton(basicDefend, 0, 160);
+        basicDefendButton.init(gc);
 
 
 
         background = ResourceLoader.getImage("battleBackground");
-
-        mobHealth = new HealthBar(ctrl.getMob().getName(), 1100, 55);
-        playerHealth = new HealthBar(ctrl.getSidekick().getName(), 400, 55);
-
-        ctrl.getMob().addObserver(mobHealth);
-        ctrl.getSidekick().addObserver(playerHealth);
     }
 
     public void addListener(AbilityListener listener){
@@ -95,9 +92,14 @@ public class CombatView {
         mobView = mobViewBuilder.finalise(true);
     }
 
-    public void init(GameContainer gc) throws SlickException {
-        basicAttackButton.init(gc);
-        basicDefendButton.init(gc);
+    public void createRoomView(){
+        createEnemyView();
+
+        mobHealth = new HealthBar(ctrl.getMob().getName(), 1100, 55);
+        playerHealth = new HealthBar(ctrl.getSidekick().getName(), 400, 55);
+
+        ctrl.getMob().addObserver(mobHealth);
+        ctrl.getSidekick().addObserver(playerHealth);
     }
 
     public void render(GameContainer gc, Graphics g) throws SlickException {

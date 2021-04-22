@@ -9,7 +9,7 @@ public class TurnManager {
     private AnimationManager animationManager;
     private MobController attacker, defender;
 
-    private boolean isAttacking;
+    private boolean isAttacking, isPlayersTurn;
 
     public TurnManager(CombatController controller, AnimationManager animationManager,
                        MobController attacker, MobController defender){
@@ -19,17 +19,19 @@ public class TurnManager {
         this.defender = defender;
 
         isAttacking = false;
+        isPlayersTurn = true;
     }
 
     public void executeAbility(Ability ability){
         if(!isAttacking)
-            ability.execute(animationManager, attacker.getMob(), defender.getMob());
+            ability.execute(animationManager, attacker.getMobData(), defender.getMobData());
 
         isAttacking = true;
     }
 
     public void update(){
         animationManager.update();
+
         if(animationManager.isDone() && isAttacking){
             isAttacking = false;
             switchAttacker();
@@ -41,6 +43,8 @@ public class TurnManager {
         defender = attacker;
         attacker = temp;
         attacker.attachController(controller);
-        attacker.getMob().updateEffects();
+        attacker.getMobData().updateEffects();
+
+        isPlayersTurn = !isPlayersTurn;
     }
 }

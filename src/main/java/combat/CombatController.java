@@ -27,15 +27,21 @@ public class CombatController extends Screen {
     private AnimationManager animationManager;
     private TurnManager turns;
 
-    public CombatController(MainController main) {
+    public CombatController(MainController main) throws SlickException {
         this.main = main;
-        playerController = new PlayerMobController(main.getSidekick());
-        playerController.attachController(this);
+
     }
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
         animationManager = new AnimationManagerImp();
+
+        view = new CombatView(this);
+        view.init(gc);
+        view.addListener((PlayerMobController) playerController);
+
+        playerController = new PlayerMobController(main.getSidekick(), view.getMobView());
+        playerController.attachController(this);
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException {
@@ -43,11 +49,12 @@ public class CombatController extends Screen {
         view = new CombatView(this);
         view.init(gc);
         view.addListener((PlayerMobController) playerController);
+        view.createRoomView();
     }
 
     public void startNewCombat(MobCombatData mobCombatData) {
         this.mobCombatData = mobCombatData;
-        MobController enemyController = new EnemyController(mobCombatData);
+        MobController enemyController = new EnemyController(mobCombatData, view.getMobView());
 
         turns = new TurnManager(this, animationManager, playerController, enemyController);
         getSidekick().clearEffects();

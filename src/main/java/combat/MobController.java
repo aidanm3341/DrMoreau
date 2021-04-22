@@ -1,8 +1,10 @@
 package combat;
 
+import combat.view.mobview.MobView;
 import data.mob.MobCombatData;
 
 public interface MobController {
     void attachController(CombatController ctrl);
-    MobCombatData getMob();
+    MobCombatData getMobData();
+    MobView getMobView();
 }

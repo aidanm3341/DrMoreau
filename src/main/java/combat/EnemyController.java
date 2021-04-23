@@ -1,6 +1,7 @@
 package combat;
 
 import combat.abilities.Ability;
+import combat.abilities.AbilityFactory;
 import combat.abilities.effects.DamageEffect;
 import combat.abilities.effects.Effect;
 import combat.stats.Stat;
@@ -17,19 +18,18 @@ import java.util.List;
 
 public class EnemyController implements MobController {
 
+    private AbilityFactory abilityFactory;
     private MobCombatData mobCombatData;
     private MobView mobView;
 
     public EnemyController(MobCombatData mobCombatData){
         this.mobCombatData = mobCombatData;
+        this.abilityFactory = new AbilityFactory(AttackAnimation.DIRECTION.LEFT);
         createMobView();
     }
 
     public void attachController(CombatController ctrl) {
-        List<Effect> effects = new ArrayList<>();
-        effects.add(new DamageEffect(ctrl.getMobController().getMobData().getStat(Stat.ATTACK_DMG)));
-        ctrl.executeAbility(new Ability("Basic Attack", effects,
-                new AttackAnimation(AttackAnimation.DIRECTION.LEFT)));
+        ctrl.executeAbility(abilityFactory.basicDamageAbility());
     }
 
     private void createMobView(){

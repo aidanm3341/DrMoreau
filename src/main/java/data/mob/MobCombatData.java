@@ -73,6 +73,10 @@ public class MobCombatData implements MobObserver{
         return parts.get(part);
     }
 
+    public Map<PartType, IBodyPart> getParts() {
+        return parts;
+    }
+
     public boolean hasPart(PartType type){
         return parts.containsKey(type);
     }

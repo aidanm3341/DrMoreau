@@ -15,14 +15,7 @@ public class MobCreator {
 
     public static MobCombatData getMob(String name, int level) throws SlickException {
         if ("Dr.Moreau".equals(name)) {
-            Map<PartType, IBodyPart> parts = new HashMap<>();
-            Stats stats = new Stats();
-            stats.put(Stat.MAX_HP, 100f);
-            stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
-            stats.put(Stat.ATTACK_DMG, 20f);
-            IBodyPart body = new BodyPart("Dr.Moreau", stats, new HashMap<>());
-            parts.put(PartType.BODY, body);
-            return new MobCombatData("Dr.Moreau", parts);
+            return new MobCombatData("Dr.Moreau", Map.of(PartType.BODY, PartFactory.getPart("Dr.Moreau", 1)));
         }
 
         return makeAnimal(name, level);

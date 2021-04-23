@@ -8,13 +8,14 @@ public class DamageEffect implements Effect{
     private float damage;
     private MobCombatData subject;
 
-    public DamageEffect(float damage){
-        this.damage = damage;
-    }
+    public DamageEffect(){ }
 
     public void attach(MobCombatData attacker, MobCombatData defender) {
         this.subject = defender;
         subject.applyEffect(this);
+
+        this.damage = attacker.getStat(Stat.ATTACK_DMG);
+
         onAttach();
     }
 

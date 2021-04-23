@@ -14,14 +14,15 @@ public class BodyPart implements IBodyPart {
 
     private final String name;
     private final Image image;
-    private Ability ability;
+    private final Ability ability;
     private final Stats stats;
     private final Map<PartType, Point> attachPoints;
 
-    public BodyPart(String name, Stats stats, Map<PartType, Point> attachPoints)
+    public BodyPart(String name, Stats stats, Ability ability, Map<PartType, Point> attachPoints)
     {
         this.name = name;
         this.stats = stats;
+        this.ability = ability;
         this.image = ResourceLoader.getImage(name);
         this.attachPoints = attachPoints;
     }
@@ -53,6 +54,6 @@ public class BodyPart implements IBodyPart {
     }
 
     public IBodyPart clone(){
-        return new BodyPart(name, stats, attachPoints);
+        return new BodyPart(name, stats, ability, attachPoints);
     }
 }

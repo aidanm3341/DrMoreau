@@ -33,12 +33,8 @@ public class CombatView {
     }
 
     public void init(GameContainer gc) throws SlickException {
-        //createEnemyView();
-        //createPlayerView();
-
-
         List<Effect> effects = new ArrayList<>();
-        effects.add(new DamageEffect(ctrl.getPlayerController().getMobData().getStat(Stat.ATTACK_DMG)));
+        effects.add(new DamageEffect());
         Ability basicAttack = new Ability("Basic Attack", effects, new AttackAnimation(AttackAnimation.DIRECTION.RIGHT));
         basicAttackButton = new AbilityButton(basicAttack, 0, 70);
         basicAttackButton.init(gc);
@@ -61,35 +57,7 @@ public class CombatView {
     }
 
 
-//    private void createPlayerView(){
-//        IBodyPart body = ctrl.getSidekick().getPart(PartType.BODY);
-//
-//        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, new PhysicalAttributes(400, 380));
-//        for(PartType type : PartType.values()){
-//            if(type != PartType.BODY)
-//                mobViewBuilder.addPart(type, ctrl.getSidekick().getPart(type));
-//        }
-//        playerView = mobViewBuilder.finalise(false);
-//    }
-
-//    public MobView getMobView(){
-//        return mobView;
-//    }
-
-//    private void createEnemyView(){
-//        IBodyPart body = ctrl.getMob().getPart(PartType.BODY);
-//
-//        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, new PhysicalAttributes(1150, 400));
-//        for(PartType type : PartType.values()){
-//            if(type != PartType.BODY && ctrl.getMob().hasPart(type))
-//                mobViewBuilder.addPart(type, ctrl.getMob().getPart(type));
-//        }
-//        mobView = mobViewBuilder.finalise(true);
-//    }
-
     public void createRoomView(){
-        //createEnemyView();
-
         mobHealth = new HealthBar(ctrl.getMobController().getMobData().getName(), 1100, 55);
         playerHealth = new HealthBar(ctrl.getPlayerController().getMobData().getName(), 400, 55);
 

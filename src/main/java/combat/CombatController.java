@@ -49,16 +49,13 @@ public class CombatController extends Screen {
         startNewCombat(main.getActiveRoom().getMob());
         view = new CombatView(this);
         view.init(gc);
+        view.createRoomView(gc);
         view.addListener((PlayerMobController) playerController);
-        view.createRoomView();
     }
 
     public void startNewCombat(MobCombatData mobCombatData) {
         this.mobCombatData = mobCombatData;
         this.enemyController = new EnemyController(mobCombatData);
-
-//        playerController = new PlayerMobController(mobCombatData);
-//        playerController.attachController(this);
 
         turns = new TurnManager(this, animationManager, playerController, enemyController);
         getPlayerController().getMobData().clearEffects();

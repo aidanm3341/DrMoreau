@@ -2,6 +2,10 @@ package combat;
 
 import combat.abilities.Ability;
 import combat.view.mobview.MobView;
+import combat.view.mobview.MobViewBuilder;
+import combat.view.mobview.PhysicalAttributes;
+import data.framework.IBodyPart;
+import data.framework.PartType;
 import data.mob.MobCombatData;
 import util.buttons.AbilityListener;
 
@@ -11,9 +15,9 @@ public class PlayerMobController implements MobController, AbilityListener {
     private MobCombatData mobCombatData;
     private MobView mobView;
 
-    public PlayerMobController(MobCombatData mobCombatData, MobView mobView){
+    public PlayerMobController(MobCombatData mobCombatData){
         this.mobCombatData = mobCombatData;
-        this.mobView = mobView;
+        createPlayerView();
     }
 
     public void attachController(CombatController ctrl) {
@@ -24,11 +28,22 @@ public class PlayerMobController implements MobController, AbilityListener {
         ctrl.executeAbility(at);
     }
 
-    public MobCombatData getMobData(){
-        return mobCombatData;
+    private void createPlayerView(){
+        IBodyPart body = mobCombatData.getPart(PartType.BODY);
+
+        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, new PhysicalAttributes(400, 380));
+        for(PartType type : PartType.values()){
+            if(type != PartType.BODY)
+                mobViewBuilder.addPart(type, mobCombatData.getPart(type));
+        }
+        mobView = mobViewBuilder.finalise(false);
     }
 
     public MobView getMobView() {
         return mobView;
+    }
+
+    public MobCombatData getMobData(){
+        return mobCombatData;
     }
 }

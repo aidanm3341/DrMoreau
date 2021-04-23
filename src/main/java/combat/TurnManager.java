@@ -30,7 +30,7 @@ public class TurnManager {
     }
 
     public void update(){
-        animationManager.update();
+        animationManager.update(attacker.getMobView().getAttributes(), defender.getMobView().getAttributes());
 
         if(animationManager.isDone() && isAttacking){
             isAttacking = false;

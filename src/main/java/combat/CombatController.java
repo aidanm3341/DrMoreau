@@ -23,6 +23,7 @@ public class CombatController extends Screen {
     private MobController playerController;
     private CombatView view;
     private MobCombatData mobCombatData;
+    private MobController enemyController;
 
     private AnimationManager animationManager;
     private TurnManager turns;
@@ -36,12 +37,12 @@ public class CombatController extends Screen {
         super.init(gc, sbg);
         animationManager = new AnimationManagerImp();
 
+        playerController = new PlayerMobController(main.getSidekick());
+        playerController.attachController(this);
+
         view = new CombatView(this);
         view.init(gc);
         view.addListener((PlayerMobController) playerController);
-
-        playerController = new PlayerMobController(main.getSidekick(), view.getMobView());
-        playerController.attachController(this);
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException {
@@ -54,10 +55,13 @@ public class CombatController extends Screen {
 
     public void startNewCombat(MobCombatData mobCombatData) {
         this.mobCombatData = mobCombatData;
-        MobController enemyController = new EnemyController(mobCombatData, view.getMobView());
+        this.enemyController = new EnemyController(mobCombatData);
+
+//        playerController = new PlayerMobController(mobCombatData);
+//        playerController.attachController(this);
 
         turns = new TurnManager(this, animationManager, playerController, enemyController);
-        getSidekick().clearEffects();
+        getPlayerController().getMobData().clearEffects();
     }
 
     public void executeAbility(Ability atk) {
@@ -82,12 +86,12 @@ public class CombatController extends Screen {
         view.render(gc, g);
     }
 
-    public MobCombatData getMob(){
-        return mobCombatData;
+    public MobController getMobController(){
+        return enemyController;
     }
 
-    public MobCombatData getSidekick(){
-        return main.getSidekick();
+    public MobController getPlayerController(){
+        return playerController;
     }
 
     public CombatView getView(){

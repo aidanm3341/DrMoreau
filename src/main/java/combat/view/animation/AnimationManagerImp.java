@@ -1,5 +1,7 @@
 package combat.view.animation;
 
+import combat.view.mobview.PhysicalAttributes;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,9 +19,9 @@ public class AnimationManagerImp implements AnimationManager {
         animations.add(animation);
     }
 
-    public void update(){
+    public void update(PhysicalAttributes attacker, PhysicalAttributes defender){
         for(Animation animation : animations) {
-            animation.update();
+            animation.update(attacker, defender);
             if(animation.isDone())
                 animationsToBeRemoved.add(animation);
         }

@@ -29,7 +29,7 @@ public class HardCodedLoader implements BodyPartLoader {
         stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
         stats.put(Stat.ATTACK_DMG, 20f);
         IBodyPart moreau = new BodyPart("Dr.Moreau", stats,
-                new AbilityFactory(AttackAnimation.DIRECTION.LEFT).basicDamageAbility(),
+                new AbilityFactory(AttackAnimation.DIRECTION.LEFT).summedDamage("Attack"),
                 new HashMap<>());
         parts.put("Dr.Moreau", moreau);
     }

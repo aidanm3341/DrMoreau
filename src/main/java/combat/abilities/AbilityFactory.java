@@ -17,7 +17,7 @@ public class AbilityFactory {
         this.direction = direction;
     }
 
-    public Ability basicDamageAbility(){
+    public Ability summedDamage(String name){
         List<Effect> effects = List.of(
                 new SummedDamageEffect()
         );
@@ -26,7 +26,7 @@ public class AbilityFactory {
 
     public Ability basicDefendAbility(){
         List<Effect> effects = List.of(
-                new ArmorEffect(5, 0)
+                new ArmorEffect(5)
         );
         return new Ability("Basic Defend", effects, new StillAnimation());
     }
@@ -38,6 +38,14 @@ public class AbilityFactory {
     public Ability flatDamageAbility(String name, float damage){
         List<Effect> effects = List.of(
                 new FlatDamageEffect(damage)
+        );
+        return new Ability(name, effects, new AttackAnimation(direction));
+    }
+
+    public Ability armorAndDamageAbility(String name, float damage, float armor){
+        List<Effect> effects = List.of(
+                new FlatDamageEffect(damage),
+                new ArmorEffect(armor)
         );
         return new Ability(name, effects, new AttackAnimation(direction));
     }

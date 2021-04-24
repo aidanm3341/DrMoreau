@@ -30,9 +30,9 @@ public class AnimalTemplate {
         stats.put(Stat.ATTACK_DMG, 1f);
 
         return Map.of(
-                name + "_head", new BodyPart(name + "_head", stats.clone(), abilityFactory.basicDamageAbility(), makeBodyAttachPoint(mobPoints.headAttachPoint())),
-                name + "_leg", new BodyPart(name + "_leg", stats.clone(), abilityFactory.basicDamageAbility(), makeBodyAttachPoint(mobPoints.legAttachPoint())),
-                name + "_arm", new BodyPart(name + "_arm", stats.clone(), abilityFactory.basicDamageAbility(), makeBodyAttachPoint(mobPoints.armAttachPoint())),
+                name + "_head", new BodyPart(name + "_head", stats.clone(), abilityFactory.summedDamage("Attack"), makeBodyAttachPoint(mobPoints.headAttachPoint())),
+                name + "_leg", new BodyPart(name + "_leg", stats.clone(), abilityFactory.summedDamage("Attack"), makeBodyAttachPoint(mobPoints.legAttachPoint())),
+                name + "_arm", new BodyPart(name + "_arm", stats.clone(), abilityFactory.summedDamage("Attack"), makeBodyAttachPoint(mobPoints.armAttachPoint())),
                 name + "_tail", new BodyPart(name + "_tail", stats.clone(), abilityFactory.basicDefendAbility(), makeBodyAttachPoint(mobPoints.tailAttachPoint())),
                 name + "_body", new BodyPart(name + "_body", stats.clone(), abilityFactory.basicDefendAbility(), mobPoints.bodyAttachPoints())
         );

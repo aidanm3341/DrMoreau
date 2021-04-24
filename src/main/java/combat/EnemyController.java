@@ -22,7 +22,7 @@ public class EnemyController implements MobController {
     }
 
     public void attachController(CombatController ctrl) {
-        ctrl.executeAbility(abilityFactory.basicDamageAbility());
+        ctrl.executeAbility(abilityFactory.summedDamage("Attack"));
     }
 
     private void createMobView(){

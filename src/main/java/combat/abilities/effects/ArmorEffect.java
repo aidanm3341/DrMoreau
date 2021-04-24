@@ -5,13 +5,11 @@ import data.mob.MobCombatData;
 
 public class ArmorEffect implements Effect {
 
-    private float armor;
-    private int remainingDuration;
+    private final float armor;
     private MobCombatData subject;
 
-    public ArmorEffect(float armor, int duration){
+    public ArmorEffect(float armor){
         this.armor = armor;
-        this.remainingDuration = duration;
     }
 
     public void attach(MobCombatData attacker, MobCombatData defender) {
@@ -28,12 +26,10 @@ public class ArmorEffect implements Effect {
         subject.setStat(Stat.ARMOR, Math.min(subject.getStat(Stat.ARMOR) - armor, 0));
         if(subject.getStat(Stat.ARMOR) < 0)
             subject.setStat(Stat.ARMOR, 0);
-
-        remainingDuration--;
     }
 
     public int getRemainingDuration(){
-        return remainingDuration;
+        return 0;
     }
 
     @Override

@@ -1,10 +1,6 @@
 package combat;
 
-import combat.abilities.Ability;
 import combat.abilities.AbilityFactory;
-import combat.abilities.effects.DamageEffect;
-import combat.abilities.effects.Effect;
-import combat.stats.Stat;
 import combat.view.animation.AttackAnimation;
 import combat.view.mobview.MobView;
 import combat.view.mobview.MobViewBuilder;
@@ -12,9 +8,6 @@ import combat.view.mobview.PhysicalAttributes;
 import data.framework.IBodyPart;
 import data.framework.PartType;
 import data.mob.MobCombatData;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class EnemyController implements MobController {
 

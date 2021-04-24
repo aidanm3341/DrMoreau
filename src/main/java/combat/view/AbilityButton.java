@@ -20,16 +20,16 @@ public class AbilityButton implements AbilitySubject, ComponentListener {
 
     private MouseOverArea area;
     private float x, y;
-    private Ability attack;
+    private Ability ability;
 
     private List<AbilityListener> listeners;
 
     private Font font;
 
-    public AbilityButton(Ability attack, float x, float y) throws SlickException {
+    public AbilityButton(Ability ability, float x, float y) throws SlickException {
         this.x = x;
         this.y = y;
-        this.attack = attack;
+        this.ability = ability;
 
         listeners = new ArrayList<>();
         font = MyFont.createFont(30);
@@ -59,7 +59,7 @@ public class AbilityButton implements AbilitySubject, ComponentListener {
         }
         g.setColor(Color.white);
         g.setFont(font);
-        g.drawString(attack.getName(), x + 20, y + 20);
+        g.drawString(ability.getName(), x + 20, y + 20);
     }
 
     @Override
@@ -70,6 +70,6 @@ public class AbilityButton implements AbilitySubject, ComponentListener {
     @Override
     public void componentActivated(AbstractComponent abstractComponent) {
         for(AbilityListener listener : listeners)
-            listener.movePerformed(attack);
+            listener.movePerformed(ability);
     }
 }

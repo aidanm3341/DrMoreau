@@ -56,4 +56,13 @@ public class Stats implements Cloneable, MobSubject {
             observer.update(this);
         }
     }
+
+
+    public static Stats ofHealthAndDamage(float health, float damage){
+        Stats stats = new Stats();
+        stats.put(Stat.MAX_HP, health);
+        stats.put(Stat.CURRENT_HP, health);
+        stats.put(Stat.ATTACK_DMG, damage);
+        return stats;
+    }
 }

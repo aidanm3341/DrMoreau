@@ -3,12 +3,12 @@ package combat.abilities.effects;
 import combat.stats.Stat;
 import data.mob.MobCombatData;
 
-public class DamageEffect implements Effect{
+public class SummedDamageEffect implements Effect{
 
     private float damage;
     private MobCombatData subject;
 
-    public DamageEffect(){ }
+    public SummedDamageEffect(){ }
 
     public void attach(MobCombatData attacker, MobCombatData defender) {
         this.subject = defender;

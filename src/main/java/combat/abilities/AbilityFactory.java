@@ -1,17 +1,17 @@
 package combat.abilities;
 
 import combat.abilities.effects.ArmorEffect;
-import combat.abilities.effects.DamageEffect;
+import combat.abilities.effects.FlatDamageEffect;
+import combat.abilities.effects.SummedDamageEffect;
 import combat.abilities.effects.Effect;
 import combat.view.animation.AttackAnimation;
 import combat.view.animation.StillAnimation;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AbilityFactory {
 
-    private AttackAnimation.DIRECTION direction;
+    private final AttackAnimation.DIRECTION direction;
 
     public AbilityFactory(AttackAnimation.DIRECTION direction){
         this.direction = direction;
@@ -19,7 +19,7 @@ public class AbilityFactory {
 
     public Ability basicDamageAbility(){
         List<Effect> effects = List.of(
-                new DamageEffect()
+                new SummedDamageEffect()
         );
         return new Ability("Basic Attack", effects, new AttackAnimation(direction));
     }
@@ -29,5 +29,16 @@ public class AbilityFactory {
                 new ArmorEffect(5, 0)
         );
         return new Ability("Basic Defend", effects, new StillAnimation());
+    }
+
+    public Ability nullAbility(){
+        return new Ability("Null", List.of(), new StillAnimation());
+    }
+
+    public Ability flatDamageAbility(String name, float damage){
+        List<Effect> effects = List.of(
+                new FlatDamageEffect(damage)
+        );
+        return new Ability(name, effects, new AttackAnimation(direction));
     }
 }

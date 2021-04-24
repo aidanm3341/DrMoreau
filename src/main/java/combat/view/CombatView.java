@@ -2,13 +2,6 @@ package combat.view;
 
 import combat.abilities.Ability;
 import combat.CombatController;
-import combat.abilities.effects.ArmorEffect;
-import combat.abilities.effects.DamageEffect;
-import combat.abilities.effects.Effect;
-import combat.stats.Stat;
-import combat.view.animation.AttackAnimation;
-import combat.view.animation.StillAnimation;
-import combat.view.mobview.MobView;
 import data.framework.IBodyPart;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -54,13 +47,14 @@ public class CombatView {
 
         int y = 70;
         for (Ability ability
-                : ctrl.getMobController().getMobData().getParts().values().stream()
+                : ctrl.getPlayerController().getMobData().getParts().values().stream()
                 .map(IBodyPart::getAbility).collect(Collectors.toList())){
-
-            AbilityButton button = new AbilityButton(ability, 0, y);
-            button.init(gc);
-            abilityButtons.add(button);
-            y += 90;
+            if(!ability.getName().equals("Null")) {
+                AbilityButton button = new AbilityButton(ability, 0, y);
+                button.init(gc);
+                abilityButtons.add(button);
+                y += 90;
+            }
         }
         Collections.reverse(abilityButtons);
     }

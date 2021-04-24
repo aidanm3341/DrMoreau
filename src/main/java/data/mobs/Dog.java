@@ -19,6 +19,7 @@ public class Dog extends MobParts {
         super("dog");
         this.partBuilder = new BodyPartBuilder();
         this.abilityFactory = new AbilityFactory(AttackAnimation.DIRECTION.RIGHT);
+        System.out.println("Bark!");
     }
 
     public IBodyPart buildHead(){

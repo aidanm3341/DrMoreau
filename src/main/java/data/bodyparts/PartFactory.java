@@ -14,7 +14,8 @@ public class PartFactory {
 
     public static IBodyPart getPart(String name, int level) throws SlickException
     {
-        loader = new HardCodedLoader();
+        if(loader == null)
+            loader = new HardCodedLoader();
         if(parts == null)
             parts = loader.getBodyParts();
 

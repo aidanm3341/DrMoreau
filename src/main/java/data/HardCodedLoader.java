@@ -8,7 +8,7 @@ import data.bodyparts.BodyPart;
 import data.framework.IBodyPart;
 import data.framework.BodyPartLoader;
 import data.mobs.Dog;
-import data.mobs.MobParts;
+import data.mobs.IMobParts;
 import data.mobs.Rat;
 
 import java.util.HashMap;
@@ -20,7 +20,7 @@ public class HardCodedLoader implements BodyPartLoader {
 
     public HardCodedLoader(){
         parts = new HashMap<>();
-        MobParts dog = new Dog(), rat = new Rat();
+        IMobParts dog = new Dog(), rat = new Rat();
         parts.putAll(dog.getParts());
         parts.putAll(rat.getParts());
 

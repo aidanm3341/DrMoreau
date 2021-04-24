@@ -6,7 +6,7 @@ import util.Point;
 
 import java.util.Map;
 
-public class Rat implements MobParts{
+public class Rat implements IMobParts {
 
     public Map<String, IBodyPart> getParts(){
         MobPointGroup pointGroup = new MobPointGroup(

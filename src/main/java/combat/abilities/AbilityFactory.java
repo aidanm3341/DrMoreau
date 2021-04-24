@@ -21,28 +21,28 @@ public class AbilityFactory {
         List<Effect> effects = List.of(
                 new SummedDamageEffect()
         );
-        return new Ability("Basic Attack", effects, new AttackAnimation(direction));
+        return new Ability(name, effects, new AttackAnimation(direction));
     }
 
-    public Ability basicDefendAbility(){
+    public Ability basicDefend(String name, int armor){
         List<Effect> effects = List.of(
-                new ArmorEffect(5)
+                new ArmorEffect(armor)
         );
-        return new Ability("Basic Defend", effects, new StillAnimation());
+        return new Ability(name, effects, new StillAnimation());
     }
 
     public Ability nullAbility(){
         return new Ability("Null", List.of(), new StillAnimation());
     }
 
-    public Ability flatDamageAbility(String name, float damage){
+    public Ability flatDamage(String name, float damage){
         List<Effect> effects = List.of(
                 new FlatDamageEffect(damage)
         );
         return new Ability(name, effects, new AttackAnimation(direction));
     }
 
-    public Ability armorAndDamageAbility(String name, float damage, float armor){
+    public Ability armorAndDamage(String name, float damage, float armor){
         List<Effect> effects = List.of(
                 new FlatDamageEffect(damage),
                 new ArmorEffect(armor)

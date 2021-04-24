@@ -52,7 +52,7 @@ public class Dog implements MobParts{
     public IBodyPart buildHead(){
         partBuilder.setName("dog_head");
         partBuilder.setStats(Stats.ofHealthAndDamage(4, 2));
-        partBuilder.setAbility(abilityFactory.flatDamageAbility("Bite", 10));
+        partBuilder.setAbility(abilityFactory.flatDamage("Bite", 10));
         partBuilder.addAttachPoint(PartType.BODY, new Point(0, 72));
         return partBuilder.finish();
     }
@@ -76,7 +76,7 @@ public class Dog implements MobParts{
     public IBodyPart buildTail(){
         partBuilder.setName("dog_tail");
         partBuilder.setStats(Stats.ofHealthAndDamage(1, 1));
-        partBuilder.setAbility(abilityFactory.flatDamageAbility("Wag", 2));
+        partBuilder.setAbility(abilityFactory.flatDamage("Wag", 2));
         partBuilder.addAttachPoint(PartType.BODY, new Point(79, 19));
         return partBuilder.finish();
     }
@@ -84,7 +84,7 @@ public class Dog implements MobParts{
     public IBodyPart buildBody(){
         partBuilder.setName("dog_body");
         partBuilder.setStats(Stats.ofHealthAndDamage(10, 0));
-        partBuilder.setAbility(abilityFactory.basicDefendAbility());
+        partBuilder.setAbility(abilityFactory.basicDefend("Defend", 5));
         partBuilder.addAllAttachPoints(Map.of(
                 PartType.HEAD,      new Point(220, 38),
                 PartType.RIGHT_ARM, new Point(195, 47),

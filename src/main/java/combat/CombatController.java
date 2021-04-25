@@ -22,7 +22,6 @@ public class CombatController extends Screen {
     private MainController main;
     private MobController playerController;
     private CombatView view;
-    private MobCombatData mobCombatData;
     private MobController enemyController;
 
     private AnimationManager animationManager;
@@ -51,17 +50,15 @@ public class CombatController extends Screen {
         view.init(gc);
         view.createRoomView(gc);
         view.addListener((PlayerMobController) playerController);
-
-        playerController = new PlayerMobController(main.getSidekick());
-        playerController.attachController(this);
     }
 
     public void startNewCombat(MobCombatData mobCombatData) {
-        this.mobCombatData = mobCombatData;
         this.enemyController = new EnemyController(mobCombatData);
+        playerController = new PlayerMobController(main.getSidekick());
+        playerController.attachController(this);
 
         turns = new TurnManager(this, animationManager, playerController, enemyController);
-        getPlayerController().getMobData().clearEffects();
+        playerController.getMobData().clearEffects();
     }
 
     public void executeAbility(Ability atk) {
@@ -76,9 +73,9 @@ public class CombatController extends Screen {
     public void checkWins() {
         if(main.getSidekick().getStat(Stat.CURRENT_HP) <= 0)
             main.enterState(Main.GAMEOVER);
-        else if(mobCombatData.getName().equals("Dr.Moreau") && mobCombatData.getStat(Stat.CURRENT_HP) <= 0)
+        else if(enemyController.getMobData().getName().equals("Dr.Moreau") && enemyController.getMobData().getStat(Stat.CURRENT_HP) <= 0)
             main.enterState(Main.VICTORY);
-        else if(mobCombatData.getStat(Stat.CURRENT_HP) <= 0)
+        else if(enemyController.getMobData().getStat(Stat.CURRENT_HP) <= 0)
             main.enterState(Main.UPGRADE);
     }
 

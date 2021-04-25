@@ -51,6 +51,9 @@ public class CombatController extends Screen {
         view.init(gc);
         view.createRoomView(gc);
         view.addListener((PlayerMobController) playerController);
+
+        playerController = new PlayerMobController(main.getSidekick());
+        playerController.attachController(this);
     }
 
     public void startNewCombat(MobCombatData mobCombatData) {

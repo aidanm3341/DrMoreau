@@ -22,6 +22,9 @@ public class Stats implements Cloneable, MobSubject {
 
     public void put(Stat stat, Float value){
         stats.put(stat, value);
+        if(stat == Stat.CURRENT_HP && value < 0)
+            stats.put(stat, 0f);
+
         notifyListeners();
     }
 

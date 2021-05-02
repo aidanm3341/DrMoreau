@@ -1,6 +1,6 @@
-package data;
+package data.loaders;
 
-import data.framework.BodyPartLoader;
+import data.loaders.BodyPartLoader;
 import data.mob.MobCombatData;
 import data.mobs.Dog;
 import data.mobs.DrMoreau;

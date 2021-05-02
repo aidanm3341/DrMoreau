@@ -1,4 +1,4 @@
-package data.framework;
+package data.bodyparts;
 
 import combat.abilities.Ability;
 import combat.stats.Stats;

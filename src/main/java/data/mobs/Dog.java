@@ -1,8 +1,8 @@
 package data.mobs;
 
 import combat.stats.Stats;
-import data.framework.IBodyPart;
-import data.framework.PartType;
+import data.bodyparts.IBodyPart;
+import data.bodyparts.PartType;
 import util.Point;
 
 import java.util.Map;

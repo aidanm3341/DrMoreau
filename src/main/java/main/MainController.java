@@ -2,7 +2,7 @@ package main;
 
 import combat.CombatController;
 import data.mob.MobCombatData;
-import data.framework.PartType;
+import data.bodyparts.PartType;
 import data.mob.MobCreator;
 import navigation.NavigationController;
 import navigation.Room;

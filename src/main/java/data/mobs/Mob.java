@@ -3,8 +3,8 @@ package data.mobs;
 import combat.abilities.AbilityFactory;
 import combat.view.animation.AttackAnimation;
 import data.bodyparts.BodyPartBuilder;
-import data.framework.IBodyPart;
-import data.framework.PartType;
+import data.bodyparts.IBodyPart;
+import data.bodyparts.PartType;
 import data.mob.MobCombatData;
 
 import java.util.HashMap;

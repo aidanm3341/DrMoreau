@@ -1,8 +1,8 @@
 package upgrade;
 
 import data.mob.MobCombatData;
-import data.framework.IBodyPart;
-import data.framework.PartType;
+import data.bodyparts.IBodyPart;
+import data.bodyparts.PartType;
 import main.Main;
 import main.MainController;
 import org.newdawn.slick.GameContainer;

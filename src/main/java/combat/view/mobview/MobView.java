@@ -1,7 +1,7 @@
 package combat.view.mobview;
 
-import data.framework.IBodyPart;
-import data.framework.PartType;
+import data.bodyparts.IBodyPart;
+import data.bodyparts.PartType;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.geom.Rectangle;

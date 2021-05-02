@@ -5,8 +5,8 @@ import combat.stats.Stat;
 import combat.stats.Stats;
 import combat.view.animation.AttackAnimation;
 import data.bodyparts.BodyPart;
-import data.framework.IBodyPart;
-import data.framework.PartType;
+import data.bodyparts.IBodyPart;
+import data.bodyparts.PartType;
 import data.mob.MobCombatData;
 
 import java.util.HashMap;

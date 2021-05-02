@@ -3,8 +3,8 @@ package data.mob;
 import combat.abilities.effects.Effect;
 import combat.stats.Stat;
 import combat.stats.Stats;
-import data.framework.IBodyPart;
-import data.framework.PartType;
+import data.bodyparts.IBodyPart;
+import data.bodyparts.PartType;
 
 import java.util.ArrayList;
 import java.util.List;

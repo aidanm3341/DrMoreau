@@ -1,6 +1,6 @@
 package upgrade.draganddrop;
 
-import data.framework.IBodyPart;
+import data.bodyparts.IBodyPart;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;

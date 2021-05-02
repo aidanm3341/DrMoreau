@@ -1,8 +1,8 @@
 package navigation;
 
-import data.BasicRoomBlueprintLoader;
+import data.loaders.BasicRoomBlueprintLoader;
 import data.mob.MobCreator;
-import data.framework.RoomBlueprintLoader;
+import data.loaders.RoomBlueprintLoader;
 import main.Main;
 import main.MainController;
 import org.newdawn.slick.GameContainer;

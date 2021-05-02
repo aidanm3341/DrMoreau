@@ -1,7 +1,7 @@
 package navigation;
 
 import data.mob.MobCombatData;
-import data.framework.IBodyPart;
+import data.bodyparts.IBodyPart;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import util.ResourceLoader;

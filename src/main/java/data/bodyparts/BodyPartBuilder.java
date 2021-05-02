@@ -4,8 +4,6 @@ import combat.abilities.Ability;
 import combat.abilities.AbilityFactory;
 import combat.stats.Stats;
 import combat.view.animation.AttackAnimation;
-import data.framework.IBodyPart;
-import data.framework.PartType;
 import util.Point;
 
 import java.util.HashMap;

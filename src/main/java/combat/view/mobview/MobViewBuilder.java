@@ -1,7 +1,7 @@
 package combat.view.mobview;
 
-import data.framework.IBodyPart;
-import data.framework.PartType;
+import data.bodyparts.IBodyPart;
+import data.bodyparts.PartType;
 import util.Point;
 
 import java.util.HashMap;

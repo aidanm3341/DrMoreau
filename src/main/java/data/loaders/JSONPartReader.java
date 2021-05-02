@@ -1,9 +1,9 @@
-package data;
+package data.loaders;
 
 import combat.abilities.Ability;
-import data.framework.IBodyPart;
-import data.framework.BodyPartLoader;
-import data.framework.PartType;
+import data.bodyparts.IBodyPart;
+import data.loaders.BodyPartLoader;
+import data.bodyparts.PartType;
 import data.mob.MobCombatData;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

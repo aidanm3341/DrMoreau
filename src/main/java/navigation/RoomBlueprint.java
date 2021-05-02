@@ -1,8 +1,8 @@
 package navigation;
 
 import data.mob.MobCombatData;
-import data.framework.IBodyPart;
-import data.framework.PartType;
+import data.bodyparts.IBodyPart;
+import data.bodyparts.PartType;
 import main.Main;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;

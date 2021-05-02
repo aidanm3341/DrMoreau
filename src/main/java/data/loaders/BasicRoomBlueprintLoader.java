@@ -1,6 +1,6 @@
-package data;
+package data.loaders;
 
-import data.framework.RoomBlueprintLoader;
+import data.loaders.RoomBlueprintLoader;
 import data.mob.MobCombatData;
 import data.mob.MobCreator;
 import navigation.RoomBlueprint;

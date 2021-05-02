@@ -1,4 +1,4 @@
-package data.framework;
+package data.loaders;
 
 import data.mob.MobCombatData;
 

@@ -4,6 +4,7 @@ import combat.abilities.Ability;
 import data.framework.IBodyPart;
 import data.framework.BodyPartLoader;
 import data.framework.PartType;
+import data.mob.MobCombatData;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -103,6 +104,11 @@ public class JSONPartReader implements BodyPartLoader {
         }
 
         return partsHash;
+    }
+
+    @Override
+    public MobCombatData getMob(String name, int level) {
+        return null;
     }
 
     private static Point pointExtractor(JSONObject obj)

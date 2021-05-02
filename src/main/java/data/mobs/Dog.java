@@ -10,13 +10,13 @@ import util.Point;
 
 import java.util.Map;
 
-public class Dog extends MobParts {
+public class Dog extends Mob {
 
     private final BodyPartBuilder partBuilder;
     private final AbilityFactory abilityFactory;
 
-    public Dog(){
-        super("dog");
+    public Dog(String name, int level){
+        super(name, level);
         this.partBuilder = new BodyPartBuilder();
         this.abilityFactory = new AbilityFactory(AttackAnimation.DIRECTION.RIGHT);
         System.out.println("Bark!");

@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
 
 public class MobCombatData{
 
-    private String name;
-    private Stats stats;
-    private Map<PartType, IBodyPart> parts;
+    private final String name;
+    private final Stats stats;
+    private final Map<PartType, IBodyPart> parts;
     private List<Effect> effects;
 
     public MobCombatData(String name, Map<PartType, IBodyPart> parts) {

@@ -2,9 +2,8 @@ package main;
 
 import combat.CombatController;
 import data.mob.MobCombatData;
-import data.bodyparts.PartFactory;
-import data.framework.IBodyPart;
 import data.framework.PartType;
+import data.mob.MobCreator;
 import navigation.NavigationController;
 import navigation.Room;
 import org.newdawn.slick.Color;
@@ -16,9 +15,6 @@ import org.newdawn.slick.state.transition.FadeOutTransition;
 import screens.GameOver;
 import screens.Victory;
 import upgrade.UpgradeController;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainController {
 
@@ -36,8 +32,7 @@ public class MainController {
         this.sbg = sbg;
     }
 
-    public void init(GameContainer gc) throws SlickException
-    {
+    public void init(GameContainer gc) throws SlickException {
         loadDefaultSidekick();
 
         intro = new Intro(this);
@@ -68,10 +63,8 @@ public class MainController {
     }
 
     public MobCombatData getSidekick(){
-        //updateSidekick();
         return sidekick;
     }
-
     public void updateSidekick()
     {
         sidekick.putPart(PartType.BODY, upgrade.getBody());
@@ -83,21 +76,12 @@ public class MainController {
         sidekick.putPart(PartType.TAIL, upgrade.getTail());
     }
 
-    public void reset() throws SlickException
-    {
+    public void reset() throws SlickException {
         loadDefaultSidekick();
     }
 
     private void loadDefaultSidekick() throws SlickException {
-        Map<PartType, IBodyPart> parts = new HashMap<>();
-        parts.put(PartType.BODY, PartFactory.getPart("dog_body", 2));
-        parts.put(PartType.LEFT_ARM, PartFactory.getPart("dog_arm", 2));
-        parts.put(PartType.RIGHT_ARM, PartFactory.getPart("dog_arm", 2));
-        parts.put(PartType.LEFT_LEG, PartFactory.getPart("dog_leg", 2));
-        parts.put(PartType.RIGHT_LEG, PartFactory.getPart("dog_leg", 2));
-        parts.put(PartType.TAIL, PartFactory.getPart("dog_tail", 2));
-        parts.put(PartType.HEAD, PartFactory.getPart("dog_head", 2));
-        sidekick = new MobCombatData("Sidekick", parts);
+        sidekick = MobCreator.getMob("sidekick", 1);
     }
 
     public void enterState(int ID) {

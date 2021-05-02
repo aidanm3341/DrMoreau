@@ -1,9 +1,7 @@
 package data.framework;
 
-import org.newdawn.slick.SlickException;
-
-import java.util.Map;
+import data.mob.MobCombatData;
 
 public interface BodyPartLoader {
-    Map<String, IBodyPart> getBodyParts() throws SlickException;
+    MobCombatData getMob(String name, int level);
 }

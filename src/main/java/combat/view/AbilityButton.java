@@ -19,12 +19,13 @@ public class AbilityButton implements AbilitySubject, ComponentListener {
     private static final Color HOVER_BLACK = new Color(0, 0, 0, 0.9f);
 
     private MouseOverArea area;
-    private float x, y;
-    private Ability ability;
+    private final float x, y;
+    private final Ability ability;
+    private final AbilityDescriptionView abilityDescriptionView;
 
-    private List<AbilityListener> listeners;
+    private final List<AbilityListener> listeners;
 
-    private Font abilityNameFont, abilityDescriptionFont;
+    private final Font abilityNameFont;
 
     public AbilityButton(Ability ability, float x, float y) throws SlickException {
         this.x = x;
@@ -33,7 +34,7 @@ public class AbilityButton implements AbilitySubject, ComponentListener {
 
         listeners = new ArrayList<>();
         abilityNameFont = new MyFont(30).getUniFont();
-        abilityDescriptionFont = new MyFont(20).getUniFont();
+        this.abilityDescriptionView = new AbilityDescriptionView(ability);
     }
 
     public void init(GameContainer gc) throws SlickException {
@@ -55,11 +56,7 @@ public class AbilityButton implements AbilitySubject, ComponentListener {
     public void render(GameContainer gc, Graphics g) {
         area.render(gc, g);
         if(area.isMouseOver()){
-            g.setColor(HOVER_BLACK);
-            g.fillRect(x, y + HEIGHT, WIDTH + 50, 200);
-            g.setColor(Color.white);
-            g.setFont(abilityDescriptionFont);
-            g.drawString(ability.toString(), x + 20, y + HEIGHT + 20);
+            abilityDescriptionView.render(g, x, y + HEIGHT);
         }
         g.setColor(Color.white);
         g.setFont(abilityNameFont);

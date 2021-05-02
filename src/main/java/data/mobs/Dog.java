@@ -1,9 +1,6 @@
 package data.mobs;
 
-import combat.abilities.AbilityFactory;
 import combat.stats.Stats;
-import combat.view.animation.AttackAnimation;
-import data.bodyparts.BodyPartBuilder;
 import data.framework.IBodyPart;
 import data.framework.PartType;
 import util.Point;
@@ -12,13 +9,8 @@ import java.util.Map;
 
 public class Dog extends Mob {
 
-    private final BodyPartBuilder partBuilder;
-    private final AbilityFactory abilityFactory;
-
     public Dog(String name, int level){
         super(name, level);
-        this.partBuilder = new BodyPartBuilder();
-        this.abilityFactory = new AbilityFactory(AttackAnimation.DIRECTION.RIGHT);
         System.out.println("Bark!");
     }
 

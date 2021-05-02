@@ -1,9 +1,6 @@
 package data.mobs;
 
-import combat.abilities.AbilityFactory;
 import combat.stats.Stats;
-import combat.view.animation.AttackAnimation;
-import data.bodyparts.BodyPartBuilder;
 import data.framework.IBodyPart;
 import data.framework.PartType;
 import util.Point;
@@ -12,34 +9,9 @@ import java.util.Map;
 
 public class Rat extends Mob {
 
-    private final BodyPartBuilder partBuilder;
-    private final AbilityFactory abilityFactory;
-
     public Rat(int level){
         super("rat", level);
-        this.partBuilder = new BodyPartBuilder();
-        this.abilityFactory = new AbilityFactory(AttackAnimation.DIRECTION.RIGHT);
     }
-
-//    public Map<String, IBodyPart> getParts(){
-//        MobPointGroup pointGroup = new MobPointGroup(
-//                new Point(20, 70),
-//                new Point(36, 20),
-//                new Point(43, 20),
-//                new Point(85, 20),
-//                Map.of(
-//                        PartType.HEAD, new Point(238, 98),
-//                        PartType.RIGHT_ARM, new Point(200, 84),
-//                        PartType.LEFT_ARM, new Point(175, 72),
-//                        PartType.RIGHT_LEG, new Point(75, 84),
-//                        PartType.LEFT_LEG, new Point(50, 72),
-//                        PartType.TAIL, new Point(-10, 78)
-//                )
-//        );
-//
-//        AnimalTemplate template = new AnimalTemplate("rat", pointGroup);
-//        return template.getPartsWithAttachPoints();
-//    }
 
     @Override
     public IBodyPart buildHead() {

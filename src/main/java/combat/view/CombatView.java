@@ -39,11 +39,8 @@ public class CombatView {
 
 
     public void createRoomView(GameContainer gc) throws SlickException {
-        mobHealth = new HealthBar(ctrl.getMobController().getMobData().getName(), 1100, 55);
-        playerHealth = new HealthBar(ctrl.getPlayerController().getMobData().getName(), 400, 55);
-
-        ctrl.getMobController().getMobData().addObserver(mobHealth);
-        ctrl.getPlayerController().getMobData().addObserver(playerHealth);
+        mobHealth = new HealthBar(ctrl.getMobController().getMobData(), 1100, 55);
+        playerHealth = new HealthBar(ctrl.getPlayerController().getMobData(), 400, 55);
 
         int y = 70;
         for (Ability ability

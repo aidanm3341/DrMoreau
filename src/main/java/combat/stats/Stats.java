@@ -1,20 +1,13 @@
 package combat.stats;
 
-import data.mob.MobObserver;
-import data.mob.MobSubject;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class Stats implements Cloneable, MobSubject {
+public class Stats implements Cloneable{
     private Map<Stat, Float> stats;
-    private List<MobObserver> observers;
 
     public Stats(){
         stats = new HashMap<>();
-        observers = new ArrayList<>();
 
         for(Stat stat : Stat.values())
             put(stat, 0f);
@@ -24,8 +17,6 @@ public class Stats implements Cloneable, MobSubject {
         stats.put(stat, value);
         if(stat == Stat.CURRENT_HP && value < 0)
             stats.put(stat, 0f);
-
-        notifyListeners();
     }
 
     public void addModifier(Stat stat, Float value){
@@ -41,23 +32,6 @@ public class Stats implements Cloneable, MobSubject {
         for(Stat stat : stats.keySet())
             clone.put(stat, get(stat));
         return clone;
-    }
-
-    @Override
-    public void addListener(MobObserver observer) {
-        observers.add(observer);
-    }
-
-    @Override
-    public void removeListener(MobObserver observer) {
-        observers.remove(observer);
-    }
-
-    @Override
-    public void notifyListeners() {
-        for(MobObserver observer : observers){
-            observer.update(this);
-        }
     }
 
 

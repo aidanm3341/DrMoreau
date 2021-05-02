@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class MobCombatData implements MobObserver{
+public class MobCombatData{
 
     private String name;
     private Stats stats;
@@ -79,15 +79,5 @@ public class MobCombatData implements MobObserver{
 
     public boolean hasPart(PartType type){
         return parts.containsKey(type);
-    }
-
-    public void addObserver(MobObserver observer){
-        stats.addListener(observer);
-        stats.notifyListeners();
-    }
-
-    @Override
-    public void update(Stats stats) {
-        this.stats = stats;
     }
 }

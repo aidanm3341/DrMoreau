@@ -1,27 +1,36 @@
 package combat.view;
 
 import combat.stats.Stat;
-import combat.stats.Stats;
-import data.mob.MobObserver;
+import data.mob.MobCombatData;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 
-public class HealthBar implements MobObserver {
+public class HealthBar{
 
     private final String name;
     private float healthBarHealth;
     private float x, y, width;
     private float maxHp, armor, currentHp;
+    private MobCombatData data;
 
-    HealthBar(String name, float x, float y){
-        this.name = name;
+    HealthBar(MobCombatData data, float x, float y){
+        this.name = data.getName();
+        this.data = data;
         this.x = x;
         this.y = y;
         width = 400;
         healthBarHealth = width;
+
+        maxHp = data.getStat(Stat.MAX_HP);
+        currentHp = data.getStat(Stat.CURRENT_HP);
+        armor = data.getStat(Stat.ARMOR);
     }
 
     public void render(Graphics g){
+        maxHp = data.getStat(Stat.MAX_HP);
+        currentHp = data.getStat(Stat.CURRENT_HP);
+        armor = data.getStat(Stat.ARMOR);
+
         // name display
         g.setColor(Color.white);
         g.drawString(name, x, y);
@@ -47,12 +56,5 @@ public class HealthBar implements MobObserver {
         healthBarHealth = health;
         if(health < 0)
             healthBarHealth = 0;
-    }
-
-    @Override
-    public void update(Stats stats) {
-        maxHp = stats.get(Stat.MAX_HP);
-        armor = stats.get(Stat.ARMOR);
-        currentHp = stats.get(Stat.CURRENT_HP);
     }
 }

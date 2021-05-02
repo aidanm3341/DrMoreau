@@ -35,7 +35,7 @@ public class Main extends StateBasedGame {
 
     // Initialize your game states (calls init method of each gamestate, and set's the state ID)
     public void initStatesList(GameContainer gc) throws SlickException {
-        gc.setDefaultFont(MyFont.createFont(100));
+        gc.setDefaultFont(new MyFont(100).getUniFont());
 
 
         ResourceLoader.loadImages();
@@ -58,7 +58,7 @@ public class Main extends StateBasedGame {
         try {
             AppGameContainer app = new AppGameContainer(new ScalableGame(new Main("Dr.Moreau v" + VERSION),
                     WIDTH, HEIGHT, true));
-            app.setDisplayMode((int) (WIDTH*0.75f), (int) (HEIGHT*0.75f), false);
+            app.setDisplayMode((int) (WIDTH*0.9f), (int) (HEIGHT*0.9f), false);
             app.setTargetFrameRate(FPS);
             app.setShowFPS(false);
             app.start();

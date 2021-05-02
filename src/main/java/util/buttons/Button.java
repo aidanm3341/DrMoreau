@@ -21,7 +21,7 @@ public class Button {
         this.x = x;
         this.y = y;
         try {
-            this.font = MyFont.createFont(30f);
+            this.font = new MyFont(30f).getUniFont();
         } catch (Exception e) {
             e.printStackTrace();
         }

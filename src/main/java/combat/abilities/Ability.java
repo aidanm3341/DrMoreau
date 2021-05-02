@@ -10,12 +10,11 @@ import java.util.List;
 
 public class Ability {
 
-    private String name;
-    private Animation animation;
-    private List<Effect> effects;
+    private final String name;
+    private final Animation animation;
+    private final List<Effect> effects;
 
-    public Ability(String name, List<Effect> effects, Animation animation)
-    {
+    public Ability(String name, List<Effect> effects, Animation animation) {
         this.name = name;
         this.effects = effects;
         this.animation = animation;
@@ -29,5 +28,9 @@ public class Ability {
         animationManager.doAnimation(animation.clone());
         for(Effect effect : effects)
             effect.attach(attacker, defender);
+    }
+
+    public String toString(){
+        return effects.stream().map(Effect::toString).reduce("", (acc, str) -> acc + str + "\n");
     }
 }

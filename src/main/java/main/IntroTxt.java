@@ -18,9 +18,11 @@ public class IntroTxt extends Screen implements ComponentListener {
     private MainController main;
     private MouseOverArea bg;
     private String txt;
+    private MyFont font;
 
-    public IntroTxt(MainController main){
+    public IntroTxt(MainController main) throws SlickException {
         this.main = main;
+        this.font = new MyFont(24);
         this.txt = "The distant thrum of medical equipment rouses you to consciousness, as you open your eyes you take in your\n"+
                 "surroundings. You realize you are lying on a cold steel table in a dark, disheveled room, scattered with medical \n"+
                 "equipment and animal anatomy diagrams. Standing in front of you is a tall, gauntly man dressed as a surgeon. \n\n"+
@@ -42,7 +44,7 @@ public class IntroTxt extends Screen implements ComponentListener {
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         bg.render(gc, g);
         try {
-        g.setFont(MyFont.createFont(24));
+        g.setFont(font.getUniFont());
         } catch (Exception e) { e.printStackTrace(); }
         //g.scale(0.27f, 0.27f);
         g.setColor(new Color(227, 255, 86));

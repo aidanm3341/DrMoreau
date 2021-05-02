@@ -21,7 +21,7 @@ public class NavigationView {
     }
 
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
-        font = MyFont.createFont(50);
+        font = new MyFont(50).getUniFont();
 
         bossButton = new Button("BOSS", ResourceLoader.getImage("basicButton"), Main.WIDTH/2, 40);
         bossButton.init(gc);

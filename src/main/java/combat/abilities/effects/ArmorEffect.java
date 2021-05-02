@@ -36,4 +36,8 @@ public class ArmorEffect implements Effect {
     public boolean isComplete() {
         return this.getRemainingDuration() <= 0;
     }
+
+    public String toString(){
+        return armor + " armor";
+    }
 }

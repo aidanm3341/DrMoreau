@@ -9,11 +9,14 @@ import java.io.IOException;
 
 public class MyFont {
 
-    public static UnicodeFont createFont(float size) throws SlickException {
+    private float size;
+    private UnicodeFont uniFont;
 
+    public MyFont(float size) throws SlickException {
+        this.size = size;
         Font newFont = null;
         try {
-            newFont = Font.createFont(Font.TRUETYPE_FONT, org.newdawn.slick.util.ResourceLoader.getResourceAsStream("inland.ttf"));
+            newFont = Font.createFont(Font.TRUETYPE_FONT, org.newdawn.slick.util.ResourceLoader.getResourceAsStream("LibreBaskerville-Regular.ttf"));
         } catch (FontFormatException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -21,7 +24,7 @@ public class MyFont {
         }
         Font javaFont = newFont.deriveFont(size);
 
-        UnicodeFont uniFont = new UnicodeFont(javaFont);
+        uniFont = new UnicodeFont(javaFont);
         uniFont.addAsciiGlyphs();
 
         ColorEffect a = new ColorEffect();
@@ -30,6 +33,9 @@ public class MyFont {
         uniFont.getEffects().add(a);
         uniFont.addAsciiGlyphs();
         uniFont.loadGlyphs();
+    }
+
+    public UnicodeFont getUniFont() {
         return uniFont;
     }
 }

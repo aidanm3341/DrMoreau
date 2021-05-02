@@ -48,4 +48,8 @@ public class SummedDamageEffect implements Effect{
     public boolean isComplete() {
         return this.getRemainingDuration() <= 0;
     }
+
+    public String toString(){
+        return damage + " damage";
+    }
 }

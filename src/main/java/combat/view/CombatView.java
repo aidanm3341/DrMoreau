@@ -58,7 +58,7 @@ public class CombatView {
 
     public void render(GameContainer gc, Graphics g) throws SlickException {
         g.drawImage(background, 0, 0);
-        g.setFont(MyFont.createFont(12));
+        //g.setFont(MyFont.createFont(12));
 
         abilityButtons.forEach(button -> button.render(gc, g));
 

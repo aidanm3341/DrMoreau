@@ -29,4 +29,8 @@ public class FlatDamageEffect implements Effect{
     public boolean isComplete() {
         return getRemainingDuration() <= 0;
     }
+
+    public String toString(){
+        return damage + " damage";
+    }
 }

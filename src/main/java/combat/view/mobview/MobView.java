@@ -4,6 +4,7 @@ import data.bodyparts.IBodyPart;
 import data.bodyparts.PartType;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 import util.Point;
 
@@ -17,11 +18,11 @@ public class MobView {
 
     private boolean flipped;
 
-    MobView(PhysicalAttributes attributes, Map<IBodyPart, Point> offsets, Map<PartType, IBodyPart> parts){
+    MobView(Map<IBodyPart, Point> offsets, Map<PartType, IBodyPart> parts){
         this.offsets = offsets;
         this.parts = parts;
 
-        this.attributes = attributes;
+        this.attributes = new PhysicalAttributes(0, 0);
 
         width = calcWidth();
         flipped = false;
@@ -60,7 +61,7 @@ public class MobView {
         flipped = !flipped;
     }
 
-    public void render(GameContainer gc, Graphics g){
+    public void render(GameContainer gc, Graphics g) throws SlickException {
         for(PartType type : parts.keySet()){
             IBodyPart bp = parts.get(type);
             if(flipped)
@@ -75,5 +76,15 @@ public class MobView {
 
     public PhysicalAttributes getAttributes(){
         return attributes;
+    }
+
+    public void setXAndHomeX(float x){
+        attributes.x = x;
+        attributes.homeX = x;
+    }
+
+    public void setYandHomeY(float y){
+        attributes.y = y;
+        attributes.homeY = y;
     }
 }

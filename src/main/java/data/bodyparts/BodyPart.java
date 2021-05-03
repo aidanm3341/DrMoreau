@@ -2,7 +2,10 @@ package data.bodyparts;
 
 import combat.abilities.Ability;
 import combat.stats.Stats;
+import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
+import util.Config;
 import util.Point;
 import util.ResourceLoader;
 
@@ -16,8 +19,7 @@ public class BodyPart implements IBodyPart {
     private final Stats stats;
     private final Map<PartType, Point> attachPoints;
 
-    public BodyPart(String name, Stats stats, Ability ability, Map<PartType, Point> attachPoints)
-    {
+    public BodyPart(String name, Stats stats, Ability ability, Map<PartType, Point> attachPoints) {
         this.name = name;
         this.stats = stats;
         this.ability = ability;
@@ -35,7 +37,11 @@ public class BodyPart implements IBodyPart {
         return attachPoints.get(type);
     }
 
-    public Image getImage() {
+    public Image getImage() throws SlickException {
+        if(Config.getInstance().isDebugMode()){
+            Graphics g = image.getGraphics();
+            attachPoints.values().forEach(p -> g.fillOval(p.x, p.y, 5, 5));
+        }
         return image;
     }
 

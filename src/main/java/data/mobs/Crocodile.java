@@ -55,7 +55,7 @@ public class Crocodile extends Mob{
         partBuilder.setStats(Stats.ofHealthAndDamage(10, 0));
         partBuilder.setAbility(abilityFactory.basicDefend("Tough Hide", 7));
         partBuilder.addAllAttachPoints(Map.of(
-                PartType.HEAD,      new Point(257, 59),
+                PartType.HEAD,      new Point(257, 50),
                 PartType.RIGHT_ARM, new Point(234, 66),
                 PartType.LEFT_ARM,  new Point(222, 47),
                 PartType.RIGHT_LEG, new Point(76, 73),

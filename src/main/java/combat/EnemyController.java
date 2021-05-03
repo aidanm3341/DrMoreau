@@ -28,12 +28,14 @@ public class EnemyController implements MobController {
     private void createMobView(){
         IBodyPart body = mobCombatData.getPart(PartType.BODY);
 
-        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, new PhysicalAttributes(1150, 400));
+        MobViewBuilder mobViewBuilder = new MobViewBuilder(body);
         for(PartType type : PartType.values()){
             if(type != PartType.BODY && mobCombatData.hasPart(type))
                 mobViewBuilder.addPart(type, mobCombatData.getPart(type));
         }
         mobView = mobViewBuilder.finalise(true);
+        mobView.setXAndHomeX(1400 - mobView.getBoundingRectangle().getWidth()/2);
+        mobView.setYandHomeY(400);
     }
 
     public MobCombatData getMobData(){

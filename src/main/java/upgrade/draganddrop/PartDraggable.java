@@ -4,6 +4,7 @@ import data.bodyparts.IBodyPart;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.gui.GUIContext;
 
@@ -31,7 +32,7 @@ public class PartDraggable {
         goHome();
     }
 
-    public void render(GUIContext gc, Graphics g){
+    public void render(GUIContext gc, Graphics g) throws SlickException {
         Image partImage = part.getImage().getScaledCopy(scale);
         g.drawImage(partImage, getX() - partImage.getWidth()/2, getY() - partImage.getHeight()/2);
     }

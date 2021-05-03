@@ -1,7 +1,7 @@
 package combat.view.mobview;
 
 public class PhysicalAttributes {
-    public final float homeX, homeY;
+    public float homeX, homeY;
     public float x, y;
 
     public PhysicalAttributes(float x, float y){

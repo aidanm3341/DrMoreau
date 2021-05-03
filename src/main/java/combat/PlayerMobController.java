@@ -31,12 +31,14 @@ public class PlayerMobController implements MobController, AbilityListener {
     private void createPlayerView(){
         IBodyPart body = mobCombatData.getPart(PartType.BODY);
 
-        MobViewBuilder mobViewBuilder = new MobViewBuilder(body, new PhysicalAttributes(400, 380));
+        MobViewBuilder mobViewBuilder = new MobViewBuilder(body);
         for(PartType type : PartType.values()){
             if(type != PartType.BODY)
                 mobViewBuilder.addPart(type, mobCombatData.getPart(type));
         }
         mobView = mobViewBuilder.finalise(false);
+        mobView.setXAndHomeX(400);
+        mobView.setYandHomeY(380);
     }
 
     public MobView getMobView() {

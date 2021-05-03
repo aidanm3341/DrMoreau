@@ -44,6 +44,7 @@ public class ResourceLoader {
     private static void loadParts() throws SlickException {
         loadDog();
         loadRat();
+        loadCrocodile();
         loadBunny();
         loadPenguin();
         loadBoar();
@@ -70,6 +71,15 @@ public class ResourceLoader {
         images.put("rat_body", new Image("parts/rat/rat_body.png"));
         images.put("rat_tail", new Image("parts/rat/rat_tail.png"));
     }
+
+    private static void loadCrocodile() throws SlickException {
+        images.put("crocodile_leg", new Image("parts/crocodile/crocodile_leg.png"));
+        images.put("crocodile_arm", new Image("parts/crocodile/crocodile_arm.png"));
+        images.put("crocodile_head", new Image("parts/crocodile/crocodile_head.png"));
+        images.put("crocodile_body", new Image("parts/crocodile/crocodile_body.png"));
+        images.put("crocodile_tail", new Image("parts/crocodile/crocodile_tail.png"));
+    }
+
     private static void loadBunny() throws SlickException {
         images.put("bunny_body", new Image("parts/bunny/bunny_body.png"));
         images.put("bunny_leg", new Image("parts/bunny/bunny_leg.png"));

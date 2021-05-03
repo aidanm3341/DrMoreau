@@ -19,7 +19,7 @@ public class BasicRoomBlueprintLoader implements RoomBlueprintLoader {
 
     private RoomBlueprint redRoom() throws SlickException {
         List<MobCombatData> mobCombatData = List.of(
-                MobCreator.getMob("dog", 1)
+                MobCreator.getMob("crocodile", 1)
 //                MobCreator.getMob("bunny", 1),
 //                MobCreator.getMob("elephant", 1)
         );

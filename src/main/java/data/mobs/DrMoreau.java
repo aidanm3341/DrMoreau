@@ -20,7 +20,7 @@ public class DrMoreau implements IMob {
         stats.put(Stat.MAX_HP, 100f);
         stats.put(Stat.CURRENT_HP, stats.get(Stat.MAX_HP));
         stats.put(Stat.ATTACK_DMG, 20f);
-        IBodyPart moreau = new BodyPart("Dr.Moreau", stats,
+        IBodyPart moreau = new BodyPart("DrMoreau_body", stats,
                 new AbilityFactory(AttackAnimation.DIRECTION.LEFT).summedDamage("Attack"),
                 new HashMap<>());
 

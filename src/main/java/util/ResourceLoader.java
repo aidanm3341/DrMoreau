@@ -13,7 +13,7 @@ public class ResourceLoader {
     {
         images = new HashMap<>();
 
-        loadParts();
+        //loadParts();
         loadGUI();
         loadNavigation();
 
@@ -42,19 +42,19 @@ public class ResourceLoader {
     }
 
     private static void loadParts() throws SlickException {
-        loadDog();
-        loadRat();
-        loadCrocodile();
-        loadBunny();
-        loadPenguin();
-        loadBoar();
-        loadDuck();
-        loadElephant();
-        loadGoat();
-        loadLion();
-        loadBeaver();
-        loadOstrich();
-        loadMisc();
+//        loadDog();
+//        loadRat();
+//        loadCrocodile();
+//        loadBunny();
+//        loadPenguin();
+//        loadBoar();
+//        loadDuck();
+//        loadElephant();
+//        loadGoat();
+//        loadLion();
+//        loadBeaver();
+//        loadOstrich();
+//        loadMisc();
     }
 
     private static void loadDog() throws SlickException {
@@ -153,7 +153,7 @@ public class ResourceLoader {
         images.put("burning_arm", new Image("parts/misc/burning_arm.png"));
         images.put("frozen_leg", new Image("parts/misc/frozen_leg.png"));
         images.put("golden_monkey_arm", new Image("parts/misc/golden_monkey_arm.png"));
-        images.put("Dr.Moreau", new Image("boss.png").getFlippedCopy(true, false).getScaledCopy(0.3f));
+        images.put("Dr.Moreau", new Image("parts/DrMoreau/DrMoreau_body.png").getFlippedCopy(true, false).getScaledCopy(0.3f));
     }
 
     public static Image getImage(String name)

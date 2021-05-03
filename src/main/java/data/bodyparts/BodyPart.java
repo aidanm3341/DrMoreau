@@ -23,7 +23,16 @@ public class BodyPart implements IBodyPart {
         this.name = name;
         this.stats = stats;
         this.ability = ability;
-        this.image = ResourceLoader.getImage(name);
+
+        String mobName = name.substring(0, name.indexOf('_'));
+        Image partImage;
+        try {
+            partImage = new Image("parts/" + mobName + "/" + name + ".png");
+        } catch (SlickException e) {
+            partImage = null;
+            e.printStackTrace();
+        }
+        this.image = partImage;
         this.attachPoints = attachPoints;
     }
 

@@ -3,29 +3,24 @@ package combat.abilities.effects;
 import combat.stats.Stat;
 import data.mob.MobCombatData;
 
-public class ArmorEffect implements Effect {
+public class ArmorEffect extends Effect {
 
     private final float armor;
-    private MobCombatData subject;
 
     public ArmorEffect(float armor){
         this.armor = armor;
     }
 
-    public void attach(MobCombatData attacker, MobCombatData defender) {
-        this.subject = attacker;
-        subject.applyEffect(this);
-        onAttach();
+    @Override
+    public void firstAction() {
+        attacker.applyEffect(this);
+        attacker.setStat(Stat.ARMOR, armor);
     }
 
-    public void onAttach() {
-        subject.setStat(Stat.ARMOR, armor);
-    }
-
-    public void resolveEndOfTurn() {
-        subject.setStat(Stat.ARMOR, Math.min(subject.getStat(Stat.ARMOR) - armor, 0));
-        if(subject.getStat(Stat.ARMOR) < 0)
-            subject.setStat(Stat.ARMOR, 0);
+    public void endOfTurnAction() {
+        attacker.setStat(Stat.ARMOR, Math.min(attacker.getStat(Stat.ARMOR) - armor, 0));
+        if(attacker.getStat(Stat.ARMOR) < 0)
+            attacker.setStat(Stat.ARMOR, 0);
     }
 
     public int getRemainingDuration(){

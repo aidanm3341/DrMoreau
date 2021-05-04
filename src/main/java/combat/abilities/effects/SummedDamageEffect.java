@@ -3,42 +3,32 @@ package combat.abilities.effects;
 import combat.stats.Stat;
 import data.mob.MobCombatData;
 
-public class SummedDamageEffect implements Effect{
-
-    private float damage;
-    private MobCombatData subject;
+public class SummedDamageEffect extends Effect {
 
     public SummedDamageEffect(){ }
 
-    public void attach(MobCombatData attacker, MobCombatData defender) {
-        this.subject = defender;
-        subject.applyEffect(this);
-
-        this.damage = attacker.getStat(Stat.ATTACK_DMG);
-
-        onAttach();
-    }
-
-    public void onAttach() {
-        float currentHp = subject.getStat(Stat.CURRENT_HP);
-        float armor = subject.getStat(Stat.ARMOR);
-        float maxHp = subject.getStat(Stat.MAX_HP);
+    @Override
+    public void firstAction() {
+        float damage = attacker.getStat(Stat.ATTACK_DMG);
+        float currentHp = defender.getStat(Stat.CURRENT_HP);
+        float armor = defender.getStat(Stat.ARMOR);
+        float maxHp = defender.getStat(Stat.MAX_HP);
 
         if(armor - damage < 0) {
-            subject.setStat(Stat.ARMOR, 0);
+            defender.setStat(Stat.ARMOR, 0);
             damage = damage - armor;
 
             if(currentHp - damage < 0)
-                subject.setStat(Stat.CURRENT_HP, 0f);
+                defender.setStat(Stat.CURRENT_HP, 0f);
             else
-                subject.setStat(Stat.CURRENT_HP, Math.min(currentHp - damage, maxHp));
+                defender.setStat(Stat.CURRENT_HP, Math.min(currentHp - damage, maxHp));
         }
         else{
-            subject.setStat(Stat.ARMOR, armor - damage);
+            defender.setStat(Stat.ARMOR, armor - damage);
         }
     }
 
-    public void resolveEndOfTurn(){}
+    public void endOfTurnAction(){}
 
     public int getRemainingDuration(){
         return 0;
@@ -50,6 +40,6 @@ public class SummedDamageEffect implements Effect{
     }
 
     public String toString(){
-        return damage + " damage";
+        return attacker.getStat(Stat.ATTACK_DMG) + " damage";
     }
 }

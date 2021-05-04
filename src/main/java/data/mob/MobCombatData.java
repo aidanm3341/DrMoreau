@@ -1,6 +1,6 @@
 package data.mob;
 
-import combat.abilities.effects.Effect;
+import combat.abilities.effects.IEffect;
 import combat.stats.Stat;
 import combat.stats.Stats;
 import data.bodyparts.IBodyPart;
@@ -16,7 +16,7 @@ public class MobCombatData{
     private final String name;
     private final Stats stats;
     private final Map<PartType, IBodyPart> parts;
-    private List<Effect> effects;
+    private List<IEffect> effects;
 
     public MobCombatData(String name, Map<PartType, IBodyPart> parts) {
         this.name = name;
@@ -49,11 +49,11 @@ public class MobCombatData{
     }
 
     public void updateEffects(){
-        effects.forEach(Effect::resolveEndOfTurn);
+        effects.forEach(IEffect::endOfTurnAction);
         effects = effects.stream().filter(eff -> !eff.isComplete()).collect(Collectors.toList());
     }
 
-    public void applyEffect(Effect effect){
+    public void applyEffect(IEffect effect){
         effects.add(effect);
     }
 

@@ -3,7 +3,7 @@ package combat.abilities;
 import combat.abilities.effects.ArmorEffect;
 import combat.abilities.effects.FlatDamageEffect;
 import combat.abilities.effects.SummedDamageEffect;
-import combat.abilities.effects.Effect;
+import combat.abilities.effects.IEffect;
 import combat.view.animation.AttackAnimation;
 import combat.view.animation.StillAnimation;
 
@@ -18,14 +18,14 @@ public class AbilityFactory {
     }
 
     public Ability summedDamage(String name){
-        List<Effect> effects = List.of(
+        List<IEffect> effects = List.of(
                 new SummedDamageEffect()
         );
         return new Ability(name, effects, new AttackAnimation(direction));
     }
 
     public Ability basicDefend(String name, int armor){
-        List<Effect> effects = List.of(
+        List<IEffect> effects = List.of(
                 new ArmorEffect(armor)
         );
         return new Ability(name, effects, new StillAnimation());
@@ -36,14 +36,14 @@ public class AbilityFactory {
     }
 
     public Ability flatDamage(String name, float damage){
-        List<Effect> effects = List.of(
+        List<IEffect> effects = List.of(
                 new FlatDamageEffect(damage)
         );
         return new Ability(name, effects, new AttackAnimation(direction));
     }
 
     public Ability armorAndDamage(String name, float damage, float armor){
-        List<Effect> effects = List.of(
+        List<IEffect> effects = List.of(
                 new FlatDamageEffect(damage),
                 new ArmorEffect(armor)
         );

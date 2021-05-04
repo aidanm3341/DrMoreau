@@ -9,6 +9,7 @@ public class SummedDamageEffect extends Effect {
 
     @Override
     public void firstAction() {
+        defender.applyEffect(this);
         float damage = attacker.getStat(Stat.ATTACK_DMG);
         float currentHp = defender.getStat(Stat.CURRENT_HP);
         float armor = defender.getStat(Stat.ARMOR);

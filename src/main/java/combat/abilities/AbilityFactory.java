@@ -1,9 +1,6 @@
 package combat.abilities;
 
-import combat.abilities.effects.ArmorEffect;
-import combat.abilities.effects.FlatDamageEffect;
-import combat.abilities.effects.SummedDamageEffect;
-import combat.abilities.effects.IEffect;
+import combat.abilities.effects.*;
 import combat.view.animation.AttackAnimation;
 import combat.view.animation.StillAnimation;
 
@@ -46,6 +43,13 @@ public class AbilityFactory {
         List<IEffect> effects = List.of(
                 new FlatDamageEffect(damage),
                 new ArmorEffect(armor)
+        );
+        return new Ability(name, effects, new AttackAnimation(direction));
+    }
+
+    public Ability poisonEffect(String name, float dmgPerTurn, int duration){
+        List<IEffect> effects = List.of(
+                new PoisonEffect(dmgPerTurn, duration)
         );
         return new Ability(name, effects, new AttackAnimation(direction));
     }

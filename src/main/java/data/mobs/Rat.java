@@ -17,7 +17,7 @@ public class Rat extends Mob {
     public IBodyPart buildHead() {
         partBuilder.setName("rat_head");
         partBuilder.setStats(Stats.ofHealthAndDamage(3, 3));
-        partBuilder.setAbility(abilityFactory.flatDamage("Nibble", 5));
+        partBuilder.setAbility(abilityFactory.poisonEffect("Infected Nibble", 2, 5));
         partBuilder.addAttachPoint(PartType.BODY, new Point(20, 70));
         return partBuilder.finish();
     }

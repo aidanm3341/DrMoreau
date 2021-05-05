@@ -44,7 +44,7 @@ public class Crocodile extends Mob{
     public IBodyPart buildTail() {
         partBuilder.setName("crocodile_tail");
         partBuilder.setStats(Stats.ofHealthAndDamage(3, 4));
-        partBuilder.setAbility(abilityFactory.flatDamage("Death Spin", 10));
+        partBuilder.setAbility(abilityFactory.armorAndDamage("Death Spin", 10, 2));
         partBuilder.addAttachPoint(PartType.BODY, new Point(225, 40));
         return partBuilder.finish();
     }

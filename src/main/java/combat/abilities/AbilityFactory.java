@@ -25,11 +25,11 @@ public class AbilityFactory {
         List<IEffect> effects = List.of(
                 new ArmorEffect(armor)
         );
-        return new Ability(name, effects, new StillAnimation());
+        return new Ability(name, effects, new StillAnimation(30));
     }
 
     public Ability nullAbility(){
-        return new Ability("Null", List.of(), new StillAnimation());
+        return new Ability("Null", List.of(), new StillAnimation(0));
     }
 
     public Ability flatDamage(String name, float damage){

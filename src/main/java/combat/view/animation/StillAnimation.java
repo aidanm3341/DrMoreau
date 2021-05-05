@@ -7,10 +7,10 @@ public class StillAnimation implements Animation {
     private int duration, maxDuration;
     private AnimationState state;
 
-    public StillAnimation(){
+    public StillAnimation(int maxDuration){
         state = new AnimationState();
         duration = 0;
-        maxDuration = 30;
+        this.maxDuration = maxDuration;
     }
 
     public void update(PhysicalAttributes attacker, PhysicalAttributes defender) {
@@ -26,6 +26,6 @@ public class StillAnimation implements Animation {
     }
 
     public Animation clone() {
-        return new StillAnimation();
+        return new StillAnimation(maxDuration);
     }
 }

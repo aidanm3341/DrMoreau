@@ -5,6 +5,7 @@ import combat.stats.Stat;
 import combat.view.CombatView;
 import combat.view.animation.AnimationManager;
 import combat.view.animation.AnimationManagerImp;
+import combat.view.animation.StillAnimation;
 import data.mob.MobCombatData;
 import main.Main;
 import main.MainController;
@@ -63,6 +64,7 @@ public class CombatController extends Screen {
 
     public void executeAbility(Ability atk) {
         turns.executeAbility(atk);
+        animationManager.doAnimation(new StillAnimation(40));
     }
 
     public void update(GameContainer gc, StateBasedGame sbg, int delta){

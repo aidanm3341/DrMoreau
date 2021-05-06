@@ -27,29 +27,33 @@ public class NavigationController extends Screen implements ComponentListener {
     private RoomBlueprintLoader roomBlueprintLoader;
     private Room left, right, activeRoom;
 
+    private int level;
+
     public NavigationController(MainController main){
         this.main = main;
     }
 
-    public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
-    {
+    public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
         super.init(gc, sbg);
         roomBlueprintLoader = new BasicRoomBlueprintLoader();
         view = new NavigationView(this);
         view.init(gc, sbg);
+
+        level = 1;
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException{
-        List<RoomBlueprint> roomBlueprints = roomBlueprintLoader.getRoomBlueprints();
+        List<RoomBlueprint> roomBlueprints = roomBlueprintLoader.getRoomBlueprints(level);
         Random rand = new Random();
         left = roomBlueprints.get(rand.nextInt(roomBlueprints.size())).buildRoom();
         right = roomBlueprints.get(rand.nextInt(roomBlueprints.size())).buildRoom();
         view.setLeftImage(left.getNavigationImage(), left.getNavigationImageHover());
         view.setRightImage(right.getNavigationImage(), right.getNavigationImageHover());
+
+        level++;
     }
 
-    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
-    {
+    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         view.render(gc, g);
     }
 

@@ -6,5 +6,5 @@ import org.newdawn.slick.SlickException;
 import java.util.List;
 
 public interface RoomBlueprintLoader {
-    List<RoomBlueprint> getRoomBlueprints() throws SlickException;
+    List<RoomBlueprint> getRoomBlueprints(int level) throws SlickException;
 }

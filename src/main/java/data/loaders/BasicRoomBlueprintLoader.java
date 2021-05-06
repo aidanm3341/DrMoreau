@@ -10,25 +10,25 @@ import util.ResourceLoader;
 import java.util.List;
 
 public class BasicRoomBlueprintLoader implements RoomBlueprintLoader {
-    public List<RoomBlueprint> getRoomBlueprints() throws SlickException {
+    public List<RoomBlueprint> getRoomBlueprints(int level) throws SlickException {
         return List.of(
-                redRoom(),
-                greyRoom()
+                redRoom(level),
+                greyRoom(level)
         );
     }
 
-    private RoomBlueprint redRoom() throws SlickException {
+    private RoomBlueprint redRoom(int level) throws SlickException {
         List<MobCombatData> mobCombatData = List.of(
-                MobCreator.getMob("crocodile", 1)
+                MobCreator.getMob("crocodile", level)
 //                MobCreator.getMob("bunny", 1),
 //                MobCreator.getMob("elephant", 1)
         );
         return new RoomBlueprint(mobCombatData, ResourceLoader.getImage("brickRoute"));
     }
 
-    private RoomBlueprint greyRoom() throws SlickException {
+    private RoomBlueprint greyRoom(int level) throws SlickException {
         List<MobCombatData> mobCombatData = List.of(
-                MobCreator.getMob("rat", 1)
+                MobCreator.getMob("rat", level)
 //                MobCreator.getMob("boar", 1),
 //                MobCreator.getMob("penguin", 1)
         );

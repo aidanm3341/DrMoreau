@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Stream;
 
 public class Pool<E> {
 
@@ -61,5 +62,9 @@ public class Pool<E> {
     public E get()
     {
         return things.get(rand.nextInt(things.size()));
+    }
+
+    public Stream<E> stream(){
+        return things.stream();
     }
 }

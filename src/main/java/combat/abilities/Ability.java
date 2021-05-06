@@ -4,6 +4,7 @@ package combat.abilities;
 import combat.abilities.effects.IEffect;
 import combat.view.animation.Animation;
 import combat.view.animation.AnimationManager;
+import combat.view.animation.AttackAnimation;
 import data.mob.MobCombatData;
 
 import java.util.List;
@@ -32,5 +33,9 @@ public class Ability {
 
     public String toString(){
         return effects.stream().map(IEffect::toString).reduce("", (acc, str) -> acc + str + "\n");
+    }
+
+    public void setAnimationDirection(AttackAnimation.DIRECTION direction){
+        animation.setDirection(direction);
     }
 }

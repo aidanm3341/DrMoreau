@@ -25,6 +25,9 @@ public class StillAnimation implements Animation {
         return state;
     }
 
+    @Override
+    public void setDirection(AttackAnimation.DIRECTION direction) { }
+
     public Animation clone() {
         return new StillAnimation(maxDuration);
     }

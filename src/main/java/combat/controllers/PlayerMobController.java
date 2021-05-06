@@ -1,6 +1,7 @@
 package combat.controllers;
 
 import combat.abilities.Ability;
+import combat.view.animation.AttackAnimation;
 import combat.view.mobview.MobView;
 import combat.view.mobview.MobViewBuilder;
 import data.bodyparts.IBodyPart;
@@ -24,6 +25,7 @@ public class PlayerMobController implements MobController, AbilityListener {
     }
 
     public void movePerformed(Ability at) {
+        at.setAnimationDirection(AttackAnimation.DIRECTION.RIGHT);
         ctrl.executeAbility(at);
     }
 

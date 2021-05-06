@@ -1,5 +1,6 @@
 package data.mob;
 
+import combat.AbilityStrategy;
 import combat.abilities.effects.EffectContainer;
 import combat.abilities.effects.IEffect;
 import combat.stats.Stat;
@@ -18,10 +19,12 @@ public class MobCombatData{
     private final Stats stats;
     private final Map<PartType, IBodyPart> parts;
     private final EffectContainer effectContainer;
+    private final AbilityStrategy abilityStrategy;
 
-    public MobCombatData(String name, Map<PartType, IBodyPart> parts) {
+    public MobCombatData(String name, Map<PartType, IBodyPart> parts, AbilityStrategy abilityStrategy) {
         this.name = name;
         this.parts = parts;
+        this.abilityStrategy = abilityStrategy;
 
         effectContainer = new EffectContainer();
 
@@ -79,5 +82,9 @@ public class MobCombatData{
 
     public boolean hasPart(PartType type){
         return parts.containsKey(type);
+    }
+
+    public AbilityStrategy getAbilityStrategy() {
+        return abilityStrategy;
     }
 }

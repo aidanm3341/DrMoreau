@@ -21,7 +21,8 @@ public class EnemyController implements MobController {
     }
 
     public void attachController(CombatController ctrl) {
-        ctrl.executeAbility(abilityFactory.summedDamage("Attack"));
+        //ctrl.executeAbility(abilityFactory.summedDamage("Attack"));
+        ctrl.executeAbility(mobCombatData.getAbilityStrategy().getNextAbility());
     }
 
     private void createMobView(){

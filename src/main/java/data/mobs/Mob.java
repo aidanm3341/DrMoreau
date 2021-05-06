@@ -1,5 +1,6 @@
 package data.mobs;
 
+import combat.RandomAbilityStrategy;
 import combat.abilities.AbilityFactory;
 import combat.view.animation.AttackAnimation;
 import data.bodyparts.BodyPartBuilder;
@@ -26,7 +27,8 @@ public abstract class Mob implements IMob {
     }
 
     public MobCombatData getMobData() {
-        return new MobCombatData(name, getParts());
+        Map<PartType, IBodyPart> parts = getParts();
+        return new MobCombatData(name, parts, new RandomAbilityStrategy(parts.values()));
     }
 
     public Map<PartType, IBodyPart> getParts() {

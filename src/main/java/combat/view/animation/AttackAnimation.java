@@ -50,6 +50,11 @@ public class AttackAnimation implements Animation {
         return null;
     }
 
+    @Override
+    public void setDirection(DIRECTION direction) {
+        this.direction = direction;
+    }
+
     public boolean isDone() {
         return isDone;
     }

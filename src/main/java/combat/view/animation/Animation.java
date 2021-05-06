@@ -6,5 +6,6 @@ public interface Animation extends Cloneable{
     void update(PhysicalAttributes attacker, PhysicalAttributes defender);
     boolean isDone();
     AnimationState getState();
+    void setDirection(AttackAnimation.DIRECTION direction);
     Animation clone();
 }

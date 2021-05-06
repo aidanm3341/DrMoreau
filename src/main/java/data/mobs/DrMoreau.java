@@ -1,5 +1,6 @@
 package data.mobs;
 
+import combat.RandomAbilityStrategy;
 import combat.abilities.AbilityFactory;
 import combat.stats.Stat;
 import combat.stats.Stats;
@@ -24,8 +25,9 @@ public class DrMoreau implements IMob {
                 new AbilityFactory(AttackAnimation.DIRECTION.LEFT).summedDamage("Attack"),
                 new HashMap<>());
 
-        return new MobCombatData("Dr.Moreau", Map.of(
+        Map<PartType, IBodyPart> parts = Map.of(
                 PartType.BODY, moreau
-        ));
+        );
+        return new MobCombatData("Dr.Moreau", parts, new RandomAbilityStrategy(parts.values()));
     }
 }

@@ -78,6 +78,7 @@ public class MainController {
 
     public void reset() throws SlickException {
         loadDefaultSidekick();
+        navigation.reset();
     }
 
     private void loadDefaultSidekick() throws SlickException {

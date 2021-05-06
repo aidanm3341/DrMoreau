@@ -61,6 +61,10 @@ public class NavigationController extends Screen implements ComponentListener {
         return activeRoom;
     }
 
+    public void reset(){
+        level = 1;
+    }
+
     public void componentActivated(AbstractComponent c){
         if(view.getBossButton().equals(c)) {
             try {

@@ -1,5 +1,6 @@
-package combat;
+package combat.controllers;
 
+import combat.TurnManager;
 import combat.abilities.Ability;
 import combat.stats.Stat;
 import combat.view.CombatView;

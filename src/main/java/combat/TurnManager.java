@@ -1,6 +1,8 @@
 package combat;
 
 import combat.abilities.Ability;
+import combat.controllers.CombatController;
+import combat.controllers.MobController;
 import combat.view.animation.AnimationManager;
 
 public class TurnManager {

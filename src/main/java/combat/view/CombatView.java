@@ -1,13 +1,12 @@
 package combat.view;
 
 import combat.abilities.Ability;
-import combat.CombatController;
+import combat.controllers.CombatController;
 import data.bodyparts.IBodyPart;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import util.MyFont;
 import util.ResourceLoader;
 import util.buttons.AbilityListener;
 

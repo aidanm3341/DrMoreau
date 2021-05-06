@@ -1,6 +1,6 @@
 package main;
 
-import combat.CombatController;
+import combat.controllers.CombatController;
 import data.mob.MobCombatData;
 import data.bodyparts.PartType;
 import data.mob.MobCreator;

@@ -1,4 +1,4 @@
-package combat;
+package combat.controllers;
 
 import combat.view.mobview.MobView;
 import data.mob.MobCombatData;

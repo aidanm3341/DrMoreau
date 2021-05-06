@@ -1,10 +1,9 @@
-package combat;
+package combat.controllers;
 
 import combat.abilities.AbilityFactory;
 import combat.view.animation.AttackAnimation;
 import combat.view.mobview.MobView;
 import combat.view.mobview.MobViewBuilder;
-import combat.view.mobview.PhysicalAttributes;
 import data.bodyparts.IBodyPart;
 import data.bodyparts.PartType;
 import data.mob.MobCombatData;

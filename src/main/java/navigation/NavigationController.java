@@ -12,6 +12,7 @@ import org.newdawn.slick.gui.AbstractComponent;
 import org.newdawn.slick.gui.ComponentListener;
 import org.newdawn.slick.state.StateBasedGame;
 import screens.Screen;
+import util.Pool;
 import util.ResourceLoader;
 
 import java.util.List;
@@ -43,10 +44,9 @@ public class NavigationController extends Screen implements ComponentListener {
     }
 
     public void enter(GameContainer gc, StateBasedGame sbg) throws SlickException{
-        List<RoomBlueprint> roomBlueprints = roomBlueprintLoader.getRoomBlueprints(level);
-        Random rand = new Random();
-        left = roomBlueprints.get(rand.nextInt(roomBlueprints.size())).buildRoom();
-        right = roomBlueprints.get(rand.nextInt(roomBlueprints.size())).buildRoom();
+        Pool<RoomBlueprint> roomBlueprintPool = new Pool<>(roomBlueprintLoader.getRoomBlueprints(level));
+        left = roomBlueprintPool.get().buildRoom();
+        right = roomBlueprintPool.get().buildRoom();
         view.setLeftImage(left.getNavigationImage(), left.getNavigationImageHover());
         view.setRightImage(right.getNavigationImage(), right.getNavigationImageHover());
 

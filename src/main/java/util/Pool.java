@@ -11,8 +11,12 @@ public class Pool<E> {
     private List<E> things;
     private Random rand;
 
-    public Pool()
-    {
+    public Pool(List<E> things){
+        this();
+        this.things.addAll(things);
+    }
+
+    public Pool() {
         things = new ArrayList<>();
         rand = new Random();
     }
@@ -40,8 +44,7 @@ public class Pool<E> {
         return returns;
     }
 
-    public E pop()
-    {
+    public E pop() {
         E e = things.get(rand.nextInt(things.size()));
         things.remove(e);
         return e;
